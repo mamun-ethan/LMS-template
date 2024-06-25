@@ -11,12 +11,20 @@
       href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- font aswome icon -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+      integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!-- tailwind stylesheet -->
     <link rel="stylesheet" href="./src/tailwind.css" />
     <title>Document</title>
   </head>
-  <body>
-    <header class="font-semibold">
+  <body class="bg-bgRed font-hind">
+    <header class="font-medium bg-header">
       <div class="container mx-auto px-4">
         <nav class="py-5">
           <div class="flex justify-between">
@@ -35,31 +43,41 @@
                   <li class="px-5"><a href="">ফ্রিতে শিখুন</a></li>
                   <li class="px-5"><a href="">ব্লগ</a></li>
                   <li class="px-5">
-                    <a href="">ডাউনলোড </a>
+                    <a href=""
+                      >ডাউনলোড <i class="ml-1 fa-solid fa-download"></i>
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
 
+            <!-- search bar -->
+            <div class="flex px-8 item-center searchbar">
+              <p
+                class="self-center relative font-light hover:cursor-text px-[85px] py-[7px] border border-solid bg-[#dbdbdb] rounded-[20px]"
+              >
+                <i
+                  class="absolute top-[30%] left-[13px] fa-solid fa-magnifying-glass"
+                ></i>
+                সার্চ করুন
+              </p>
+            </div>
+
             <!-- right nav items -->
-            <div>
-              <ul class="flex">
-                <li>
-                  <a href="">
-                    <img src="" alt="" />
-                    EN
+            <div class="flex items-center">
+              <ul class="flex items-center">
+                <li class="px-5">
+                  <a href=""> <i class="mr-1 fa-solid fa-globe"></i> EN </a>
+                </li>
+                <li class="px-5">
+                  <a class="py-2 px-8 rounded-[8px] bg-[#dbdbdb] href="">
+                    সব কোর্স <i class="ml-1 fa-solid fa-angle-down"></i>
                   </a>
                 </li>
-                <li>
-                  <a href="">
-                    সব কোর্স
-                    <img src="" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
+                <li class="">
+                  <a class="py-2 px-8 rounded-[8px] bg-btnYellow" href="">
+                    <i class="mr-1 fa-solid fa-user"></i>
                     লগইন
-                    <img src="" alt="" />
                   </a>
                 </li>
               </ul>
@@ -70,7 +88,41 @@
       <!-- hero -->
       <div class="hero"></div>
     </header>
-    <main></main>
+    <main>
+
+      <div class="hero">
+        <div class="container m-auto">
+              <div class="flex  flex-row m-20 p-8 border-2 border-zinc-700 rounded-2xl  justify-between">
+                <div class="hero_content flex justify-center flex-col w-1/2">
+                  <h1 class="text-4xl font-bold pb-4">শিখবে এবার বাংলাদেশ</h1>
+                  <h5 class="text-base font-semibold pb-4">স্কিল শেখার মাধ্যমে বদলে ফেলুন নিজের ভবিষ্যৎ</h5>
+
+                  <a  href="">
+                    <button class="bg-btnYellow font-semibold px-8 py-3 rounded-lg">
+                      শেখা শুরু করুন 
+                      <i class=" ml-5 fa-solid fa-person-walking-arrow-right"></i>
+                    </button>
+                  </a>
+                  <p class="font-medium my-8">৭০০০+ গ্র্যাজুয়েটরা কর্মরত আছেন বিভিন্ন দেশি ও বিদেশি প্রতিষ্ঠানে:</p>
+                  <div class="brand">
+                   <ul class="flex flex-row justify-between">
+                    <li class="px-4"><a href=""><img src="./src/assets/img/brand_1.webp" alt=""></a></li>
+                    <li class="px-4"><a href=""><img src="./src/assets/img/brand_4.webp" alt=""></a></li>
+                    <li class="px-4"><a href=""><img src="./src/assets/img/brand_2.webp" alt=""></a></li>
+                    <li class="px-4"><a href=""><img src="./src/assets/img/brand_3.webp" alt=""></a></li>
+                   </ul>
+                  </div>
+                </div>
+                <div class="hero_img flex justify-center items-center w-1/2">
+                  <img class="w-full h-[80%] rounded-lg"  src="./src/assets/img/hero.webp" alt="">
+                </div>
+              </div>
+        </div>
+      </div>
+
+
+
+    </main>
     <footer></footer>
   </body>
 </html>

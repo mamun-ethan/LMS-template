@@ -2,11 +2,16 @@
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
-    fontFamily: {
-      hind: ["Hind Siliguri", "sans-serif"],
+    extend: {
+      fontFamily: {
+        hind: ["Hind Siliguri", "sans-serif"],
+      },
+      colors: {
+        bgRed: "rgb(241 241 241)",
+        header: "#fff",
+        btnYellow: "#ffc000",
+      },
     },
-
-    extends: {},
   },
   plugins: [],
 };

@@ -3,10 +3,3 @@
 @tailwind utilities;
 
 /* custom style */
-
-@layer base {
-  html {
-    font-family: hind;
-    font-weight: semibold;
-  }
-}
