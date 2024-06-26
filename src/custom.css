@@ -3,3 +3,10 @@
 @tailwind utilities;
 
 /* custom style */
+.course-box {
+  display: none;
+}
+.active {
+  background-color: #0d0f37;
+  color: #fff;
+}

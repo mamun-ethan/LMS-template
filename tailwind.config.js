@@ -7,9 +7,9 @@ module.exports = {
         hind: ["Hind Siliguri", "sans-serif"],
       },
       colors: {
-        bgRed: "rgb(241 241 241)",
+        bgColor: "rgb(241 241 241)",
         header: "#fff",
-        btnYellow: "#ffc000",
+        primary: "rgb(32 0 213)",
       },
     },
   },

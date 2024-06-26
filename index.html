@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./src/tailwind.css" />
     <title>Document</title>
   </head>
-  <body class="bg-bgRed font-hind">
+  <body class="bg-bgColor font-hind">
     <header class="font-medium bg-header">
       <div class="container mx-auto px-4">
         <nav class="py-5">
@@ -75,7 +75,7 @@
                   </a>
                 </li>
                 <li class="">
-                  <a class="py-2 px-8 rounded-[8px] bg-btnYellow" href="">
+                  <a class="py-2 px-8 text-slate-50 rounded-[8px] bg-primary" href="">
                     <i class="mr-1 fa-solid fa-user"></i>
                     লগইন
                   </a>
@@ -89,16 +89,16 @@
       <div class="hero"></div>
     </header>
     <main>
-
+<!-- hero section -->
       <div class="hero">
-        <div class="container m-auto">
+        <div class="container m-auto px-5">
               <div class="flex  flex-row m-20 p-8 border-2 border-zinc-700 rounded-2xl  justify-between">
                 <div class="hero_content flex justify-center flex-col w-1/2">
                   <h1 class="text-4xl font-bold pb-4">শিখবে এবার বাংলাদেশ</h1>
                   <h5 class="text-base font-semibold pb-4">স্কিল শেখার মাধ্যমে বদলে ফেলুন নিজের ভবিষ্যৎ</h5>
 
                   <a  href="">
-                    <button class="bg-btnYellow font-semibold px-8 py-3 rounded-lg">
+                    <button class="bg-primary text-slate-50 font-semibold px-8 py-3 rounded-lg">
                       শেখা শুরু করুন 
                       <i class=" ml-5 fa-solid fa-person-walking-arrow-right"></i>
                     </button>
@@ -119,10 +119,386 @@
               </div>
         </div>
       </div>
+<!-- courses section -->
+        
+
+        <!-- course filter  -->
+     <div>
+
+      <div class="container  mx-auto p-24">
+       
+      <div class="p-10 rounded-lg bg-white border-1">
+        <h1 class="font-bold text-4xl text-center mb-8">আমাদের কোর্স সমুহ</h1>
+<!-- course catagory -->
+        <div class="flex justify-evenly">
+          <!-- web development -->
+          <div id="web-development-btn" class="menu-btn flex flex-row justify-between items-center bg-bgColor text-black px-4 py-2 rounded" onclick="filterCourses('web-development')">
+            
+        <div>
+          <i class="fa-solid p-2 fa-terminal"></i>
+        </div>
+        <div class="flex flex-col justify-between">
+          <span class="text-xs ml-4">ওয়েব ডেভেলপমেন্ট</span>
+          <ul class="flex flex-row list-disc justify-between text-[11px]">
+            <li class="ml-4">১২টি কোর্স</li>
+            <li  class="mx-4">৫টি ওয়ার্কশপ</li>
+          </ul>
+        </div>
+          
+          </div>
+          <!-- app developemmt -->
+          <div id="app-development-btn" class="menu-btn flex flex-row justify-between items-cente bg-bgColor text-black px-4 py-2 rounded" onclick="filterCourses('app-development')">
+            
+            
+            <div>
+              <i class="fa-solid p-2 fa-terminal"></i>
+            </div>
+            <div class="flex flex-col justify-between">
+              <span class="text-xs ml-4">অ্যাপ ডেভেলপমেন্ট</span>
+              <ul class="flex flex-row list-disc justify-between text-[11px]">
+                <li class="ml-4">১২টি কোর্স</li>
+                <li  class="mx-4">৫টি ওয়ার্কশপ</li>
+              </ul>
+            </div>
+          
+          </div>
+
+          <!-- ui ux design -->
+          
+          <div id="ui-ux-design-btn" class="menu-btn flex flex-row justify-between items-cente bg-bgColor text-black px-4 py-2 rounded" onclick="filterCourses('ui-ux-design')">
+            
+            
+            <div>
+              <i class="fa-solid p-2 fa-terminal"></i>
+            </div>
+            <div class="flex flex-col justify-between">
+              <span class="text-xs ml-4">ui ux design</span>
+              <ul class="flex flex-row list-disc justify-between text-[11px]">
+                <li class="ml-4">১২টি কোর্স</li>
+                <li  class="mx-4">৫টি ওয়ার্কশপ</li>
+              </ul>
+            </div>
+          
+          </div>
+          <!-- digital-marketing -->
+          <div id="digital-marketing-btn" class="menu-btn flex flex-row justify-between items-cente bg-bgColor text-black px-4 py-2 rounded" onclick="filterCourses('digital-marketing')">
+            
+            
+            <div>
+              <i class="fa-solid p-2 fa-terminal"></i>
+            </div>
+            <div class="flex flex-col justify-between">
+              <span class="text-xs ml-4">ui ux design</span>
+              <ul class="flex flex-row list-disc justify-between text-[11px]">
+                <li class="ml-4">১২টি কোর্স</li>
+                <li  class="mx-4">৫টি ওয়ার্কশপ</li>
+              </ul>
+            </div>
+          
+          </div>
+         
+      </div>
+
+      <!-- course items -->
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="course-box web-development bg-white p-4 rounded shadow">
+              
+            <div>
+              <img src="./src/assets/img/course_item_1.jpg" alt="">
+            </div>
+            <div class="text-xs flex flex-row justify-between font-medium p-4">
+              <span>৪র্থ ব্যাচ</span>
+              <span>১০ সিট বাকী</span>
+              <span>৭ দিন </span>
+            </div>
+            <hr>
+            <div>
+              <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+            </div>
+            <div class="mt-5 w-full">
+              <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                <button>বিস্তারিত জানুন</button>
+              </a>
+            </div>
+          </div>
+          <div class="course-box web-development bg-white p-4 rounded shadow">
+              
+            <div>
+              <img src="./src/assets/img/course_item_1.jpg" alt="">
+            </div>
+            <div class="text-xs flex flex-row justify-between font-medium p-4">
+              <span>৪র্থ ব্যাচ</span>
+              <span>১০ সিট বাকী</span>
+              <span>৭ দিন </span>
+            </div>
+            <hr>
+            <div>
+              <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+            </div>
+            <div class="mt-5 w-full">
+              <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                <button>বিস্তারিত জানুন</button>
+              </a>
+            </div>
+          </div>
+          <div class="course-box web-development bg-white p-4 rounded shadow">
+              
+            <div>
+              <img src="./src/assets/img/course_item_1.jpg" alt="">
+            </div>
+            <div class="text-xs flex flex-row justify-between font-medium p-4">
+              <span>৪র্থ ব্যাচ</span>
+              <span>১০ সিট বাকী</span>
+              <span>৭ দিন </span>
+            </div>
+            <hr>
+            <div>
+              <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+            </div>
+            <div class="mt-5 w-full">
+              <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                <button>বিস্তারিত জানুন</button>
+              </a>
+            </div>
+          </div>
+          <div class="course-box web-development bg-white p-4 rounded shadow">
+              
+            <div>
+              <img src="./src/assets/img/course_item_1.jpg" alt="">
+            </div>
+            <div class="text-xs flex flex-row justify-between font-medium p-4">
+              <span>৪র্থ ব্যাচ</span>
+              <span>১০ সিট বাকী</span>
+              <span>৭ দিন </span>
+            </div>
+            <hr>
+            <div>
+              <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+            </div>
+            <div class="mt-5 w-full">
+              <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                <button>বিস্তারিত জানুন</button>
+              </a>
+            </div>
+          </div>
+          <div class="course-box web-development bg-white p-4 rounded shadow">
+              
+            <div>
+              <img src="./src/assets/img/course_item_1.jpg" alt="">
+            </div>
+            <div class="text-xs flex flex-row justify-between font-medium p-4">
+              <span>৪র্থ ব্যাচ</span>
+              <span>১০ সিট বাকী</span>
+              <span>৭ দিন </span>
+            </div>
+            <hr>
+            <div>
+              <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+            </div>
+            <div class="mt-5 w-full">
+              <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                <button>বিস্তারিত জানুন</button>
+              </a>
+            </div>
+          </div>
+          <div class="course-box web-development bg-white p-4 rounded shadow">
+              
+            <div>
+              <img src="./src/assets/img/course_item_1.jpg" alt="">
+            </div>
+            <div class="text-xs flex flex-row justify-between font-medium p-4">
+              <span>৪র্থ ব্যাচ</span>
+              <span>১০ সিট বাকী</span>
+              <span>৭ দিন </span>
+            </div>
+            <hr>
+            <div>
+              <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+            </div>
+            <div class="mt-5 w-full">
+              <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                <button>বিস্তারিত জানুন</button>
+              </a>
+            </div>
+          </div>
+          <div class="course-box web-development bg-white p-4 rounded shadow">
+              
+            <div>
+              <img src="./src/assets/img/course_item_1.jpg" alt="">
+            </div>
+            <div class="text-xs flex flex-row justify-between font-medium p-4">
+              <span>৪র্থ ব্যাচ</span>
+              <span>১০ সিট বাকী</span>
+              <span>৭ দিন </span>
+            </div>
+            <hr>
+            <div>
+              <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+            </div>
+            <div class="mt-5 w-full">
+              <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                <button>বিস্তারিত জানুন</button>
+              </a>
+            </div>
+          </div>
+          <div class="course-box web-development bg-white p-4 rounded shadow">
+            <div>
+              <img src="./src/assets/img/course_item_2.jpg" alt="">
+            </div>
+            <div class="text-xs flex flex-row justify-between font-medium p-4">
+              <span>৪র্থ ব্যাচ</span>
+              <span>১০ সিট বাকী</span>
+              <span>৭ দিন </span>
+            </div>
+            <hr>
+            <div>
+              <h2 class="font-semibold text-lg">Wordpress pluggin development & freelancing</h2>
+            </div>
+            <div class="mt-5 w-full">
+              <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                <button>বিস্তারিত জানুন</button>
+              </a>
+            </div>
+          </div>
+          <div class="course-box app-development bg-white p-4 rounded shadow">
+            <div>
+              <img src="./src/assets/img/course_item_2.jpg" alt="">
+            </div>
+            <div class="text-xs flex flex-row justify-between font-medium p-4">
+              <span>৪র্থ ব্যাচ</span>
+              <span>১০ সিট বাকী</span>
+              <span>৭ দিন </span>
+            </div>
+            <hr>
+            <div>
+              <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+            </div>
+            <div class="mt-5 w-full">
+              <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                <button>বিস্তারিত জানুন</button>
+              </a>
+            </div>
+          </div>
+          <div class="course-box app-development bg-white p-4 rounded shadow">
+            <div>
+              <img src="./src/assets/img/course_item_1.jpg" alt="">
+            </div>
+            <div class="text-xs flex flex-row justify-between font-medium p-4">
+              <span>৪র্থ ব্যাচ</span>
+              <span>১০ সিট বাকী</span>
+              <span>৭ দিন </span>
+            </div>
+            <hr>
+            <div>
+              <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+            </div>
+            <div class="mt-5 w-full">
+              <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                <button>বিস্তারিত জানুন</button>
+              </a>
+            </div>
+          </div>
+          <div class="course-box ui-ux-design bg-white p-4 rounded shadow">
+            <div>
+              <img src="./src/assets/img/course_item_1.jpg" alt="">
+            </div>
+            <div class="text-xs flex flex-row justify-between font-medium p-4">
+              <span>৪র্থ ব্যাচ</span>
+              <span>১০ সিট বাকী</span>
+              <span>৭ দিন </span>
+            </div>
+            <hr>
+            <div>
+              <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+            </div>
+            <div class="mt-5 w-full">
+              <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                <button>বিস্তারিত জানুন</button>
+              </a>
+            </div>
+          </div>
+          <div class="course-box ui-ux-design bg-white p-4 rounded shadow">
+              <h3 class="text-lg font-bold">
+                <div>
+                  <img src="./src/assets/img/course_item_2.jpg" alt="">
+                </div>
+                <div class="text-xs flex flex-row justify-between font-medium p-4">
+                  <span>৪র্থ ব্যাচ</span>
+                  <span>১০ সিট বাকী</span>
+                  <span>৭ দিন </span>
+                </div>
+                <hr>
+                <div>
+                  <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+                </div>
+                <div class="mt-5 w-full">
+                  <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                    <button>বিস্তারিত জানুন</button>
+                  </a>
+                </div>
+          </div>
+          <div class="course-box digital-marketing bg-white p-4 rounded shadow">
+              <h3 class="text-lg font-bold">
+                <div>
+                  <img src="./src/assets/img/course_item_2.jpg" alt="">
+                </div>
+                <div class="text-xs flex flex-row justify-between font-medium p-4">
+                  <span>৪র্থ ব্যাচ</span>
+                  <span>১০ সিট বাকী</span>
+                  <span>৭ দিন </span>
+                </div>
+                <hr>
+                <div>
+                  <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+                </div>
+                <div class="mt-5 w-full">
+                  <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                    <button>বিস্তারিত জানুন</button>
+                  </a>
+                </div>
+          </div>
+          <div class="course-box digital-marketing bg-white p-4 rounded shadow">
+            <div>
+              <img src="./src/assets/img/course_item_1.jpg" alt="">
+            </div>
+            <div class="text-xs flex flex-row justify-between font-medium p-4">
+              <span>৪র্থ ব্যাচ</span>
+              <span>১০ সিট বাকী</span>
+              <span>৭ দিন </span>
+            </div>
+            <hr>
+            <div>
+              <h2 class="font-semibold text-lg">Full stack web development with javascript</h2>
+            </div>
+            <div class="mt-5 w-full">
+              <a class="bg-primary text-center font-medium block text-white d-block rounded-md p-1" href="#">
+                <button>বিস্তারিত জানুন</button>
+              </a>
+            </div>
+            
+          </div>
+          
+      </div>
+      <div class="mx-auto py-5 text-center mt-10 ">
+        <a class="bg-primary text-center px-20  font-medium text-white d-inline-block rounded-md p-1" href="#">
+          <button class="btn btn-primary">বিস্তারিত জানুন</button>
+        </a>
+      </div>
+      
+      </div>
+    </div>
+
+     </div>
+
+
+
+
+
 
 
 
     </main>
     <footer></footer>
+    <script src="./src/custom.js"></script>
   </body>
 </html>
