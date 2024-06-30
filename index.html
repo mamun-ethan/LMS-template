@@ -19,92 +19,328 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <!-- tailwind stylesheet -->
+    <!-- tailwindcss -->
     <link rel="stylesheet" href="./src/tailwind.css" />
+    <!-- flowbite cdn -->
+
     <title>Document</title>
   </head>
   <body class="bg-bgColor font-hind">
-    <header class="font-medium bg-header">
-      <div class="container mx-auto px-4">
-        <nav class="py-5">
-          <div class="flex justify-between">
-            <!-- left nav items -->
-            <div class="flex items-center space-x-6">
-              <ul class="flex pt-1">
-                <li>
-                  <img
-                    class="w-[100px] h-[30px]"
-                    src="./src/assets/img/logo.png"
-                  />
-                </li>
-                <li class="px-5">
-                  <a href="">ফ্রিতে শিখুন</a>
-                </li>
-                <li class="px-5">
-                  <a href="">ব্লগ</a>
-                </li>
-                <li class="px-5">
-                  <a href="">
-                    ডাউনলোড
-                    <i class="ml-1 fa-solid fa-download"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- search bar -->
-            <div class="flex px-8 items-center searchbar">
-              <p
-                class="self-center relative font-light hover:cursor-text px-[85px] py-[7px] border border-solid bg-[#dbdbdb] rounded-[20px]"
+    <header>
+      <nav
+        class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700"
+      >
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <!-- humberger menu -->
+          <button
+            id="navbar-toggle"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-dropdown"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <!-- login/logout -->
+          <div class="md:hidden">
+            <ul class="flex flex-row justify-evenly">
+              <li class="flex flex-row justify-between items-center">
+                <img
+                  class="h-[60%] mr-2"
+                  src="./src/assets/img/en.png"
+                  alt=""
+                />
+                EN
+              </li>
+              <li
+                class="md:relative flex flex-row items-center bg-primary rounded-lg px-4 py-2 text-white mx-4"
               >
-                <i
-                  class="absolute top-[30%] left-[13px] fa-solid fa-magnifying-glass"
-                ></i>
-                সার্চ করুন
-              </p>
-            </div>
+                সব কোর্স
 
-            <!-- right nav items -->
-            <div class="flex items-center">
-              <ul class="flex items-center">
-                <li class="px-5">
-                  <a href="">
-                    <i class="mr-1 fa-solid fa-globe"></i>
-                    EN
-                  </a>
-                </li>
-                <li class="px-5">
-                  <a class="py-2 px-8 rounded-[8px] bg-[#dbdbdb]" href="">
-                    সব কোর্স
-                    <i class="ml-1 fa-solid fa-angle-down"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="py-2 px-8 text-slate-50 rounded-[8px] bg-primary"
-                    href=""
-                  >
-                    <i class="mr-1 fa-solid fa-user"></i>
-                    লগইন
-                  </a>
-                </li>
-              </ul>
-            </div>
+                <i class="fa-solid ml-2 fa-arrow-down"></i>
+
+                <!-- Dropdown menu -->
+                <div
+                  class="dropdown-menu hidden z-10 md:absolute md:top-12 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                >
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400">
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Option 1</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Option 2</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Option 3</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      >Sign out</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li
+                class="md:relative flex flex-row items-center bg-green-500 rounded-lg px-4 py-2 text-white mx-4"
+              >
+                লগইন
+                <i class="fa-solid ml-2 fa-arrow-right"></i>
+              </li>
+            </ul>
           </div>
-        </nav>
-      </div>
-      <!-- hero -->
-      <div class="hero"></div>
+
+          <!-- menu -->
+          <div class="w-full hidden md:block md:w-auto" id="navbar-dropdown">
+            <ul
+              class="flex items-center flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li class="hidden md:block">
+                <a
+                  href="#"
+                  class="flex items-center space-x-3 rtl:space-x-reverse"
+                >
+                  <img
+                    src="https://flowbite.com/docs/images/logo.svg"
+                    class="h-8"
+                    alt="Flowbite Logo"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Contact</a
+                >
+              </li>
+              <li class="md:relative">
+                <button
+                  id="dropdownToggle"
+                  class="dropdown-toggle flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownMenu"
+                  class="dropdown-menu hidden z-10 md:absolute md:top-12 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                  aria-labelledby="dropdownToggle"
+                >
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400">
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Dashboard</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Settings</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Earnings</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      >Sign out</a
+                    >
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- search -->
+          <div class="hidden lg:block">
+            <form class="max-w-md mx-auto">
+              <label
+                for="default-search"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                >Search</label
+              >
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Search"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- login/logout -->
+          <div class="hidden md:block">
+            <ul class="flex flex-row justify-evenly">
+              <li class="flex flex-row justify-between items-center">
+                <img
+                  class="h-[60%] mr-2"
+                  src="./src/assets/img/en.png"
+                  alt=""
+                />
+                EN
+              </li>
+              <li
+                class="md:relative flex flex-row items-center bg-primary rounded-lg px-1 md:px-4 py-2 text-white mx-1 md:mx-4"
+              >
+                সব কোর্স
+
+                <i class="fa-solid ml-2 fa-arrow-down"></i>
+
+                <!-- Dropdown menu -->
+                <div
+                  class="dropdown-menu hidden z-10 md:absolute md:top-12 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                >
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400">
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Option 1</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Option 2</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Option 3</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      >Sign out</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li
+                class="md:relative flex flex-row items-center bg-neutral-800 rounded-lg px-1 md:px-4 py-2 text-white mx-1 md:mx-4"
+              >
+                লগইন
+                <i class="fa-solid ml-2 fa-arrow-right"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
       <!-- hero section -->
       <div class="hero">
-        <div class="container m-auto px-5">
+        <div class="container py-5 m-auto px-5">
           <div
-            class="flex flex-row m-20 p-8 bg-sky-200 border-2 border-zinc-700 rounded-2xl justify-between"
+            class="grid grid-cols-1 md:grid-cols-2 m-5 md:m-20 p-8 bg-sky-200 border-2 border-zinc-700 rounded-2xl"
           >
-            <div class="hero_content flex justify-center flex-col w-1/2">
+            <div class="hero_content flex justify-center flex-col">
               <h1 class="text-4xl font-bold pb-4">শিখবে এবার বাংলাদেশ</h1>
               <h5 class="text-base font-semibold pb-4">
                 স্কিল শেখার মাধ্যমে বদলে ফেলুন নিজের ভবিষ্যৎ
@@ -147,7 +383,7 @@
                 </ul>
               </div>
             </div>
-            <div class="hero_img flex justify-center items-center w-1/2">
+            <div class="hero_img flex justify-center items-center">
               <img
                 class="w-full h-[80%] rounded-lg"
                 src="./src/assets/img/hero.webp"
@@ -161,17 +397,17 @@
 
       <!-- course filter  -->
       <div>
-        <div class="container mx-auto p-24">
+        <div class="container mx-auto p-4 md:p-24">
           <div class="p-10 rounded-lg bg-white border-1">
             <h1 class="font-bold text-4xl text-center mb-8">
               আমাদের কোর্স সমুহ
             </h1>
             <!-- course catagory -->
-            <div class="flex justify-evenly">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
               <!-- web development -->
               <div
                 id="web-development-btn"
-                class="menu-btn flex flex-row justify-between items-center bg-bgColor text-black px-4 py-2 rounded"
+                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-4 py-2 rounded"
                 onclick="filterCourses('web-development')"
               >
                 <div>
@@ -190,7 +426,7 @@
               <!-- app developemmt -->
               <div
                 id="app-development-btn"
-                class="menu-btn flex flex-row justify-between items-cente bg-bgColor text-black px-4 py-2 rounded"
+                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-4 py-2 rounded"
                 onclick="filterCourses('app-development')"
               >
                 <div>
@@ -211,7 +447,7 @@
 
               <div
                 id="ui-ux-design-btn"
-                class="menu-btn flex flex-row justify-between items-cente bg-bgColor text-black px-4 py-2 rounded"
+                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-4 py-2 rounded"
                 onclick="filterCourses('ui-ux-design')"
               >
                 <div>
@@ -230,7 +466,7 @@
               <!-- digital-marketing -->
               <div
                 id="digital-marketing-btn"
-                class="menu-btn flex flex-row justify-between items-cente bg-bgColor text-black px-4 py-2 rounded"
+                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-4 py-2 rounded"
                 onclick="filterCourses('digital-marketing')"
               >
                 <div>
@@ -1431,8 +1667,8 @@
           <div
             class="grid bg-[#FFE0DF] p-10 rounded-lg grid-cols-1 lg:grid-cols-2"
           >
-            <div>
-              <div>
+            <div class="py-5">
+              <div class="py-4">
                 <h1 class="font-bold text-4xl mb-5">
                   Our Business
                   <i class="fa-solid fa-business-time"></i>
@@ -1480,7 +1716,7 @@
             </div>
             <div>
               <img
-                class="rounded-lg ml-5"
+                class="rounded-lg md:ml-5"
                 src="./src/assets/img/course_item_1.jpg"
                 alt=""
               />
@@ -1713,7 +1949,7 @@
     </main>
     <footer>
       <div class="container py-16 px-4 mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div class="flex flex-col p-5">
             <img
               class="w-[50%]"
@@ -1738,7 +1974,7 @@
               </a>
             </div>
             <span> কমিউনিটি -এর সাথে কানেক্টেড থাকতে </span>
-            <div class="flex mt-4 flex-row justify-around">
+            <div class="flex mt-4 flex-row justify-start lg:justify-around">
               <a href="">
                 <img src="./src/assets/img/facebook.svg" alt="" />
               </a>
@@ -1875,6 +2111,7 @@
         </div>
       </div>
     </footer>
+
     <script src="./src/custom.js"></script>
   </body>
 </html>
