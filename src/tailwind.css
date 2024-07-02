@@ -830,6 +830,10 @@ video {
   height: auto;
 }
 
+.h-\[40\%\] {
+  height: 40%;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -1531,6 +1535,10 @@ video {
     display: none;
   }
 
+  .md\:h-\[60\%\] {
+    height: 60%;
+  }
+
   .md\:w-1\/4 {
     width: 25%;
   }
@@ -1545,6 +1553,14 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
   }
 
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
