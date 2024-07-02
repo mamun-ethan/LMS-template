@@ -1587,6 +1587,11 @@ video {
     padding-right: 2.5rem;
   }
 
+  .md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .md\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
