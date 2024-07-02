@@ -61,7 +61,7 @@
           <!-- login/logout -->
           <div class="md:hidden">
             <ul class="flex flex-row justify-evenly">
-              <li class="flex flex-row justify-between items-center">
+              <li class="hidden md:flex flex-row justify-between items-center">
                 <img
                   class="h-[60%] mr-2"
                   src="./src/assets/img/en.png"
@@ -70,7 +70,7 @@
                 EN
               </li>
               <li
-                class="md:relative flex flex-row items-center bg-primary rounded-lg px-4 py-2 text-white mx-4"
+                class="md:relative hidden md:flex flex-row items-center bg-primary rounded-lg px-4 py-2 text-white mx-4"
               >
                 সব কোর্স
 
@@ -270,7 +270,7 @@
           <!-- login/logout -->
           <div class="hidden md:block">
             <ul class="flex flex-row justify-evenly">
-              <li class="flex flex-row justify-between items-center">
+              <li class="hidden md:flex flex-row justify-between items-center">
                 <img
                   class="h-[60%] mr-2"
                   src="./src/assets/img/en.png"
@@ -338,7 +338,7 @@
       <div class="hero">
         <div class="container py-5 m-auto px-5">
           <div
-            class="grid grid-cols-1 md:grid-cols-2 m-5 md:m-20 p-8 bg-sky-200 border-2 border-zinc-700 rounded-2xl"
+            class="grid grid-cols-1 md:grid-cols-2 m-2 md:m-20 p-8 bg-sky-200 border-2 border-zinc-700 rounded-2xl"
           >
             <div class="hero_content flex justify-center flex-col">
               <h1 class="text-4xl font-bold pb-4">শিখবে এবার বাংলাদেশ</h1>
@@ -398,7 +398,7 @@
       <!-- course filter  -->
       <div>
         <div class="container mx-auto p-4 md:p-24">
-          <div class="p-10 rounded-lg bg-white border-1">
+          <div class="p-4 md:p-10 rounded-lg bg-white border-1">
             <h1 class="font-bold text-4xl text-center mb-8">
               আমাদের কোর্স সমুহ
             </h1>
@@ -407,7 +407,7 @@
               <!-- web development -->
               <div
                 id="web-development-btn"
-                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-4 py-2 rounded"
+                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-3 py-2 rounded"
                 onclick="filterCourses('web-development')"
               >
                 <div>
@@ -426,7 +426,7 @@
               <!-- app developemmt -->
               <div
                 id="app-development-btn"
-                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-4 py-2 rounded"
+                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-3 py-2 rounded"
                 onclick="filterCourses('app-development')"
               >
                 <div>
@@ -447,7 +447,7 @@
 
               <div
                 id="ui-ux-design-btn"
-                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-4 py-2 rounded"
+                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-3 py-2 rounded"
                 onclick="filterCourses('ui-ux-design')"
               >
                 <div>
@@ -466,7 +466,7 @@
               <!-- digital-marketing -->
               <div
                 id="digital-marketing-btn"
-                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-4 py-2 rounded"
+                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-3 py-2 rounded"
                 onclick="filterCourses('digital-marketing')"
               >
                 <div>
@@ -1092,7 +1092,7 @@
       <!-- Wenbinear -->
       <div class="bg-[#FFE0DF]">
         <div class="container mx-auto">
-          <div class="rounded-lg p-10">
+          <div class="rounded-lg p-4 md:p-10">
             <h1 class="text-center font-bold text-primary text-4xl">
               <i class="fa-solid fa-video mr-4"></i>ফ্রি ওয়েবিনিয়ার দেখুন
             </h1>
@@ -1421,7 +1421,7 @@
 
       <!-- career guidelines -->
       <div>
-        <div class="containier mx-auto p-24">
+        <div class="containier mx-auto p-8 md:p-24">
           <h1 class="text-center font-bold text-4xl">ক্যারিয়ার গোল সেট করুন</h1>
           <p class="text-center font-normal py-5 text-base">
             নিচের অপশন গুলো থেকে আপনার গোল সিলেক্ট করে শেখা শুরু করুন
@@ -1514,7 +1514,7 @@
 
       <!-- live course -->
       <div>
-        <div class="container mx-auto px-16">
+        <div class="container mx-auto px-8 md:px-16">
           <h1 class="text-center font-bold text-4xl">ক্যারিয়ার গোল সেট করুন</h1>
           <p class="text-center font-normal py-5 text-base">
             নিচের অপশন গুলো থেকে আপনার গোল সিলেক্ট করে শেখা শুরু করুন
@@ -1613,7 +1613,7 @@
 
       <!-- explore -->
       <div>
-        <div class="container mx-auto my-24 px-16">
+        <div class="container mx-auto my-5 md:my-24 py-5 md:px-16">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div
               class="flex border border-primary bg-header py-5 px-4 justify-between flex-col"
@@ -1663,9 +1663,9 @@
 
       <!-- business -->
       <div>
-        <div class="container mx-auto px-10">
+        <div class="container mx-auto px-5 md:px-10">
           <div
-            class="grid bg-[#FFE0DF] p-10 rounded-lg grid-cols-1 lg:grid-cols-2"
+            class="grid bg-[#FFE0DF] p-4 md:p-10 rounded-lg grid-cols-1 lg:grid-cols-2"
           >
             <div class="py-5">
               <div class="py-4">
@@ -1727,7 +1727,7 @@
 
       <!-- achivement -->
       <div>
-        <div class="container px-16 py-20 my-10 mx-auto">
+        <div class="container px-8 md:px-16 py-20 my-5 md:my-10 mx-auto">
           <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
             <div class="bg-rose-300 py-8 px-4 text-center rounded-lg">
               <h1 class="font-bold text-3xl">700+</h1>
@@ -1751,7 +1751,7 @@
 
       <!-- free courses -->
       <div>
-        <div class="container mx-auto p-16">
+        <div class="container mx-auto p-5 md:p-16">
           <h1 class="font-bold text-center text-4xl mb-5">
             Free course
             <i class="fa-brands text-primary fa-free-code-camp"></i>
