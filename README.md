@@ -4,3 +4,6 @@
 - [404/error](https://mamun-ethan.github.io/E-learning-platform-template/404.html)
 - [After login](https://mamun-ethan.github.io/E-learning-platform-template/login.html)
 - [Dashboard](https://mamun-ethan.github.io/E-learning-platform-template/dashboard.html)
+- [mycourse](https://mamun-ethan.github.io/E-learning-platform-template/mycourse.html)
+- [quize-result](https://mamun-ethan.github.io/E-learning-platform-template/quize-result.html)
+- [quizes](https://mamun-ethan.github.io/E-learning-platform-template/quizes.html)
