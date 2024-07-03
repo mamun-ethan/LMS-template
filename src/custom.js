@@ -93,9 +93,3 @@ navbarToggle.addEventListener("click", function (event) {
   event.stopPropagation(); // Prevent closing when clicking inside the mobile menu
   toggleMobileMenu();
 });
-
-// Toggle dropdown menu on button click
-dropdownToggle.addEventListener("click", function (event) {
-  event.stopPropagation(); // Prevent closing when clicking inside the dropdown
-  toggleDropdown();
-});
