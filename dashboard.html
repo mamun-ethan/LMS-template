@@ -27,7 +27,7 @@
   </head>
   <body class="bg-bgColor font-hind">
     <main>
-      <header>
+      <header class="p-4 bg-white">
         <!-- mobile button -->
         <div>
           <button
@@ -52,9 +52,29 @@
           </button>
         </div>
         <!-- item -->
-        <div>
-          <ul>
-            <li><img src="./src/assets/img/user.jpg" alt="" /></li>
+        <div class="flex w-full flex-row justify-end">
+          <ul class="flex flex-row justify-between cursor-pointer items-center">
+            <li class="mx-2 flex flex-col">
+              <a href="#">
+                <span class="font-medium text-base"> Mamun Ethan </span>
+              </a>
+
+              <a href="#">
+                <span class="font-light text-sm text-gray-500"
+                  >Frontend Dev
+                </span>
+              </a>
+            </li>
+            <li class="flex justify-around mx-2 items-center flex-row">
+              <img
+                class="w-[50px] h-auto rounded-full"
+                src="./src/assets/img/user.jpg"
+                alt=""
+              />
+            </li>
+            <li class="mx-4">
+              <i class="fa-solid text-gray-500 fa-arrow-down-long"></i>
+            </li>
           </ul>
         </div>
       </header>

@@ -6,4 +6,5 @@
 - [Dashboard](https://mamun-ethan.github.io/E-learning-platform-template/dashboard.html)
 - [mycourse](https://mamun-ethan.github.io/E-learning-platform-template/mycourse.html)
 - [quize-result](https://mamun-ethan.github.io/E-learning-platform-template/quize-result.html)
-- [quizes](https://mamun-ethan.github.io/E-learning-platform-template/quizes.html)
+- [quiz](https://mamun-ethan.github.io/E-learning-platform-template/quizes.html)
+- [profile](https://mamun-ethan.github.io/E-learning-platform-template/profile.html)
