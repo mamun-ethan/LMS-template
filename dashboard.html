@@ -72,8 +72,30 @@
                 alt=""
               />
             </li>
-            <li class="mx-4">
-              <i class="fa-solid text-gray-500 fa-arrow-down-long"></i>
+            <li id="user_drop_down" class="mx-4 relative">
+              <i
+                class="fa-solid px-2 py-2 rounded-full bg-slate-100 text-gray-500 fa-arrow-down-long"
+              ></i>
+              <div
+                id="drop_down_menu"
+                class="absolute hidden top-[64px] right-0"
+              >
+                <ul class="p-5 rounded-sm flex flex-col bg-slate-300">
+                  <li class="w-full flex flex-row">
+                    <span class="mx-2">
+                      <i class="fa-solid fa-user"></i>
+                    </span>
+                    Profile
+                  </li>
+
+                  <li class="w-full flex flex-row mt-4">
+                    <span class="mx-2"
+                      ><i class="fa-solid fa-right-from-bracket"></i
+                    ></span>
+                    Logout
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>

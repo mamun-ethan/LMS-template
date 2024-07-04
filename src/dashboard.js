@@ -12,3 +12,11 @@ toggle_btn.addEventListener("click", function () {
 collapse_btn.addEventListener("click", () => {
   sidebar.classList.toggle("-translate-x-full");
 });
+
+// dropdown menu
+const drop_down_menu = document.getElementById("drop_down_menu");
+const dropdown_btn = document
+  .getElementById("user_drop_down")
+  .addEventListener("click", () => {
+    drop_down_menu.classList.toggle("hidden");
+  });
