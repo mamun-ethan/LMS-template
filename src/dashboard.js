@@ -13,10 +13,14 @@ collapse_btn.addEventListener("click", () => {
   sidebar.classList.toggle("-translate-x-full");
 });
 
-// dropdown menu
-const drop_down_menu = document.getElementById("drop_down_menu");
-const dropdown_btn = document
-  .getElementById("user_drop_down")
-  .addEventListener("click", () => {
-    drop_down_menu.classList.toggle("hidden");
+// Select all dropdown buttons and menus
+const dropdownBtns = document.querySelectorAll(".dropdown_btn");
+const dropdownMenus = document.querySelectorAll(".dropdown_menu");
+
+// Add event listeners to each dropdown button
+dropdownBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    console.log("Hello");
+    dropdownMenus[index].classList.toggle("hidden");
   });
+});
