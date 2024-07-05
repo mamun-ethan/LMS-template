@@ -653,16 +653,12 @@ video {
   top: 0px;
 }
 
-.top-\[64px\] {
-  top: 64px;
-}
-
-.top-\[61px\] {
-  top: 61px;
-}
-
 .top-\[60px\] {
   top: 60px;
+}
+
+.top-\[64px\] {
+  top: 64px;
 }
 
 .z-10 {
