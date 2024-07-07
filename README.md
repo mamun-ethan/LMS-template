@@ -9,6 +9,7 @@
 - [Quiz Details](https://mamun-ethan.github.io/E-learning-platform-template/quiz-details.html)
 - [Quize Result](https://mamun-ethan.github.io/E-learning-platform-template/quize-result.html)
 - [Quiz Enroll](https://mamun-ethan.github.io/E-learning-platform-template/quiz-enroll.html)
+- [assessment](https://mamun-ethan.github.io/E-learning-platform-template/assessment.html)
 
 - [Profile](https://mamun-ethan.github.io/E-learning-platform-template/profile.html)
 - [My course](https://mamun-ethan.github.io/E-learning-platform-template/mycourse.html)
