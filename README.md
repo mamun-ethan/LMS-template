@@ -5,9 +5,10 @@
 - [After login](https://mamun-ethan.github.io/E-learning-platform-template/login.html)
 - [Dashboard](https://mamun-ethan.github.io/E-learning-platform-template/dashboard.html)
 
-- [Quiz](https://mamun-ethan.github.io/E-learning-platform-template/quizes.html)
+- [Quizs](https://mamun-ethan.github.io/E-learning-platform-template/quizzes.html)
 - [Quiz Details](https://mamun-ethan.github.io/E-learning-platform-template/quiz-details.html)
-- [Quize-result](https://mamun-ethan.github.io/E-learning-platform-template/quize-result.html)
+- [Quize Result](https://mamun-ethan.github.io/E-learning-platform-template/quize-result.html)
+- [Quiz Enroll](https://mamun-ethan.github.io/E-learning-platform-template/quiz-enroll.html)
 
 - [Profile](https://mamun-ethan.github.io/E-learning-platform-template/profile.html)
 - [My course](https://mamun-ethan.github.io/E-learning-platform-template/mycourse.html)
