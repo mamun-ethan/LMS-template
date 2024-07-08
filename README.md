@@ -11,6 +11,7 @@
 - [Course-Enroll](https://mamun-ethan.github.io/E-learning-platform-template/course-enroll.html)
 - [Assessment](https://mamun-ethan.github.io/E-learning-platform-template/assessment.html)
 - [Quiz Attend](https://mamun-ethan.github.io/E-learning-platform-template/quiz-attend.html)
+- [Quiz Play](https://mamun-ethan.github.io/E-learning-platform-template/play-quiz.html)
 
 - [Profile](https://mamun-ethan.github.io/E-learning-platform-template/profile.html)
 - [My course](https://mamun-ethan.github.io/E-learning-platform-template/mycourse.html)
