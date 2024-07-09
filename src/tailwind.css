@@ -1075,6 +1075,10 @@ video {
   gap: 1rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -2015,6 +2019,10 @@ video {
     padding: 6rem;
   }
 
+  .md\:p-5 {
+    padding: 1.25rem;
+  }
+
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -2049,14 +2057,18 @@ video {
     font-size: 230px;
   }
 
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
 
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+  .md\:font-semibold {
+    font-weight: 600;
   }
 
   .md\:hover\:bg-transparent:hover {
