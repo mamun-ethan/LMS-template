@@ -2001,6 +2001,10 @@ video {
     width: 20%;
   }
 
+  .md\:w-\[22\%\] {
+    width: 22%;
+  }
+
   .md\:w-auto {
     width: auto;
   }
