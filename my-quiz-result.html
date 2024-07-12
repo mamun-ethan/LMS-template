@@ -242,15 +242,13 @@
       <div class="p-4 sm:ml-64">
         <div class="bg-header">
           <div class="container mx-auto p-4 md:p-5">
-            <!-- header of play quiz -->
-
             <!-- test item  wrapper-->
             <div class="my-12">
               <div class="container px-4 mx-auto">
                 <div class="bg-header rounded-l">
                   <!-- multiple select -->
                   <h1 class="font-medium text-2xl text-start py-5">
-                    <span class="text-primary text-2xl"
+                    <span class="text-green-600 text-2xl"
                       ><i class="fa-regular fa-square-check"></i
                     ></span>
                     1.
@@ -262,13 +260,14 @@
 
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                     <label
-                      class="flex items-center p-4 border-none focus-within:bg-slate-400 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                      class="flex items-center p-4 border-none bg-green-300 rounded-lg mb-4 cursor-pointer"
                       for="default-radio-1"
                     >
                       <input
                         id="default-radio-1"
                         type="radio"
                         value=""
+                        checked
                         name="default-radio"
                         class="peer w-4 text-xl cursor-pointer h-4"
                       />
@@ -278,13 +277,14 @@
                       >
                     </label>
                     <label
-                      class="flex items-center p-4 border-none focus-within:bg-slate-400 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                      class="flex items-center p-4 border-none bg-gray-100 rounded-lg mb-4 cursor-pointer"
                       for="default-radio-2"
                     >
                       <input
                         id="default-radio-2"
                         type="radio"
                         value=""
+                        disabled
                         name="default-radio"
                         class="peer w-4 text-xl cursor-pointer h-4"
                       />
@@ -294,13 +294,14 @@
                       >
                     </label>
                     <label
-                      class="flex items-center p-4 border-none focus-within:bg-slate-400 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                      class="flex items-center p-4 border-none bg-gray-100 rounded-lg mb-4 cursor-pointer"
                       for="default-radio-3"
                     >
                       <input
                         id="default-radio-3"
                         type="radio"
                         value=""
+                        disabled
                         name="default-radio"
                         class="peer w-4 text-xl cursor-pointer h-4"
                       />
@@ -310,13 +311,14 @@
                       >
                     </label>
                     <label
-                      class="flex items-center p-4 border-none focus-within:bg-slate-400 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                      class="flex items-center p-4 border-none bg-gray-100 rounded-lg mb-4 cursor-pointer"
                       for="default-radio-4"
                     >
                       <input
                         id="default-radio-4"
                         type="radio"
                         value=""
+                        disabled
                         name="default-radio"
                         class="peer w-4 text-xl cursor-pointer h-4"
                       />
@@ -328,7 +330,7 @@
                   </div>
                   <!-- blank fill -->
                   <h1 class="font-medium text-2xl text-start py-5">
-                    <span class="text-primary text-2xl"
+                    <span class="text-red-600 text-2xl"
                       ><i class="fa-regular fa-square-check"></i
                     ></span>
                     2.
@@ -343,13 +345,33 @@
                       <textarea
                         class="w-full border-0 border-b border-gray-400 focus:border-primary outline-none focus:border-b-2 focus:outline-none resize-none"
                         rows="1"
-                        placeholder="Type your answer here..."
+                        value="Lorem ipsum doller set ammet"
                       ></textarea>
+                    </div>
+                    <div
+                      class="flex text-sm md:text-lg flex-row justify-between items-center"
+                    >
+                      <div class="flex space-x-2 flex-row">
+                        <span class="text-red-600"
+                          ><i class="fa-solid fa-rectangle-xmark"></i
+                        ></span>
+                        <span class="px-3 bg-orange-500"
+                          >lorem ipsum doller set ammmet</span
+                        >
+                      </div>
+                      <div class="flex space-x-2 flex-row">
+                        <span class="bg-green-500 px-3"
+                          >lorem ipsum doller set ammmet</span
+                        >
+                        <span class="text-green-600"
+                          ><i class="fa-solid fa-square-check"></i
+                        ></span>
+                      </div>
                     </div>
                   </div>
                   <!-- image to multiple select -->
                   <h1 class="font-medium text-2xl text-start py-5">
-                    <span class="text-primary text-2xl"
+                    <span class="text-red-600 text-2xl"
                       ><i class="fa-regular fa-square-check"></i
                     ></span>
                     3.
@@ -368,13 +390,14 @@
 
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                     <label
-                      class="flex items-center p-4 border-none focus-within:bg-slate-400 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                      class="flex items-center p-4 border-none bg-gray-100 rounded-lg mb-4 cursor-pointer"
                       for="radio-img-1"
                     >
                       <input
                         id="radio-img-1"
                         type="radio"
                         value=""
+                        disabled
                         name="default-radio"
                         class="peer w-4 text-xl cursor-pointer h-4"
                       />
@@ -384,13 +407,14 @@
                       >
                     </label>
                     <label
-                      class="flex items-center p-4 border-none focus-within:bg-slate-400 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                      class="flex items-center p-4 border-none bg-green-300 rounded-lg mb-4 cursor-pointer"
                       for="radio-img-2"
                     >
                       <input
                         id="radio-img-2"
                         type="radio"
                         value=""
+                        disabled
                         name="default-radio"
                         class="peer w-4 text-xl cursor-pointer h-4"
                       />
@@ -400,7 +424,7 @@
                       >
                     </label>
                     <label
-                      class="flex items-center p-4 border-none focus-within:bg-slate-400 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                      class="flex items-center p-4 border-none bg-red-400 rounded-lg mb-4 cursor-pointer"
                       for="radio-img-3"
                     >
                       <input
@@ -408,6 +432,7 @@
                         type="radio"
                         value=""
                         name="default-radio"
+                        checked
                         class="peer w-4 text-xl cursor-pointer h-4"
                       />
                       <span
@@ -416,13 +441,14 @@
                       >
                     </label>
                     <label
-                      class="flex items-center p-4 border-none focus-within:bg-slate-400 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                      class="flex items-center p-4 border-none bg-gray-100 rounded-lg mb-4 cursor-pointer"
                       for="radio-img-4"
                     >
                       <input
                         id="radio-img-4"
                         type="radio"
                         value=""
+                        disabled
                         name="default-radio"
                         class="peer w-4 text-xl cursor-pointer h-4"
                       />
@@ -434,7 +460,7 @@
                   </div>
                   <!-- audio to multiple select -->
                   <h1 class="font-medium text-2xl text-start py-5">
-                    <span class="text-primary text-2xl"
+                    <span class="text-green-600 text-2xl"
                       ><i class="fa-regular fa-square-check"></i
                     ></span>
                     4.
@@ -451,7 +477,7 @@
 
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                     <label
-                      class="flex items-center p-4 border-none focus-within:bg-slate-400 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                      class="flex items-center p-4 border-none rounded-lg mb-4 cursor-pointer bg-gray-100"
                       for="radio-audio-1"
                     >
                       <input
@@ -459,6 +485,7 @@
                         type="radio"
                         value=""
                         name="default-radio"
+                        disabled
                         class="peer w-4 text-xl cursor-pointer h-4"
                       />
                       <span
@@ -467,12 +494,13 @@
                       >
                     </label>
                     <label
-                      class="flex items-center p-4 border-none focus-within:bg-slate-400 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                      class="flex items-center p-4 border-none rounded-lg mb-4 cursor-pointer bg-gray-100"
                       for="radio-audio-2"
                     >
                       <input
                         id="radio-audio-2"
                         type="radio"
+                        disabled
                         value=""
                         name="default-radio"
                         class="peer w-4 text-xl cursor-pointer h-4"
@@ -483,13 +511,14 @@
                       >
                     </label>
                     <label
-                      class="flex items-center p-4 border-none focus-within:bg-slate-400 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                      class="flex items-center p-4 border-none bg-gray-100 rounded-lg mb-4 cursor-pointer"
                       for="radio-audio-3"
                     >
                       <input
                         id="radio-audio-3"
                         type="radio"
                         value=""
+                        disabled
                         name="default-radio"
                         class="peer w-4 text-xl cursor-pointer h-4"
                       />
@@ -499,7 +528,7 @@
                       >
                     </label>
                     <label
-                      class="flex items-center p-4 border-none focus-within:bg-slate-400 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                      class="flex items-center p-4 border-none bg-green-300 rounded-lg mb-4 cursor-pointer"
                       for="radio-audio-4"
                     >
                       <input
@@ -507,6 +536,7 @@
                         type="radio"
                         value=""
                         name="default-radio"
+                        checked
                         class="peer w-4 text-xl cursor-pointer h-4"
                       />
                       <span
@@ -516,21 +546,18 @@
                     </label>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            <div class="flex flex-row justify-end">
-              <a href="">
-                <button
-                  class="bg-primary text-slate-50 font-semibold px-8 py-2.5 rounded-lg"
-                >
-                  স্কিক & নেক্সট
-                  <i class="ml-5 fa-solid fa-person-walking-arrow-right"></i>
-                </button>
-              </a>
+                <div class="join mt-8 flex flex-row justify-center">
+                  <button class="join-item btn btn-outline">
+                    Previous page
+                  </button>
+                  <button class="join-item btn btn-outline">Next</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
         <footer>
           <div class="container pt-16 px-4 mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
