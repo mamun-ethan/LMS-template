@@ -252,11 +252,53 @@
                 <a
                   class="font-semibold text-base text-center py-2 px-6 my-5 bg-yellow-100"
                   href="#"
-                  >ছবি পরিবর্ন করুন</a
-                >
+                  >ছবি পরিবর্ন করুন <i class="fa-regular mx-1 fa-image"></i
+                ></a>
               </div>
-              <div>
-                <form action=""></form>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                  <label class="input input-bordered flex items-center gap-2">
+                    Name:
+                    <input type="text" class="grow" value="Mamun Ethan" />
+                  </label>
+                  <label class="input input-bordered flex items-center gap-2">
+                    Email:
+                    <input
+                      type="text"
+                      class="grow"
+                      value="ethan.mamun@gmai.com"
+                    />
+                  </label>
+                  <label class="input input-bordered flex items-center gap-2">
+                    Alternative Email
+                    <input
+                      type="text"
+                      class="grow"
+                      placeholder="ethan.mamun@gmail.com"
+                    />
+                  </label>
+                  <label class="input input-bordered flex items-center gap-2">
+                    Mobile:
+                    <input
+                      type="number"
+                      class="grow"
+                      placeholder="0195xxxxxxx"
+                    />
+                  </label>
+                  <button class="btn w-full btn-warning">Update</button>
+                </div>
+                <div class="space-y-4">
+                  <label class="input input-bordered flex items-center gap-2">
+                    New Password:
+                    <input type="text" class="grow" placeholder="*********" />
+                  </label>
+
+                  <label class="input input-bordered flex items-center gap-2">
+                    Confirm Password:
+                    <input type="text" class="grow" placeholder="*********" />
+                  </label>
+                  <button class="btn w-full btn-warning">Change</button>
+                </div>
               </div>
             </div>
           </div>

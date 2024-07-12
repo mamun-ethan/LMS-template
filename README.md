@@ -13,6 +13,7 @@
 - [Quiz Attend](https://mamun-ethan.github.io/E-learning-platform-template/quiz-attend.html)
 - [Quiz Play](https://mamun-ethan.github.io/E-learning-platform-template/play-quiz.html)
 - [Quiz Result](https://mamun-ethan.github.io/E-learning-platform-template/quiz-result.html)
+- [My quiz result](https://mamun-ethan.github.io/E-learning-platform-template/my-quiz-result.html)
 
 - [Profile](https://mamun-ethan.github.io/E-learning-platform-template/profile.html)
 - [All Course](https://mamun-ethan.github.io/E-learning-platform-template/all-course.html)
