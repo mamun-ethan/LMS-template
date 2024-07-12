@@ -15,4 +15,4 @@
 - [Quiz Result](https://mamun-ethan.github.io/E-learning-platform-template/quiz-result.html)
 
 - [Profile](https://mamun-ethan.github.io/E-learning-platform-template/profile.html)
-- [My course](https://mamun-ethan.github.io/E-learning-platform-template/mycourse.html)
+- [All Course](https://mamun-ethan.github.io/E-learning-platform-template/all-course.html)
