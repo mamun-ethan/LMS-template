@@ -12,9 +12,7 @@
 - [Assessment](https://mamun-ethan.github.io/E-learning-platform-template/assessment.html)
 - [Quiz Attend](https://mamun-ethan.github.io/E-learning-platform-template/quiz-attend.html)
 - [Quiz Play](https://mamun-ethan.github.io/E-learning-platform-template/play-quiz.html)
-- [Quiz Result](https://mamun-ethan.github.io/E-learning-platform-template/quiz-result.html)
-- [My quiz result](https://mamun-ethan.github.io/E-learning-platform-template/students-result.html)
-- [My quiz result](https://mamun-ethan.github.io/E-learning-platform-template/my-quiz-result.html)
+- [Quiz Performers](https://mamun-ethan.github.io/E-learning-platform-template/quiz-performers.html) -[My Performance](https://mamun-ethan.github.io/E-learning-platform-template/quiz-performers.html) -[My Quiz result in details](https://mamun-ethan.github.io/E-learning-platform-template/my-quiz-result-details.html)
 
 - [Profile](https://mamun-ethan.github.io/E-learning-platform-template/profile.html)
 - [All Course](https://mamun-ethan.github.io/E-learning-platform-template/all-course.html)
