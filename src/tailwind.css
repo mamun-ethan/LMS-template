@@ -3925,6 +3925,46 @@ details.collapse summary::-webkit-details-marker {
   top: 64px;
 }
 
+.top-12 {
+  top: 3rem;
+}
+
+.top-8 {
+  top: 2rem;
+}
+
+.-top-11 {
+  top: -2.75rem;
+}
+
+.-top-12 {
+  top: -3rem;
+}
+
+.-top-14 {
+  top: -3.5rem;
+}
+
+.-top-16 {
+  top: -4rem;
+}
+
+.-top-\[6rem\] {
+  top: -6rem;
+}
+
+.-top-\[4\.5rem\] {
+  top: -4.5rem;
+}
+
+.-left-7 {
+  left: -1.75rem;
+}
+
+.-top-7 {
+  top: -1.75rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -4108,6 +4148,14 @@ details.collapse summary::-webkit-details-marker {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.-mb-20 {
+  margin-bottom: -5rem;
+}
+
+.-mb-10 {
+  margin-bottom: -2.5rem;
 }
 
 .block {
@@ -4304,6 +4352,18 @@ details.collapse summary::-webkit-details-marker {
 
 .w-full {
   width: 100%;
+}
+
+.w-9 {
+  width: 2.25rem;
+}
+
+.w-\[40\%\] {
+  width: 40%;
+}
+
+.w-\[34\%\] {
+  width: 34%;
 }
 
 .max-w-md {
@@ -4858,8 +4918,47 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(194 120 3 / var(--tw-bg-opacity));
 }
 
+.bg-purple-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(85 33 181 / var(--tw-bg-opacity));
+}
+
+.bg-fuchsia-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(134 25 143 / var(--tw-bg-opacity));
+}
+
+.bg-fuchsia-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(162 28 175 / var(--tw-bg-opacity));
+}
+
+.bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 196 141 / var(--tw-bg-opacity));
+}
+
+.bg-lime-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(163 230 53 / var(--tw-bg-opacity));
+}
+
+.bg-lime-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(101 163 13 / var(--tw-bg-opacity));
+}
+
+.bg-lime-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(132 204 22 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'\.\/src\/assets\/img\/\'\)\] {
+  background-image: url('./src/assets/img/');
 }
 
 .from-indigo-500 {
@@ -5045,6 +5144,11 @@ details.collapse summary::-webkit-details-marker {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 .pb-2 {
