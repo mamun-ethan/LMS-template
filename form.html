@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
+      <h2 class="text-2xl font-bold mb-6">Form Example</h2>
+
+      <!-- Input form -->
+      <div class="mb-4">
+        <label for="name" class="block text-sm font-medium text-gray-700"
+          >Name</label
+        >
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+        />
+      </div>
+
+      <!-- Single Select -->
+      <div class="mb-4">
+        <label
+          for="single-select"
+          class="block text-sm font-medium text-gray-700"
+          >Single Select</label
+        >
+        <select
+          id="single-select"
+          name="single-select"
+          class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+        >
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+      </div>
+
+      <!-- Checkboxes -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700"
+          >Select your preferences</label
+        >
+        <div class="mt-2 space-y-2">
+          <div>
+            <input
+              type="checkbox"
+              id="checkbox1"
+              name="preferences"
+              class="h-4 w-4 text-blue-600 border-gray-300 rounded"
+            />
+            <label for="checkbox1" class="ml-2 text-sm text-gray-700"
+              >Option 1</label
+            >
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="checkbox2"
+              name="preferences"
+              class="h-4 w-4 text-blue-600 border-gray-300 rounded"
+            />
+            <label for="checkbox2" class="ml-2 text-sm text-gray-700"
+              >Option 2</label
+            >
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="checkbox3"
+              name="preferences"
+              class="h-4 w-4 text-blue-600 border-gray-300 rounded"
+            />
+            <label for="checkbox3" class="ml-2 text-sm text-gray-700"
+              >Option 3</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Radio Buttons -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700"
+          >Select an option</label
+        >
+        <div class="mt-2 space-y-2">
+          <div>
+            <input
+              type="radio"
+              id="radio1"
+              name="radio"
+              class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+            />
+            <label for="radio1" class="ml-2 text-sm text-gray-700"
+              >Option 1</label
+            >
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="radio2"
+              name="radio"
+              class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+            />
+            <label for="radio2" class="ml-2 text-sm text-gray-700"
+              >Option 2</label
+            >
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="radio3"
+              name="radio"
+              class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+            />
+            <label for="radio3" class="ml-2 text-sm text-gray-700"
+              >Option 3</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="mt-6">
+        <button
+          type="submit"
+          class="w-full px-4 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
