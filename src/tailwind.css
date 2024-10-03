@@ -5004,6 +5004,11 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(194 120 3 / var(--tw-bg-opacity));
 }
 
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\/src\/assets\/img\/\'\)\] {
   background-image: url('./src/assets/img/');
 }

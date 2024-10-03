@@ -25,4 +25,6 @@
 
 - [Sign in](https://mamun-ethan.github.io/e-learning/sign-in.html)
 - [Sign up](https://mamun-ethan.github.io/e-learning/sign-up.html)
-- [preloader](https://mamun-ethan.github.io/e-learning/preloader.html)
+
+- [form](https://mamun-ethan.github.io/e-learning/form.html)
+- [table](https://mamun-ethan.github.io/e-learning/table.html)
