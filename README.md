@@ -1,5 +1,7 @@
 ## To Navigate all of the route :point_down:
 
+## student
+
 - [Home](https://mamun-ethan.github.io/e-learning/index.html)
 - [404/error](https://mamun-ethan.github.io/e-learning/404.html)
 - [After login](https://mamun-ethan.github.io/e-learning/login.html)
@@ -28,3 +30,7 @@
 
 - [form](https://mamun-ethan.github.io/e-learning/form.html)
 - [table](https://mamun-ethan.github.io/e-learning/table.html)
+
+## admin
+
+- [admin-dashboard](https://mamun-ethan.github.io/e-learning/admin-dashboard)
