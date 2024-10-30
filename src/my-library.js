@@ -29,3 +29,18 @@ document.addEventListener("click", function (event) {
     dropdownMenu.classList.add("hidden");
   }
 });
+
+function toggleDropdown() {
+  const dropdown = document.getElementById("dropdown-menu");
+  dropdown.classList.toggle("hidden");
+}
+
+// Close dropdown if clicking outside
+document.addEventListener("click", (event) => {
+  const button = document.getElementById("menu-button");
+  const dropdown = document.getElementById("dropdown-menu");
+
+  if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.classList.add("hidden");
+  }
+});
