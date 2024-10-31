@@ -30,17 +30,35 @@ document.addEventListener("click", function (event) {
   }
 });
 
-function toggleDropdown() {
-  const dropdown = document.getElementById("dropdown-menu");
+// dropdown
+function toggleDropdown(menuId) {
+  const dropdown = document.getElementById(menuId);
   dropdown.classList.toggle("hidden");
 }
 
-// Close dropdown if clicking outside
+// Close dropdowns if clicking outside
 document.addEventListener("click", (event) => {
-  const button = document.getElementById("menu-button");
-  const dropdown = document.getElementById("dropdown-menu");
+  const buttons = ["menu-button-1", "menu-button-2"];
+  const dropdowns = ["dropdown-menu-1", "dropdown-menu-2"];
 
-  if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-    dropdown.classList.add("hidden");
+  if (
+    !buttons.some((id) => document.getElementById(id).contains(event.target)) &&
+    !dropdowns.some((id) => document.getElementById(id).contains(event.target))
+  ) {
+    dropdowns.forEach((id) =>
+      document.getElementById(id).classList.add("hidden")
+    );
   }
+});
+
+// threee dot icon to dropdown
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownButton = document.getElementById(
+    "dropdownMenuIconHorizontalButton"
+  );
+  const dropdownMenu = document.getElementById("dropdownDotsHorizontal");
+
+  dropdownButton.addEventListener("click", function () {
+    dropdownMenu.classList.toggle("hidden");
+  });
 });

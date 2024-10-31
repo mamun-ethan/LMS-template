@@ -35,3 +35,4 @@
 
 - [admin-dashboard](https://mamun-ethan.github.io/e-learning/admin-dashboard)
 - [my-library](https://mamun-ethan.github.io/e-learning/my-libary)
+- [create quiz](https://mamun-ethan.github.io/e-learning/create-quiz.html)
