@@ -36,5 +36,8 @@
 - [admin-dashboard](https://mamun-ethan.github.io/e-learning/admin-dashboard)
 - [my-library](https://mamun-ethan.github.io/e-learning/my-libary)
 - [create quiz](https://mamun-ethan.github.io/e-learning/create-quiz.html)
-
--[create multiple choice](https://mamun-ethan.github.io/e-learning/create-multiple.html) -[create blank](https://mamun-ethan.github.io/e-learning/create-blank.html) -[create video](https://mamun-ethan.github.io/e-learning/create-video.html) -[create iamge](https://mamun-ethan.github.io/e-learning/create-image.html)
+- [create multiple](https://mamun-ethan.github.io/e-learning/create-multiple.html)
+- [create blank](https://mamun-ethan.github.io/e-learning/create-blank.html)
+- [create image](https://mamun-ethan.github.io/e-learning/create-image.html)
+- [create video](https://mamun-ethan.github.io/e-learning/create-video.html)
+- [create audio](https://mamun-ethan.github.io/e-learning/create-audio.html)
