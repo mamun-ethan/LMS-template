@@ -62,3 +62,15 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownMenu.classList.toggle("hidden");
   });
 });
+
+// threee dot icon to dropdown
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownButton = document.getElementById(
+    "dropdownMenuIconHorizontalButton-2"
+  );
+  const dropdownMenu = document.getElementById("dropdownDotsHorizontal-2");
+
+  dropdownButton.addEventListener("click", function () {
+    dropdownMenu.classList.toggle("hidden");
+  });
+});
