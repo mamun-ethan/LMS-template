@@ -74,29 +74,44 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownMenu.classList.toggle("hidden");
   });
 });
+// Get elements
+const categorySelect = document.getElementById("category");
+const courseSelect = document.getElementById("course");
+const lessonSelect = document.getElementById("lesson");
+const saveBtn = document.getElementById("saveBtn");
 
-// catagory dropdown
-function toggleDropdown(id) {
-  const dropdown = document.getElementById(id);
-  dropdown.classList.toggle("hidden");
-}
+// Show course select when category is chosen
+categorySelect.addEventListener("change", function () {
+  if (
+    categorySelect.value === "course1" ||
+    categorySelect.value === "course2"
+  ) {
+    courseSelect.classList.remove("hidden");
+  } else {
+    courseSelect.classList.add("hidden");
+    lessonSelect.classList.add("hidden");
+    saveBtn.classList.add("hidden");
+  }
+});
 
-function toggleNestedDropdown(id, element) {
-  // Hide all nested dropdowns
-  document.querySelectorAll("[id^='dropdown-submenu-']").forEach((menu) => {
-    if (menu.id !== id) menu.classList.add("hidden");
-  });
+// Show lesson select when course is chosen
+courseSelect.addEventListener("change", function () {
+  if (courseSelect.value === "lesson1" || courseSelect.value === "lesson2") {
+    lessonSelect.classList.remove("hidden");
+  } else {
+    lessonSelect.classList.add("hidden");
+    saveBtn.classList.add("hidden");
+  }
+});
 
-  // Toggle the selected nested dropdown
-  const nestedDropdown = document.getElementById(id);
-  nestedDropdown.classList.toggle("hidden");
-
-  // Remove active state from other buttons
-  document
-    .querySelectorAll(".py-1 > div > button")
-    .forEach((btn) => btn.classList.remove("bg-gray-300", "text-gray-900"));
-
-  // Add active state to the clicked button
-  element.classList.toggle("bg-gray-300"); // Changes background color to gray when active
-  element.classList.toggle("text-gray-900"); // Changes text color to dark gray when active
-}
+// Show save button when lesson is chosen
+lessonSelect.addEventListener("change", function () {
+  if (
+    lessonSelect.value === "homework" ||
+    lessonSelect.value === "assignment"
+  ) {
+    saveBtn.classList.remove("hidden");
+  } else {
+    saveBtn.classList.add("hidden");
+  }
+});
