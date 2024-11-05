@@ -34,7 +34,7 @@
 ## admin
 
 - [admin-dashboard](https://mamun-ethan.github.io/e-learning/admin-dashboard)
-- [my-library](https://mamun-ethan.github.io/e-learning/my-libary)
+- [my-library](https://mamun-ethan.github.io/e-learning/my-library)
 - [create quiz](https://mamun-ethan.github.io/e-learning/create-quiz.html)
 - [create multiple](https://mamun-ethan.github.io/e-learning/create-multiple.html)
 - [create blank](https://mamun-ethan.github.io/e-learning/create-blank.html)
