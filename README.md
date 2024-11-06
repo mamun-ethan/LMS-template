@@ -42,3 +42,4 @@
 - [create image](https://mamun-ethan.github.io/e-learning/create-image.html)
 - [create video](https://mamun-ethan.github.io/e-learning/create-video.html)
 - [create audio](https://mamun-ethan.github.io/e-learning/create-audio.html)
+- [edit](https://mamun-ethan.github.io/e-learning/edit.html)
