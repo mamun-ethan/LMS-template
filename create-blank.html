@@ -234,55 +234,68 @@
               create multiplae quiz question
             </h1>
             <button
+              id="add-quiz-btn"
               type="button"
               class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
             >
               <i class="fa-solid font-extrabold text-lg fa-plus"></i>
             </button>
+            <button
+              id="substract-quiz-btn"
+              type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
+            >
+              <i class="fa-solid font-extrabold text-lg fa-minus"></i>
+            </button>
           </div>
           <div class="md:mx-10">
-            <div class="title">
-              <h6 class="py-5 capitalize font-bold text-xl">Question</h6>
-              <input
-                class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                type="text"
-                placeholder="Enter the question "
-              />
-            </div>
-            <div class="answare md:mt-8">
-              <div>
-                <h6 class="py-5 capitalize font-bold text-xl">
-                  enter your answare
-                </h6>
-                <div class="grid grid-cols-1 gap-4">
+            <div id="quiz-sections-container">
+              <div class="quizz-section">
+                <div class="title">
+                  <h6 class="py-5 capitalize font-bold text-xl">Question</h6>
+                  <input
+                    class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                    type="text"
+                    placeholder="Enter the question "
+                  />
+                </div>
+                <div class="answare md:mt-8">
                   <div>
-                    <div class="flex justify-start gap-2 items-end">
-                      <input
-                        class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                        type="text"
-                        placeholder="answare "
-                      />
+                    <h6 class="py-5 capitalize font-bold text-xl">
+                      enter your answare
+                    </h6>
+                    <div class="grid grid-cols-1 gap-4">
+                      <div>
+                        <div class="flex justify-start gap-2 items-end">
+                          <input
+                            class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                            type="text"
+                            placeholder="answare "
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class="py-5 mt-8 capitalize font-bold text-xl">
+                      alternative answare
+                    </h6>
+                    <div class="grid grid-cols-1 gap-4">
+                      <div>
+                        <div class="flex justify-start gap-2 items-end">
+                          <input
+                            class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                            type="text"
+                            placeholder="answare "
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <h6 class="py-5 mt-8 capitalize font-bold text-xl">
-                  alternative answare
-                </h6>
-                <div class="grid grid-cols-1 gap-4">
-                  <div>
-                    <div class="flex justify-start gap-2 items-end">
-                      <input
-                        class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                        type="text"
-                        placeholder="answare "
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="flex mt-10 justify-end items-center">
-                  <button class="btn btn-primary">save</button>
                 </div>
               </div>
+            </div>
+            <br /><br /><br />
+            <div class="flex mt-10 justify-end items-center">
+              <button class="btn btn-primary">save</button>
             </div>
           </div>
         </div>
@@ -489,6 +502,6 @@
       </div>
     </main>
 
-    <script src="./src/dashboard.js"></script>
+    <script src="./src/create-blank.js"></script>
   </body>
 </html>
