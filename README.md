@@ -43,3 +43,4 @@
 - [create video](https://mamun-ethan.github.io/e-learning/create-video.html)
 - [create audio](https://mamun-ethan.github.io/e-learning/create-audio.html)
 - [edit](https://mamun-ethan.github.io/e-learning/edit.html)
+- [all created quiz](https://mamun-ethan.github.io/e-learning/all-created-quiz.html)
