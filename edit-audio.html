@@ -231,7 +231,7 @@
         <div class="content">
           <div class="flex justify-around items-center">
             <h1 class="capitalize font-bold py-10 text-4xl">
-              create video to multiple question
+              audio to multiple question
             </h1>
             <button
               id="add-quiz-btn"
@@ -259,14 +259,14 @@
                 </h1>
                 <div class="title">
                   <h6 class="py-5 capitalize font-bold text-xl">
-                    upload the video
+                    upload the audio
                   </h6>
 
                   <form action="">
                     <input
                       class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
                       type="file"
-                      accept="video/*"
+                      accept="audio/*"
                     />
                   </form>
                   <div class="title">
@@ -274,6 +274,7 @@
                     <input
                       class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
                       type="text"
+                      value="example"
                       placeholder="Enter the question "
                     />
                   </div>
@@ -339,11 +340,13 @@
                             class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
                             type="text"
                             placeholder="answare "
+                            value="example"
                           />
                           <input
                             type="checkbox"
                             class="checkbox checkbox-primary"
                             name=""
+                            checked
                             id=""
                           />
                         </div>
@@ -357,7 +360,7 @@
                       >
                       <select name="" id="pause">
                         <option value="1">0</option>
-                        <option value="2">2</option>
+                        <option selected value="2">2</option>
                         <option value="3">3</option>
                       </select>
                     </div>
@@ -366,7 +369,9 @@
               </div>
             </div>
             <div class="flex mt-10 justify-end items-center">
-              <button class="btn btn-primary">save</button>
+              <button class="btn font-semibold text-white text-sm btn-primary">
+                update
+              </button>
             </div>
           </div>
         </div>
@@ -573,6 +578,6 @@
       </div>
     </main>
 
-    <script src="./src/create-video.js"></script>
+    <script src="./src/create-audio.js"></script>
   </body>
 </html>

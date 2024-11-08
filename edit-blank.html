@@ -231,7 +231,7 @@
         <div class="content">
           <div class="flex justify-around items-center">
             <h1 class="capitalize font-bold py-10 text-4xl">
-              create video to multiple question
+              create multiplae quiz question
             </h1>
             <button
               id="add-quiz-btn"
@@ -258,115 +258,55 @@
                   1.
                 </h1>
                 <div class="title">
-                  <h6 class="py-5 capitalize font-bold text-xl">
-                    upload the video
-                  </h6>
-
-                  <form action="">
-                    <input
-                      class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                      type="file"
-                      accept="video/*"
-                    />
-                  </form>
-                  <div class="title">
-                    <h6 class="py-5 capitalize font-bold text-xl">Question</h6>
-                    <input
-                      class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                      type="text"
-                      placeholder="Enter the question "
-                    />
-                  </div>
+                  <h6 class="py-5 capitalize font-bold text-xl">Question</h6>
+                  <input
+                    class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                    type="text"
+                    placeholder="Enter the question "
+                    value="example"
+                  />
                 </div>
                 <div class="answare md:mt-8">
                   <div>
                     <h6 class="py-5 capitalize font-bold text-xl">
                       enter your answare
                     </h6>
-                    <div class="grid grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 gap-4">
                       <div>
-                        <h6 class="py-5 capitalize font-bold text-xl">1.</h6>
-                        <div class="flex justify-around gap-2 items-end">
+                        <div class="flex justify-start gap-2 items-end">
                           <input
                             class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
                             type="text"
                             placeholder="answare "
-                          />
-                          <input
-                            type="checkbox"
-                            name=""
-                            id=""
-                            class="checkbox checkbox-primary"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h6 class="py-5 capitalize font-bold text-xl">2.</h6>
-                        <div class="flex justify-between gap-4 items-end">
-                          <input
-                            class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                            type="text"
-                            placeholder="answare "
-                          />
-                          <input
-                            type="checkbox"
-                            class="checkbox checkbox-primary"
-                            name=""
-                            id=""
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h6 class="py-5 capitalize font-bold text-xl">3.</h6>
-                        <div class="flex justify-around gap-2 items-end">
-                          <input
-                            class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                            type="text"
-                            placeholder="answare "
-                          />
-                          <input
-                            type="checkbox"
-                            name=""
-                            id=""
-                            class="checkbox checkbox-primary"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h6 class="py-5 capitalize font-bold text-xl">4.</h6>
-                        <div class="flex justify-between gap-4 items-end">
-                          <input
-                            class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                            type="text"
-                            placeholder="answare "
-                          />
-                          <input
-                            type="checkbox"
-                            class="checkbox checkbox-primary"
-                            name=""
-                            id=""
+                            value="example"
                           />
                         </div>
                       </div>
                     </div>
-                    <div class="mt-5">
-                      <label
-                        class="capitalize text-lg font-semibold"
-                        for="pause"
-                        >pause limite</label
-                      >
-                      <select name="" id="pause">
-                        <option value="1">0</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                      </select>
+                    <h6 class="py-5 mt-8 capitalize font-bold text-xl">
+                      alternative answare
+                    </h6>
+                    <div class="grid grid-cols-1 gap-4">
+                      <div>
+                        <div class="flex justify-start gap-2 items-end">
+                          <input
+                            class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                            type="text"
+                            placeholder="answare "
+                            value="example"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <br /><br /><br />
             <div class="flex mt-10 justify-end items-center">
-              <button class="btn btn-primary">save</button>
+              <button class="btn font-semibold text-sm text-white btn-primary">
+                update
+              </button>
             </div>
           </div>
         </div>
@@ -573,6 +513,6 @@
       </div>
     </main>
 
-    <script src="./src/create-video.js"></script>
+    <script src="./src/create-blank.js"></script>
   </body>
 </html>

@@ -42,5 +42,11 @@
 - [create image](https://mamun-ethan.github.io/e-learning/create-image.html)
 - [create video](https://mamun-ethan.github.io/e-learning/create-video.html)
 - [create audio](https://mamun-ethan.github.io/e-learning/create-audio.html)
-- [edit](https://mamun-ethan.github.io/e-learning/edit.html)
+
+- [edit quiz](https://mamun-ethan.github.io/e-learning/edit.html)
 - [all created quiz](https://mamun-ethan.github.io/e-learning/all-created-quiz.html)
+- [edit multiple](https://mamun-ethan.github.io/e-learning/edit-multiple.html)
+- [edit blank](https://mamun-ethan.github.io/e-learning/edit-blank.html)
+- [edit audio](https://mamun-ethan.github.io/e-learning/edit-audio.html)
+- [edit image](https://mamun-ethan.github.io/e-learning/edit-image.html)
+- [edit video](https://mamun-ethan.github.io/e-learning/edit-video.html)

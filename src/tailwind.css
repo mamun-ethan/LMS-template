@@ -4007,6 +4007,10 @@ details.collapse summary::-webkit-details-marker {
   top: 64px;
 }
 
+.right-\[5\%\] {
+  right: 5%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -5825,11 +5829,6 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
-.focus-within\:bg-slate-400:focus-within {
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
-}
-
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -6077,11 +6076,6 @@ details.collapse summary::-webkit-details-marker {
   border-color: rgb(63 131 248 / var(--tw-border-opacity));
 }
 
-.dark\:border-gray-500:is(.dark *) {
-  --tw-border-opacity: 1;
-  border-color: rgb(107 114 128 / var(--tw-border-opacity));
-}
-
 .dark\:border-gray-600:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
@@ -6184,10 +6178,6 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(156 163 175 / var(--tw-placeholder-opacity));
 }
 
-.dark\:ring-offset-gray-700:is(.dark *) {
-  --tw-ring-offset-color: #374151;
-}
-
 .dark\:hover\:bg-blue-700:hover:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(26 86 219 / var(--tw-bg-opacity));
@@ -6242,11 +6232,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-ring-color: rgb(63 131 248 / var(--tw-ring-opacity));
 }
 
-.dark\:focus\:ring-blue-600:focus:is(.dark *) {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(28 100 242 / var(--tw-ring-opacity));
-}
-
 .dark\:focus\:ring-blue-800:focus:is(.dark *) {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(30 66 159 / var(--tw-ring-opacity));
@@ -6260,10 +6245,6 @@ details.collapse summary::-webkit-details-marker {
 .dark\:focus\:ring-red-600:focus:is(.dark *) {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(224 36 36 / var(--tw-ring-opacity));
-}
-
-.dark\:focus\:ring-offset-gray-700:focus:is(.dark *) {
-  --tw-ring-offset-color: #374151;
 }
 
 @media not all and (min-width: 768px) {
@@ -6304,14 +6285,6 @@ details.collapse summary::-webkit-details-marker {
 
   .sm\:rounded-lg {
     border-radius: 0.5rem;
-  }
-
-  .sm\:border-b-0 {
-    border-bottom-width: 0px;
-  }
-
-  .sm\:border-r {
-    border-right-width: 1px;
   }
 
   .sm\:p-12 {
