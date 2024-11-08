@@ -1,9 +1,14 @@
 document.getElementById("add-quiz-btn").addEventListener("click", function () {
   const quizContainer = document.getElementById("quiz-sections-container");
 
-  // HTML structure for a new quiz section without duplicate ID
+  // Calculate the section number based on existing sections
+  const sectionNumber = quizContainer.children.length + 1;
+
+  // HTML structure for a new quiz section with dynamic section number
   const newQuizSection = `
     <div class="quiz-section">
+      <br /><br /><br /><br />
+      <h1 class="capitalize text-4xl text-start font-semibold">${sectionNumber}</h1>
       <div class="title">
         <h6 class="py-5 capitalize font-bold text-xl">Question</h6>
         <input

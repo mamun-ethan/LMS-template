@@ -1,9 +1,13 @@
+let sectionCount = 1; // Initialize counter
+
 document.getElementById("add-quiz-btn").addEventListener("click", function () {
   const quizContainer = document.getElementById("quiz-sections-container");
 
-  // HTML structure for a new quiz section
+  // HTML structure for a new quiz section, with dynamic section number
   const newQuizSection = `
   <div class="quizz-section">
+   <br /><br /><br /><br />
+      <h1 class="capitalize text-4xl text-start font-semibold">${sectionCount}</h1>
                 <div class="title">
                   <h6 class="py-5 capitalize font-bold text-xl">
                     upload the video
@@ -115,6 +119,9 @@ document.getElementById("add-quiz-btn").addEventListener("click", function () {
 
   // Add the new quiz section to the container
   quizContainer.insertAdjacentHTML("beforeend", newQuizSection);
+
+  // Increment section count
+  sectionCount++;
 });
 
 document
@@ -126,5 +133,8 @@ document
     if (quizContainer.children.length > 0) {
       // Remove the last quiz section
       quizContainer.removeChild(quizContainer.lastElementChild);
+
+      // Decrement section count if sections remain
+      if (sectionCount > 1) sectionCount--;
     }
   });
