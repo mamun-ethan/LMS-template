@@ -86,7 +86,7 @@
                       <span class="mx-2">
                         <i class="fa-solid fa-user"></i>
                       </span>
-                      <a href="./profile.html">Profile</a>
+                      Profile
                     </li>
 
                     <li class="w-full flex flex-row mt-4">
@@ -116,13 +116,11 @@
               </a>
             </li>
             <li class="flex justify-around mx-2 items-center flex-row">
-              <a href="./profile.html">
-                <img
-                  class="w-[50px] h-auto rounded-full"
-                  src="./src/assets/img/user.jpg"
-                  alt=""
-                />
-              </a>
+              <img
+                class="w-[50px] h-auto rounded-full"
+                src="./src/assets/img/user.jpg"
+                alt=""
+              />
             </li>
             <li class="dropdown_btn mx-4 relative">
               <i
@@ -134,7 +132,7 @@
                     <span class="mx-2">
                       <i class="fa-solid fa-user"></i>
                     </span>
-                    <a href="./profile.html">Profile</a>
+                    Profile
                   </li>
 
                   <li class="w-full flex flex-row mt-4">
@@ -175,7 +173,7 @@
             <ul class="space-y-2 font-medium">
               <li>
                 <a
-                  href="./admin-dashboard.html"
+                  href="./dashboard.html"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
                   <span class="ms-3">Dashboard</span>
@@ -215,12 +213,26 @@
               </li>
               <li>
                 <a
-                  href="./my-library.html"
+                  href="#"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
-                  <span class="flex-1 ms-3 capitalize whitespace-nowrap"
-                    >my library</span
-                  >
+                  <span class="flex-1 ms-3 whitespace-nowrap">Products</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 whitespace-nowrap">Sign In</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
                 </a>
               </li>
             </ul>
@@ -228,133 +240,375 @@
         </aside>
       </div>
       <div class="p-4 sm:ml-64">
-        <div class="content">
-          <div class="flex justify-around items-center">
-            <div class="flex justify-between gap-5 items-center">
-              <h1 class="capitalize font-bold py-10 text-4xl">all quizzes</h1>
-              <button
-                id="add-quiz-btn"
-                type="button"
-                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
-              >
-                <i class="fa-solid font-extrabold text-lg fa-plus"></i>
-              </button>
-              <button
-                id="substract-quiz-btn"
-                type="button"
-                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
-              >
-                <i class="fa-solid font-extrabold text-lg fa-minus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="md:mx-10">
-            <div id="quiz-sections-container">
-              <div class="quizz-section mb-14">
-                <h1
-                  id="counter"
-                  class="capitalize text-4xl text-start font-semibold"
-                >
-                  1.
-                </h1>
-                <div class="title">
-                  <h6 class="py-5 capitalize font-bold text-xl">
-                    upload the image
-                  </h6>
-
-                  <form action="">
-                    <input
-                      class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                      type="file"
-                      accept="image/*"
-                    />
-                  </form>
-                  <div class="title">
-                    <h6 class="py-5 capitalize font-bold text-xl">Question</h6>
-                    <input
-                      class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                      type="text"
-                      placeholder="Enter the question "
-                    />
+        <div class="bg-header">
+          <div class="container mx-auto p-4 md:p-5">
+            <!-- header of play quiz -->
+            <h1 class="font-semibold text-4xl text-center capitalize">
+              all quizzes
+            </h1>
+            <!-- test item  wrapper-->
+            <div class="my-12">
+              <div class="container px-4 mx-auto">
+                <div class="bg-header rounded-l">
+                  <!-- Question 1: Multiple Choice -->
+                  <h1 class="font-medium text-2xl text-start py-5">
+                    <span class="text-primary text-2xl"
+                      ><i class="fa-regular fa-square-check"></i
+                    ></span>
+                    1.
+                    <span class="font-normal text-lg text-start py-5"
+                      >The quick key to select from current place to end of
+                      column?</span
+                    >
+                  </h1>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        checked
+                        name="question1"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Alt + PageDown</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question1"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Ctrl + End</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question1"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Shift + End</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question1"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Alt + End</span
+                      >
+                    </label>
                   </div>
-                </div>
-                <div class="answare md:mt-8">
-                  <div>
-                    <h6 class="py-5 capitalize font-bold text-xl">
-                      enter your answare
-                    </h6>
-                    <div class="grid grid-cols-2 gap-4">
-                      <div>
-                        <h6 class="py-5 capitalize font-bold text-xl">1.</h6>
-                        <div class="flex justify-around gap-2 items-end">
-                          <input
-                            class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                            type="text"
-                            placeholder="answare "
-                          />
-                          <input
-                            type="checkbox"
-                            name=""
-                            id=""
-                            class="checkbox checkbox-primary"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h6 class="py-5 capitalize font-bold text-xl">2.</h6>
-                        <div class="flex justify-between gap-4 items-end">
-                          <input
-                            class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                            type="text"
-                            placeholder="answare "
-                          />
-                          <input
-                            type="checkbox"
-                            class="checkbox checkbox-primary"
-                            name=""
-                            id=""
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h6 class="py-5 capitalize font-bold text-xl">3.</h6>
-                        <div class="flex justify-around gap-2 items-end">
-                          <input
-                            class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                            type="text"
-                            placeholder="answare "
-                          />
-                          <input
-                            type="checkbox"
-                            name=""
-                            id=""
-                            class="checkbox checkbox-primary"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h6 class="py-5 capitalize font-bold text-xl">4.</h6>
-                        <div class="flex justify-between gap-4 items-end">
-                          <input
-                            class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
-                            type="text"
-                            placeholder="answare "
-                          />
-                          <input
-                            type="checkbox"
-                            class="checkbox checkbox-primary"
-                            name=""
-                            id=""
-                          />
-                        </div>
-                      </div>
-                    </div>
+
+                  <!-- Question 2: Text Input -->
+                  <h1 class="font-medium text-2xl text-start py-5">
+                    <span class="text-primary text-2xl"
+                      ><i class="fa-regular fa-square-check"></i
+                    ></span>
+                    2.
+                    <span class="font-normal text-lg text-start py-5"
+                      >The quick key to select from current place to end of
+                      column?</span
+                    >
+                  </h1>
+                  <div class="p-4 rounded-lg mb-4">
+                    <textarea
+                      class="w-full border-b border-gray-400 focus:border-primary outline-none resize-none"
+                      rows="1"
+                      placeholder="Type your answer here..."
+                    >
+example</textarea
+                    >
+                  </div>
+
+                  <!-- Question 3: Image to Multiple Choice -->
+                  <h1 class="font-medium text-2xl text-start py-5">
+                    <span class="text-primary text-2xl"
+                      ><i class="fa-regular fa-square-check"></i
+                    ></span>
+                    3.
+                    <span class="font-normal text-lg text-start py-5"
+                      >Choose the correct answer</span
+                    >
+                  </h1>
+                  <img
+                    src="./src/assets/img/ms.svg"
+                    class="w-[30%] md:w-[20%] py-5"
+                    alt=""
+                  />
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question3"
+                        checked
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Alt + PageDown</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question3"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Ctrl + End</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question3"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Shift + End</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question3"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Alt + End</span
+                      >
+                    </label>
+                  </div>
+
+                  <!-- Question 4: Audio to Multiple Choice -->
+                  <h1 class="font-medium text-2xl text-start py-5">
+                    <span class="text-primary text-2xl"
+                      ><i class="fa-regular fa-square-check"></i
+                    ></span>
+                    4.
+                    <span class="font-normal text-lg text-start py-5"
+                      >Choose the correct answer</span
+                    >
+                  </h1>
+                  <div class="p-4 flex justify-start overflow-hidden">
+                    <audio controls>
+                      <source src="" type="audio/ogg" />
+                    </audio>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question4"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Alt + PageDown</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question4"
+                        checked
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Ctrl + End</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question4"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Shift + End</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question4"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Alt + End</span
+                      >
+                    </label>
+                  </div>
+
+                  <!-- Question 5: Video to Multiple Choice -->
+                  <h1 class="font-medium text-2xl text-start py-5">
+                    <span class="text-primary text-2xl"
+                      ><i class="fa-regular fa-square-check"></i
+                    ></span>
+                    5.
+                    <span class="font-normal text-lg text-start py-5"
+                      >The quick key to select from current place to end of
+                      column?</span
+                    >
+                  </h1>
+
+                  <video class="w-96 rounded-lg my-4" controls>
+                    <source src="/docs/videos/flowbite.mp4" type="video/mp4" />
+                  </video>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question5"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Alt + PageDown</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question5"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Ctrl + End</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question5"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Shift + End</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="question5"
+                        checked
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Alt + End</span
+                      >
+                    </label>
+                  </div>
+                  <!-- Question 6: Multiple Answer with Checkboxes -->
+                  <h1 class="font-medium text-2xl text-start py-5">
+                    <span class="text-primary text-2xl"
+                      ><i class="fa-regular fa-square-check"></i
+                    ></span>
+                    6.
+                    <span class="font-normal text-lg text-start py-5"
+                      >Select one or more correct answers</span
+                    >
+                  </h1>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="checkbox"
+                        name="question6"
+                        checked
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Option A</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="checkbox"
+                        name="question6"
+                        checked
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Option B</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="checkbox"
+                        name="question6"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Option C</span
+                      >
+                    </label>
+                    <label
+                      class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer"
+                    >
+                      <input
+                        type="checkbox"
+                        name="question6"
+                        class="peer w-4 h-4 cursor-pointer"
+                      />
+                      <span class="ml-2 text-sm font-medium text-gray-900"
+                        >Option D</span
+                      >
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="flex mt-10 justify-end items-center">
-              <button class="btn btn-primary">save</button>
+
+            <div class="flex flex-row justify-end">
+              <a href="./edit-all-quiz.html">
+                <button
+                  class="bg-primary capitalize text-slate-50 font-semibold px-8 py-2.5 rounded-lg"
+                >
+                  edit
+                  <i class="ml-5 fa-solid fa-person-walking-arrow-right"></i>
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -397,7 +651,9 @@
                   </a>
                 </div>
                 <span> কমিউনিটি -এর সাথে কানেক্টেড থাকতে </span>
-                <div class="flex mt-4 flex-row justify-start lg:justify-around">
+                <div
+                  class="flex mt-4 space-x-3 flex-row justify-start lg:justify-around"
+                >
                   <a href="">
                     <img src="./src/assets/img/facebook.svg" alt="" />
                   </a>
@@ -561,6 +817,7 @@
       </div>
     </main>
 
-    <script src="./src/create-image.js"></script>
+    <!-- jQuery -->
+    <script src="/path/to/cdn/jquery.slim.min.js"></script>
   </body>
 </html>
