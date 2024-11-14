@@ -3979,6 +3979,10 @@ details.collapse summary::-webkit-details-marker {
   right: 31%;
 }
 
+.right-\[5\%\] {
+  right: 5%;
+}
+
 .start-0 {
   inset-inline-start: 0px;
 }
@@ -4005,10 +4009,6 @@ details.collapse summary::-webkit-details-marker {
 
 .top-\[64px\] {
   top: 64px;
-}
-
-.right-\[5\%\] {
-  right: 5%;
 }
 
 .z-10 {
@@ -4511,6 +4511,10 @@ details.collapse summary::-webkit-details-marker {
 
 .flex-shrink {
   flex-shrink: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .shrink-0 {
@@ -5429,6 +5433,10 @@ details.collapse summary::-webkit-details-marker {
   padding-top: 2rem;
 }
 
+.pl-11 {
+  padding-left: 2.75rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -5800,6 +5808,10 @@ details.collapse summary::-webkit-details-marker {
   transition-duration: 300ms;
 }
 
+.duration-75 {
+  transition-duration: 75ms;
+}
+
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
@@ -6066,6 +6078,11 @@ details.collapse summary::-webkit-details-marker {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.group:hover .group-hover\:text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
 .dark\:divide-gray-600:is(.dark *) > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-divide-opacity));
@@ -6245,6 +6262,11 @@ details.collapse summary::-webkit-details-marker {
 .dark\:focus\:ring-red-600:focus:is(.dark *) {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(224 36 36 / var(--tw-ring-opacity));
+}
+
+.group:hover .dark\:group-hover\:text-white:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media not all and (min-width: 768px) {

@@ -194,6 +194,57 @@
                 </a>
               </li>
               <li>
+                <button
+                  type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  aria-controls="dropdown-example"
+                  data-collapse-toggle="dropdown-example"
+                >
+                  <span
+                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                    >E-commerce</span
+                  >
+                  <svg
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <ul id="dropdown-example" class="hidden py-2 space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Products</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Billing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Invoice</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
                 <a
                   href="#"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
@@ -435,5 +486,17 @@
     </main>
 
     <script src="./src/dashboard.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const ecommerceButton = document.querySelector(
+          '[data-collapse-toggle="dropdown-example"]'
+        );
+        const dropdownMenu = document.getElementById("dropdown-example");
+
+        ecommerceButton.addEventListener("click", function () {
+          dropdownMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
   </body>
 </html>
