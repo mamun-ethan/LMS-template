@@ -4059,6 +4059,10 @@ details.collapse summary::-webkit-details-marker {
   top: 0.5rem;
 }
 
+.top-\[45\%\] {
+  top: 45%;
+}
+
 .top-\[60px\] {
   top: 60px;
 }
@@ -5043,6 +5047,11 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(9 7 43 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#FFC224\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 194 36 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#FFE0DF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 224 223 / var(--tw-bg-opacity));
@@ -5900,6 +5909,12 @@ details.collapse summary::-webkit-details-marker {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-\[2px_2px_0px_0px_rgba\(0\2c 0\2c 0\)\] {
+  --tw-shadow: 2px 2px 0px 0px rgba(0,0,0);
+  --tw-shadow-colored: 2px 2px 0px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-\[5px_5px_0px_0px_rgba\(0\2c 0\2c 0\)\] {
   --tw-shadow: 5px 5px 0px 0px rgba(0,0,0);
   --tw-shadow-colored: 5px 5px 0px 0px var(--tw-shadow-color);
@@ -6048,6 +6063,26 @@ details.collapse summary::-webkit-details-marker {
 
 .brand-marquee-content:hover {
   animation-play-state: paused;
+}
+
+/* skills and test */
+
+.skill-course-box {
+  display: none;
+}
+
+.skill-active::after {
+  content: "";
+  width: 50px;
+  height: 5px;
+  background: blue;
+  position: absolute;
+  bottom: -12px;
+  border-radius: 30px;
+}
+
+.skill-active span {
+  color: black;
 }
 
 /* Marquee Animation */

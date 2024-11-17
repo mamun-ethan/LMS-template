@@ -42,6 +42,23 @@
   animation-play-state: paused;
 }
 
+/* skills and test */
+.skill-course-box {
+  display: none;
+}
+.skill-active::after {
+  content: "";
+  width: 50px;
+  height: 5px;
+  background: blue;
+  position: absolute;
+  bottom: -12px;
+  border-radius: 30px;
+}
+.skill-active span {
+  color: black;
+}
+
 /* Marquee Animation */
 @keyframes marquee {
   0% {

@@ -1,5 +1,4 @@
-// course filter
-
+// course filtler
 document.addEventListener("DOMContentLoaded", (event) => {
   filterCourses("web-development");
 });
@@ -18,7 +17,26 @@ function filterCourses(category) {
   selectedCourses.forEach((course) => (course.style.display = "block"));
 }
 
-// faq// Select all accordion buttons and contents
+// skills filter
+document.addEventListener("DOMContentLoaded", (event) => {
+  filterSkills("skill-web-development");
+});
+
+function filterSkills(category) {
+  const skillMenuButtons = document.querySelectorAll(".skill-menu-btn");
+  skillMenuButtons.forEach((button) => button.classList.remove("skill-active"));
+
+  const skillActiveButton = document.getElementById(`${category}-btn`);
+  skillActiveButton.classList.add("skill-active");
+
+  const skills = document.querySelectorAll(".skill-course-box");
+  skills.forEach((course) => (course.style.display = "none"));
+
+  const selectedSkills = document.querySelectorAll(`.${category}`);
+  selectedSkills.forEach((course) => (course.style.display = "block"));
+}
+
+// faq
 const accordionButtons = document.querySelectorAll(".accordion-toggle");
 const accordionContents = document.querySelectorAll(".accordion-content");
 
@@ -38,3 +56,6 @@ accordionButtons.forEach((button) => {
     });
   });
 });
+
+// skills filtering
+// course filter
