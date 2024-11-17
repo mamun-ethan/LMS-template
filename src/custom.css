@@ -22,3 +22,42 @@
 .mt-neg-5 {
   margin-top: -5px;
 }
+
+/* marquee effect */
+/* Brand Marquee Container */
+.brand-marquee {
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+}
+
+/* Marquee Content */
+.brand-marquee-content {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+}
+
+/* Stop animation on hover */
+.brand-marquee-content:hover {
+  animation-play-state: paused;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Marquee Items */
+.marquee-item {
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.marquee-item:hover {
+  transform: scale(1.1);
+}
