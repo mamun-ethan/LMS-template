@@ -6,9 +6,17 @@
 .course-box {
   display: none;
 }
-.active {
-  background-color: #0d0f37;
-  color: #fff;
+.active::after {
+  content: "";
+  width: 50px;
+  height: 5px;
+  background: blue;
+  position: absolute;
+  bottom: -12px;
+  border-radius: 30px;
+}
+.active span {
+  color: black;
 }
 
 .mt-neg-5 {

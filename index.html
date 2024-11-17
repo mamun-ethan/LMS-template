@@ -304,9 +304,12 @@
             </div>
             <!-- desktop navbar -->
             <div class="hidden w-full md:block" id="navbar-dropdown">
-              <div class="md:grid grid-cols-3 items-center space-x-5">
+              <div class="md:grid grid-cols-2 items-center space-x-5">
                 <!-- left menu -->
-                <div>
+                <div class="flex justify-between items-center">
+                  <div>
+                    <img src="./src/assets/img/logo.svg" alt="" />
+                  </div>
                   <ul
                     class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
                   >
@@ -404,54 +407,55 @@
                     </li>
                   </ul>
                 </div>
-                <!-- search bar -->
-                <div class="p-5">
-                  <form class="max-w-md mx-auto">
-                    <label
-                      for="default-search"
-                      class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-                      >Search</label
-                    >
-                    <div class="relative">
-                      <div
-                        class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-                      >
-                        <svg
-                          class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                          />
-                        </svg>
-                      </div>
-                      <input
-                        type="search"
-                        id="default-search"
-                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Search"
-                        required
-                      />
-                      <button
-                        type="submit"
-                        class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      >
-                        Search
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <!-- language & user login -->
+
+                <!-- search , language & user login -->
                 <div
                   class="flex-row hidden md:flex justify-end space-x-3 items-center"
                 >
+                  <!-- search bar -->
+                  <div class="p-5">
+                    <form class="max-w-md mx-auto">
+                      <label
+                        for="default-search"
+                        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                        >Search</label
+                      >
+                      <div class="relative">
+                        <div
+                          class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                        >
+                          <svg
+                            class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                            />
+                          </svg>
+                        </div>
+                        <input
+                          type="search"
+                          id="default-search"
+                          class="block w-full px-4 py-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Search"
+                          required
+                        />
+                        <button
+                          type="submit"
+                          class="text-white absolute end-3 bottom-1 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-3 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        >
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
                   <!-- language -->
                   <div
                     class="flex border border-primary rounded-lg items-center space-x-1 md:space-x-0"
@@ -663,26 +667,7 @@
 
                   <button
                     type="button"
-                    class="text-white bg-orange-500 hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-3 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 me-2"
-                  >
-                    <svg
-                      class="w-4 h-4 me-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 18 19"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M8.842 18.083a8.8 8.8 0 0 1-8.65-8.948 8.841 8.841 0 0 1 8.8-8.652h.153a8.464 8.464 0 0 1 5.7 2.257l-2.193 2.038A5.27 5.27 0 0 0 9.09 3.4a5.882 5.882 0 0 0-.2 11.76h.124a5.091 5.091 0 0 0 5.248-4.057L14.3 11H9V8h8.34c.066.543.095 1.09.088 1.636-.086 5.053-3.463 8.449-8.4 8.449l-.186-.002Z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    Google
-                  </button>
-                  <button
-                    type="button"
-                    class="text-white bg-green-600 hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 me-2"
+                    class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-3 focus:outline-none font-medium rounded-xl text-sm px-5 py-2 text-center inline-flex items-center dark:focus:ring-blue-800 me-2"
                   >
                     Sign up
                   </button>
@@ -765,92 +750,60 @@
             </h1>
             <!-- course catagory -->
             <div
-              class="grid grid-cols-1 cursor-pointer gap-4 md:grid-cols-2 lg:grid-cols-4"
+              class="grid grid-cols-1 cursor-pointer gap-4 md:grid-cols-2 lg:grid-cols-4 md:border-b-4 border-gray-300 pb-2"
             >
               <!-- web development -->
               <div
                 id="web-development-btn"
-                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-3 py-2 rounded"
+                class="menu-btn flex flex-row justify-center items-center text-black px-3 py-2 rounded relative"
                 onclick="filterCourses('web-development')"
               >
-                <div>
-                  <i class="fa-solid p-2 fa-terminal"></i>
-                </div>
-                <div class="flex flex-col justify-between">
-                  <span class="text-xs ml-4">ওয়েব ডেভেলপমেন্ট</span>
-                  <ul
-                    class="flex flex-row list-disc justify-between text-[11px]"
-                  >
-                    <li class="ml-4">১২টি কোর্স</li>
-                    <li class="mx-4">৫টি ওয়ার্কশপ</li>
-                  </ul>
-                </div>
+                <span
+                  class="font-semibold text-base text-center capitalize text-gray-400"
+                  >web development</span
+                >
               </div>
               <!-- app developemmt -->
               <div
                 id="app-development-btn"
-                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-3 py-2 rounded"
+                class="menu-btn flex flex-row justify-center items-center text-black px-3 relative"
                 onclick="filterCourses('app-development')"
               >
-                <div>
-                  <i class="fa-solid p-2 fa-terminal"></i>
-                </div>
-                <div class="flex flex-col justify-between">
-                  <span class="text-xs ml-4">অ্যাপ ডেভেলপমেন্ট</span>
-                  <ul
-                    class="flex flex-row list-disc justify-between text-[11px]"
-                  >
-                    <li class="ml-4">১২টি কোর্স</li>
-                    <li class="mx-4">৫টি ওয়ার্কশপ</li>
-                  </ul>
-                </div>
+                <span
+                  class="font-semibold text-base text-center capitalize text-gray-400"
+                  >app development</span
+                >
               </div>
 
               <!-- ui ux design -->
 
               <div
                 id="ui-ux-design-btn"
-                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-3 py-2 rounded"
+                class="menu-btn flex flex-row justify-center relative items-center"
                 onclick="filterCourses('ui-ux-design')"
               >
-                <div>
-                  <i class="fa-solid p-2 fa-terminal"></i>
-                </div>
-                <div class="flex flex-col justify-between">
-                  <span class="text-xs ml-4">ui ux design</span>
-                  <ul
-                    class="flex flex-row list-disc justify-between text-[11px]"
-                  >
-                    <li class="ml-4">১২টি কোর্স</li>
-                    <li class="mx-4">৫টি ওয়ার্কশপ</li>
-                  </ul>
-                </div>
+                <span
+                  class="font-semibold text-base text-center capitalize text-gray-400"
+                  >ui & ux</span
+                >
               </div>
               <!-- digital-marketing -->
               <div
                 id="digital-marketing-btn"
-                class="menu-btn flex flex-row justify-center lg:justify-between items-center bg-bgColor text-black px-3 py-2 rounded"
+                class="menu-btn flex flex-row justify-center litems-center relative"
                 onclick="filterCourses('digital-marketing')"
               >
-                <div>
-                  <i class="fa-solid p-2 fa-terminal"></i>
-                </div>
-                <div class="flex flex-col justify-between">
-                  <span class="text-xs ml-4">Digital Marketing</span>
-                  <ul
-                    class="flex flex-row list-disc justify-between text-[11px]"
-                  >
-                    <li class="ml-4">১২টি কোর্স</li>
-                    <li class="mx-4">৫টি ওয়ার্কশপ</li>
-                  </ul>
-                </div>
+                <span
+                  class="font-semibold text-base text-center capitalize text-gray-400"
+                  >marketing</span
+                >
               </div>
             </div>
 
             <!-- course items -->
             <div class="mt-10">
               <!-- web-development -->
-              <div class="web_de grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div class="web_dev grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div
                   class="course-box web-development bg-white p-4 rounded shadow"
                 >
@@ -870,9 +823,9 @@
                       Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -898,38 +851,9 @@
                       Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
-                      href="#"
-                    >
-                      <button>বিস্তারিত জানুন</button>
-                    </a>
-                  </div>
-                </div>
-
-                <div
-                  class="course-box web-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex flex-row justify-between font-medium p-4"
-                  >
-                    <span>৪র্থ ব্যাচ</span>
-                    <span>১০ সিট বাকী</span>
-                    <span>৭ দিন </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold text-lg">
-                      Full stack web development with javascript
-                    </h2>
-                  </div>
-                  <div class="mt-5 w-full">
-                    <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -956,9 +880,9 @@
                       Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -985,9 +909,9 @@
                       Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -1001,7 +925,7 @@
                   class="course-box app-development bg-white p-4 rounded shadow"
                 >
                   <div>
-                    <img src="./src/assets/img/course_item_2.jpg" alt="" />
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
                   <div
                     class="text-xs flex flex-row justify-between font-medium p-4"
@@ -1013,12 +937,12 @@
                   <hr />
                   <div>
                     <h2 class="font-semibold text-lg">
-                      Zeto To Hero App Development With Expert
+                      Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -1029,7 +953,7 @@
                   class="course-box app-development bg-white p-4 rounded shadow"
                 >
                   <div>
-                    <img src="./src/assets/img/course_item_2.jpg" alt="" />
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
                   <div
                     class="text-xs flex flex-row justify-between font-medium p-4"
@@ -1041,12 +965,12 @@
                   <hr />
                   <div>
                     <h2 class="font-semibold text-lg">
-                      Zeto To Hero App Development With Expert
+                      Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -1057,7 +981,7 @@
                   class="course-box app-development bg-white p-4 rounded shadow"
                 >
                   <div>
-                    <img src="./src/assets/img/course_item_2.jpg" alt="" />
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
                   <div
                     class="text-xs flex flex-row justify-between font-medium p-4"
@@ -1069,12 +993,12 @@
                   <hr />
                   <div>
                     <h2 class="font-semibold text-lg">
-                      Zeto To Hero App Development With Expert
+                      Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -1085,7 +1009,7 @@
                   class="course-box app-development bg-white p-4 rounded shadow"
                 >
                   <div>
-                    <img src="./src/assets/img/course_item_2.jpg" alt="" />
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
                   <div
                     class="text-xs flex flex-row justify-between font-medium p-4"
@@ -1097,68 +1021,12 @@
                   <hr />
                   <div>
                     <h2 class="font-semibold text-lg">
-                      Zeto To Hero App Development With Expert
+                      Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
-                      href="#"
-                    >
-                      <button>বিস্তারিত জানুন</button>
-                    </a>
-                  </div>
-                </div>
-                <div
-                  class="course-box app-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_2.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex flex-row justify-between font-medium p-4"
-                  >
-                    <span>৪র্থ ব্যাচ</span>
-                    <span>১০ সিট বাকী</span>
-                    <span>৭ দিন </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold text-lg">
-                      Zeto To Hero App Development With Expert
-                    </h2>
-                  </div>
-                  <div class="mt-5 w-full">
-                    <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
-                      href="#"
-                    >
-                      <button>বিস্তারিত জানুন</button>
-                    </a>
-                  </div>
-                </div>
-                <div
-                  class="course-box app-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_2.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex flex-row justify-between font-medium p-4"
-                  >
-                    <span>৪র্থ ব্যাচ</span>
-                    <span>১০ সিট বাকী</span>
-                    <span>৭ দিন </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold text-lg">
-                      Zeto To Hero App Development With Expert
-                    </h2>
-                  </div>
-                  <div class="mt-5 w-full">
-                    <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -1183,11 +1051,13 @@
                   </div>
                   <hr />
                   <div>
-                    <h2 class="font-semibold text-lg">ui ux deign</h2>
+                    <h2 class="font-semibold text-lg">
+                      Full stack web development with javascript
+                    </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -1209,18 +1079,19 @@
                   </div>
                   <hr />
                   <div>
-                    <h2 class="font-semibold text-lg">ui ux deign</h2>
+                    <h2 class="font-semibold text-lg">
+                      Full stack web development with javascript
+                    </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
                     </a>
                   </div>
                 </div>
-
                 <div
                   class="course-box ui-ux-design bg-white p-4 rounded shadow"
                 >
@@ -1236,18 +1107,19 @@
                   </div>
                   <hr />
                   <div>
-                    <h2 class="font-semibold text-lg">ui ux deign</h2>
+                    <h2 class="font-semibold text-lg">
+                      Full stack web development with javascript
+                    </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
                     </a>
                   </div>
                 </div>
-
                 <div
                   class="course-box ui-ux-design bg-white p-4 rounded shadow"
                 >
@@ -1263,18 +1135,19 @@
                   </div>
                   <hr />
                   <div>
-                    <h2 class="font-semibold text-lg">ui ux deign</h2>
+                    <h2 class="font-semibold text-lg">
+                      Full stack web development with javascript
+                    </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
                     </a>
                   </div>
                 </div>
-
                 <div
                   class="course-box ui-ux-design bg-white p-4 rounded shadow"
                 >
@@ -1290,11 +1163,13 @@
                   </div>
                   <hr />
                   <div>
-                    <h2 class="font-semibold text-lg">ui ux deign</h2>
+                    <h2 class="font-semibold text-lg">
+                      Full stack web development with javascript
+                    </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -1310,7 +1185,7 @@
                   class="course-box digital-marketing bg-white p-4 rounded shadow"
                 >
                   <div>
-                    <img src="./src/assets/img/course_item_2.jpg" alt="" />
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
                   <div
                     class="text-xs flex flex-row justify-between font-medium p-4"
@@ -1322,12 +1197,12 @@
                   <hr />
                   <div>
                     <h2 class="font-semibold text-lg">
-                      Complete Digital Markeing Guidelines
+                      Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -1338,7 +1213,7 @@
                   class="course-box digital-marketing bg-white p-4 rounded shadow"
                 >
                   <div>
-                    <img src="./src/assets/img/course_item_2.jpg" alt="" />
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
                   <div
                     class="text-xs flex flex-row justify-between font-medium p-4"
@@ -1350,12 +1225,12 @@
                   <hr />
                   <div>
                     <h2 class="font-semibold text-lg">
-                      Complete Digital Markeing Guidelines
+                      Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -1366,7 +1241,7 @@
                   class="course-box digital-marketing bg-white p-4 rounded shadow"
                 >
                   <div>
-                    <img src="./src/assets/img/course_item_2.jpg" alt="" />
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
                   <div
                     class="text-xs flex flex-row justify-between font-medium p-4"
@@ -1378,12 +1253,12 @@
                   <hr />
                   <div>
                     <h2 class="font-semibold text-lg">
-                      Complete Digital Markeing Guidelines
+                      Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -1394,7 +1269,7 @@
                   class="course-box digital-marketing bg-white p-4 rounded shadow"
                 >
                   <div>
-                    <img src="./src/assets/img/course_item_2.jpg" alt="" />
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
                   <div
                     class="text-xs flex flex-row justify-between font-medium p-4"
@@ -1406,12 +1281,12 @@
                   <hr />
                   <div>
                     <h2 class="font-semibold text-lg">
-                      Complete Digital Markeing Guidelines
+                      Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -1422,7 +1297,7 @@
                   class="course-box digital-marketing bg-white p-4 rounded shadow"
                 >
                   <div>
-                    <img src="./src/assets/img/course_item_2.jpg" alt="" />
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
                   <div
                     class="text-xs flex flex-row justify-between font-medium p-4"
@@ -1434,12 +1309,12 @@
                   <hr />
                   <div>
                     <h2 class="font-semibold text-lg">
-                      Complete Digital Markeing Guidelines
+                      Full stack web development with javascript
                     </h2>
                   </div>
-                  <div class="mt-5 w-full">
+                  <div class="mt-5 w-3/5">
                     <a
-                      class="bg-primary text-center font-medium block text-white d-block rounded-md p-1"
+                      class="bg-[#ffc224] text-center font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
                       href="#"
                     >
                       <button>বিস্তারিত জানুন</button>
@@ -1449,9 +1324,9 @@
               </div>
             </div>
 
-            <div class="mx-auto py-5 text-center mt-10">
+            <div class="mx-auto py-3 text-center mt-10">
               <a
-                class="bg-bgColor border hover:bg-blue-950 hover:text-white border-primary text-center px-20 py-3 font-medium text-black d-inline-block rounded-xl"
+                class="bg-blue-900 text-white border hover:bg-blue-950 hover:text-white border-primary text-center px-10 py-2 font-medium d-inline-block rounded-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
                 href="#"
               >
                 বিস্তারিত জানুন
@@ -1461,335 +1336,6 @@
         </div>
       </div>
 
-      <!-- Wenbinear -->
-      <div class="bg-[#FFE0DF]">
-        <div class="container py-10 mx-auto">
-          <div class="rounded-lg p-4 md:p-10">
-            <h1 class="text-center font-bold text-primary text-4xl">
-              <i class="fa-solid fa-video mr-4"></i>ফ্রি ওয়েবিনিয়ার দেখুন
-            </h1>
-            <p class="text-center text-2xl text-black py-4">
-              দেখে নিন কি কি পাচ্ছেন ওস্তাদের লাইভ কোর্সে জয়েন করলে
-            </p>
-            <h2 class="text-center text-primary font-semibold text-2xl">
-              <i class="fa-solid mr-4 fa-calendar-days"></i>
-              আপকামিং লাইভ ওয়েবিনার
-            </h2>
-            <br />
-            <hr />
-            <br />
-            <!-- upcomming webnier -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div
-                class="course-box web-development bg-white p-4 rounded shadow"
-              >
-                <div>
-                  <img
-                    class="p-2 rounded-xl"
-                    src="./src/assets/img/course_item_1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-xs font-medium p-4">
-                  <p
-                    class="border rounded-lg font-light text-center border-gray-400"
-                  >
-                    web and app development
-                  </p>
-                </div>
-                <hr />
-                <div>
-                  <h2 class="font-semibold text-base">
-                    জাভাস্কিপ্ট ডেভেলপারের সিভি কেমন হওয়া উচিত
-                  </h2>
-                </div>
-                <div class="mt-5 w-full">
-                  <p class="text-center text-red-500 font-light text-sm mb-4">
-                    <i class="fa-solid mr-4 fa-calendar-days"></i>
-                    শনিবার ,সকাল ১০টায় ,২৩শে জুন
-                  </p>
-                  <a
-                    class="bg-bgColor border-primary border text-center font-medium block text-black d-block rounded-md p-1"
-                    href="#"
-                  >
-                    <button>বিস্তারিত জানুন</button>
-                  </a>
-                </div>
-              </div>
-              <div
-                class="course-box web-development bg-white p-4 rounded shadow"
-              >
-                <div>
-                  <img
-                    class="p-2 rounded-xl"
-                    src="./src/assets/img/course_item_1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-xs font-medium p-4">
-                  <p
-                    class="border rounded-lg font-light text-center border-gray-400"
-                  >
-                    web and app development
-                  </p>
-                </div>
-                <hr />
-                <div>
-                  <h2 class="font-semibold text-base">
-                    জাভাস্কিপ্ট ডেভেলপারের সিভি কেমন হওয়া উচিত
-                  </h2>
-                </div>
-                <div class="mt-5 w-full">
-                  <p class="text-center text-red-500 font-light text-sm mb-4">
-                    <i class="fa-solid mr-4 fa-calendar-days"></i>
-                    শনিবার ,সকাল ১০টায় ,২৩শে জুন
-                  </p>
-                  <a
-                    class="bg-bgColor border-primary border text-center font-medium block text-black d-block rounded-md p-1"
-                    href="#"
-                  >
-                    <button>বিস্তারিত জানুন</button>
-                  </a>
-                </div>
-              </div>
-              <div
-                class="course-box web-development bg-white p-4 rounded shadow"
-              >
-                <div>
-                  <img
-                    class="p-2 rounded-xl"
-                    src="./src/assets/img/course_item_1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-xs font-medium p-4">
-                  <p
-                    class="border rounded-lg font-light text-center border-gray-400"
-                  >
-                    web and app development
-                  </p>
-                </div>
-                <hr />
-                <div>
-                  <h2 class="font-semibold text-base">
-                    জাভাস্কিপ্ট ডেভেলপারের সিভি কেমন হওয়া উচিত
-                  </h2>
-                </div>
-                <div class="mt-5 w-full">
-                  <p class="text-center text-red-500 font-light text-sm mb-4">
-                    <i class="fa-solid mr-4 fa-calendar-days"></i>
-                    শনিবার ,সকাল ১০টায় ,২৩শে জুন
-                  </p>
-                  <a
-                    class="bg-bgColor border-primary border text-center font-medium block text-black d-block rounded-md p-1"
-                    href="#"
-                  >
-                    <button>বিস্তারিত জানুন</button>
-                  </a>
-                </div>
-              </div>
-              <div
-                class="course-box web-development bg-white p-4 rounded shadow"
-              >
-                <div>
-                  <img
-                    class="p-2 rounded-xl"
-                    src="./src/assets/img/course_item_1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-xs font-medium p-4">
-                  <p
-                    class="border rounded-lg font-light text-center border-gray-400"
-                  >
-                    web and app development
-                  </p>
-                </div>
-                <hr />
-                <div>
-                  <h2 class="font-semibold text-base">
-                    জাভাস্কিপ্ট ডেভেলপারের সিভি কেমন হওয়া উচিত
-                  </h2>
-                </div>
-                <div class="mt-5 w-full">
-                  <p class="text-center text-red-500 font-light text-sm mb-4">
-                    <i class="fa-solid mr-4 fa-calendar-days"></i>
-                    শনিবার ,সকাল ১০টায় ,২৩শে জুন
-                  </p>
-                  <a
-                    class="bg-bgColor border-primary border text-center font-medium block text-black d-block rounded-md p-1"
-                    href="#"
-                  >
-                    <button>বিস্তারিত জানুন</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- previous webnier -->
-            <br />
-            <h2 class="text-center text-primary py-5 font-semibold text-2xl">
-              <i class="fa-solid mr-4 fa-calendar-days"></i>
-              প্রিভিয়াস লাইভ ওয়েবিনার
-            </h2>
-            <br />
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div
-                class="course-box web-development bg-white p-4 rounded shadow"
-              >
-                <div>
-                  <img
-                    class="p-2 rounded-xl"
-                    src="./src/assets/img/course_item_1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-xs font-medium p-4">
-                  <p
-                    class="border rounded-lg font-light text-center border-gray-400"
-                  >
-                    web and app development
-                  </p>
-                </div>
-                <hr />
-                <div>
-                  <h2 class="font-semibold text-base">
-                    জাভাস্কিপ্ট ডেভেলপারের সিভি কেমন হওয়া উচিত
-                  </h2>
-                </div>
-                <div class="mt-5 w-full">
-                  <p class="text-center text-red-500 font-light text-sm mb-4">
-                    <i class="fa-solid mr-4 fa-calendar-days"></i>
-                    শনিবার ,সকাল ১০টায় ,২৩শে জুন
-                  </p>
-                  <a
-                    class="bg-primary border-primary border text-center font-medium block text-white d-block rounded-md p-1"
-                    href="#"
-                  >
-                    <button>বিস্তারিত জানুন</button>
-                  </a>
-                </div>
-              </div>
-              <div
-                class="course-box web-development bg-white p-4 rounded shadow"
-              >
-                <div>
-                  <img
-                    class="p-2 rounded-xl"
-                    src="./src/assets/img/course_item_1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-xs font-medium p-4">
-                  <p
-                    class="border rounded-lg font-light text-center border-gray-400"
-                  >
-                    web and app development
-                  </p>
-                </div>
-                <hr />
-                <div>
-                  <h2 class="font-semibold text-base">
-                    জাভাস্কিপ্ট ডেভেলপারের সিভি কেমন হওয়া উচিত
-                  </h2>
-                </div>
-                <div class="mt-5 w-full">
-                  <p class="text-center text-red-500 font-light text-sm mb-4">
-                    <i class="fa-solid mr-4 fa-calendar-days"></i>
-                    শনিবার ,সকাল ১০টায় ,২৩শে জুন
-                  </p>
-                  <a
-                    class="bg-primary border-primary border text-center font-medium block text-white d-block rounded-md p-1"
-                    href="#"
-                  >
-                    <button>বিস্তারিত জানুন</button>
-                  </a>
-                </div>
-              </div>
-              <div
-                class="course-box web-development bg-white p-4 rounded shadow"
-              >
-                <div>
-                  <img
-                    class="p-2 rounded-xl"
-                    src="./src/assets/img/course_item_1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-xs font-medium p-4">
-                  <p
-                    class="border rounded-lg font-light text-center border-gray-400"
-                  >
-                    web and app development
-                  </p>
-                </div>
-                <hr />
-                <div>
-                  <h2 class="font-semibold text-base">
-                    জাভাস্কিপ্ট ডেভেলপারের সিভি কেমন হওয়া উচিত
-                  </h2>
-                </div>
-                <div class="mt-5 w-full">
-                  <p class="text-center text-red-500 font-light text-sm mb-4">
-                    <i class="fa-solid mr-4 fa-calendar-days"></i>
-                    শনিবার ,সকাল ১০টায় ,২৩শে জুন
-                  </p>
-                  <a
-                    class="bg-primary border-primary border text-center font-medium block text-white d-block rounded-md p-1"
-                    href="#"
-                  >
-                    <button>বিস্তারিত জানুন</button>
-                  </a>
-                </div>
-              </div>
-              <div
-                class="course-box web-development bg-white p-4 rounded shadow"
-              >
-                <div>
-                  <img
-                    class="p-2 rounded-xl"
-                    src="./src/assets/img/course_item_1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-xs font-medium p-4">
-                  <p
-                    class="border rounded-lg font-light text-center border-gray-400"
-                  >
-                    web and app development
-                  </p>
-                </div>
-                <hr />
-                <div>
-                  <h2 class="font-semibold text-base">
-                    জাভাস্কিপ্ট ডেভেলপারের সিভি কেমন হওয়া উচিত
-                  </h2>
-                </div>
-                <div class="mt-5 w-full">
-                  <p class="text-center text-red-500 font-light text-sm mb-4">
-                    <i class="fa-solid mr-4 fa-calendar-days"></i>
-                    শনিবার ,সকাল ১০টায় ,২৩শে জুন
-                  </p>
-                  <a
-                    class="bg-primary border-primary border text-center font-medium block text-white d-block rounded-md p-1"
-                    href="#"
-                  >
-                    <button>বিস্তারিত জানুন</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="mx-auto py-5 text-center mt-10">
-              <a
-                class="bg-bgColor border hover:bg-blue-950 hover:text-white border-primary text-center px-20 py-3 font-medium text-black d-inline-block rounded-xl"
-                href="#"
-              >
-                বিস্তারিত জানুন
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- career guidelines -->
       <div>
         <div class="containier mx-auto p-3 md:p-24">
@@ -2350,22 +1896,24 @@
 
       <!-- achivement -->
       <div>
-        <div class="container px-8 md:px-16 py-20 my-5 md:my-10 mx-auto">
-          <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
-            <div class="bg-rose-300 py-8 px-4 text-center rounded-lg">
-              <h1 class="font-bold text-3xl">700+</h1>
+        <div
+          class="container px-8 md:px-16 bg-blue-900 rounded-lg py-20 my-5 md:my-10 mx-auto"
+        >
+          <div class="grid grid-cols-1 text-white lg:grid-cols-4 gap-4">
+            <div class="py-8 px-4 border-r-2 text-center">
+              <h1 class="font-bold text-4xl">700+</h1>
               <p>জব পেয়েছে</p>
             </div>
-            <div class="bg-green-300 py-8 px-4 text-center rounded-lg">
-              <h1 class="font-bold text-3xl">700+</h1>
+            <div class="py-8 px-4 border-r-2 text-center">
+              <h1 class="font-bold text-4xl">700+</h1>
               <p>জব পেয়েছে</p>
             </div>
-            <div class="bg-yellow-300 py-8 px-4 text-center rounded-lg">
-              <h1 class="font-bold text-3xl">700+</h1>
+            <div class="py-8 px-4 border-r-2 text-center">
+              <h1 class="font-bold text-4xl">700+</h1>
               <p>জব পেয়েছে</p>
             </div>
-            <div class="bg-purple-300 py-8 px-4 text-center rounded-lg">
-              <h1 class="font-bold text-3xl">700+</h1>
+            <div class="py-8 px-4 text-center">
+              <h1 class="font-bold text-4xl">700+</h1>
               <p>জব পেয়েছে</p>
             </div>
           </div>
@@ -2567,7 +2115,7 @@
         </div>
       </div>
     </main>
-    <footer>
+    <footer class="bg-[#09072b]">
       <div class="container py-16 px-4 mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div class="flex flex-col p-5">
@@ -2576,112 +2124,88 @@
               src="./src/assets/img/footer_logo.png"
               alt=""
             />
-            <span class="text-lg my-2"
-              >অনলাইন লাইভ স্কিল ডেভেলপমেন্ট প্ল্যাটফর্ম।</span
-            >
-            <span class="font-bold text-lg my-2"
-              >ডাউনলোড করুন ওস্তাদ অ্যাপ</span
-            >
-            <div class="flex flex-row justify-start mb-5">
-              <a href="" class="bg-slate-900 p-4 rounded-lg">
-                <img class="h-auto" src="./src/assets/img/social.svg" alt="" />
-              </a>
-              <a href="" class="bg-slate-900 ml-4 p-4 rounded-lg">
-                <img class="h-auto" src="./src/assets/img/social.svg" alt="" />
-              </a>
-              <a href="" class="bg-slate-900 ml-4 p-4 rounded-lg">
-                <img class="h-auto" src="./src/assets/img/social.svg" alt="" />
-              </a>
-            </div>
-            <span> কমিউনিটি -এর সাথে কানেক্টেড থাকতে </span>
-            <div class="flex mt-4 flex-row justify-start lg:justify-around">
-              <a href="">
-                <img src="./src/assets/img/facebook.svg" alt="" />
-              </a>
-              <a href="">
-                <img src="./src/assets/img/youtube.svg" alt="" />
-              </a>
-              <a href="">
-                <img src="./src/assets/img/tiktok.svg" alt="" />
-              </a>
-              <a href="">
-                <img src="./src/assets/img/youtube.svg" alt="" />
-              </a>
-              <a href="">
-                <img src="./src/assets/img/tiktok.svg" alt="" />
-              </a>
+            <div class="text-gray-200 mt-10 flex flex-col">
+              <span class="text-base my-2"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatem, necessitatibus?</span
+              >
+
+              <span class="font-semibold capitalize text-lg"
+                >mirpur 1212, dhaka,</span
+              >
+              <span class="font-semibold capitalize text-lg">+8801xxxxxx</span>
             </div>
           </div>
           <div class="p-5">
-            <ul>
+            <ul class="text-gray-200">
               <li class="font-semibold text-lg my-3">কুইক লিংক</li>
               <li
-                class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                class="font-light text-base my-3 hover:text-white hover:underline"
               >
                 আপকামিং লাইভ ব্যাচ
               </li>
               <li
-                class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                class="font-light text-base my-3 hover:text-white hover:underline"
               >
                 ফ্রি কোর্সসমূহ
               </li>
               <li
-                class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                class="font-light text-base my-3 hover:text-white hover:underline"
               >
                 আপকামিং লাইভ ব্যাচ
               </li>
               <li
-                class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                class="font-light text-base my-3 hover:text-white hover:underline"
               >
                 ফ্রি কোর্সসমূহ
               </li>
             </ul>
           </div>
           <div class="p-5">
-            <ul>
+            <ul class="text-gray-200">
               <li class="font-semibold text-lg my-3">কুইক লিংক</li>
               <li
-                class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                class="font-light text-base my-3 hover:text-white hover:underline"
               >
                 আপকামিং লাইভ ব্যাচ
               </li>
               <li
-                class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                class="font-light text-base my-3 hover:text-white hover:underline"
               >
                 ফ্রি কোর্সসমূহ
               </li>
               <li
-                class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                class="font-light text-base my-3 hover:text-white hover:underline"
               >
                 আপকামিং লাইভ ব্যাচ
               </li>
               <li
-                class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                class="font-light text-base my-3 hover:text-white hover:underline"
               >
                 ফ্রি কোর্সসমূহ
               </li>
             </ul>
           </div>
           <div class="p-5">
-            <ul>
+            <ul class="text-gray-200">
               <li class="font-semibold text-lg my-3">কুইক লিংক</li>
               <li
-                class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                class="font-light text-base my-3 hover:text-white hover:underline"
               >
                 আপকামিং লাইভ ব্যাচ
               </li>
               <li
-                class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                class="font-light text-base my-3 hover:text-white hover:underline"
               >
                 ফ্রি কোর্সসমূহ
               </li>
               <li
-                class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                class="font-light text-base my-3 hover:text-white hover:underline"
               >
                 আপকামিং লাইভ ব্যাচ
               </li>
               <li
-                class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                class="font-light text-base my-3 hover:text-white hover:underline"
               >
                 ফ্রি কোর্সসমূহ
               </li>
