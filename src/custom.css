@@ -61,3 +61,16 @@
 .marquee-item:hover {
   transform: scale(1.1);
 }
+
+/* 
+faq */
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.accordion-content.active {
+  max-height: 500px; /* Adjust this based on the content height or use a higher value if you want more flexibility */
+}
