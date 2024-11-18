@@ -4115,6 +4115,10 @@ details.collapse summary::-webkit-details-marker {
   margin: 1.25rem;
 }
 
+.m-1 {
+  margin: 0.25rem;
+}
+
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -4553,6 +4557,10 @@ details.collapse summary::-webkit-details-marker {
   width: 100%;
 }
 
+.w-1\/5 {
+  width: 20%;
+}
+
 .min-w-\[150px\] {
   min-width: 150px;
 }
@@ -4595,6 +4603,10 @@ details.collapse summary::-webkit-details-marker {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-\[50px\] {
+  max-width: 50px;
 }
 
 .flex-1 {
@@ -6298,6 +6310,16 @@ faq */
 .hover\:bg-gray-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-blue-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(63 131 248 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-blue-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 100 242 / var(--tw-bg-opacity));
 }
 
 .hover\:text-blue-600:hover {

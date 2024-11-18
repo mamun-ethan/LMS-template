@@ -708,6 +708,56 @@
                 src="./src/assets/img/course-details-img.jpg"
                 alt=""
               />
+
+              <div>
+                <div class="my-10">
+                  <span
+                    class="bg-gray-300 px-3 cursor-pointer m-1 rounded-full font-medium capitalize hover:bg-blue-600 hover:text-white"
+                    >web development</span
+                  >
+                  <span
+                    class="text-lg ml-2 font-medium capitalize text-gray-600"
+                    ><i class="fa-solid text-[#FFC224] fa-star"></i> 5.0
+                    rating</span
+                  >
+                </div>
+                <h1 class="font-semibold text-4xl capitalize">
+                  Cloud Computing with AWS: From Beginner
+                </h1>
+                <!-- instractor -->
+                <div class="mt-10">
+                  <ul class="flex flex-row items-center gap-4">
+                    <li>
+                      <img
+                        class="max-w-[50px] rounded-full"
+                        src="./src/assets/img/instractor-men.png"
+                        alt=""
+                      />
+                    </li>
+                    <li class="text-gray-400">
+                      by<a
+                        class="capitalize ml-2 font-semibold text-gray-600 text-lg"
+                        href="#"
+                        >Oliver ethan</a
+                      >
+                    </li>
+                    <li class="text-gray-500">
+                      <a class="capitalize ml-2 font-medium text-lg" href="#"
+                        >22/10/2024</a
+                      >
+                    </li>
+                    <li class="">
+                      <i class="fa-solid text-gray-500 fa-graduation-cap"></i>
+                      <span class="text-blue-600 font-semibold">10</span>
+                      <a
+                        class="capitalize text-gray-500 font-medium text-lg"
+                        href="#"
+                        >students</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div
               class="p-2 col-span-2 shadow-[1px_8px_23px_5px_rgba(59,_130,_246,_0.15)] rounded-lg"
@@ -895,433 +945,289 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- course filter  -->
-      <div>
-        <div class="container mx-auto md:p-16">
-          <div class="p-4 md:p-10 rounded-lg bg-white border-1">
-            <h1 class="font-bold text-4xl capitalize text-center mb-8">
-              our courses
-            </h1>
-            <!-- course catagory -->
-            <div
-              class="grid grid-cols-1 cursor-pointer gap-4 md:grid-cols-2 lg:grid-cols-4 md:border-b-4 border-gray-300 pb-2"
-            >
-              <!-- web development -->
-              <div
-                id="web-development-btn"
-                class="menu-btn flex flex-row justify-center items-center text-black px-3 py-2 rounded relative"
-                onclick="filterCourses('web-development')"
-              >
-                <span
-                  class="font-semibold text-base text-center capitalize text-gray-400"
-                  >web development</span
-                >
-              </div>
-              <!-- app developemmt -->
-              <div
-                id="app-development-btn"
-                class="menu-btn flex flex-row justify-center items-center text-black px-3 relative"
-                onclick="filterCourses('app-development')"
-              >
-                <span
-                  class="font-semibold text-base text-center capitalize text-gray-400"
-                  >app development</span
-                >
-              </div>
+          <!-- course overview -->
 
-              <!-- ui ux design -->
+          <div>
+            <div class="container mx-auto md:p-16">
+              <div class="p-4 md:p-10 rounded-lg bg-white border-1">
+                <!-- course in details-->
+                <div
+                  class="grid grid-cols-1 cursor-pointer gap-4 md:grid-cols-2 lg:grid-cols-4 md:border-b-4 border-gray-300 pb-2"
+                >
+                  <!-- overview -->
+                  <div
+                    id="web-development-btn"
+                    class="menu-btn flex flex-row justify-center items-center text-black px-3 py-2 rounded relative"
+                    onclick="filterCourses('web-development')"
+                  >
+                    <span
+                      class="font-semibold text-base text-center capitalize text-gray-400"
+                      >overview</span
+                    >
+                  </div>
+                  <!-- carriculm -->
+                  <div
+                    id="app-development-btn"
+                    class="menu-btn flex flex-row justify-center items-center text-black px-3 relative"
+                    onclick="filterCourses('app-development')"
+                  >
+                    <span
+                      class="font-semibold text-base text-center capitalize text-gray-400"
+                      >carriculam</span
+                    >
+                  </div>
 
-              <div
-                id="ui-ux-design-btn"
-                class="menu-btn flex flex-row justify-center relative items-center"
-                onclick="filterCourses('ui-ux-design')"
-              >
-                <span
-                  class="font-semibold text-base text-center capitalize text-gray-400"
-                  >ui & ux</span
-                >
-              </div>
-              <!-- digital-marketing -->
-              <div
-                id="digital-marketing-btn"
-                class="menu-btn flex flex-row justify-center litems-center relative"
-                onclick="filterCourses('digital-marketing')"
-              >
-                <span
-                  class="font-semibold text-base text-center capitalize text-gray-400"
-                  >marketing</span
-                >
-              </div>
-            </div>
+                  <!-- instractor -->
 
-            <!-- course items -->
-            <div class="mt-10">
-              <!-- web-development -->
-              <div class="web_dev grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div
-                  class="course-box web-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
                   <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
+                    id="ui-ux-design-btn"
+                    class="menu-btn flex flex-row justify-center relative items-center"
+                    onclick="filterCourses('ui-ux-design')"
                   >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold text-lg">
-                      Full stack web development with javascript
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
+                    <span
+                      class="font-semibold text-base text-center capitalize text-gray-400"
+                      >instractor</span
                     >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
+                  </div>
+                  <!-- reviews -->
+                  <div
+                    id="digital-marketing-btn"
+                    class="menu-btn flex flex-row justify-center litems-center relative"
+                    onclick="filterCourses('digital-marketing')"
+                  >
+                    <span
+                      class="font-semibold text-base text-center capitalize text-gray-400"
+                      >review</span
+                    >
                   </div>
                 </div>
-                <div
-                  class="course-box web-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold text-lg">
-                      Full stack web development with javascript
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <!-- app development -->
-              <div class="app_dev grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div
-                  class="course-box app-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      app development
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="course-box app-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      app development
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <!-- ui ux design -->
-              <div class="ui_ux_design grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div
-                  class="course-box ui-ux-design bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      ui ux design
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="course-box ui-ux-design bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      ui ux design
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <!-- digital marketing -->
-              <div
-                class="digital_marketing grid grid-cols-1 md:grid-cols-4 gap-4"
-              >
-                <div
-                  class="course-box digital-marketing bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      digital marketing
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="course-box digital-marketing bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      digital marketing
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="course-box digital-marketing bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      digital marketing
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="course-box digital-marketing bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      digital marketing
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="mx-auto py-3 text-center mt-10">
-              <a
-                class="bg-blue-900 text-white capitalize border hover:bg-blue-950 hover:text-white border-primary text-center px-10 py-2 font-medium d-inline-block rounded-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
-                href="#"
-              >
-                see more
-              </a>
+                <!-- course items -->
+                <div class="mt-10">
+                  <!-- overview -->
+                  <div class="web_dev">
+                    <div class="course-box web-development">
+                      <div>
+                        <h1
+                          class="font-semibold text-2xl capitalize text-start"
+                        >
+                          course description
+                        </h1>
+                        <p class="my-5 text-lg font-medium text-gray-600">
+                          Laravel 10: Build Realtime Messaging App From Scratch
+                          (2024)
+                        </p>
+                        <p class="my-5 text-lg font-medium text-gray-500">
+                          Are you ready to take your Laravel skills to the next
+                          level? In this course,
+                          <span class="font-bold text-gray-600"
+                            >you will build a complete Realtime Messaging
+                            System</span
+                          >
+                          project from scratch using Laravel 10 and Pusher. This
+                          project-based course is designed to help you become a
+                          professional Laravel developer and give you a
+                          competitive edge in the job market.
+                        </p>
+                        <p class="my-5 text-lg font-semibold text-gray-600">
+                          why learn from us?
+                        </p>
+                        <p class="my-5 text-lg font-medium text-gray-500">
+                          Laravel 10 is the latest version of the popular PHP
+                          framework and comes packed with new features and
+                          improvements, making it faster and more efficient than
+                          ever before. It's easy to learn and has a huge
+                          community, making it the perfect choice for building
+                          robust and scalable web applications.
+                        </p>
+                        <p class="my-5 text-lg font-semibold text-gray-600">
+                          what you'll learn from us?
+                        </p>
+                        <ul class="list-disc text-lg text-gray-500">
+                          <li>User to User Live Chat</li>
+                          <li>Pusher Implementation</li>
+                          <li>Server Side Event Broadcasting</li>
+                          <li>Laravel Echo Implementation</li>
+                          <li>Working with Private Channels</li>
+                          <li>Working with Presence Channels</li>
+                          <li>Listening Events From Client Side</li>
+                          <li>Request Debouncing</li>
+                          <li>Live Search</li>
+                          <li>Live Image Sending</li>
+                          <li>Ajax Scroll to Paginate</li>
+                          <li>Message Delete Feature</li>
+                          <li>Add Contact to Favorites</li>
+                          <li>Dynamic Image Gallery</li>
+                          <li>Profile Update Feature</li>
+                          <li>Personal Inbox</li>
+                          <li>Laravel Breeze For Auth</li>
+                          <li>And More</li>
+                        </ul>
+                        <p class="my-5 text-lg font-semibold text-gray-600">
+                          why choice this course?
+                        </p>
+                        <p class="my-5 text-lg font-medium text-gray-500">
+                          Laravel 10 is the latest version of the popular PHP
+                          framework and comes packed with new features and
+                          improvements, making it faster and more efficient than
+                          ever before. It's easy to learn and has a huge
+                          community, making it the perfect choice for building
+                          robust and scalable web applications.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- carriculm -->
+                  <div class="app_dev grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div
+                      class="course-box app-development bg-white p-4 rounded shadow"
+                    >
+                      <div>
+                        <img src="./src/assets/img/course_item_1.jpg" alt="" />
+                      </div>
+                      <div
+                        class="text-xs flex capitalize flex-row justify-between font-medium p-4"
+                      >
+                        <span>3d batch</span>
+                        <span>05 sit</span>
+                        <span>9 days </span>
+                      </div>
+                      <hr />
+                      <div>
+                        <h2 class="font-semibold capitalize text-lg">
+                          app development
+                        </h2>
+                      </div>
+                      <div class="mt-5 flex justify-between items-center">
+                        <a
+                          class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
+                          href="#"
+                        >
+                          add to cart
+                        </a>
+                        <span class="font-semibold text-blue-600">
+                          <i
+                            class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
+                          ></i>
+                          4990 <span class="text-gray-600">/=</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="course-box app-development bg-white p-4 rounded shadow"
+                    >
+                      <div>
+                        <img src="./src/assets/img/course_item_1.jpg" alt="" />
+                      </div>
+                      <div
+                        class="text-xs flex capitalize flex-row justify-between font-medium p-4"
+                      >
+                        <span>3d batch</span>
+                        <span>05 sit</span>
+                        <span>9 days </span>
+                      </div>
+                      <hr />
+                      <div>
+                        <h2 class="font-semibold capitalize text-lg">
+                          app development
+                        </h2>
+                      </div>
+                      <div class="mt-5 flex justify-between items-center">
+                        <a
+                          class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
+                          href="#"
+                        >
+                          add to cart
+                        </a>
+                        <span class="font-semibold text-blue-600">
+                          <i
+                            class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
+                          ></i>
+                          4990 <span class="text-gray-600">/=</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- instractor-->
+                  <div class="ui_ux_design">
+                    <div class="course-box ui-ux-design">
+                      <div
+                        class="flex flex-row items-center px-12 justify-start gap-2"
+                      >
+                        <div class="w-1/5">
+                          <img
+                            class="rounded-full w-full h-full bg-gray-400"
+                            src="./src/assets/img/instractor-men.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="info flex flex-col">
+                          <h2
+                            class="font-semibold text-gray-500 text-3xl hover:text-blue-600 cursor-pointer capitalize"
+                          >
+                            oliver ethan
+                          </h2>
+                          <span
+                            class="text-lg mb-2 ml-2 font-medium text-blue-600 capitalize"
+                            >developer</span
+                          >
+                          <p class="my-4 text-gray-500 capitalize font-medium">
+                            I am a web developer with a vast array of knowledge
+                            in many different front end and back end languages,
+                            responsive frameworks, databases, and best code
+                            practice
+                          </p>
+                          <div>
+                            <ul
+                              class="flex flex-row ml-2 mt-4 justify-start items-center gap-2"
+                            >
+                              <li>
+                                <a
+                                  class="text-4xl text-blue-700 hover:text-blue-800"
+                                  href="#"
+                                  ><i class="fa-brands fa-facebook"></i
+                                ></a>
+                              </li>
+                              <li>
+                                <a
+                                  class="text-4xl text-blue-800 hover:text-blue-900"
+                                  href="#"
+                                  ><i class="fa-brands fa-linkedin"></i
+                                ></a>
+                              </li>
+                              <li>
+                                <a
+                                  class="text-4xl text-blue-950 hover:text-black"
+                                  href="#"
+                                  ><i class="fa-brands fa-x-twitter"></i
+                                ></a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- review -->
+                  <div
+                    class="digital_marketing grid grid-cols-1 md:grid-cols-4 gap-4"
+                  >
+                    <div class="course-box digital-marketing">
+                      <h1>Hi</h1>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mx-auto py-3 text-center mt-10">
+                  <a
+                    class="bg-[#ffc224] w-1/5 mx-auto text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
+                    href="#"
+                  >
+                    enroll now
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
