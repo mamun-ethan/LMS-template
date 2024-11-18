@@ -680,61 +680,69 @@
     </header>
 
     <main>
-      <!-- hero section -->
+      <!-- Hero Section -->
       <div class="hero">
         <div class="container py-5 m-auto md:px-5">
           <div
-            class="grid grid-cols-1 md:grid-cols-2 m-2 p-5 bg-[rgb(255 249 242)] border-2 border-zinc-700 rounded-2xl"
+            class="slider grid grid-cols-1 md:grid-cols-2 m-2 p-5 bg-[rgb(255_249_242)] border-2 border-zinc-700 rounded-2xl"
           >
-            <div class="hero_content flex justify-center flex-col">
-              <h1 class="text-4xl font-bold pb-4">শিখবে এবার বাংলাদেশ</h1>
-              <h5 class="text-base font-semibold pb-4">
-                স্কিল শেখার মাধ্যমে বদলে ফেলুন নিজের ভবিষ্যৎ
-              </h5>
-
-              <a href="">
-                <button
-                  class="bg-blue-800 text-slate-50 font-semibold px-8 py-3 rounded-lg"
-                >
-                  শেখা শুরু করুন
-                  <i class="ml-5 fa-solid fa-person-walking-arrow-right"></i>
-                </button>
-              </a>
-              <p class="font-medium my-8">
-                ৭০০০+ গ্র্যাজুয়েটরা কর্মরত আছেন বিভিন্ন দেশি ও বিদেশি
-                প্রতিষ্ঠানে:
-              </p>
-              <div class="brand">
-                <ul class="flex flex-row justify-between">
-                  <li class="px-4">
-                    <a href=""
-                      ><img src="./src/assets/img/brand_1.webp" alt=""
-                    /></a>
-                  </li>
-                  <li class="px-4">
-                    <a href=""
-                      ><img src="./src/assets/img/brand_4.webp" alt=""
-                    /></a>
-                  </li>
-                  <li class="px-4">
-                    <a href=""
-                      ><img src="./src/assets/img/brand_2.webp" alt=""
-                    /></a>
-                  </li>
-                  <li class="px-4">
-                    <a href=""
-                      ><img src="./src/assets/img/brand_3.webp" alt=""
-                    /></a>
-                  </li>
-                </ul>
+            <!-- Left Content (Slider Content) -->
+            <div class="hero_content flex flex-col justify-center">
+              <div class="content-slide block">
+                <h1 class="text-4xl font-bold pb-4">শিখবে এবার বাংলাদেশ</h1>
+                <h5 class="text-base font-semibold pb-4">
+                  স্কিল শেখার মাধ্যমে বদলে ফেলুন নিজের ভবিষ্যৎ
+                </h5>
+                <a href="#">
+                  <button
+                    class="bg-blue-800 text-slate-50 font-semibold px-8 py-3 rounded-lg"
+                  >
+                    শেখা শুরু করুন
+                    <i class="ml-5 fa-solid fa-person-walking-arrow-right"></i>
+                  </button>
+                </a>
+                <p class="font-medium my-8">
+                  ৭০০০+ গ্র্যাজুয়েটরা কর্মরত আছেন বিভিন্ন দেশি ও বিদেশি
+                  প্রতিষ্ঠানে:
+                </p>
+              </div>
+              <div class="content-slide hidden">
+                <h1 class="text-4xl font-bold pb-4">
+                  নতুন ভবিষ্যতের দিকে যাত্রা
+                </h1>
+                <h5 class="text-base font-semibold pb-4">
+                  নতুন দক্ষতা অর্জন করে এগিয়ে যান আরও
+                </h5>
+                <a href="#">
+                  <button
+                    class="bg-blue-800 text-slate-50 font-semibold px-8 py-3 rounded-lg"
+                  >
+                    এখনই শুরু করুন
+                    <i class="ml-5 fa-solid fa-person-walking-arrow-right"></i>
+                  </button>
+                </a>
+                <p class="font-medium my-8">
+                  হাজারো শিক্ষার্থী তাদের ক্যারিয়ার গড়েছেন এখান থেকে:
+                </p>
               </div>
             </div>
+
+            <!-- Right Side Images (Slider Images) -->
             <div class="hero_img flex justify-center items-center">
-              <img
-                class="w-full h-[80%] rounded-lg"
-                src="./src/assets/img/hero.webp"
-                alt=""
-              />
+              <div class="image-slide block">
+                <img
+                  class="w-full h-[80%] rounded-lg"
+                  src="./src/assets/img/hero.webp"
+                  alt=""
+                />
+              </div>
+              <div class="image-slide hidden">
+                <img
+                  class="w-full h-[80%] rounded-lg"
+                  src="./src/assets/img/hero.webp"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>

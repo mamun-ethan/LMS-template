@@ -5291,6 +5291,11 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(30 66 159 / var(--tw-bg-opacity));
 }
 
+.bg-\[rgb\(255_249_242\)\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 249 242 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\/src\/assets\/img\/\'\)\] {
   background-image: url('./src/assets/img/');
 }
@@ -6236,6 +6241,11 @@ faq */
 .hover\:bg-blue-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(35 56 118 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
 .hover\:text-blue-600:hover {

@@ -57,5 +57,30 @@ accordionButtons.forEach((button) => {
   });
 });
 
-// skills filtering
-// course filter
+//hero section
+
+const contentSlides = document.querySelectorAll(".content-slide");
+const imageSlides = document.querySelectorAll(".image-slide");
+
+let currentIndex = 0;
+
+function updateSlider(index) {
+  // Hide all slides
+  contentSlides.forEach((slide) => slide.classList.add("hidden"));
+  imageSlides.forEach((slide) => slide.classList.add("hidden"));
+
+  // Show the current slide
+  contentSlides[index].classList.remove("hidden");
+  imageSlides[index].classList.remove("hidden");
+}
+
+function autoSlide() {
+  currentIndex = (currentIndex + 1) % contentSlides.length;
+  updateSlider(currentIndex);
+}
+
+// Start auto-sliding every 3 seconds
+setInterval(autoSlide, 3000);
+
+// Initialize slider
+updateSlider(currentIndex);
