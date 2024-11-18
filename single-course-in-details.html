@@ -680,68 +680,218 @@
     </header>
 
     <main>
-      <!-- Hero Section -->
-      <div class="hero">
-        <div class="container py-5 m-auto md:px-5">
-          <div
-            class="slider grid grid-cols-1 md:grid-cols-2 m-2 p-5 bg-[rgb(255_249_242)] border-2 border-zinc-700 rounded-2xl"
-          >
-            <!-- Left Content (Slider Content) -->
-            <div class="hero_content flex flex-col justify-center">
-              <div class="content-slide block">
-                <h1 class="text-4xl font-bold pb-4">শিখবে এবার বাংলাদেশ</h1>
-                <h5 class="text-base font-semibold pb-4">
-                  স্কিল শেখার মাধ্যমে বদলে ফেলুন নিজের ভবিষ্যৎ
-                </h5>
-                <a href="#">
-                  <button
-                    class="bg-blue-800 text-slate-50 font-semibold px-8 py-3 rounded-lg"
-                  >
-                    শেখা শুরু করুন
-                    <i class="ml-5 fa-solid fa-person-walking-arrow-right"></i>
-                  </button>
-                </a>
-                <p class="font-medium my-8">
-                  ৭০০০+ গ্র্যাজুয়েটরা কর্মরত আছেন বিভিন্ন দেশি ও বিদেশি
-                  প্রতিষ্ঠানে:
-                </p>
-              </div>
-              <div class="content-slide hidden">
-                <h1 class="text-4xl font-bold pb-4">
-                  নতুন ভবিষ্যতের দিকে যাত্রা
-                </h1>
-                <h5 class="text-base font-semibold pb-4">
-                  নতুন দক্ষতা অর্জন করে এগিয়ে যান আরও
-                </h5>
-                <a href="#">
-                  <button
-                    class="bg-blue-800 text-slate-50 font-semibold px-8 py-3 rounded-lg"
-                  >
-                    এখনই শুরু করুন
-                    <i class="ml-5 fa-solid fa-person-walking-arrow-right"></i>
-                  </button>
-                </a>
-                <p class="font-medium my-8">
-                  হাজারো শিক্ষার্থী তাদের ক্যারিয়ার গড়েছেন এখান থেকে:
-                </p>
-              </div>
+      <!-- course title -->
+      <div>
+        <div class="container mx-auto py-20 bg-blue-100 px-5">
+          <h1 class="font-bold text-5xl capitalize text-left">
+            course details
+          </h1>
+          <ul class="flex mt-5 gap-4">
+            <li class="capitalize text-gray-500 font-medium">
+              <a href="index.html">Home</a>
+            </li>
+            <span class="text-gray-500 font-medium"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+            <li class="capitalize text-gray-600 font-medium">
+              <a href="#">course details</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="my-10">
+        <div class="container mx-auto px-5">
+          <div class="grid grid-cols-1 md:grid-cols-6 gap-4 justify-center">
+            <div class="col-span-4 course_thumbnail">
+              <img
+                class="w-full rounded-lg"
+                src="./src/assets/img/course-details-img.jpg"
+                alt=""
+              />
             </div>
-
-            <!-- Right Side Images (Slider Images) -->
-            <div class="hero_img flex justify-center items-center">
-              <div class="image-slide block">
-                <img
-                  class="w-full h-[80%] rounded-lg"
-                  src="./src/assets/img/hero.webp"
-                  alt=""
-                />
+            <div
+              class="p-2 col-span-2 shadow-[1px_8px_23px_5px_rgba(59,_130,_246,_0.15)] rounded-lg"
+            >
+              <!-- price -->
+              <div
+                class="p-5 text-start rounded-xl m-5 text-gray-200 bg-blue-600"
+              >
+                <span class="font-medium text-xl capitalize"
+                  >the course fee:</span
+                >
+                <h2 class="">
+                  <span class="font-bold text-2xl text-white">
+                    <i
+                      class="fa-solid text-gray-200 fa-bangladeshi-taka-sign"
+                    ></i>
+                    4990 <span class="text-gray-200">/=</span>
+                  </span>
+                </h2>
               </div>
-              <div class="image-slide hidden">
-                <img
-                  class="w-full h-[80%] rounded-lg"
-                  src="./src/assets/img/hero.webp"
-                  alt=""
-                />
+              <div>
+                <h2 class="font-semibold text-xl text-start capitalize">
+                  course include:
+                </h2>
+                <ul class="flex flex-col justify-between items-center">
+                  <li class="border-b-2 my-4 border-gray-300 w-full">
+                    <span
+                      class="flex flex-row mb-2 justify-between items-center"
+                    >
+                      <span class="space-x-2">
+                        <span class="font-bold text-lg text-gray-400">
+                          <i class="fa-solid fa-stairs"></i>
+                        </span>
+                        <span
+                          class="font-medium text-lg text-gray-800 capitalize"
+                        >
+                          level
+                        </span>
+                      </span>
+                      <span>
+                        <span
+                          class="px-2 bg-blue-200 capitalize text-blue-800 rounded-md"
+                          >intermidate</span
+                        >
+                      </span>
+                    </span>
+                  </li>
+                  <li class="border-b-2 my-4 border-gray-300 w-full">
+                    <span
+                      class="flex flex-row mb-2 justify-between items-center"
+                    >
+                      <span class="space-x-2">
+                        <span class="font-bold text-lg text-gray-400">
+                          <i class="fa-regular fa-clock"></i>
+                        </span>
+                        <span
+                          class="font-medium text-lg text-gray-800 capitalize"
+                        >
+                          duration
+                        </span>
+                      </span>
+                      <span>
+                        <span class="px-2 capitalize text-gray-400">20hr</span>
+                      </span>
+                    </span>
+                  </li>
+                  <li class="border-b-2 my-4 border-gray-300 w-full">
+                    <span
+                      class="flex flex-row mb-2 justify-between items-center"
+                    >
+                      <span class="space-x-2">
+                        <span class="font-bold text-lg text-gray-400">
+                          <i class="fa-solid fa-book"></i>
+                        </span>
+                        <span
+                          class="font-medium text-lg text-gray-800 capitalize"
+                        >
+                          lession
+                        </span>
+                      </span>
+                      <span>
+                        <span class="px-2 capitalize text-gray-400">20</span>
+                      </span>
+                    </span>
+                  </li>
+                  <li class="border-b-2 my-4 border-gray-300 w-full">
+                    <span
+                      class="flex flex-row mb-2 justify-between items-center"
+                    >
+                      <span class="space-x-2">
+                        <span class="font-bold text-lg text-gray-400">
+                          <i class="fa-solid fa-puzzle-piece"></i>
+                        </span>
+                        <span
+                          class="font-medium text-lg text-gray-800 capitalize"
+                        >
+                          quiz
+                        </span>
+                      </span>
+                      <span>
+                        <span class="px-2 capitalize text-gray-400">20</span>
+                      </span>
+                    </span>
+                  </li>
+                  <li class="border-b-2 my-4 border-gray-300 w-full">
+                    <span
+                      class="flex flex-row mb-2 justify-between items-center"
+                    >
+                      <span class="space-x-2">
+                        <span class="font-bold text-lg text-gray-400">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                        </span>
+                        <span
+                          class="font-medium text-lg text-gray-800 capitalize"
+                        >
+                          quiz
+                        </span>
+                      </span>
+                      <span>
+                        <span class="px-2 uppercase text-gray-400">yes</span>
+                      </span>
+                    </span>
+                  </li>
+                  <li class="border-b-2 my-4 border-gray-300 w-full">
+                    <span
+                      class="flex flex-row mb-2 justify-between items-center"
+                    >
+                      <span class="space-x-2">
+                        <span class="font-bold text-lg text-gray-400">
+                          <i class="fa-solid fa-language"></i>
+                        </span>
+                        <span
+                          class="font-medium text-lg text-gray-800 capitalize"
+                        >
+                          quiz
+                        </span>
+                      </span>
+                      <span>
+                        <span
+                          class="px-2 bg-blue-200 rounded-md text-blue-800 capitalize"
+                          >bangla</span
+                        >
+                      </span>
+                    </span>
+                  </li>
+                </ul>
+                <h2 class="font-semibold text-xl text-start capitalize">
+                  share on :
+                </h2>
+                <div>
+                  <ul
+                    class="flex flex-row ml-2 mt-4 justify-start items-center gap-2"
+                  >
+                    <li>
+                      <a
+                        class="text-4xl text-blue-700 hover:text-blue-800"
+                        href="#"
+                        ><i class="fa-brands fa-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        class="text-4xl text-blue-800 hover:text-blue-900"
+                        href="#"
+                        ><i class="fa-brands fa-linkedin"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        class="text-4xl text-blue-950 hover:text-black"
+                        href="#"
+                        ><i class="fa-brands fa-x-twitter"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="my-5">
+                  <a
+                    class="bg-[#ffc224] w-1/2 mx-auto text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
+                    href="#"
+                  >
+                    add to cart
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1172,1372 +1322,6 @@
               >
                 see more
               </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- career guidelines -->
-      <div class="bg-white">
-        <div class="containier mx-auto p-3 md:p-24">
-          <div class="p-10">
-            <h1 class="text-center capitalize font-bold text-4xl">
-              set your career goal
-            </h1>
-            <p class="text-center font-normal py-5 text-base">
-              <span
-                class="bg-blue-100 text-blue-600 font-semibold px-2 rounded-xl"
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </span>
-            </p>
-          </div>
-
-          <div
-            class="grid bg-gray-200 px-10 relative py-5 rounded-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
-          >
-            <div
-              class="flex py-5 px-3 flex-col gap-5 justify-center items-center"
-            >
-              <div
-                class="border-2 border-gray-400 rounded-full p-10 hover:bg-[#FFC224]"
-              >
-                <img src="./src/assets/img/app-icon.png" alt="" srcset="" />
-              </div>
-              <div class="text-center">
-                <h3 class="font-semibold text-lg text-neutral-600 capitalize">
-                  web development
-                </h3>
-                <p class="font-semibold text-base text-blue-600 capitalize">
-                  (11)
-                </p>
-              </div>
-            </div>
-            <div
-              class="flex py-5 px-3 flex-col gap-5 justify-center items-center"
-            >
-              <div
-                class="border-2 border-gray-400 rounded-full p-10 hover:bg-[#FFC224]"
-              >
-                <img src="./src/assets/img/web-icon.png" alt="" srcset="" />
-              </div>
-              <div class="text-center">
-                <h3 class="font-semibold text-lg text-neutral-600 capitalize">
-                  app development
-                </h3>
-                <p class="font-semibold text-base text-blue-600 capitalize">
-                  (05)
-                </p>
-              </div>
-            </div>
-            <div
-              class="flex py-5 px-3 flex-col gap-5 justify-center items-center"
-            >
-              <div
-                class="border-2 border-gray-400 rounded-full p-10 hover:bg-[#FFC224]"
-              >
-                <img src="./src/assets/img/design-icon.png" alt="" srcset="" />
-              </div>
-              <div class="text-center">
-                <h3 class="font-semibold text-lg text-neutral-600 capitalize">
-                  ui & ux design
-                </h3>
-                <p class="font-semibold text-base text-blue-600 capitalize">
-                  (15)
-                </p>
-              </div>
-            </div>
-            <div
-              class="flex py-5 px-3 flex-col gap-5 justify-center items-center"
-            >
-              <div
-                class="border-2 border-gray-400 rounded-full p-10 hover:bg-[#FFC224]"
-              >
-                <img
-                  src="./src/assets/img/marketing-con.png"
-                  alt=""
-                  srcset=""
-                />
-              </div>
-              <div class="text-center">
-                <h3 class="font-semibold text-lg text-neutral-600 capitalize">
-                  digital marketing
-                </h3>
-                <p class="font-semibold text-base text-blue-600 capitalize">
-                  (41)
-                </p>
-              </div>
-            </div>
-            <button class="absolute left-1 top-[45%]">
-              <i
-                class="fa-solid py-4 px-4 d-block rounded-full shadow-[2px_2px_0px_0px_rgba(0,0,0)] bg-[#FFC224] fa-arrow-left"
-              ></i>
-            </button>
-            <button class="absolute right-1 top-[45%]">
-              <i
-                class="fa-solid py-4 px-4 d-block rounded-full shadow-[2px_2px_0px_0px_rgba(0,0,0)] bg-[#FFC224] fa-arrow-right"
-              ></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Brand Area -->
-      <div class="brand-marquee py-5 bg-black overflow-hidden">
-        <div class="brand-marquee-content flex items-center gap-4">
-          <a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          />
-          <a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          />
-          <a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          />
-          <a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          /><a href="#" class="marquee-item">
-            <img src="./src/assets/img/brand-urban.png" alt="" />
-          </a>
-          <img
-            width="50px"
-            src="./src/assets/img/star.png"
-            alt=""
-            class="marquee-item"
-          />
-        </div>
-      </div>
-
-      <!-- instractors -->
-      <div class="my-12 bg-white py-14">
-        <div class="container px-5 mx-auto">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-4">
-            <!-- content -->
-            <div class="flex flex-col gap-5">
-              <div>
-                <span
-                  class="font-semibold text-blue-700 px-4 bg-blue-100 rounded-xl"
-                >
-                  skilled introduced
-                </span>
-              </div>
-              <h1 class="font-semibold text-5xl">
-                Our Top Class & Expert Instructors in One Place
-              </h1>
-              <p class="text-lg text-gray-600">
-                Combines the ideas of empowered learning and top-tier
-                instruction for students. Emphasizes both instructor expertise
-              </p>
-              <div class="mt-5 w-3/5">
-                <a
-                  class="bg-blue-800 text-center capitalize font-semibold block text-white shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-3"
-                  href="#"
-                >
-                  <button>know more.....</button>
-                </a>
-              </div>
-            </div>
-            <div class="flex flex-col gap-5">
-              <div class="flex flex-row items-center justify-start gap-2">
-                <div class="w-2/5">
-                  <img
-                    class="rounded-full w-full h-full bg-gray-400"
-                    src="./src/assets/img/instractor-men.png"
-                    alt=""
-                  />
-                </div>
-                <div class="info flex flex-col">
-                  <h2
-                    class="font-semibold text-gray-500 text-3xl hover:text-blue-600 cursor-pointer capitalize"
-                  >
-                    oliver ethan
-                  </h2>
-                  <span
-                    class="text-lg mb-2 ml-2 font-medium text-blue-600 capitalize"
-                    >developer</span
-                  >
-                  <span
-                    class="text-lg ml-2 font-medium capitalize text-gray-400"
-                    ><i class="fa-solid text-[#FFC224] fa-star"></i> 5.0
-                    rating</span
-                  >
-                  <ul
-                    class="flex flex-row ml-2 mt-4 justify-start items-center gap-2"
-                  >
-                    <li>
-                      <a class="text-4xl hover:text-blue-600" href="#"
-                        ><i class="fa-brands fa-facebook"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a class="text-4xl hover:text-blue-600" href="#"
-                        ><i class="fa-brands fa-linkedin"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a class="text-4xl hover:text-blue-600" href="#"
-                        ><i class="fa-brands fa-x-twitter"></i
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="flex flex-row items-center justify-start gap-2">
-                <div class="w-2/5">
-                  <img
-                    class="rounded-full w-full h-full bg-gray-400"
-                    src="./src/assets/img/designer-men.png"
-                    alt=""
-                  />
-                </div>
-                <div class="info flex flex-col">
-                  <h2
-                    class="font-semibold text-gray-500 text-3xl hover:text-blue-600 cursor-pointer capitalize"
-                  >
-                    sabbir ahamed
-                  </h2>
-                  <span
-                    class="text-lg mb-2 ml-2 font-medium text-blue-600 capitalize"
-                    >designer</span
-                  >
-                  <span
-                    class="text-lg ml-2 font-medium capitalize text-gray-400"
-                    ><i class="fa-solid text-[#FFC224] fa-star"></i> 5.0
-                    rating</span
-                  >
-                  <ul
-                    class="flex flex-row ml-2 mt-4 justify-start items-center gap-2"
-                  >
-                    <li>
-                      <a class="text-4xl hover:text-blue-600" href="#"
-                        ><i class="fa-brands fa-facebook"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a class="text-4xl hover:text-blue-600" href="#"
-                        ><i class="fa-brands fa-linkedin"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a class="text-4xl hover:text-blue-600" href="#"
-                        ><i class="fa-brands fa-x-twitter"></i
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col gap-5">
-              <div class="flex flex-row items-center justify-start gap-2">
-                <div class="w-2/5">
-                  <img
-                    class="rounded-full w-full h-full bg-gray-400"
-                    src="./src/assets/img/ex-expert.png"
-                    alt=""
-                  />
-                </div>
-                <div class="info flex flex-col">
-                  <h2
-                    class="font-semibold text-gray-500 text-3xl hover:text-blue-600 cursor-pointer capitalize"
-                  >
-                    tonima taslin
-                  </h2>
-                  <span
-                    class="text-lg mb-2 ml-2 font-medium text-blue-600 capitalize"
-                    >ux expert</span
-                  >
-                  <span
-                    class="text-lg ml-2 font-medium capitalize text-gray-400"
-                    ><i class="fa-solid text-[#FFC224] fa-star"></i> 5.0
-                    rating</span
-                  >
-                  <ul
-                    class="flex flex-row ml-2 mt-4 justify-start items-center gap-2"
-                  >
-                    <li>
-                      <a class="text-4xl hover:text-blue-600" href="#"
-                        ><i class="fa-brands fa-facebook"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a class="text-4xl hover:text-blue-600" href="#"
-                        ><i class="fa-brands fa-linkedin"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a class="text-4xl hover:text-blue-600" href="#"
-                        ><i class="fa-brands fa-x-twitter"></i
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="flex flex-row items-center justify-start gap-2">
-                <div class="w-2/5">
-                  <img
-                    class="rounded-full w-full h-full bg-gray-400"
-                    src="./src/assets/img/marketer-men.png"
-                    alt=""
-                  />
-                </div>
-                <div class="info flex flex-col">
-                  <h2
-                    class="font-semibold text-gray-500 text-3xl hover:text-blue-600 cursor-pointer capitalize"
-                  >
-                    akash shekh
-                  </h2>
-                  <span
-                    class="text-lg mb-2 ml-2 font-medium text-blue-600 capitalize"
-                    >designer</span
-                  >
-                  <span
-                    class="text-lg ml-2 font-medium capitalize text-gray-400"
-                    ><i class="fa-solid text-[#FFC224] fa-star"></i> 5.0
-                    rating</span
-                  >
-                  <ul
-                    class="flex flex-row ml-2 mt-4 justify-start items-center gap-2"
-                  >
-                    <li>
-                      <a class="text-4xl hover:text-blue-600" href="#"
-                        ><i class="fa-brands fa-facebook"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a class="text-4xl hover:text-blue-600" href="#"
-                        ><i class="fa-brands fa-linkedin"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a class="text-4xl hover:text-blue-600" href="#"
-                        ><i class="fa-brands fa-x-twitter"></i
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Section -->
-      <div class="py-24">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div
-            class="flex flex-col justify-center items-center gap-x-16 gap-y-5 xl:gap-28 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full"
-          >
-            <div class="w-full lg:w-1/2">
-              <img
-                src="https://pagedone.io/asset/uploads/1696230182.png"
-                alt="FAQ tailwind section"
-                class="w-full rounded-xl object-cover"
-              />
-            </div>
-            <div class="w-full lg:w-1/2">
-              <div class="lg:max-w-xl">
-                <div class="mb-6 lg:mb-16">
-                  <h6
-                    class="text-lg text-center font-semibold uppercase text-indigo-600 mb-2 lg:text-left"
-                  >
-                    faqs
-                  </h6>
-                  <h2
-                    class="text-4xl text-center font-bold text-gray-900 leading-[3.25rem] mb-5 lg:text-left"
-                  >
-                    Start Learning From World’s Pro Instructors
-                  </h2>
-                  <p class="text-lg text-gray-400 font-medium">
-                    Groove’s intuitive shared inbox makes it easy for team
-                    members to organize, prioritize and.In this episode.
-                  </p>
-                </div>
-                <div class="accordion-group" data-accordion="default-accordion">
-                  <div
-                    class="accordion pb-8 border-b border-solid border-gray-200"
-                    id="basic-heading-one-with-arrow-always-open"
-                  >
-                    <button
-                      class="accordion-toggle group inline-flex items-center justify-between text-xl font-semibold leading-8 text-gray-800 w-full transition duration-500 hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:font-medium always-open"
-                      aria-controls="basic-collapse-one-with-arrow-always-open"
-                    >
-                      <h5>How to create an account?</h5>
-                      <svg
-                        class="text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
-                          stroke="currentColor"
-                          stroke-width="1.6"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    </button>
-                    <div
-                      id="basic-collapse-one-with-arrow-always-open"
-                      class="accordion-content w-full px-0 overflow-hidden pr-4"
-                      aria-labelledby="basic-heading-one-with-arrow-always-open"
-                    >
-                      <p class="text-base font-normal text-gray-600">
-                        To create an account, find the 'Sign up' or 'Create
-                        account' button, fill out the registration form with
-                        your personal information, and click 'Create account' or
-                        'Sign up.' Verify your email address if needed, and then
-                        log in to start using the platform.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="accordion pb-8 border-b border-solid border-gray-200"
-                    id="basic-heading-one-with-arrow-always-open"
-                  >
-                    <button
-                      class="accordion-toggle group inline-flex items-center justify-between text-xl font-semibold leading-8 text-gray-800 w-full transition duration-500 hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:font-medium always-open"
-                      aria-controls="basic-collapse-one-with-arrow-always-open"
-                    >
-                      <h5>How to create an account?</h5>
-                      <svg
-                        class="text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
-                          stroke="currentColor"
-                          stroke-width="1.6"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    </button>
-                    <div
-                      id="basic-collapse-one-with-arrow-always-open"
-                      class="accordion-content w-full px-0 overflow-hidden pr-4"
-                      aria-labelledby="basic-heading-one-with-arrow-always-open"
-                    >
-                      <p class="text-base font-normal text-gray-600">
-                        To create an account, find the 'Sign up' or 'Create
-                        account' button, fill out the registration form with
-                        your personal information, and click 'Create account' or
-                        'Sign up.' Verify your email address if needed, and then
-                        log in to start using the platform.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="accordion pb-8 border-b border-solid border-gray-200"
-                    id="basic-heading-one-with-arrow-always-open"
-                  >
-                    <button
-                      class="accordion-toggle group inline-flex items-center justify-between text-xl font-semibold leading-8 text-gray-800 w-full transition duration-500 hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:font-medium always-open"
-                      aria-controls="basic-collapse-one-with-arrow-always-open"
-                    >
-                      <h5>How to create an account?</h5>
-                      <svg
-                        class="text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
-                          stroke="currentColor"
-                          stroke-width="1.6"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    </button>
-                    <div
-                      id="basic-collapse-one-with-arrow-always-open"
-                      class="accordion-content w-full px-0 overflow-hidden pr-4"
-                      aria-labelledby="basic-heading-one-with-arrow-always-open"
-                    >
-                      <p class="text-base font-normal text-gray-600">
-                        To create an account, find the 'Sign up' or 'Create
-                        account' button, fill out the registration form with
-                        your personal information, and click 'Create account' or
-                        'Sign up.' Verify your email address if needed, and then
-                        log in to start using the platform.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="accordion pb-8 border-b border-solid border-gray-200"
-                    id="basic-heading-one-with-arrow-always-open"
-                  >
-                    <button
-                      class="accordion-toggle group inline-flex items-center justify-between text-xl font-semibold leading-8 text-gray-800 w-full transition duration-500 hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:font-medium always-open"
-                      aria-controls="basic-collapse-one-with-arrow-always-open"
-                    >
-                      <h5>How to create an account?</h5>
-                      <svg
-                        class="text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
-                          stroke="currentColor"
-                          stroke-width="1.6"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    </button>
-                    <div
-                      id="basic-collapse-one-with-arrow-always-open"
-                      class="accordion-content w-full px-0 overflow-hidden pr-4"
-                      aria-labelledby="basic-heading-one-with-arrow-always-open"
-                    >
-                      <p class="text-base font-normal text-gray-600">
-                        To create an account, find the 'Sign up' or 'Create
-                        account' button, fill out the registration form with
-                        your personal information, and click 'Create account' or
-                        'Sign up.' Verify your email address if needed, and then
-                        log in to start using the platform.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- scholarship and contatancy -->
-      <div>
-        <div class="container mx-auto md:p-16">
-          <div class="p-4 md:p-10 rounded-lg bg-white border-1">
-            <h1 class="font-bold text-4xl capitalize text-center mb-8">
-              scholarship and contatancy
-            </h1>
-
-            <!--  items -->
-            <div class="mt-10">
-              <!-- web-development -->
-              <div class="we grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="bg-white p-4 rounded shadow">
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex flex-row capitalize justify-between font-medium p-4"
-                  >
-                    <span>2nd batch</span>
-                    <span>10 sit</span>
-                    <span>2 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold text-lg">
-                      Full stack web development with javascript
-                    </h2>
-                  </div>
-                  <div class="mt-5 w-3/5">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
-                      href="#"
-                    >
-                      <button>add to cart</button>
-                    </a>
-                  </div>
-                </div>
-                <div class="bg-white p-4 rounded shadow">
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex flex-row capitalize justify-between font-medium p-4"
-                  >
-                    <span>2nd batch</span>
-                    <span>10 sit</span>
-                    <span>2 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold text-lg">
-                      Full stack web development with javascript
-                    </h2>
-                  </div>
-                  <div class="mt-5 w-3/5">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
-                      href="#"
-                    >
-                      <button>add to cart</button>
-                    </a>
-                  </div>
-                </div>
-                <div class="bg-white p-4 rounded shadow">
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex flex-row capitalize justify-between font-medium p-4"
-                  >
-                    <span>2nd batch</span>
-                    <span>10 sit</span>
-                    <span>2 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold text-lg">
-                      Full stack web development with javascript
-                    </h2>
-                  </div>
-                  <div class="mt-5 w-3/5">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
-                      href="#"
-                    >
-                      <button>add to cart</button>
-                    </a>
-                  </div>
-                </div>
-                <div class="bg-white p-4 rounded shadow">
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex flex-row capitalize justify-between font-medium p-4"
-                  >
-                    <span>2nd batch</span>
-                    <span>10 sit</span>
-                    <span>2 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold text-lg">
-                      Full stack web development with javascript
-                    </h2>
-                  </div>
-                  <div class="mt-5 w-3/5">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5"
-                      href="#"
-                    >
-                      <button>add to cart</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="mx-auto py-3 text-center mt-10">
-              <a
-                class="bg-blue-900 text-white border hover:bg-blue-950 hover:text-white border-primary text-center px-10 py-2 capitalize font-medium d-inline-block rounded-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
-                href="#"
-              >
-                explore more
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- test -->
-      <div>
-        <div class="container mx-auto md:p-16">
-          <div class="p-4 md:p-10 rounded-lg bg-white border-1">
-            <h1 class="font-bold text-4xl capitalize text-center mb-8">
-              skills and test
-            </h1>
-            <!-- course catagory -->
-            <div
-              class="grid grid-cols-1 cursor-pointer gap-4 md:grid-cols-2 lg:grid-cols-4 md:border-b-4 border-gray-300 pb-2"
-            >
-              <!-- web development -->
-              <div
-                id="skill-web-development-btn"
-                class="skill-menu-btn flex flex-row justify-center items-center text-black px-3 py-2 rounded relative"
-                onclick="filterSkills('skill-web-development')"
-              >
-                <span
-                  class="font-semibold text-base text-center capitalize text-gray-400"
-                  >web development</span
-                >
-              </div>
-              <!-- app developemmt -->
-              <div
-                id="skill-app-development-btn"
-                class="skill-menu-btn flex flex-row justify-center items-center text-black px-3 relative"
-                onclick="filterSkills('skill-app-development')"
-              >
-                <span
-                  class="font-semibold text-base text-center capitalize text-gray-400"
-                  >app development</span
-                >
-              </div>
-
-              <!-- ui ux design -->
-
-              <div
-                id="skill-ui-ux-design-btn"
-                class="skill-menu-btn flex flex-row justify-center relative items-center"
-                onclick="filterSkills('skill-ui-ux-design')"
-              >
-                <span
-                  class="font-semibold text-base text-center capitalize text-gray-400"
-                  >ui & ux</span
-                >
-              </div>
-              <!-- digital-marketing -->
-              <div
-                id="skill-digital-marketing-btn"
-                class="skill-menu-btn flex flex-row justify-center litems-center relative"
-                onclick="filterSkills('skill-digital-marketing')"
-              >
-                <span
-                  class="font-semibold text-base text-center capitalize text-gray-400"
-                  >marketing</span
-                >
-              </div>
-            </div>
-
-            <!-- course items -->
-            <div class="mt-10">
-              <!-- web-development -->
-              <div class="web_dev grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div
-                  class="skill-course-box skill-web-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold text-lg">
-                      Full stack web development with javascript
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <!-- app development -->
-              <div class="skill-app_dev grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div
-                  class="skill-course-box skill-app-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      app development
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <!-- ui ux design -->
-              <div
-                class="skill-ui_ux_design grid grid-cols-1 md:grid-cols-4 gap-4"
-              >
-                <div
-                  class="skill-course-box skill-ui-ux-design bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      ui ux design
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <!-- digital marketing -->
-              <div
-                class="skill-digital_marketing grid grid-cols-1 md:grid-cols-4 gap-4"
-              >
-                <div
-                  class="skill-course-box skill-digital-marketing bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      digital marketing
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="mx-auto py-3 text-center mt-10">
-              <a
-                class="bg-blue-900 text-white capitalize border hover:bg-blue-950 hover:text-white border-primary text-center px-10 py-2 font-medium d-inline-block rounded-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
-                href="#"
-              >
-                see more
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- blogs -->
-      <div>
-        <div class="container mx-auto my-5 md:my-24 py-5 md:px-16">
-          <div class="p-10">
-            <h1 class="text-center font-bold text-4xl capitalize">
-              latest blog
-            </h1>
-            <p
-              class="text-center font-medium font-lg capitalize py-5 text-base"
-            >
-              explore more from our experts
-            </p>
-          </div>
-          <div
-            class="grid grid-cols-1 justify-center items-center md:grid-cols-3 gap-5"
-          >
-            <div class="mx-auto">
-              <div
-                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-              >
-                <a href="#">
-                  <img
-                    class="rounded-t-lg"
-                    src="./src/assets/img/course_item_1.jpg"
-                    alt=""
-                  />
-                </a>
-                <div class="p-5">
-                  <a href="#">
-                    <h5
-                      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-                    >
-                      Noteworthy technology acquisitions 2021
-                    </h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of
-                    2021 so far, in reverse chronological order.
-                  </p>
-                  <a
-                    href="#"
-                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    Read more
-                    <svg
-                      class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 14 10"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M1 5h12m0 0L9 1m4 4L9 9"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="mx-auto">
-              <div
-                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-              >
-                <a href="#">
-                  <img
-                    class="rounded-t-lg"
-                    src="./src/assets/img/course_item_1.jpg"
-                    alt=""
-                  />
-                </a>
-                <div class="p-5">
-                  <a href="#">
-                    <h5
-                      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-                    >
-                      Noteworthy technology acquisitions 2021
-                    </h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of
-                    2021 so far, in reverse chronological order.
-                  </p>
-                  <a
-                    href="#"
-                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    Read more
-                    <svg
-                      class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 14 10"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M1 5h12m0 0L9 1m4 4L9 9"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="mx-auto">
-              <div
-                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-              >
-                <a href="#">
-                  <img
-                    class="rounded-t-lg"
-                    src="./src/assets/img/course_item_1.jpg"
-                    alt=""
-                  />
-                </a>
-                <div class="p-5">
-                  <a href="#">
-                    <h5
-                      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-                    >
-                      Noteworthy technology acquisitions 2021
-                    </h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of
-                    2021 so far, in reverse chronological order.
-                  </p>
-                  <a
-                    href="#"
-                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    Read more
-                    <svg
-                      class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 14 10"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M1 5h12m0 0L9 1m4 4L9 9"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- achivement -->
-      <div>
-        <div
-          class="container px-8 md:px-16 bg-blue-800 rounded-lg py-20 my-5 md:my-10 mx-auto"
-        >
-          <div class="grid grid-cols-1 text-white lg:grid-cols-4 gap-4">
-            <div
-              class="py-8 px-4 border-b-2 md:border-b-0 md:border-r-2 text-center"
-            >
-              <h1 class="font-bold text-4xl">700+</h1>
-              <p>জব পেয়েছে</p>
-            </div>
-            <div
-              class="py-8 px-4 border-b-2 md:border-b-0 md:border-r-2 text-center"
-            >
-              <h1 class="font-bold text-4xl">700+</h1>
-              <p>জব পেয়েছে</p>
-            </div>
-            <div
-              class="py-8 px-4 border-b-2 md:border-b-0 md:border-r-2 text-center"
-            >
-              <h1 class="font-bold text-4xl">700+</h1>
-              <p>জব পেয়েছে</p>
-            </div>
-            <div class="py-8 px-4 text-center">
-              <h1 class="font-bold text-4xl">700+</h1>
-              <p>জব পেয়েছে</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- review -->
-      <div class="hidden">
-        <div class="container mx-auto p-16">
-          <div class="grid grid-cols-3 gap-4">
-            <div class="border p-4 border-primary rounded-xl">
-              <p class="text-base text-gray-600 font-medium">
-                ওস্তাদ-এর MERN কোর্সটি স্কিল ডেভেলপমেন্টের জন্য অনেক হেল্পফুল
-                একটি কোর্স। আমার প্রতিটি প্রবলেমই তারা লাইভ ক্লাসেই সলভ করার
-                চেষ্টা করেছে। এছাড়াও সাপোর্ট ইন্সট্রাক্টররাও অনেক ভালো। এসব
-                কারণেই MERN এর লার্নিং জার্নিটা আমার জন্য ছিল অসাধারণ।
-              </p>
-              <div>
-                <div>
-                  <img
-                    class="w-14 h-14 rounded-3xl my-3"
-                    src="./src/assets/img/user.jpg"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <h6>Ashikur Rahman</h6>
-                  <span>Ux/Ux Expert</span>
-                </div>
-              </div>
-              <hr />
-              <div></div>
-            </div>
-            <div class="">
-              <p class="text-base text-gray-600 font-medium">
-                ওস্তাদ-এর MERN কোর্সটি স্কিল ডেভেলপমেন্টের জন্য অনেক হেল্পফুল
-                একটি কোর্স। আমার প্রতিটি প্রবলেমই তারা লাইভ ক্লাসেই সলভ করার
-                চেষ্টা করেছে। এছাড়াও সাপোর্ট ইন্সট্রাক্টররাও অনেক ভালো। এসব
-                কারণেই MERN এর লার্নিং জার্নিটা আমার জন্য ছিল অসাধারণ।
-              </p>
-              <div>
-                <div>
-                  <img src="./src/assets/img/user.jpg" alt="" />
-                </div>
-                <div>
-                  <h6>Ashikur Rahman</h6>
-                  <span>Ux/Ux Expert</span>
-                </div>
-              </div>
-              <hr />
-              <div></div>
-            </div>
-            <div class="">
-              <p class="text-base text-gray-600 font-medium">
-                ওস্তাদ-এর MERN কোর্সটি স্কিল ডেভেলপমেন্টের জন্য অনেক হেল্পফুল
-                একটি কোর্স। আমার প্রতিটি প্রবলেমই তারা লাইভ ক্লাসেই সলভ করার
-                চেষ্টা করেছে। এছাড়াও সাপোর্ট ইন্সট্রাক্টররাও অনেক ভালো। এসব
-                কারণেই MERN এর লার্নিং জার্নিটা আমার জন্য ছিল অসাধারণ।
-              </p>
-              <div>
-                <div>
-                  <img src="./src/assets/img/user.jpg" alt="" />
-                </div>
-                <div>
-                  <h6>Ashikur Rahman</h6>
-                  <span>Ux/Ux Expert</span>
-                </div>
-              </div>
-              <hr />
-              <div></div>
-            </div>
-            <div class="">
-              <p class="text-base text-gray-600 font-medium">
-                ওস্তাদ-এর MERN কোর্সটি স্কিল ডেভেলপমেন্টের জন্য অনেক হেল্পফুল
-                একটি কোর্স। আমার প্রতিটি প্রবলেমই তারা লাইভ ক্লাসেই সলভ করার
-                চেষ্টা করেছে। এছাড়াও সাপোর্ট ইন্সট্রাক্টররাও অনেক ভালো। এসব
-                কারণেই MERN এর লার্নিং জার্নিটা আমার জন্য ছিল অসাধারণ।
-              </p>
-              <div>
-                <div>
-                  <img src="./src/assets/img/user.jpg" alt="" />
-                </div>
-                <div>
-                  <h6>Ashikur Rahman</h6>
-                  <span>Ux/Ux Expert</span>
-                </div>
-              </div>
-              <hr />
-              <div></div>
             </div>
           </div>
         </div>

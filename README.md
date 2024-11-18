@@ -50,3 +50,5 @@
 - [edit audio](https://mamun-ethan.github.io/e-learning/edit-audio.html)
 - [edit image](https://mamun-ethan.github.io/e-learning/edit-image.html)
 - [edit video](https://mamun-ethan.github.io/e-learning/edit-video.html)
+
+- [single course in details](https://mamun-ethan.github.io/e-learning/single-course-in-details.html)
