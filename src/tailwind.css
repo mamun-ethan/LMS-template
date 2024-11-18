@@ -4305,6 +4305,10 @@ details.collapse summary::-webkit-details-marker {
   margin-top: 2rem;
 }
 
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
 .block {
   display: block;
 }
@@ -4767,6 +4771,14 @@ details.collapse summary::-webkit-details-marker {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-x-1 {
@@ -5272,6 +5284,11 @@ details.collapse summary::-webkit-details-marker {
 .bg-yellow-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(194 120 3 / var(--tw-bg-opacity));
+}
+
+.bg-blue-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 66 159 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\/src\/assets\/img\/\'\)\] {
@@ -6216,6 +6233,11 @@ faq */
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-blue-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(35 56 118 / var(--tw-bg-opacity));
+}
+
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(28 100 242 / var(--tw-text-opacity));
@@ -6451,6 +6473,11 @@ faq */
   background-color: rgb(17 24 39 / 0.8);
 }
 
+.dark\:bg-blue-800:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 66 159 / var(--tw-bg-opacity));
+}
+
 .dark\:text-blue-300:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(164 202 254 / var(--tw-text-opacity));
@@ -6516,6 +6543,11 @@ faq */
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
+.dark\:hover\:bg-blue-900:hover:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(35 56 118 / var(--tw-bg-opacity));
+}
+
 .dark\:hover\:text-blue-500:hover:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(63 131 248 / var(--tw-text-opacity));
@@ -6565,6 +6597,11 @@ faq */
   --tw-ring-color: rgb(224 36 36 / var(--tw-ring-opacity));
 }
 
+.dark\:focus\:ring-blue-900:focus:is(.dark *) {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(35 56 118 / var(--tw-ring-opacity));
+}
+
 @media not all and (min-width: 1024px) {
   .max-lg\:max-w-2xl {
     max-width: 42rem;
@@ -6584,6 +6621,10 @@ faq */
 @media (min-width: 640px) {
   .sm\:ml-64 {
     margin-left: 16rem;
+  }
+
+  .sm\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 
   .sm\:flex {
@@ -6773,6 +6814,10 @@ faq */
     justify-content: space-between;
   }
 
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
   .md\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0px * var(--tw-space-x-reverse));
@@ -6797,6 +6842,14 @@ faq */
 
   .md\:border-b-4 {
     border-bottom-width: 4px;
+  }
+
+  .md\:border-r-2 {
+    border-right-width: 2px;
+  }
+
+  .md\:border-b-0 {
+    border-bottom-width: 0px;
   }
 
   .md\:bg-transparent {
