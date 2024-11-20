@@ -11,6 +11,9 @@ module.exports = {
         header: "#fff",
         primary: "rgb(32 0 213)",
       },
+      translate: {
+        "40p": "40%", // Add custom translate value
+      },
     },
   },
   plugins: [require("daisyui"), require("flowbite/plugin")],

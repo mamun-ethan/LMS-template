@@ -217,68 +217,108 @@
         <!-- filter -->
         <br /><br /><br />
         <div class="grid grid-cols-1 md:grid-cols-2 justify-between">
+          <!-- Trigger Button -->
           <div class="flex justify-between items-center space-x-2">
             <div class="flex gap-5">
+              <span class="font-semibold text-lg capitalize">add</span>
               <button
+                id="addBtn"
                 type="button"
-                class="inline-flex capitalize w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
               >
-                publish
+                <i class="fa-solid font-extrabold text-lg fa-plus"></i>
               </button>
-              <button
-                type="button"
-                class="inline-flex capitalize w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-              >
-                draft 2
-              </button>
-              <a href="quiz-creation.html">
-                <button
-                  type="button"
-                  class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
-                >
-                  <i class="fa-solid font-extrabold text-lg fa-plus"></i>
-                </button>
-              </a>
             </div>
           </div>
-          <div class="flex justify-start md:justify-end items-center gap-5">
-            <div class="relative inline-block text-left">
-              <div
-                class="grid md:flex grid-cols-2 md:grid-cols-4 justify-between gap-5 items-center py-4"
+        </div>
+
+        <div>
+          <div
+            id="modal"
+            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+          >
+            <div
+              class="bg-white transform translate-x-40p rounded-lg shadow-lg my-8 p-5 relative"
+            >
+              <!-- Cancel Button -->
+              <button
+                id="cancelBtn"
+                class="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
               >
-                <!-- Category option -->
-                <select id="category" class="capitalize">
-                  <option value="category" selected disabled>category</option>
-                  <option value="course1">course 1</option>
-                  <option value="course2">course 2</option>
-                </select>
+                <i class="fa-solid fa-times text-lg"></i>
+              </button>
+              <div>
+                <div class="content">
+                  <h1 class="mx-auto text-4xl">initilize</h1>
 
-                <!-- Course option (initially hidden) -->
-                <select id="course" class="capitalize hidden">
-                  <option value="course" selected disabled>course</option>
-                  <option value="lesson1">lesson 1</option>
-                  <option value="lesson2">lesson 2</option>
-                </select>
+                  <form class="mx-auto">
+                    <div class="">
+                      <label
+                        for="base-input"
+                        class="block text-lg capitalize mb-4 font-medium text-gray-900 dark:text-white"
+                        >upload thumbnail</label
+                      >
+                      <input
+                        class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none mb-5 focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                        type="file"
+                        accept="image/*"
+                      />
+                      <label
+                        for="base-input"
+                        class="block mb-2 text-lg font-medium text-gray-900 dark:text-white"
+                        >Title</label
+                      >
+                      <input
+                        type="text"
+                        id="base-input"
+                        placeholder="quiz title"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      />
 
-                <!-- Lesson option (initially hidden) -->
-                <select id="lesson" class="capitalize hidden">
-                  <option value="lesson" selected disabled>lesson</option>
-                  <option value="homework">homework</option>
-                  <option value="assignment">assignment</option>
-                </select>
+                      <label
+                        for="base-input"
+                        class="block mt-5 capitalize text-lg font-medium text-gray-900 dark:text-white"
+                        >time:</label
+                      >
+                      <input
+                        type="time"
+                        id="base-input"
+                        placeholder="set time"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      />
+                      <label
+                        for="base-input"
+                        class="block mt-5 capitalize text-lg font-medium text-gray-900 dark:text-white"
+                      >
+                        full mark:</label
+                      >
+                      <input
+                        type="number"
+                        id="base-input"
+                        placeholder="full mark"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      />
+                      <label
+                        for="base-input"
+                        class="block capitalize mt-5 text-lg font-medium text-gray-900 dark:text-white"
+                        >pass mark:</label
+                      >
+                      <input
+                        type="number"
+                        id="base-input"
+                        placeholder="pass mark"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      />
 
-                <!-- Save button (initially hidden) -->
-                <button
-                  id="saveBtn"
-                  type="button"
-                  class="text-white bg-blue-700 hidden hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                >
-                  save
-                </button>
+                      <button class="btn btn-primary mt-5">save</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
         <!-- quizzes -->
         <div class="mt-10">
           <div
@@ -365,6 +405,13 @@
                     </li>
                     <li>
                       <a
+                        href="edit.html"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >edit question</a
+                      >
+                    </li>
+                    <li>
+                      <a
                         href="#"
                         class="block text-red-600 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                         >delete</a
@@ -372,20 +419,6 @@
                     </li>
                   </ul>
                 </div>
-              </div>
-              <div class="space-x-2">
-                <button
-                  type="button"
-                  class="px-3 capitalize py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  publish
-                </button>
-                <button
-                  type="button"
-                  class="px-3 capitalize py-2 text-xs font-medium text-center text-red-600 bg-red-200 rounded-lg hover:bg-red-200 focus:ring-2 focus:outline-none focus:ring-red-400 dark:bg-blue-600 dark:focus:ring-red-600"
-                >
-                  draft
-                </button>
               </div>
             </div>
           </div>
@@ -473,6 +506,13 @@
                     </li>
                     <li>
                       <a
+                        href="edit.html"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >edit question</a
+                      >
+                    </li>
+                    <li>
+                      <a
                         href="#"
                         class="block text-red-600 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                         >delete</a
@@ -480,20 +520,6 @@
                     </li>
                   </ul>
                 </div>
-              </div>
-              <div class="space-x-2">
-                <button
-                  type="button"
-                  class="px-3 capitalize py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  publish
-                </button>
-                <button
-                  type="button"
-                  class="px-3 capitalize py-2 text-xs font-medium text-center text-red-600 bg-red-200 rounded-lg hover:bg-red-200 focus:ring-2 focus:outline-none focus:ring-red-400 dark:bg-blue-600 dark:focus:ring-red-600"
-                >
-                  draft
-                </button>
               </div>
             </div>
           </div>
@@ -701,7 +727,24 @@
         </footer>
       </div>
     </main>
-
     <script src="./src/my-library.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Select elements
+        const addBtn = document.getElementById("addBtn");
+        const modal = document.getElementById("modal");
+        const cancelBtn = document.getElementById("cancelBtn");
+
+        // Show modal on "Add" button click
+        addBtn.addEventListener("click", () => {
+          modal.classList.remove("hidden"); // Show the modal
+        });
+
+        // Hide modal on "Cancel" button click
+        cancelBtn.addEventListener("click", () => {
+          modal.classList.add("hidden"); // Hide the modal
+        });
+      });
+    </script>
   </body>
 </html>
