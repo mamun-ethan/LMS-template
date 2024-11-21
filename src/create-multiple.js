@@ -57,3 +57,36 @@ document
       quizContainer.removeChild(quizContainer.lastElementChild);
     }
   });
+
+// multiple choice form submiting
+document.addEventListener("DOMContentLoaded", () => {
+  // Get the "Add" button inside the modal
+  const addButton = document.querySelector(".btn-primary");
+
+  // Function to collect and log data when adding a quiz
+  addButton.addEventListener("click", () => {
+    const questionInput = document.querySelector(".title input").value;
+    const answers = [];
+
+    // Get all answer inputs and checkboxes
+    const answerInputs = document.querySelectorAll(
+      '.answare input[type="text"]'
+    );
+    const checkboxes = document.querySelectorAll(
+      '.answare input[type="checkbox"]'
+    );
+
+    answerInputs.forEach((input, index) => {
+      answers.push({
+        answer: input.value,
+        isCorrect: checkboxes[index].checked,
+      });
+    });
+
+    // Log the collected data to the console
+    console.log({
+      question: questionInput,
+      answers: answers,
+    });
+  });
+});
