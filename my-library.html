@@ -214,7 +214,7 @@
             </button>
           </div>
         </div>
-        <!-- filter -->
+        <!-- add and filtering -->
         <br /><br /><br />
         <div class="grid grid-cols-1 md:grid-cols-2 justify-between">
           <!-- Trigger Button -->
@@ -229,6 +229,36 @@
                 <i class="fa-solid font-extrabold text-lg fa-plus"></i>
               </button>
             </div>
+          </div>
+          <!-- category wise filtering -->
+          <div class="flex gap-2">
+            <!-- Category option -->
+            <select id="category" class="capitalize">
+              <option value="category" selected disabled>category</option>
+              <option value="course1">course 1</option>
+              <option value="course2">course 2</option>
+            </select>
+            <!-- Course option (initially hidden) -->
+            <select id="course" class="capitalize hidden">
+              <option value="course" selected disabled>course</option>
+              <option value="lesson1">lesson 1</option>
+              <option value="lesson2">lesson 2</option>
+            </select>
+            <!-- Lesson option (initially hidden) -->
+            <select id="lesson" class="capitalize hidden">
+              <option value="lesson" selected disabled>lesson</option>
+              <option value="homework">homework</option>
+              <option value="assignment">assignment</option>
+            </select>
+
+            <!-- Save button (initially hidden) -->
+            <button
+              id="saveBtn"
+              type="button"
+              class="text-white bg-blue-700 hidden hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            >
+              save
+            </button>
           </div>
         </div>
         <!-- add modal -->
@@ -323,6 +353,7 @@
         <div class="mt-10">
           <div
             class="flex cursor-pointer flex-col md:flex-row items-start border-2 mb-4 rounded-lg bg-slate-100 py-4 px-2 md:justify-between md:items-center"
+            onclick="location.href='create-quiz.html';"
           >
             <div class="flex justify-start items-center gap-5">
               <div>
@@ -373,6 +404,7 @@
                   data-dropdown-toggle="dropdownDotsHorizontal"
                   class="dropdownMenuIconButton inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                   type="button"
+                  onclick="handleThreeDotsClick(event)"
                 >
                   <svg
                     class="w-5 h-5"
@@ -386,11 +418,10 @@
                     />
                   </svg>
                 </button>
-
                 <!-- Dropdown menu -->
                 <div
                   id="dropdownDotsHorizontal"
-                  class="z-10 dropDown absolute right-[31%] md:right-[13%] hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                  class="z-10 dropDown absolute right-[20%] md:right-[5%] hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                 >
                   <ul
                     class="py-2 text-sm capitalize text-gray-700 dark:text-gray-200"
@@ -422,8 +453,10 @@
               </div>
             </div>
           </div>
+
           <div
             class="flex cursor-pointer flex-col md:flex-row items-start border-2 mb-4 rounded-lg bg-slate-100 py-4 px-2 md:justify-between md:items-center"
+            onclick="location.href='create-quiz.html';"
           >
             <div class="flex justify-start items-center gap-5">
               <div>
@@ -474,6 +507,7 @@
                   data-dropdown-toggle="dropdownDotsHorizontal"
                   class="dropdownMenuIconButton inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                   type="button"
+                  onclick="handleThreeDotsClick(event)"
                 >
                   <svg
                     class="w-5 h-5"
@@ -487,11 +521,10 @@
                     />
                   </svg>
                 </button>
-
                 <!-- Dropdown menu -->
                 <div
                   id="dropdownDotsHorizontal"
-                  class="z-10 dropDown absolute right-[31%] md:right-[13%] hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                  class="z-10 dropDown absolute right-[20%] md:right-[5%] hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                 >
                   <ul
                     class="py-2 text-sm capitalize text-gray-700 dark:text-gray-200"
@@ -621,203 +654,110 @@
         </div>
 
         <!-- footer -->
-        <footer>
-          <div class="container pt-16 px-4 mx-auto">
+        <footer class="bg-[#09072b]">
+          <div class="container py-16 px-4 mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div class="flex flex-col p-5">
                 <img
                   class="w-[50%]"
-                  src="./src/assets/img/footer_logo.png"
+                  src="./src/assets/img/hsk logo.png"
                   alt=""
                 />
-                <span class="text-lg my-2"
-                  >অনলাইন লাইভ স্কিল ডেভেলপমেন্ট প্ল্যাটফর্ম।</span
-                >
-                <span class="font-bold text-lg my-2"
-                  >ডাউনলোড করুন ওস্তাদ অ্যাপ</span
-                >
-                <div class="flex flex-row justify-start mb-5">
-                  <a href="" class="bg-slate-900 p-4 rounded-lg">
-                    <img
-                      class="h-auto"
-                      src="./src/assets/img/social.svg"
-                      alt=""
-                    />
-                  </a>
-                  <a href="" class="bg-slate-900 ml-4 p-4 rounded-lg">
-                    <img
-                      class="h-auto"
-                      src="./src/assets/img/social.svg"
-                      alt=""
-                    />
-                  </a>
-                  <a href="" class="bg-slate-900 ml-4 p-4 rounded-lg">
-                    <img
-                      class="h-auto"
-                      src="./src/assets/img/social.svg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <span> কমিউনিটি -এর সাথে কানেক্টেড থাকতে </span>
-                <div class="flex mt-4 flex-row justify-start lg:justify-around">
-                  <a href="">
-                    <img src="./src/assets/img/facebook.svg" alt="" />
-                  </a>
-                  <a href="">
-                    <img src="./src/assets/img/youtube.svg" alt="" />
-                  </a>
-                  <a href="">
-                    <img src="./src/assets/img/tiktok.svg" alt="" />
-                  </a>
-                  <a href="">
-                    <img src="./src/assets/img/youtube.svg" alt="" />
-                  </a>
-                  <a href="">
-                    <img src="./src/assets/img/tiktok.svg" alt="" />
-                  </a>
-                </div>
-              </div>
-              <div class="p-5">
-                <ul>
-                  <li class="font-semibold text-lg my-3">কুইক লিংক</li>
-                  <li
-                    class="font-light text-base my-3 hover:text-red-500 hover:underline"
+                <div class="text-gray-200 flex flex-col">
+                  <span class="text-base my-2"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem, necessitatibus?</span
                   >
-                    আপকামিং লাইভ ব্যাচ
-                  </li>
-                  <li
-                    class="font-light text-base my-3 hover:text-red-500 hover:underline"
-                  >
-                    ফ্রি কোর্সসমূহ
-                  </li>
-                  <li
-                    class="font-light text-base my-3 hover:text-red-500 hover:underline"
-                  >
-                    আপকামিং লাইভ ব্যাচ
-                  </li>
-                  <li
-                    class="font-light text-base my-3 hover:text-red-500 hover:underline"
-                  >
-                    ফ্রি কোর্সসমূহ
-                  </li>
-                </ul>
-              </div>
-              <div class="p-5">
-                <ul>
-                  <li class="font-semibold text-lg my-3">কুইক লিংক</li>
-                  <li
-                    class="font-light text-base my-3 hover:text-red-500 hover:underline"
-                  >
-                    আপকামিং লাইভ ব্যাচ
-                  </li>
-                  <li
-                    class="font-light text-base my-3 hover:text-red-500 hover:underline"
-                  >
-                    ফ্রি কোর্সসমূহ
-                  </li>
-                  <li
-                    class="font-light text-base my-3 hover:text-red-500 hover:underline"
-                  >
-                    আপকামিং লাইভ ব্যাচ
-                  </li>
-                  <li
-                    class="font-light text-base my-3 hover:text-red-500 hover:underline"
-                  >
-                    ফ্রি কোর্সসমূহ
-                  </li>
-                </ul>
-              </div>
-              <div class="p-5">
-                <ul>
-                  <li class="font-semibold text-lg my-3">কুইক লিংক</li>
-                  <li
-                    class="font-light text-base my-3 hover:text-red-500 hover:underline"
-                  >
-                    আপকামিং লাইভ ব্যাচ
-                  </li>
-                  <li
-                    class="font-light text-base my-3 hover:text-red-500 hover:underline"
-                  >
-                    ফ্রি কোর্সসমূহ
-                  </li>
-                  <li
-                    class="font-light text-base my-3 hover:text-red-500 hover:underline"
-                  >
-                    আপকামিং লাইভ ব্যাচ
-                  </li>
-                  <li
-                    class="font-light text-base my-3 hover:text-red-500 hover:underline"
-                  >
-                    ফ্রি কোর্সসমূহ
-                  </li>
-                </ul>
-              </div>
-            </div>
 
-            <div class="brand pt-8">
-              <ul class="flex flex-wrap justify-between">
-                <li class="px-4 py-2 md:w-1/4 lg:w-1/6">
-                  <a href=""
-                    ><img src="./src/assets/img/brand_1.webp" alt=""
-                  /></a>
-                </li>
-                <li class="px-4 py-2 md:w-1/4 lg:w-1/6">
-                  <a href=""
-                    ><img src="./src/assets/img/brand_4.webp" alt=""
-                  /></a>
-                </li>
-                <li class="px-4 py-2 md:w-1/4 lg:w-1/6">
-                  <a href=""
-                    ><img src="./src/assets/img/brand_2.webp" alt=""
-                  /></a>
-                </li>
-                <li class="px-4 py-2 md:w-1/4 lg:w-1/6">
-                  <a href=""
-                    ><img src="./src/assets/img/brand_3.webp" alt=""
-                  /></a>
-                </li>
-                <li class="px-4 py-2 md:w-1/4 lg:w-1/6">
-                  <a href=""
-                    ><img src="./src/assets/img/brand_1.webp" alt=""
-                  /></a>
-                </li>
-                <li class="px-4 py-2 md:w-1/4 lg:w-1/6">
-                  <a href=""
-                    ><img src="./src/assets/img/brand_4.webp" alt=""
-                  /></a>
-                </li>
-                <li class="px-4 py-2 md:w-1/4 lg:w-1/6">
-                  <a href=""
-                    ><img src="./src/assets/img/brand_2.webp" alt=""
-                  /></a>
-                </li>
-                <li class="px-4 py-2 md:w-1/4 lg:w-1/6">
-                  <a href=""
-                    ><img src="./src/assets/img/brand_3.webp" alt=""
-                  /></a>
-                </li>
-                <li class="px-4 py-2 md:w-1/4 lg:w-1/6">
-                  <a href=""
-                    ><img src="./src/assets/img/brand_1.webp" alt=""
-                  /></a>
-                </li>
-                <li class="px-4 py-2 md:w-1/4 lg:w-1/6">
-                  <a href=""
-                    ><img src="./src/assets/img/brand_4.webp" alt=""
-                  /></a>
-                </li>
-                <li class="px-4 py-2 md:w-1/4 lg:w-1/6">
-                  <a href=""
-                    ><img src="./src/assets/img/brand_2.webp" alt=""
-                  /></a>
-                </li>
-                <li class="px-4 py-2 md:w-1/4 lg:w-1/6">
-                  <a href=""
-                    ><img src="./src/assets/img/brand_3.webp" alt=""
-                  /></a>
-                </li>
-              </ul>
+                  <span class="font-semibold capitalize text-lg"
+                    >mirpur 1212, dhaka,</span
+                  >
+                  <span class="font-semibold capitalize text-lg"
+                    >+8801xxxxxx</span
+                  >
+                </div>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </footer>

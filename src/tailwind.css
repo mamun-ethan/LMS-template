@@ -4071,6 +4071,10 @@ details.collapse summary::-webkit-details-marker {
   top: 64px;
 }
 
+.right-\[20\%\] {
+  right: 20%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -4323,10 +4327,6 @@ details.collapse summary::-webkit-details-marker {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
 }
 
 .block {
@@ -6725,6 +6725,10 @@ faq */
 
   .md\:top-12 {
     top: 3rem;
+  }
+
+  .md\:right-\[5\%\] {
+    right: 5%;
   }
 
   .md\:col-span-2 {

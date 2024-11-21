@@ -56,7 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const dropdownButtons = document.querySelectorAll(".dropdownMenuIconButton");
 
   dropdownButtons.forEach((button) => {
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function (event) {
+      // Prevent the click from propagating to the parent <div>
+      event.stopPropagation();
+
       // Find the closest dropdown menu for this button
       const dropdownMenu = button.nextElementSibling;
 
@@ -67,7 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-// Get elements
+
+// filtering
 const categorySelect = document.getElementById("category");
 const courseSelect = document.getElementById("course");
 const lessonSelect = document.getElementById("lesson");
