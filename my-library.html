@@ -231,7 +231,7 @@
             </div>
           </div>
         </div>
-
+        <!-- add modal -->
         <div>
           <div
             id="modal"
@@ -390,7 +390,7 @@
                 <!-- Dropdown menu -->
                 <div
                   id="dropdownDotsHorizontal"
-                  class="z-10 absolute right-[31%] md:right-[13%] hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                  class="z-10 dropDown absolute right-[31%] md:right-[13%] hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                 >
                   <ul
                     class="py-2 text-sm capitalize text-gray-700 dark:text-gray-200"
@@ -398,8 +398,8 @@
                   >
                     <li>
                       <a
-                        href="edit.html"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        href="#"
+                        class="block edit-btn px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                         >edit</a
                       >
                     </li>
@@ -491,7 +491,7 @@
                 <!-- Dropdown menu -->
                 <div
                   id="dropdownDotsHorizontal"
-                  class="z-10 absolute right-[31%] md:right-[13%] hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                  class="z-10 dropDown absolute right-[31%] md:right-[13%] hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                 >
                   <ul
                     class="py-2 text-sm capitalize text-gray-700 dark:text-gray-200"
@@ -499,8 +499,8 @@
                   >
                     <li>
                       <a
-                        href="edit.html"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        href="#"
+                        class="block edit-btn px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                         >edit</a
                       >
                     </li>
@@ -524,6 +524,102 @@
             </div>
           </div>
         </div>
+
+        <div
+          id="editModal"
+          class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden overflow-y-auto"
+        >
+          <div
+            class="bg-white transform translate-x-40p rounded-lg shadow-lg p-5 relative max-h-screen overflow-y-auto"
+          >
+            <!-- Cancel Button -->
+            <button
+              id="editCancelBtn"
+              class="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+            >
+              <i class="fa-solid fa-times text-lg"></i>
+            </button>
+            <div>
+              <!-- Content -->
+              <div
+                class="content max-h-[calc(100vh-100px)] overflow-y-auto p-4"
+              >
+                <h1 class="mx-auto text-center py-5 capitalize text-4xl">
+                  Edit Quiz
+                </h1>
+
+                <form class="mx-auto">
+                  <!-- Inputs -->
+                  <div class="">
+                    <label
+                      for="base-input"
+                      class="block text-lg capitalize mb-4 font-medium text-gray-900 dark:text-white"
+                      >Change Thumbnail</label
+                    >
+                    <input
+                      class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none mb-5 focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                      type="file"
+                      accept="image/*"
+                    />
+                    <!-- More inputs -->
+                    <label
+                      for="base-input"
+                      class="block mb-2 text-lg font-medium text-gray-900 dark:text-white"
+                      >Title</label
+                    >
+                    <input
+                      type="text"
+                      value="example"
+                      id="base-input"
+                      placeholder="Quiz Title"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    />
+                    <label
+                      for="base-input"
+                      class="block mt-5 capitalize text-lg font-medium text-gray-900 dark:text-white"
+                      >Time:</label
+                    >
+                    <input
+                      type="time"
+                      id="base-input"
+                      placeholder="Set Time"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    />
+                    <label
+                      for="base-input"
+                      class="block mt-5 capitalize text-lg font-medium text-gray-900 dark:text-white"
+                      >Full Mark:</label
+                    >
+                    <input
+                      type="number"
+                      id="base-input"
+                      placeholder="Full Mark"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    />
+                    <label
+                      for="base-input"
+                      class="block capitalize mt-5 text-lg font-medium text-gray-900 dark:text-white"
+                      >Pass Mark:</label
+                    >
+                    <input
+                      type="number"
+                      id="base-input"
+                      placeholder="Pass Mark"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    />
+                    <br />
+                    <button
+                      class="py-2 px-6 text-white font-semibold capitalize rounded-lg bg-blue-600"
+                    >
+                      Update
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- footer -->
         <footer>
           <div class="container pt-16 px-4 mx-auto">
@@ -730,19 +826,41 @@
     <script src="./src/my-library.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // Select elements
+        // Select elements for "Add" modal
         const addBtn = document.getElementById("addBtn");
         const modal = document.getElementById("modal");
         const cancelBtn = document.getElementById("cancelBtn");
+        const dropDowns = document.querySelectorAll(".dropDown");
 
         // Show modal on "Add" button click
-        addBtn.addEventListener("click", () => {
-          modal.classList.remove("hidden"); // Show the modal
+        addBtn?.addEventListener("click", () => {
+          modal.classList.remove("hidden");
         });
 
         // Hide modal on "Cancel" button click
-        cancelBtn.addEventListener("click", () => {
-          modal.classList.add("hidden"); // Hide the modal
+        cancelBtn?.addEventListener("click", () => {
+          modal.classList.add("hidden");
+        });
+
+        // Select elements for "Edit" modal
+        const editBtns = document.querySelectorAll(".edit-btn");
+        const editModal = document.getElementById("editModal");
+        const editCancelBtn = document.getElementById("editCancelBtn");
+
+        // Show edit modal on "Edit" button click
+        editBtns.forEach((btn) =>
+          btn.addEventListener("click", () => {
+            editModal.classList.remove("hidden");
+            dropDowns.forEach((dropdown) => {
+              dropdown.classList.add("hidden"); // Hide all dropdowns
+              console.log("HI");
+            });
+          })
+        );
+
+        // Hide edit modal on "Cancel" button click
+        editCancelBtn?.addEventListener("click", () => {
+          editModal.classList.add("hidden");
         });
       });
     </script>
