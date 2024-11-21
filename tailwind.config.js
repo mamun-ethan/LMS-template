@@ -12,7 +12,8 @@ module.exports = {
         primary: "rgb(32 0 213)",
       },
       translate: {
-        "40p": "40%", // Add custom translate value
+        "40p": "40%",
+        "15p": "15%", // Add custom translate value
       },
     },
   },
