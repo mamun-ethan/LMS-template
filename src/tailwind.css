@@ -4189,11 +4189,6 @@ details.collapse summary::-webkit-details-marker {
   margin-bottom: 2rem;
 }
 
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
-
 .\!mt-12 {
   margin-top: 3rem !important;
 }
@@ -4438,16 +4433,16 @@ details.collapse summary::-webkit-details-marker {
   height: 100vh;
 }
 
+.max-h-\[90vh\] {
+  max-height: 90vh;
+}
+
 .max-h-\[calc\(100vh-100px\)\] {
   max-height: calc(100vh - 100px);
 }
 
 .max-h-screen {
   max-height: 100vh;
-}
-
-.max-h-\[90vh\] {
-  max-height: 90vh;
 }
 
 .min-h-\[400px\] {

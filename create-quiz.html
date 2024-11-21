@@ -252,9 +252,10 @@
                 </div>
               </a>
 
-              <a href="create-blank.html">
+              <!-- Fill in the Blank Trigger -->
+              <a id="openBlankModal" class="cursor-pointer">
                 <div
-                  class="flex cursor-pointer justify-start items-center border-2 px-2 py-4 bg-slate-50 rounded-lg gap-2"
+                  class="flex justify-start items-center border-2 px-2 py-4 bg-slate-50 rounded-lg gap-2"
                 >
                   <div>
                     <i
@@ -268,7 +269,8 @@
                   </div>
                 </div>
               </a>
-              <a href="create-video.html">
+              <!-- video modal -->
+              <a id="openVideoModal" href="create-video.html">
                 <div
                   class="flex cursor-pointer justify-start items-center border-2 px-2 py-4 bg-slate-50 rounded-lg gap-2"
                 >
@@ -280,7 +282,8 @@
                   </div>
                 </div>
               </a>
-              <a href="create-image.html">
+              <!-- image modal -->
+              <a id="openImageModal" href="create-image.html">
                 <div
                   class="flex cursor-pointer justify-start items-center border-2 px-2 py-4 bg-slate-50 rounded-lg gap-2"
                 >
@@ -292,7 +295,7 @@
                   </div>
                 </div>
               </a>
-              <a href="create-audio.html">
+              <a id="openAudioModal" href="create-audio.html">
                 <div
                   class="flex cursor-pointer justify-start items-center border-2 px-2 py-4 bg-slate-50 rounded-lg gap-2"
                 >
@@ -388,7 +391,6 @@
                                 type="checkbox"
                                 name=""
                                 id=""
-                                checked
                                 class="checkbox checkbox-primary"
                               />
                             </div>
@@ -458,6 +460,576 @@
                   >
                     add
                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fill in the Blank Modal -->
+        <div
+          id="blankModal"
+          class="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+        >
+          <div
+            class="bg-white rounded-lg shadow-lg my-8 p-5 relative w-[70%] max-w-[1200px] min-h-[400px] max-h-[90vh] overflow-y-auto"
+          >
+            <button
+              id="cancelBlankModal"
+              class="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+            >
+              <i class="fa-solid fa-times text-lg"></i>
+            </button>
+            <div class="content">
+              <div class="flex justify-around items-center">
+                <h1 class="capitalize font-bold py-10 text-4xl">
+                  Create multiple quiz questions
+                </h1>
+                <button
+                  class="add-quiz-btn text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
+                  type="button"
+                >
+                  <i class="fa-solid font-extrabold text-lg fa-plus"></i>
+                </button>
+                <button
+                  class="substract-quiz-btn text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
+                  type="button"
+                >
+                  <i class="fa-solid font-extrabold text-lg fa-minus"></i>
+                </button>
+              </div>
+              <div class="md:mx-10">
+                <div class="quiz-sections-container">
+                  <div class="quiz-section mb-14">
+                    <h1 class="capitalize text-4xl text-start font-semibold">
+                      1.
+                    </h1>
+                    <div class="title">
+                      <h6 class="py-5 capitalize font-bold text-xl">
+                        Question
+                      </h6>
+                      <input
+                        class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                        type="text"
+                        placeholder="Enter the question"
+                      />
+                    </div>
+                    <div class="answare md:mt-8">
+                      <div>
+                        <h6 class="py-5 capitalize font-bold text-xl">
+                          Enter your answer
+                        </h6>
+                        <div class="grid grid-cols-1 gap-4">
+                          <div>
+                            <div class="flex justify-start gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <h6 class="py-5 mt-8 capitalize font-bold text-xl">
+                          Alternative answer
+                        </h6>
+                        <div class="grid grid-cols-1 gap-4">
+                          <div>
+                            <div class="flex justify-start gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex mt-10 justify-end items-center">
+                  <button class="btn btn-primary">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- video Modal -->
+        <div
+          id="videoModal"
+          class="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+        >
+          <div
+            class="bg-white rounded-lg shadow-lg my-8 p-5 relative w-[70%] max-w-[1200px] min-h-[400px] max-h-[90vh] overflow-y-auto"
+          >
+            <button
+              id="cancelVideoModal"
+              class="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+            >
+              <i class="fa-solid fa-times text-lg"></i>
+            </button>
+            <div class="content">
+              <div class="flex justify-around items-center">
+                <h1 class="capitalize font-bold py-10 text-4xl">
+                  create video to multiple question
+                </h1>
+                <button
+                  id="add-quiz-btn-video"
+                  class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
+                  type="button"
+                >
+                  <i class="fa-solid font-extrabold text-lg fa-plus"></i>
+                </button>
+                <button
+                  id="substract-quiz-btn-video"
+                  class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
+                  type="button"
+                >
+                  <i class="fa-solid font-extrabold text-lg fa-minus"></i>
+                </button>
+              </div>
+
+              <div class="md:mx-10">
+                <div
+                  id="quiz-sections-container-video"
+                  class="quiz-sections-container-video"
+                >
+                  <div class="quizz-section mb-14">
+                    <h1
+                      class="counter capitalize text-4xl text-start font-semibold"
+                    >
+                      1.
+                    </h1>
+                    <div class="title">
+                      <h6 class="py-5 capitalize font-bold text-xl">
+                        upload the video
+                      </h6>
+                      <form action="">
+                        <input
+                          class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                          type="file"
+                          accept="video/*"
+                        />
+                      </form>
+                      <div class="title">
+                        <h6 class="py-5 capitalize font-bold text-xl">
+                          Question
+                        </h6>
+                        <input
+                          class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                          type="text"
+                          placeholder="Enter the question"
+                        />
+                      </div>
+                    </div>
+                    <div class="answare md:mt-8">
+                      <div>
+                        <h6 class="py-5 capitalize font-bold text-xl">
+                          enter your answare
+                        </h6>
+                        <div class="grid grid-cols-2 gap-4">
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              1.
+                            </h6>
+                            <div class="flex justify-around gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="answare"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              2.
+                            </h6>
+                            <div class="flex justify-between gap-4 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="answare"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              3.
+                            </h6>
+                            <div class="flex justify-around gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="answare"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              4.
+                            </h6>
+                            <div class="flex justify-between gap-4 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="answare"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mt-5">
+                          <label
+                            class="capitalize text-lg font-semibold"
+                            for="pause"
+                            >pause limite</label
+                          >
+                          <select name="" id="pause">
+                            <option value="1">0</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex mt-10 justify-end items-center">
+                  <button class="btn btn-primary">save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- image Modal -->
+        <div
+          id="imageModal"
+          class="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+        >
+          <div
+            class="bg-white rounded-lg shadow-lg my-8 p-5 relative w-[70%] max-w-[1200px] min-h-[400px] max-h-[90vh] overflow-y-auto"
+          >
+            <button
+              id="cancelImageModal"
+              class="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+            >
+              <i class="fa-solid fa-times text-lg"></i>
+            </button>
+            <div class="content">
+              <div class="flex justify-around items-center">
+                <div class="flex justify-between gap-5 items-center">
+                  <h1 class="capitalize font-bold py-10 text-4xl">
+                    create multiplae quiz question
+                  </h1>
+                  <button
+                    id="add-quiz-btn-image"
+                    type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
+                  >
+                    <i class="fa-solid font-extrabold text-lg fa-plus"></i>
+                  </button>
+                  <button
+                    id="substract-quiz-btn-image"
+                    type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
+                  >
+                    <i class="fa-solid font-extrabold text-lg fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="md:mx-10">
+                <div id="quiz-sections-container-image">
+                  <div class="quizz-section-image mb-14">
+                    <h1
+                      id="counter"
+                      class="capitalize text-4xl text-start font-semibold"
+                    >
+                      1.
+                    </h1>
+                    <div class="title">
+                      <h6 class="py-5 capitalize font-bold text-xl">
+                        upload the image
+                      </h6>
+
+                      <form action="">
+                        <input
+                          class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                          type="file"
+                          accept="image/*"
+                        />
+                      </form>
+                      <div class="title">
+                        <h6 class="py-5 capitalize font-bold text-xl">
+                          Question
+                        </h6>
+                        <input
+                          class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                          type="text"
+                          placeholder="Enter the question "
+                        />
+                      </div>
+                    </div>
+                    <div class="answare md:mt-8">
+                      <div>
+                        <h6 class="py-5 capitalize font-bold text-xl">
+                          enter your answare
+                        </h6>
+                        <div class="grid grid-cols-2 gap-4">
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              1.
+                            </h6>
+                            <div class="flex justify-around gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="answare "
+                              />
+                              <input
+                                type="checkbox"
+                                name=""
+                                id=""
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              2.
+                            </h6>
+                            <div class="flex justify-between gap-4 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="answare "
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                                name=""
+                                id=""
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              3.
+                            </h6>
+                            <div class="flex justify-around gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="answare "
+                              />
+                              <input
+                                type="checkbox"
+                                name=""
+                                id=""
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              4.
+                            </h6>
+                            <div class="flex justify-between gap-4 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="answare "
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                                name=""
+                                id=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex mt-10 justify-end items-center">
+                  <button class="btn btn-primary">save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- audio Modal -->
+        <div
+          id="audioModal"
+          class="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+        >
+          <div
+            class="bg-white rounded-lg shadow-lg my-8 p-5 relative w-[70%] max-w-[1200px] min-h-[400px] max-h-[90vh] overflow-y-auto"
+          >
+            <button
+              id="cancelAudioModal"
+              class="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+            >
+              <i class="fa-solid fa-times text-lg"></i>
+            </button>
+            <div class="content">
+              <div class="flex justify-around items-center">
+                <h1 class="capitalize font-bold py-10 text-4xl">
+                  Create video to multiple question
+                </h1>
+                <button
+                  id="add-quiz-btn-audio"
+                  type="button"
+                  class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
+                >
+                  <i class="fa-solid font-extrabold text-lg fa-plus"></i>
+                </button>
+                <button
+                  id="substract-quiz-btn-audio"
+                  type="button"
+                  class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3.5 py-2 text-center inline-flex items-center me-2"
+                >
+                  <i class="fa-solid font-extrabold text-lg fa-minus"></i>
+                </button>
+              </div>
+
+              <div class="md:mx-10">
+                <div id="quiz-sections-container-audio">
+                  <div class="quizz-section-audio mb-14">
+                    <h1
+                      id="counter"
+                      class="capitalize text-4xl text-start font-semibold"
+                    >
+                      1.
+                    </h1>
+                    <div class="title">
+                      <h6 class="py-5 capitalize font-bold text-xl">
+                        Upload the video
+                      </h6>
+
+                      <form action="">
+                        <input
+                          class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                          type="file"
+                          accept="video/*"
+                        />
+                      </form>
+                      <div class="title">
+                        <h6 class="py-5 capitalize font-bold text-xl">
+                          Question
+                        </h6>
+                        <input
+                          class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                          type="text"
+                          placeholder="Enter the question"
+                        />
+                      </div>
+                    </div>
+                    <div class="answare md:mt-8">
+                      <div>
+                        <h6 class="py-5 capitalize font-bold text-xl">
+                          Enter your answer
+                        </h6>
+                        <div class="grid grid-cols-2 gap-4">
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              1.
+                            </h6>
+                            <div class="flex justify-around gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              2.
+                            </h6>
+                            <div class="flex justify-between gap-4 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              3.
+                            </h6>
+                            <div class="flex justify-around gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              4.
+                            </h6>
+                            <div class="flex justify-between gap-4 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mt-5">
+                          <label
+                            class="capitalize text-lg font-semibold"
+                            for="pause"
+                            >Pause limit</label
+                          >
+                          <select name="" id="pause">
+                            <option value="1">0</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex mt-10 justify-end items-center">
+                  <button class="btn btn-primary">Save</button>
                 </div>
               </div>
             </div>
@@ -676,5 +1248,9 @@
     <script src="./src/dashboard.js"></script>
     <script src="./src/create-quiz.js"></script>
     <script src="./src/create-multiple.js"></script>
+    <script src="./src/create-video.js"></script>
+    <script src="./src/create-blank.js"></script>
+    <script src="./src/create-image.js"></script>
+    <script src="./src/create-audio.js"></script>
   </body>
 </html>
