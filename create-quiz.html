@@ -308,7 +308,7 @@
           </div>
         </div>
 
-        <!-- Modal -->
+        <!-- multiple choice Modal -->
         <div
           id="modal"
           class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
@@ -327,7 +327,7 @@
             <div class="content">
               <div class="flex justify-around items-center">
                 <h1 class="capitalize font-bold py-10 text-4xl">
-                  create multiple quiz questions
+                  create multiplae quiz question
                 </h1>
                 <button
                   id="add-quiz-btn"
@@ -360,6 +360,7 @@
                       <input
                         class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
                         type="text"
+                        value="example"
                         placeholder="Enter the question "
                       />
                     </div>
@@ -373,7 +374,6 @@
                           id="quizz-container"
                           class="grid grid-cols-2 gap-4"
                         >
-                          <!-- Answer Inputs -->
                           <div>
                             <h6 class="py-5 capitalize font-bold text-xl">
                               1.
@@ -382,7 +382,44 @@
                               <input
                                 class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
                                 type="text"
-                                placeholder="answer"
+                                placeholder="answare "
+                              />
+                              <input
+                                type="checkbox"
+                                name=""
+                                id=""
+                                checked
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              2.
+                            </h6>
+                            <div class="flex justify-between gap-4 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="answare "
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                                name=""
+                                id=""
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              3.
+                            </h6>
+                            <div class="flex justify-around gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="answare "
                               />
                               <input
                                 type="checkbox"
@@ -392,14 +429,35 @@
                               />
                             </div>
                           </div>
-                          <!-- Add more answers -->
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              4.
+                            </h6>
+                            <div class="flex justify-between gap-4 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="answare "
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                                name=""
+                                id=""
+                              />
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="flex mt-10 justify-end items-center">
-                  <button class="btn btn-primary">save</button>
+                  <button
+                    class="btn text-sm font-semibold text-white btn-primary"
+                  >
+                    update
+                  </button>
                 </div>
               </div>
             </div>
@@ -611,6 +669,72 @@
 
     <script src="./src/dashboard.js"></script>
     <script src="./src/create-quiz.js"></script>
-    <script src="./src/create-multiple.js"></script>
+    <script>
+      document
+        .getElementById("add-quiz-btn")
+        .addEventListener("click", function () {
+          const quizContainer = document.getElementById(
+            "quiz-sections-container"
+          );
+
+          // Calculate the section number based on existing sections
+          const sectionNumber = quizContainer.children.length + 1;
+
+          // HTML structure for a new quiz section with dynamic section number
+          const newQuizSection = `
+    <div class="quiz-section">
+      <br /><br /><br /><br />
+      <h1 class="capitalize text-4xl text-start font-semibold">${sectionNumber}</h1>
+      <div class="title">
+        <h6 class="py-5 capitalize font-bold text-xl">Question</h6>
+        <input
+          class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 bg-transparent"
+          type="text"
+          placeholder="Enter the question"
+        />
+      </div>
+      <div class="answare md:mt-8">
+        <h6 class="py-5 capitalize font-bold text-xl">Enter your answer</h6>
+        <div class="grid grid-cols-2 gap-4">
+          ${Array(4)
+            .fill(0)
+            .map(
+              (_, i) => `
+                <div>
+                  <h6 class="py-5 capitalize font-bold text-xl">${i + 1}.</h6>
+                  <div class="flex justify-around gap-2 items-end">
+                    <input
+                      class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 bg-transparent"
+                      type="text"
+                      placeholder="Answer"
+                    />
+                    <input type="checkbox" class="checkbox checkbox-primary" />
+                  </div>
+                </div>`
+            )
+            .join("")}
+        </div>
+      </div>
+    </div>
+  `;
+
+          // Add the new quiz section to the container
+          quizContainer.insertAdjacentHTML("beforeend", newQuizSection);
+        });
+
+      document
+        .getElementById("substract-quiz-btn")
+        .addEventListener("click", function () {
+          const quizContainer = document.getElementById(
+            "quiz-sections-container"
+          );
+
+          // Check if there's at least one section to remove
+          if (quizContainer.children.length > 0) {
+            // Remove the last quiz section
+            quizContainer.removeChild(quizContainer.lastElementChild);
+          }
+        });
+    </script>
   </body>
 </html>
