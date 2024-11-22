@@ -33,7 +33,7 @@ document
       <div class="answare md:mt-8">
         <div>
           <h6 class="py-5 capitalize font-bold text-xl">Enter your answer</h6>
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-2 border-2 rounded-lg p-2 gap-4">
             ${[1, 2, 3, 4]
               .map(
                 (num) => `

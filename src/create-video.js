@@ -25,7 +25,11 @@ function addQuizSection() {
     <div class="title">
       <h6 class="py-5 capitalize font-bold text-xl">upload the video</h6>
       <form action="">
-        <input class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent" type="file" accept="video/*" />
+        <input
+                          class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                          type="text"
+                          placeholder="Enter video link"
+                        />
       </form>
       <div class="title">
         <h6 class="py-5 capitalize font-bold text-xl">Question</h6>
@@ -35,7 +39,7 @@ function addQuizSection() {
     <div class="answare md:mt-8">
       <div>
         <h6 class="py-5 capitalize font-bold text-xl">enter your answare</h6>
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-2 border-2 rounded-lg p-2 gap-4">
           <div>
             <h6 class="py-5 capitalize font-bold text-xl">1.</h6>
             <div class="flex justify-around gap-2 items-end">
