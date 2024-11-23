@@ -1,10 +1,9 @@
-// adding new quiz item by submiting modal form
-
 // Initialize the counter
-let quizCounter = 0;
+var quizCounter = 0;
 
 document.querySelector(".btn-image").addEventListener("click", function () {
-  // Get all quiz sections
+  // Get the modal and all quiz sections
+  const modal = document.getElementById("imageModal");
   const quizSections = document.querySelectorAll(".quizz-section-image");
   const quizData = [];
 
@@ -101,8 +100,37 @@ document.querySelector(".btn-image").addEventListener("click", function () {
     // Update the counter
     quizCounter += quizData.length;
 
-    // Close the modal
-    const modal = document.getElementById("imageModal");
+    // Clear only the input fields in the modal
+    quizSections.forEach((section) => {
+      const imageInput = section.querySelector('input[type="file"]');
+      const questionInput = section.querySelector(
+        'input[placeholder="Enter the question "]'
+      );
+      const answerInputs = section.querySelectorAll(
+        '.answare input[type="text"]'
+      );
+      const checkboxes = section.querySelectorAll(
+        '.answare input[type="checkbox"]'
+      );
+
+      // Reset the image input
+      if (imageInput) imageInput.value = "";
+
+      // Reset the question input
+      if (questionInput) questionInput.value = "";
+
+      // Reset the answer inputs
+      answerInputs.forEach((input) => {
+        input.value = "";
+      });
+
+      // Uncheck all checkboxes
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = false;
+      });
+    });
+
+    // Hide the modal without resetting its structure
     modal.classList.add("hidden");
   } else {
     console.error("Please fill out all required fields.");

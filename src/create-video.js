@@ -1,4 +1,7 @@
-// modal form submiting
+// Initialize the quiz counter
+var quizCounter = 0;
+
+// Modal form submitting for video quizzes
 document.querySelector(".btn-video").addEventListener("click", function () {
   // Get the modal and form inputs
   const modal = document.getElementById("videoModal");
@@ -34,9 +37,8 @@ document.querySelector(".btn-video").addEventListener("click", function () {
   // Get pause limit
   const pauseLimit = modal.querySelector("#pause").value;
 
-  // Get the current number of quiz items already added
-  const quizContainer = document.getElementById("quizContainer");
-  const currentQuizCount = quizContainer.querySelectorAll(".bg-white").length; // Count existing quiz sections
+  // Increment the counter for the new quiz
+  quizCounter++;
 
   // Create the new question HTML structure
   const newQuestion = document.createElement("div");
@@ -53,7 +55,7 @@ document.querySelector(".btn-video").addEventListener("click", function () {
 <span class="text-primary text-2xl">
 <i class="fa-regular fa-square-check"></i>
 </span>
-${currentQuizCount + 1}.  <!-- Increment the quiz number -->
+${quizCounter}.  <!-- Increment the quiz number -->
 <span class="font-normal text-lg text-start py-5">${questionText}</span>
 <a href="./edit-video.html" class="capitalize text-xs absolute right-[5%] px-3 py-1.5 text-white rounded-lg bg-blue-700 font-semibold">edit</a>
 </h1>
@@ -65,9 +67,9 @@ ${answers
   .map(
     (answer, idx) => `
 <label class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer">
-  <input type="radio" name="question${
-    currentQuizCount + 1
-  }" class="peer w-4 h-4 cursor-pointer" ${answer.correct ? "checked" : ""} />
+  <input type="radio" name="question${quizCounter}" class="peer w-4 h-4 cursor-pointer" ${
+      answer.correct ? "checked" : ""
+    } />
   <span class="ml-2 text-sm font-medium text-gray-900">${answer.text}</span>
 </label>
 `
@@ -77,6 +79,7 @@ ${answers
 `;
 
   // Append the new question to the quiz container
+  const quizContainer = document.getElementById("quizContainer");
   quizContainer.appendChild(newQuestion);
 
   // Close the modal

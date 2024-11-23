@@ -1,5 +1,3 @@
-// submiting modal by entering data
-
 document.querySelector(".btn").addEventListener("click", function () {
   const quizSectionsContainer = document.getElementById(
     "quiz-sections-container"
@@ -67,7 +65,22 @@ document.querySelector(".btn").addEventListener("click", function () {
     quizContainer.appendChild(questionElement);
   });
 
-  // Clear the modal content and close it
-  quizSectionsContainer.innerHTML = ""; // Clear modal content
-  modal.classList.add("hidden"); // Hide the modal
+  // Clear the modal input fields but keep the structure
+  quizSections.forEach((section) => {
+    const inputs = section.querySelectorAll("input[type='text']");
+    const checkboxes = section.querySelectorAll(".checkbox");
+
+    // Clear text inputs
+    inputs.forEach((input) => {
+      input.value = "";
+    });
+
+    // Uncheck checkboxes
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+  });
+
+  // Hide the modal
+  modal.classList.add("hidden");
 });

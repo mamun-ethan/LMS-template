@@ -1,5 +1,3 @@
-// submiting modal form
-
 document.querySelector(".blank-btn").addEventListener("click", function () {
   const modal = document.getElementById("blankModal");
   const quizSectionsContainer = modal.querySelector(".quiz-sections-container");
@@ -60,10 +58,22 @@ document.querySelector(".blank-btn").addEventListener("click", function () {
     quizContainer.appendChild(newQuizElement);
   });
 
-  // Log the collected data
-  console.log("Quiz Data appended!");
+  // Clear only the input data in the modal
+  quizSections.forEach((section) => {
+    const questionInput = section.querySelector(".title input");
+    const answerInputs = section.querySelectorAll(
+      ".answare input[type='text']"
+    );
 
-  // Clear modal content and close the modal
-  quizSectionsContainer.innerHTML = ""; // Reset modal content
-  modal.classList.add("hidden"); // Hide the modal
+    // Clear the question input
+    if (questionInput) questionInput.value = "";
+
+    // Clear the answer inputs
+    answerInputs.forEach((input) => {
+      input.value = "";
+    });
+  });
+
+  // Hide the modal without resetting its structure
+  modal.classList.add("hidden");
 });
