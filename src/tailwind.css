@@ -1255,36 +1255,6 @@ input:checked + .toggle-bg {
   }
 }
 
-.alert {
-  display: grid;
-  width: 100%;
-  grid-auto-flow: row;
-  align-content: flex-start;
-  align-items: center;
-  justify-items: center;
-  gap: 1rem;
-  text-align: center;
-  border-radius: var(--rounded-box, 1rem);
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
-  padding: 1rem;
-  --tw-text-opacity: 1;
-  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
-  --alert-bg: var(--fallback-b2,oklch(var(--b2)/1));
-  --alert-bg-mix: var(--fallback-b1,oklch(var(--b1)/1));
-  background-color: var(--alert-bg);
-}
-
-@media (min-width: 640px) {
-  .alert {
-    grid-auto-flow: column;
-    grid-template-columns: auto minmax(auto,1fr);
-    justify-items: start;
-    text-align: start;
-  }
-}
-
 .avatar.placeholder > div {
   display: flex;
   align-items: center;
@@ -4694,11 +4664,6 @@ details.collapse summary::-webkit-details-marker {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-x-15p {
-  --tw-translate-x: 15%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .translate-x-40p {
   --tw-translate-x: 40%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -6863,6 +6828,15 @@ faq */
     width: auto;
   }
 
+  .md\:translate-x-15p {
+    --tw-translate-x: 15%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:transform {
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -6998,6 +6972,11 @@ faq */
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .md\:text-\[230px\] {

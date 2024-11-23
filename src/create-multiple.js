@@ -23,6 +23,7 @@ document.querySelector(".btn").addEventListener("click", function () {
 
     // Create the question section dynamically
     const questionHTML = `
+  <div class="flex  justify-between items-center">
   <h1 class="font-medium text-2xl ml-5 relative text-start py-5">
     <span class="text-primary text-2xl">
       <i class="fa-regular fa-square-check"></i>
@@ -31,13 +32,28 @@ document.querySelector(".btn").addEventListener("click", function () {
     <span class="font-normal text-lg text-start py-5">
       ${questionText}
     </span>
+  </h1>
+
+  <!-- Button Container with Flexbox for spacing -->
+  <div class="flex gap-5"> 
     <a
       href="./edit-multiple.html"
-      class="capitalize text-xs absolute right-[5%] px-3 py-1.5 text-white rounded-lg bg-blue-700 font-semibold"
+      class="capitalize edit-btn text-xs px-3 py-1.5 text-white rounded-lg bg-blue-700 font-semibold"
     >
       edit
     </a>
-  </h1>
+    
+    <a
+      class="capitalize delete-btn text-xs px-3 py-1.5 text-red-600 rounded-lg bg-red-300 font-semibold"
+    >
+      delete
+    </a>
+  </div>
+
+  
+</div>
+
+  
   <div class="grid grid-cols-1 px-10 md:grid-cols-2 gap-2">
     ${answers
       .map(
@@ -62,6 +78,7 @@ document.querySelector(".btn").addEventListener("click", function () {
     // Append the question to the quiz container
     const questionElement = document.createElement("div");
     questionElement.innerHTML = questionHTML;
+
     quizContainer.appendChild(questionElement);
   });
 

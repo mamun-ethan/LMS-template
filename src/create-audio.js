@@ -55,7 +55,9 @@ document.querySelector(".btn-audio").addEventListener("click", function () {
     quizData.forEach((quiz) => {
       const quizHTML = `
         <div class="quiz-item">
-          <h1 class="font-medium ml-2 text-2xl relative text-start py-5">
+
+      <div class="flex  justify-between items-center">
+ <h1 class="font-medium ml-2 text-2xl relative text-start py-5">
             <span class="text-primary text-2xl">
               <i class="fa-regular fa-square-check"></i>
             </span>
@@ -63,8 +65,29 @@ document.querySelector(".btn-audio").addEventListener("click", function () {
             <span class="font-normal text-lg text-start py-5">${
               quiz.questionText
             }</span>
-            <a href="edit-audio.html" class="capitalize text-xs absolute right-[5%] px-3 py-1.5 text-white rounded-lg bg-blue-700 font-semibold">edit</a>
+           
           </h1>
+
+          <!-- Button Container with Flexbox for spacing -->
+          <div class="flex gap-5"> 
+            <a
+              href="./edit-multiple.html"
+              class="capitalize edit-btn text-xs px-3 py-1.5 text-white rounded-lg bg-blue-700 font-semibold"
+            >
+              edit
+            </a>
+            
+            <a
+              class="capitalize delete-btn text-xs px-3 py-1.5 text-red-600 rounded-lg bg-red-300 font-semibold"
+            >
+              delete
+            </a>
+          </div>
+      </div>
+
+          
+         
+
           <div class="p-4 ml-2 flex justify-start overflow-hidden">
             <audio controls>
               <source src="${quiz.audioLink}" type="audio/ogg" />
