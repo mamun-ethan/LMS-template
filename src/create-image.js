@@ -138,7 +138,7 @@ document.querySelector(".btn-image").addEventListener("click", function () {
     quizData.forEach((quiz) => {
       const quizHTML = `
               <div class="quiz-item my-8">
-                <h1 class="font-medium text-2xl relative text-start py-5">
+                <h1 class="font-medium ml-2 text-2xl relative text-start py-5">
                   <span class="text-primary text-2xl"><i class="fa-regular fa-square-check"></i></span>
                   ${quiz.questionNumber}.
                   <span class="font-normal text-lg text-start py-5">${
@@ -151,10 +151,10 @@ document.querySelector(".btn-image").addEventListener("click", function () {
                 </h1>
                 ${
                   quiz.imageURL
-                    ? `<img src="${quiz.imageURL}" class="w-[30%] md:w-[20%] py-5" alt="Uploaded Image"/>`
+                    ? `<img src="${quiz.imageURL}" class="w-[30%] ml-2 md:w-[20%] py-5" alt="Uploaded Image"/>`
                     : ""
                 }
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div class="grid grid-cols-1 px-2 md:grid-cols-2 gap-2">
                   ${quiz.answers
                     .map(
                       (answer, idx) => `

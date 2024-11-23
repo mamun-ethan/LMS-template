@@ -95,7 +95,7 @@ document.querySelector(".blank-btn").addEventListener("click", function () {
 
     // Create the new quiz item dynamically
     const newQuizItemHTML = `
-  <h1 class="font-medium text-2xl relative text-start py-5">
+  <h1 class="font-medium ml-2 text-2xl relative text-start py-5">
     <span class="text-primary text-2xl">
       <i class="fa-regular fa-square-check"></i>
     </span>

@@ -161,7 +161,7 @@ document.querySelector(".btn-audio").addEventListener("click", function () {
     // Generate the markup for the new quiz item
     const quizItemHTML = `
     <div class="quiz-item">
-      <h1 class="font-medium text-2xl relative text-start py-5">
+      <h1 class="font-medium ml-2 text-2xl relative text-start py-5">
         <span class="text-primary text-2xl">
           <i class="fa-regular fa-square-check"></i>
         </span>
@@ -171,12 +171,12 @@ document.querySelector(".btn-audio").addEventListener("click", function () {
         }</span>
         <a href="edit-audio.html" class="capitalize text-xs absolute right-[5%] px-3 py-1.5 text-white rounded-lg bg-blue-700 font-semibold">edit</a>
       </h1>
-      <div class="p-4 flex justify-start overflow-hidden">
+      <div class="p-4 ml-2 flex justify-start overflow-hidden">
         <audio controls>
           <source src="${quizData[0].audioLink}" type="audio/ogg" />
         </audio>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <div class="grid grid-cols-1 px-2 md:grid-cols-2 gap-2">
         ${quizData[0].answers
           .map(
             (answer) => `
