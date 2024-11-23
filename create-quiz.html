@@ -980,6 +980,137 @@
           <!-- Existing questions will be appended here -->
         </div>
 
+        <!-- edit mutliple modal -->
+
+        <!-- Modal for Editing Quiz Items (Unique ID 'quineModal') -->
+        <div
+          id="quineModal"
+          class="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+        >
+          <div
+            class="bg-white rounded-lg shadow-lg my-8 p-5 md:transform md:translate-x-15p relative w-[70%] max-w-[1200px] min-h-[400px] max-h-[90vh] overflow-y-auto"
+          >
+            <button
+              id="cancelBtn-multiple"
+              class="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+            >
+              <i class="fa-solid fa-times text-lg"></i>
+            </button>
+            <div class="content">
+              <div class="flex justify-around items-center">
+                <h1 class="capitalize font-bold py-10 text-2xl md:text-4xl">
+                  Edit Multiple Choice Quiz Question
+                </h1>
+              </div>
+              <div class="md:mx-10">
+                <div id="quiz-sections-container">
+                  <div class="quizz-section mb-14">
+                    <h1
+                      id="counter"
+                      class="capitalize text-4xl text-start font-semibold"
+                    >
+                      1.
+                    </h1>
+                    <div class="title">
+                      <h6 class="py-5 capitalize font-bold text-xl">
+                        Question
+                      </h6>
+                      <input
+                        class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                        type="text"
+                        value="example"
+                        placeholder="Enter the question"
+                      />
+                    </div>
+                    <div class="answare md:mt-8">
+                      <div>
+                        <h6 class="py-5 capitalize font-bold text-xl">
+                          Enter Your Answer
+                        </h6>
+                        <div
+                          id="quizz-container"
+                          class="grid grid-cols-2 border-2 rounded-lg p-2 gap-4"
+                        >
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              1.
+                            </h6>
+                            <div class="flex justify-around gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              2.
+                            </h6>
+                            <div class="flex justify-between gap-4 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              3.
+                            </h6>
+                            <div class="flex justify-around gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              4.
+                            </h6>
+                            <div class="flex justify-between gap-4 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex mt-10 justify-end items-center">
+                  <button
+                    class="btn text-sm font-semibold text-white capitalize btn-primary"
+                  >
+                    Save Changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- created quizzes -->
 
         <footer class="bg-[#09072b]">
@@ -1099,5 +1230,7 @@
     <script src="./src/create-blank.js"></script>
     <script src="./src/create-image.js"></script>
     <script src="./src/create-audio.js"></script>
+    <!-- JavaScript to Handle Quiz Item Creation, Edit, and Delete -->
+    <script></script>
   </body>
 </html>
