@@ -6,6 +6,9 @@
 .course-box {
   display: none;
 }
+.delete-btn {
+  cursor: pointer;
+}
 .active::after {
   content: "";
   width: 50px;

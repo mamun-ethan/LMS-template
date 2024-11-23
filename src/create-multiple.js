@@ -36,7 +36,7 @@ document.querySelector(".btn").addEventListener("click", function () {
               </h1>
               <div class="flex gap-5">
                 <a href="#edit" class="capitalize edit-btn text-xs px-3 py-1.5 text-white rounded-lg bg-blue-700 font-semibold">edit</a>
-                <a href="#delete" class="capitalize delete-btn text-xs px-3 py-1.5 text-red-600 rounded-lg bg-red-300 font-semibold">delete</a>
+                <a href="#delete" class="capitalize cursor-pointer delete-btn text-xs px-3 py-1.5 text-red-600 rounded-lg bg-red-300 font-semibold">delete</a>
               </div>
             </div>
             <div class="grid grid-cols-1 px-10 md:grid-cols-2 gap-2">

@@ -980,9 +980,7 @@
           <!-- Existing questions will be appended here -->
         </div>
 
-        <!-- edit mutliple modal -->
-
-        <!-- Modal for Editing Quiz Items (Unique ID 'quineModal') -->
+        <!-- Modal for Editing Quiz Items  -->
         <div
           id="quineModal"
           class="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
@@ -1111,6 +1109,97 @@
             </div>
           </div>
         </div>
+
+        <!-- Edit Blank Modal -->
+        <div
+          id="blankModal"
+          class="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+        >
+          <div
+            class="bg-white rounded-lg shadow-lg my-8 p-5 relative w-[70%] max-w-[1200px] min-h-[400px] max-h-[90vh] overflow-y-auto"
+          >
+            <!-- Close button -->
+            <button
+              id="cancelBlankModal-edit"
+              class="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+            >
+              <i class="fa-solid fa-times text-lg"></i>
+            </button>
+
+            <!-- Modal Content -->
+            <div class="content">
+              <div class="flex justify-around items-center">
+                <h1 class="capitalize font-bold py-10 text-2xl md:text-4xl">
+                  Edit Question
+                </h1>
+              </div>
+              <div class="md:mx-10">
+                <div class="quiz-sections-container">
+                  <div class="quiz-section mb-14">
+                    <h1 class="capitalize text-4xl text-start font-semibold">
+                      Edit Question
+                    </h1>
+                    <div class="title">
+                      <h6 class="py-5 capitalize font-bold text-xl">
+                        Question
+                      </h6>
+                      <input
+                        class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                        type="text"
+                        placeholder="Enter the question"
+                      />
+                    </div>
+                    <div class="answare md:mt-8">
+                      <div>
+                        <h6 class="py-5 capitalize font-bold text-xl">
+                          Enter your answer
+                        </h6>
+                        <div class="grid grid-cols-1 gap-4">
+                          <div>
+                            <div class="flex justify-start gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <h6 class="py-5 mt-8 capitalize font-bold text-xl">
+                          Alternative answer
+                        </h6>
+                        <div class="grid grid-cols-1 gap-4">
+                          <div>
+                            <div class="flex justify-start gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Save Button -->
+                <div class="flex mt-10 justify-end items-center">
+                  <button id="saveEditModal" class="btn btn-primary">
+                    Save Changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="quizContainer" class="space-y-4 p-6">
+          <!-- Quiz items will be appended here -->
+        </div>
+
         <!-- created quizzes -->
 
         <footer class="bg-[#09072b]">
@@ -1226,11 +1315,9 @@
     <script src="./src/dashboard.js"></script>
     <script src="./src/create-quiz.js"></script>
     <script src="./src/create-multiple.js"></script>
-    <script src="./src/create-video.js"></script>
+    <!-- <script src="./src/create-video.js"></script> -->
     <script src="./src/create-blank.js"></script>
     <script src="./src/create-image.js"></script>
     <script src="./src/create-audio.js"></script>
-    <!-- JavaScript to Handle Quiz Item Creation, Edit, and Delete -->
-    <script></script>
   </body>
 </html>
