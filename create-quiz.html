@@ -296,6 +296,7 @@
                   </div>
                 </div>
               </a>
+              <!-- audio modal -->
               <a id="openAudioModal" href="create-audio.html">
                 <div
                   class="flex cursor-pointer justify-start items-center border-2 px-2 py-4 bg-slate-50 rounded-lg gap-2"
@@ -843,7 +844,7 @@
             <div class="content">
               <div class="flex justify-around items-center">
                 <h1 class="capitalize font-bold py-10 text-2xl md:text-4xl">
-                  Create video question
+                  Create audio to quizes
                 </h1>
               </div>
 
@@ -1493,7 +1494,155 @@
             </div>
           </div>
         </div>
+        <!-- edit audio Modal -->
+        <div
+          id="audioModal-edit"
+          class="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+        >
+          <div
+            class="bg-white rounded-lg shadow-lg my-8 p-5 relative w-[70%] max-w-[1200px] min-h-[400px] max-h-[90vh] overflow-y-auto"
+          >
+            <button
+              id="cancelAudioModal-edit"
+              class="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+            >
+              <i class="fa-solid fa-times text-lg"></i>
+            </button>
+            <div class="content">
+              <div class="flex justify-around items-center">
+                <h1 class="capitalize font-bold py-10 text-2xl md:text-4xl">
+                  Create audio to quizes
+                </h1>
+              </div>
 
+              <div class="md:mx-10">
+                <div id="quiz-sections-container-audio">
+                  <div class="quizz-section-audio mb-14">
+                    <h1
+                      id="counter"
+                      class="capitalize text-4xl text-start font-semibold"
+                    >
+                      1.
+                    </h1>
+                    <div class="title">
+                      <h6 class="py-5 capitalize font-bold text-xl">
+                        Upload the video
+                      </h6>
+
+                      <form action="">
+                        <input
+                          class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                          type="text"
+                          placeholder="Enter Audio Link"
+                        />
+                      </form>
+                      <div class="title">
+                        <h6 class="py-5 capitalize font-bold text-xl">
+                          Question
+                        </h6>
+                        <input
+                          class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                          type="text"
+                          placeholder="Enter the question"
+                        />
+                      </div>
+                    </div>
+                    <div class="answare md:mt-8">
+                      <div>
+                        <h6 class="py-5 capitalize font-bold text-xl">
+                          Enter your answer
+                        </h6>
+                        <div
+                          class="grid border-2 rounded-lg p-2 grid-cols-2 gap-4"
+                        >
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              1.
+                            </h6>
+                            <div class="flex justify-around gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              2.
+                            </h6>
+                            <div class="flex justify-between gap-4 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              3.
+                            </h6>
+                            <div class="flex justify-around gap-2 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="py-5 capitalize font-bold text-xl">
+                              4.
+                            </h6>
+                            <div class="flex justify-between gap-4 items-end">
+                              <input
+                                class="w-2/3 text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
+                                type="text"
+                                placeholder="Answer"
+                              />
+                              <input
+                                type="checkbox"
+                                class="checkbox checkbox-primary"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mt-5">
+                          <label
+                            class="capitalize text-lg font-semibold"
+                            for="pause"
+                            >Pause limit</label
+                          >
+                          <select name="" id="pause">
+                            <option value="1">0</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex mt-10 justify-end items-center">
+                  <button class="btn btn-audio-edit btn-primary">update</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Quiz Container -->
         <div id="quizContainer" class="space-y-4 p-6">
           <!-- Quiz items will be appended here -->
@@ -1616,37 +1765,34 @@
     <script src="./src/create-multiple.js"></script>
     <script src="./src/create-video.js"></script>
     <script src="./src/create-blank.js"></script>
-    <!-- <script src="./src/create-image.js"></script> -->
-    <script src="./src/create-audio.js"></script>
+    <script src="./src/create-image.js"></script>
+    <!-- <script src="./src/create-audio.js"></script> -->
     <script>
       // Initialize the counter
-      var quizCounter = 0;
+      var quizCounter = 0; // Same as in image modal
 
       document
-        .querySelector(".btn-image")
+        .querySelector(".btn-audio")
         .addEventListener("click", function () {
-          // Get the modal and all quiz sections
-          const modal = document.getElementById("imageModal");
+          const modal = document.getElementById("audioModal");
           const quizSections = document.querySelectorAll(
-            ".quizz-section-image"
+            ".quizz-section-audio"
           );
           const quizData = [];
 
-          quizSections.forEach((section, index) => {
-            const questionNumber = quizCounter + index + 1; // Adjust the question number based on counter
+          quizSections.forEach((section) => {
+            const questionNumber = quizCounter + 1; // Adjust the question number based on counter
 
-            // Get the uploaded image
-            const imageInput = section.querySelector('input[type="file"]');
-            const imageFile = imageInput.files[0];
-            const imageURL = imageFile ? URL.createObjectURL(imageFile) : null;
+            const audioInput = section.querySelector(
+              'input[placeholder="Enter Audio Link"]'
+            );
+            const audioLink = audioInput.value.trim();
 
-            // Get the question text
             const questionInput = section.querySelector(
-              'input[placeholder="Enter the question "]'
+              'input[placeholder="Enter the question"]'
             );
             const questionText = questionInput.value.trim();
 
-            // Get all answers and checkboxes
             const answers = [];
             const answerInputs = section.querySelectorAll(
               '.answare input[type="text"]'
@@ -1664,216 +1810,177 @@
               }
             });
 
-            // Validate and store the data
-            if (questionText && answers.length > 0) {
+            const pauseLimit = section.querySelector("select#pause").value;
+
+            if (audioLink && questionText && answers.length > 0) {
               quizData.push({
                 questionNumber,
-                imageURL,
+                audioLink,
                 questionText,
                 answers,
+                pauseLimit,
               });
             }
           });
 
-          // Append data dynamically
           if (quizData.length > 0) {
             const quizContainer = document.getElementById("quizContainer");
 
             quizData.forEach((quiz) => {
               const quizHTML = `
-      <div class="quiz-item my-8" data-question-number="${quiz.questionNumber}">
-        <div class="flex justify-between items-center">
-          <h1 class="font-medium ml-2 text-2xl relative text-start py-5">
-            <span class="text-primary text-2xl"><i class="fa-regular fa-square-check"></i></span>
-            ${quiz.questionNumber}.
-            <span class="font-normal text-lg text-start py-5">${
-              quiz.questionText
-            }</span>
-          </h1>
-          <div class="flex gap-5"> 
-            <a class="capitalize edit-btn text-xs px-3 py-1.5 text-white rounded-lg bg-blue-700 font-semibold">edit</a>
-            <a class="capitalize delete-btn text-xs px-3 py-1.5 text-red-600 rounded-lg bg-red-300 font-semibold">delete</a>
-          </div>
-        </div>
-        ${
-          quiz.imageURL
-            ? `<img src="${quiz.imageURL}" class="w-[30%] ml-2 md:w-[20%] py-5" alt="Uploaded Image"/>`
-            : ""
-        }
-        <div class="grid grid-cols-1 px-2 md:grid-cols-2 gap-2">
-          ${quiz.answers
-            .map(
-              (answer, idx) => `
-            <label class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer">
-              <input type="radio" name="question${quiz.questionNumber}" ${
-                answer.isCorrect ? "checked" : ""
-              } class="peer w-4 h-4 cursor-pointer" />
-              <span class="ml-2 text-sm font-medium text-gray-900">${
-                answer.text
-              }</span>
-            </label>`
-            )
-            .join("")}
-        </div>
-      </div>`;
+          <div class="quiz-item" data-question-number="${quiz.questionNumber}">
+            <div class="flex justify-between items-center">
+              <h1 class="font-medium ml-2 text-2xl relative text-start py-5">
+                <span class="text-primary text-2xl">
+                  <i class="fa-regular fa-square-check"></i>
+                </span>
+                ${quiz.questionNumber}.
+                <span class="font-normal text-lg text-start py-5">
+                  ${quiz.questionText}
+                </span>
+              </h1>
 
-              // Append the new quiz item
+              <!-- Button Container with Flexbox for spacing -->
+              <div class="flex gap-5"> 
+                <a class="capitalize edit-btn-audio text-xs px-3 cursor-pointer py-1.5 text-white rounded-lg bg-blue-700 font-semibold">
+                  edit
+                </a>
+                <a class="capitalize delete-btn-audio mr-3 text-xs px-3 cursor-pointer py-1.5 text-red-600 rounded-lg bg-red-300 font-semibold">
+                  delete
+                </a>
+              </div>
+            </div>
+
+            <div class="p-4 ml-2 flex justify-start overflow-hidden">
+              <audio controls>
+                <source src="${quiz.audioLink}" type="audio/ogg" />
+              </audio>
+            </div>
+
+            <div class="grid grid-cols-1 px-2 md:grid-cols-2 gap-2">
+              ${quiz.answers
+                .map(
+                  (answer) => `
+                    <label class="flex items-center p-4 bg-gray-100 rounded-lg mb-4 cursor-pointer">
+                      <input type="radio" name="question${
+                        quiz.questionNumber
+                      }" class="peer w-4 h-4 cursor-pointer" ${
+                    answer.isCorrect ? "checked" : ""
+                  } />
+                      <span class="ml-2 text-sm font-medium text-gray-900">${
+                        answer.text
+                      }</span>
+                    </label>
+                  `
+                )
+                .join("")}
+            </div>
+          </div>
+        `;
               quizContainer.insertAdjacentHTML("beforeend", quizHTML);
             });
 
             // Update the counter
             quizCounter += quizData.length;
 
-            // Clear only the input fields in the modal
+            // Hide the modal and clear input fields
             quizSections.forEach((section) => {
-              const imageInput = section.querySelector('input[type="file"]');
-              const questionInput = section.querySelector(
-                'input[placeholder="Enter the question "]'
-              );
-              const answerInputs = section.querySelectorAll(
-                '.answare input[type="text"]'
-              );
-              const checkboxes = section.querySelectorAll(
-                '.answare input[type="checkbox"]'
-              );
-
-              // Reset the image input
-              if (imageInput) imageInput.value = "";
-
-              // Reset the question input
-              if (questionInput) questionInput.value = "";
-
-              // Reset the answer inputs
-              answerInputs.forEach((input) => {
-                input.value = "";
-              });
-
-              // Uncheck all checkboxes
-              checkboxes.forEach((checkbox) => {
-                checkbox.checked = false;
-              });
+              section.querySelector(
+                'input[placeholder="Enter Audio Link"]'
+              ).value = "";
+              section.querySelector(
+                'input[placeholder="Enter the question"]'
+              ).value = "";
+              section
+                .querySelectorAll('.answare input[type="text"]')
+                .forEach((input) => (input.value = ""));
+              section
+                .querySelectorAll('.answare input[type="checkbox"]')
+                .forEach((checkbox) => (checkbox.checked = false));
+              section.querySelector("select#pause").value = ""; // Reset the select dropdown
             });
 
-            // Hide the modal without resetting its structure
             modal.classList.add("hidden");
           } else {
-            console.error("Please fill out all required fields.");
+            console.error("Please fill out all required fields before saving.");
           }
         });
 
       // Cancel button to close the modal without saving
       document
-        .getElementById("cancelImageModal")
+        .getElementById("cancelAudioModal")
         .addEventListener("click", function () {
-          const modal = document.getElementById("imageModal");
+          const modal = document.getElementById("audioModal");
           modal.classList.add("hidden");
         });
 
-      // Edit button functionality
-      document
-        .getElementById("quizContainer")
-        .addEventListener("click", function (event) {
-          if (event.target && event.target.classList.contains("edit-btn")) {
-            const quizItem = event.target.closest(".quiz-item");
-            const questionNumber = quizItem.getAttribute(
-              "data-question-number"
-            );
+      // Handle edit button click
+      document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("edit-btn-audio")) {
+          const quizItem = event.target.closest(".quiz-item");
+          const questionNumber = quizItem.getAttribute("data-question-number");
 
-            // Open the edit modal and pre-fill data
-            const modal = document.getElementById("imageModal-update");
-            const quizData = getQuizDataByQuestionNumber(questionNumber);
+          const audioLink = quizItem.querySelector("audio source").src;
+          const questionText = quizItem.querySelector(
+            "h1 span.font-normal"
+          ).textContent;
 
-            if (quizData) {
-              const { imageURL, questionText, answers } = quizData;
+          // Fill the edit modal with current quiz data
+          const modal = document.getElementById("audioModal-edit");
+          modal.querySelector('input[placeholder="Enter Audio Link"]').value =
+            audioLink;
+          modal.querySelector('input[placeholder="Enter the question"]').value =
+            questionText;
 
-              // Set the modal data
-              const imageInput = modal.querySelector('input[type="file"]');
-              const questionInput = modal.querySelector(
-                'input[placeholder="Enter the question "]'
-              );
-              const answerInputs = modal.querySelectorAll(
-                '.answare input[type="text"]'
-              );
-              const checkboxes = modal.querySelectorAll(
-                '.answare input[type="checkbox"]'
-              );
-
-              questionInput.value = questionText;
-
-              // Set answers
-              answers.forEach((answer, idx) => {
-                answerInputs[idx].value = answer.text;
-                checkboxes[idx].checked = answer.isCorrect;
-              });
-
-              // Set the image (if any)
-              const imgElement = modal.querySelector("img");
-              if (imgElement) {
-                imgElement.src = imageURL;
-              } else {
-                // If no img element, show placeholder or handle accordingly
-                console.warn("Image element not found in the modal.");
-              }
-
-              modal.classList.remove("hidden");
-            }
-          }
-        });
-
-      // Delete button functionality
-      document
-        .getElementById("quizContainer")
-        .addEventListener("click", function (event) {
-          if (event.target && event.target.classList.contains("delete-btn")) {
-            const quizItem = event.target.closest(".quiz-item");
-            quizItem.remove();
-          }
-        });
-
-      // Helper function to get quiz data by question number
-      function getQuizDataByQuestionNumber(questionNumber) {
-        const quizItems = document.querySelectorAll(".quiz-item");
-        for (let quizItem of quizItems) {
-          if (quizItem.getAttribute("data-question-number") == questionNumber) {
-            return {
-              imageURL: quizItem.querySelector("img")
-                ? quizItem.querySelector("img").src
-                : null,
-              questionText:
-                quizItem.querySelector("h1 span.text-start").textContent,
-              answers: Array.from(
-                quizItem.querySelectorAll("input[type='radio']")
-              ).map((input, idx) => {
-                return {
-                  text: quizItem.querySelectorAll("span.text-sm")[idx]
-                    .textContent,
-                  isCorrect: input.checked,
-                };
-              }),
-            };
-          }
-        }
-        return null;
-      }
-
-      // Update button functionality in the edit modal
-      document
-        .querySelector(".update-btn")
-        .addEventListener("click", function () {
-          const modal = document.getElementById("imageModal-update");
-          const imageInput = modal.querySelector('input[type="file"]');
-          const questionInput = modal.querySelector(
-            'input[placeholder="Enter the question "]'
-          );
+          // Populate answers
           const answerInputs = modal.querySelectorAll(
             '.answare input[type="text"]'
           );
           const checkboxes = modal.querySelectorAll(
             '.answare input[type="checkbox"]'
           );
+          const answers = quizItem.querySelectorAll(
+            '.grid input[type="radio"]:checked'
+          );
 
-          const questionText = questionInput.value.trim();
+          answers.forEach((answer, idx) => {
+            answerInputs[idx].value =
+              answer.parentElement.querySelector("span").textContent;
+            checkboxes[idx].checked = true;
+          });
+
+          modal.classList.remove("hidden");
+        }
+      });
+
+      // Cancel edit modal
+      document
+        .getElementById("cancelAudioModal-edit")
+        .addEventListener("click", function () {
+          const modal = document.getElementById("audioModal-edit");
+          modal.classList.add("hidden");
+        });
+
+      // Handle update button click in edit modal
+      document
+        .querySelector(".btn-audio-edit")
+        .addEventListener("click", function () {
+          const modal = document.getElementById("audioModal-edit");
+
+          const audioLink = modal
+            .querySelector('input[placeholder="Enter Audio Link"]')
+            .value.trim();
+          const questionText = modal
+            .querySelector('input[placeholder="Enter the question"]')
+            .value.trim();
+
           const answers = [];
+          const answerInputs = modal.querySelectorAll(
+            '.answare input[type="text"]'
+          );
+          const checkboxes = modal.querySelectorAll(
+            '.answare input[type="checkbox"]'
+          );
 
           answerInputs.forEach((answerInput, idx) => {
             const answerText = answerInput.value.trim();
@@ -1884,46 +1991,47 @@
             }
           });
 
-          if (questionText && answers.length > 0) {
-            // Save the updated quiz data here
+          if (audioLink && questionText && answers.length > 0) {
+            // Update the quiz item
             const quizItem = document.querySelector(
-              `.quiz-item[data-question-number="${quizCounter}"]`
+              `.quiz-item[data-question-number="${questionNumber}"]`
             );
-            if (quizItem) {
-              quizItem.querySelector("span.text-start").textContent =
-                questionText;
-              answers.forEach((answer, idx) => {
-                quizItem.querySelectorAll("span.text-sm")[idx].textContent =
-                  answer.text;
-                quizItem.querySelectorAll("input[type='radio']")[idx].checked =
-                  answer.isCorrect;
-              });
+            quizItem.querySelector("audio source").src = audioLink;
+            quizItem.querySelector("h1 span.font-normal").textContent =
+              questionText;
 
-              // If image was updated
-              if (imageInput.files[0]) {
-                const imgElement = quizItem.querySelector("img");
-                if (imgElement) {
-                  imgElement.src = URL.createObjectURL(imageInput.files[0]);
-                }
-              }
-            }
+            // Update answers
+            const radioButtons = quizItem.querySelectorAll(
+              '.grid input[type="radio"]'
+            );
+            radioButtons.forEach((radioButton, idx) => {
+              radioButton.checked = checkboxes[idx].checked;
+              radioButton.nextElementSibling.textContent =
+                answerInputs[idx].value;
+            });
 
             modal.classList.add("hidden");
           } else {
-            console.error("Please fill out all required fields.");
+            console.error(
+              "Please fill out all required fields before updating."
+            );
           }
         });
-      const cancel_image_modal_edit = document.getElementById(
-        "cancelImageModal-update"
-      );
-      cancel_image_modal_edit.addEventListener("click", () => {
-        const modal = document.getElementById("imageModal-update");
-        modal.classList.add("hidden");
+
+      // Handle delete button click
+      document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("delete-btn-audio")) {
+          const quizItem = event.target.closest(".quiz-item");
+          quizItem.remove();
+          quizCounter--; // Adjust the counter when an item is deleted
+        }
       });
-      // Close modal by clicking outside
-      window.addEventListener("click", function (event) {
-        const modal = document.getElementById("imageModal-update");
-        if (event.target === modal) {
+
+      // Close the edit modal when clicking outside of it
+      document.addEventListener("click", function (e) {
+        const modal = document.getElementById("audioModal-edit");
+
+        if (e.target === modal) {
           modal.classList.add("hidden");
         }
       });
