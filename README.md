@@ -52,3 +52,5 @@
 - [edit video](https://mamun-ethan.github.io/e-learning/edit-video.html)
 
 - [single course in details](https://mamun-ethan.github.io/e-learning/single-course-in-details.html)
+
+- [single course in details](https://mamun-ethan.github.io/e-learning/student-dashboard-course-details.html)
