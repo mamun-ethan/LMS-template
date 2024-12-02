@@ -602,16 +602,73 @@
                 </div>
               </div>
             </div>
-
+            <!-- button -->
             <div class="flex flex-row justify-end">
-              <a href="./submit-quiz.html">
+              <a href="#">
                 <button
-                  class="bg-[#ffc224] text-black font-semibold px-8 py-2.5 rounded-lg"
+                  id="openModalButton"
+                  class="bg-[#ffc224] capitalize font-bold text-black px-8 py-2.5 rounded-lg"
                 >
-                  স্কিক & নেক্সট
+                  next
                   <i class="ml-5 fa-solid fa-person-walking-arrow-right"></i>
                 </button>
               </a>
+            </div>
+          </div>
+          <!-- modal -->
+          <div
+            id="quineModal"
+            class="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+          >
+            <div
+              class="bg-white rounded-lg shadow-lg my-8 p-5 md:transform md:translate-x-15p relative w-[70%] max-w-[1200px] min-h-[400px] max-h-[90vh] overflow-y-auto"
+            >
+              <button
+                id="cancelBtnMultiple"
+                class="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+              >
+                <i class="fa-solid fa-times text-lg"></i>
+              </button>
+              <div class="content p-3">
+                <div
+                  class="flex border-2 rounded-lg py-10 border-primary flex-col flex-wrap items-center justify-center"
+                >
+                  <img
+                    class="w-[10%] md:w-[22%]"
+                    src="./src/assets/img/ms.svg"
+                    alt=""
+                  />
+                  <span class="my-4 py-0.5 px-2 rounded-lg bg-green-500"
+                    >level 1</span
+                  >
+                  <h2 class="font-bold my-4 text-2xl capitalize">
+                    10/10 question answered
+                  </h2>
+                  <span class="font-bold text-base my-4 capitalize"
+                    >are you sure want to submit ?</span
+                  >
+                  <div
+                    class="flex flex-row w-full px-4 justify-between items-center"
+                  >
+                    <a href="./quizzes.html">
+                      <button
+                        class="bg-[#ffc224] text-black text-sm md:text-base font-semibold px-4 py-2.5 rounded-lg"
+                      >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        ফিরে যান
+                      </button>
+                    </a>
+                    <a href="./my-quiz-result-details.html">
+                      <button
+                        class="bg-[#ffc224] text-blacktext-sm md:text-base font-semibold px-4 py-2.5 rounded-lg"
+                      >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        সাবমিট করুন
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -725,7 +782,27 @@
       </div>
     </main>
 
-    <!-- jQuery -->
-    <script src="/path/to/cdn/jquery.slim.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const openModalButton = document.getElementById("openModalButton");
+        const modal = document.getElementById("quineModal");
+        const closeModalButton = document.getElementById("cancelBtnMultiple");
+
+        openModalButton.addEventListener("click", (e) => {
+          e.preventDefault();
+          modal.classList.remove("hidden");
+        });
+
+        closeModalButton.addEventListener("click", () => {
+          modal.classList.add("hidden");
+        });
+
+        window.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            modal.classList.add("hidden");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
