@@ -2,6 +2,40 @@
 let isEditing = false;
 let currentEditingElement = null;
 
+// Get references to all inputs for the upload section
+const imageInput = document.getElementById("imageInput");
+const audioInput = document.getElementById("audioInput");
+const videoInput = document.getElementById("videoInput");
+const uploadImage = document.getElementById("uploadImage");
+const uploadAudio = document.getElementById("uploadAudio");
+const uploadVideo = document.getElementById("uploadVideo");
+const submitButton = document.getElementById("submitButton");
+
+// Add event listeners to radio buttons for upload options
+uploadImage.addEventListener("change", () => {
+  imageInput.disabled = !uploadImage.checked;
+  audioInput.disabled = true;
+  videoInput.disabled = true;
+  audioInput.value = "";
+  videoInput.value = "";
+});
+
+uploadAudio.addEventListener("change", () => {
+  audioInput.disabled = !uploadAudio.checked;
+  imageInput.disabled = true;
+  videoInput.disabled = true;
+  imageInput.value = "";
+  videoInput.value = "";
+});
+
+uploadVideo.addEventListener("change", () => {
+  videoInput.disabled = !uploadVideo.checked;
+  imageInput.disabled = true;
+  audioInput.disabled = true;
+  imageInput.value = "";
+  audioInput.value = "";
+});
+
 // Event listener for the "Save" button in the modal
 document.querySelector(".blank-btn").addEventListener("click", function () {
   const modal = document.getElementById("blankModal");
@@ -12,12 +46,6 @@ document.querySelector(".blank-btn").addEventListener("click", function () {
 
   quizSections.forEach((section, index) => {
     const questionText = section.querySelector(".title input").value.trim();
-
-    // Skip if question text is empty
-    if (!questionText) {
-      alert(`Question ${index + 1} cannot be empty!`);
-      return;
-    }
 
     const answers = [];
     const answerInputs = section.querySelectorAll(
@@ -30,6 +58,25 @@ document.querySelector(".blank-btn").addEventListener("click", function () {
         answers.push(answerText); // Collect non-empty answers
       }
     });
+
+    // Handle media upload
+    let uploadedMedia = null;
+    if (uploadImage.checked && imageInput.files.length > 0) {
+      uploadedMedia = {
+        type: "image",
+        src: URL.createObjectURL(imageInput.files[0]),
+      };
+    } else if (uploadAudio.checked && audioInput.files.length > 0) {
+      uploadedMedia = {
+        type: "audio",
+        src: URL.createObjectURL(audioInput.files[0]),
+      };
+    } else if (uploadVideo.checked && videoInput.value.trim()) {
+      uploadedMedia = {
+        type: "video",
+        src: videoInput.value.trim(),
+      };
+    }
 
     // Create the new quiz item dynamically
     const newQuizItemHTML = `
@@ -52,11 +99,10 @@ document.querySelector(".blank-btn").addEventListener("click", function () {
       edit
     </a>
     <a
-  class="capitalize delete-btn text-xs px-3 py-1.5 text-red-600 rounded-lg bg-red-300 font-semibold cursor-pointer"
->
-  delete
-</a>
-
+      class="capitalize delete-btn text-xs px-3 py-1.5 text-red-600 rounded-lg bg-red-300 font-semibold cursor-pointer"
+    >
+      delete
+    </a>
   </div>
 </div>
 
@@ -72,6 +118,37 @@ document.querySelector(".blank-btn").addEventListener("click", function () {
     // Append the new quiz item to the quiz container
     const newQuizElement = document.createElement("div");
     newQuizElement.innerHTML = newQuizItemHTML;
+
+    // Add the uploaded media (if any) to the new quiz item
+    if (uploadedMedia) {
+      let mediaElement;
+      if (uploadedMedia.type === "image") {
+        mediaElement = document.createElement("img");
+        mediaElement.src = uploadedMedia.src;
+        mediaElement.alt = "Uploaded Image";
+        mediaElement.style.marginTop = "1rem"; // mt-4 equivalent
+        mediaElement.style.width = "200px";
+        mediaElement.style.height = "150px";
+      } else if (uploadedMedia.type === "audio") {
+        mediaElement = document.createElement("audio");
+        mediaElement.controls = true;
+        const audioSource = document.createElement("source");
+        audioSource.src = uploadedMedia.src;
+        audioSource.type = "audio/mp3";
+        mediaElement.appendChild(audioSource);
+        mediaElement.classList.add("mt-4");
+      } else if (uploadedMedia.type === "video") {
+        mediaElement = document.createElement("video");
+        mediaElement.controls = true;
+        const videoSource = document.createElement("source");
+        videoSource.src = uploadedMedia.src;
+        videoSource.type = "video/mp4";
+        mediaElement.appendChild(videoSource);
+        mediaElement.classList.add("mt-4", "w-[200px]", "h-[150]");
+      }
+
+      newQuizElement.querySelector(".p-4").appendChild(mediaElement);
+    }
 
     // Add edit and delete button functionality
     newQuizElement
@@ -169,3 +246,18 @@ document
     isEditing = false;
     currentEditingElement = null;
   });
+
+// Handle form submission for upload options
+submitButton.addEventListener("click", () => {
+  let selectedData = null;
+
+  if (uploadImage.checked) {
+    selectedData = imageInput.files[0] ? imageInput.files[0].name : null;
+  } else if (uploadAudio.checked) {
+    selectedData = audioInput.files[0] ? audioInput.files[0].name : null;
+  } else if (uploadVideo.checked) {
+    selectedData = videoInput.value.trim() || null;
+  }
+
+  console.log("Selected Data:", selectedData);
+});

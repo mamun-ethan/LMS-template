@@ -484,8 +484,9 @@
                       <h6 class="py-5 capitalize font-bold text-xl">
                         Question
                       </h6>
+                      <!-- upload media -->
                       <div
-                        class="flex flex-col md:flex-row jusitify-between items-center"
+                        class="flex mb-10 flex-col md:flex-row justify-between items-center"
                       >
                         <!-- upload image -->
                         <div>
@@ -494,11 +495,17 @@
                             >upload image</span
                           >
                           <div class="flex items-center gap-2">
-                            <input type="checkbox" name="" id="" />
                             <input
+                              type="radio"
+                              name="uploadChoice"
+                              id="uploadImage"
+                            />
+                            <input
+                              id="imageInput"
                               class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
                               type="file"
                               accept="image/*"
+                              disabled
                             />
                           </div>
                         </div>
@@ -509,11 +516,17 @@
                             >upload audio</span
                           >
                           <div class="flex items-center gap-2">
-                            <input type="checkbox" name="" id="" />
                             <input
+                              type="radio"
+                              name="uploadChoice"
+                              id="uploadAudio"
+                            />
+                            <input
+                              id="audioInput"
                               class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
                               type="file"
                               accept="audio/*"
+                              disabled
                             />
                           </div>
                         </div>
@@ -524,15 +537,22 @@
                             >upload video link</span
                           >
                           <div class="flex items-center gap-2">
-                            <input type="checkbox" name="" id="" />
                             <input
+                              type="radio"
+                              name="uploadChoice"
+                              id="uploadVideo"
+                            />
+                            <input
+                              id="videoInput"
                               class="w-[50%] text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
                               type="text"
                               placeholder="Enter video link"
+                              disabled
                             />
                           </div>
                         </div>
                       </div>
+
                       <input
                         class="w-full text-xl border-0 border-b-2 border-black focus:outline-none focus:ring-0 focus:border-b-2 focus:border-black bg-transparent"
                         type="text"
