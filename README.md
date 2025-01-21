@@ -2,57 +2,57 @@
 
 ## student
 
-- [Home](https://mamun-ethan.github.io/LMS-templateg/index.html)
-- [404/error](https://mamun-ethan.github.io/LMS-templateg/404.html)
-- [After login](https://mamun-ethan.github.io/LMS-templateg/login.html)
-- [Dashboard](https://mamun-ethan.github.io/LMS-templateg/dashboard.html)
+- [Home](https://mamun-ethan.github.io/LMS-template/index.html)
+- [404/error](https://mamun-ethan.github.io/LMS-template/404.html)
+- [After login](https://mamun-ethan.github.io/LMS-template/login.html)
+- [Dashboard](https://mamun-ethan.github.io/LMS-template/dashboard.html)
 
-- [Quizzes](https://mamun-ethan.github.io/LMS-templateg/quizzes.html)
-- [Quiz Details](https://mamun-ethan.github.io/LMS-templateg/quiz-details.html)
-- [Quize Result](https://mamun-ethan.github.io/LMS-templateg/my-quiz-result-details.html)
-- [Course-Enroll](https://mamun-ethan.github.io/LMS-templateg/course-enroll.html)
-- [Assessment](https://mamun-ethan.github.io/LMS-templateg/assessment.html)
-- [Quiz Attend](https://mamun-ethan.github.io/LMS-templateg/quiz-attend.html)
+- [Quizzes](https://mamun-ethan.github.io/LMS-template/quizzes.html)
+- [Quiz Details](https://mamun-ethan.github.io/LMS-template/quiz-details.html)
+- [Quize Result](https://mamun-ethan.github.io/LMS-template/my-quiz-result-details.html)
+- [Course-Enroll](https://mamun-ethan.github.io/LMS-template/course-enroll.html)
+- [Assessment](https://mamun-ethan.github.io/LMS-template/assessment.html)
+- [Quiz Attend](https://mamun-ethan.github.io/LMS-template/quiz-attend.html)
 
-- [Quiz Play](https://mamun-ethan.github.io/LMS-templateg/play-quiz.html)
+- [Quiz Play](https://mamun-ethan.github.io/LMS-template/play-quiz.html)
 
-- [Quiz Performers](https://mamun-ethan.github.io/LMS-templateg/quiz-performers.html)
+- [Quiz Performers](https://mamun-ethan.github.io/LMS-template/quiz-performers.html)
 
--[My Performance](https://mamun-ethan.github.io/LMS-templateg/my-quiz-result-details.html)
+-[My Performance](https://mamun-ethan.github.io/LMS-template/my-quiz-result-details.html)
 
--[My Quiz result in details](https://mamun-ethan.github.io/LMS-templateg/my-quiz-result-details.html)
+-[My Quiz result in details](https://mamun-ethan.github.io/LMS-template/my-quiz-result-details.html)
 
-- [Profile](https://mamun-ethan.github.io/LMS-templateg/profile.html)
-- [All Course](https://mamun-ethan.github.io/LMS-templateg/all-course.html)
+- [Profile](https://mamun-ethan.github.io/LMS-template/profile.html)
+- [All Course](https://mamun-ethan.github.io/LMS-template/all-course.html)
 
-- [Sign in](https://mamun-ethan.github.io/LMS-templateg/sign-in.html)
-- [Sign up](https://mamun-ethan.github.io/LMS-templateg/sign-up.html)
+- [Sign in](https://mamun-ethan.github.io/LMS-template/sign-in.html)
+- [Sign up](https://mamun-ethan.github.io/LMS-template/sign-up.html)
 
-- [form](https://mamun-ethan.github.io/LMS-templateg/form.html)
-- [table](https://mamun-ethan.github.io/LMS-templateg/table.html)
+- [form](https://mamun-ethan.github.io/LMS-template/form.html)
+- [table](https://mamun-ethan.github.io/LMS-template/table.html)
 
 ## admin
 
-- [admin-dashboard](https://mamun-ethan.github.io/LMS-templateg/admin-dashboard)
-- [my-library](https://mamun-ethan.github.io/LMS-templateg/my-library)
-- [quiz creation](https://mamun-ethan.github.io/LMS-templateg/quiz-creation.html)
-- [create quiz](https://mamun-ethan.github.io/LMS-templateg/create-quiz.html)
-- [create multiple](https://mamun-ethan.github.io/LMS-templateg/create-multiple.html)
-- [create blank](https://mamun-ethan.github.io/LMS-templateg/create-blank.html)
-- [create image](https://mamun-ethan.github.io/LMS-templateg/create-image.html)
-- [create video](https://mamun-ethan.github.io/LMS-templateg/create-video.html)
-- [create audio](https://mamun-ethan.github.io/LMS-templateg/create-audio.html)
+- [admin-dashboard](https://mamun-ethan.github.io/LMS-template/admin-dashboard)
+- [my-library](https://mamun-ethan.github.io/LMS-template/my-library)
+- [quiz creation](https://mamun-ethan.github.io/LMS-template/quiz-creation.html)
+- [create quiz](https://mamun-ethan.github.io/LMS-template/create-quiz.html)
+- [create multiple](https://mamun-ethan.github.io/LMS-template/create-multiple.html)
+- [create blank](https://mamun-ethan.github.io/LMS-template/create-blank.html)
+- [create image](https://mamun-ethan.github.io/LMS-template/create-image.html)
+- [create video](https://mamun-ethan.github.io/LMS-template/create-video.html)
+- [create audio](https://mamun-ethan.github.io/LMS-template/create-audio.html)
 
-- [edit quiz](https://mamun-ethan.github.io/LMS-templateg/edit.html)
-- [all created quiz](https://mamun-ethan.github.io/LMS-templateg/all-created-quiz.html)
-- [edit multiple](https://mamun-ethan.github.io/LMS-templateg/edit-multiple.html)
-- [edit blank](https://mamun-ethan.github.io/LMS-templateg/edit-blank.html)
-- [edit audio](https://mamun-ethan.github.io/LMS-templateg/edit-audio.html)
-- [edit image](https://mamun-ethan.github.io/LMS-templateg/edit-image.html)
-- [edit video](https://mamun-ethan.github.io/LMS-templateg/edit-video.html)
+- [edit quiz](https://mamun-ethan.github.io/LMS-template/edit.html)
+- [all created quiz](https://mamun-ethan.github.io/LMS-template/all-created-quiz.html)
+- [edit multiple](https://mamun-ethan.github.io/LMS-template/edit-multiple.html)
+- [edit blank](https://mamun-ethan.github.io/LMS-template/edit-blank.html)
+- [edit audio](https://mamun-ethan.github.io/LMS-template/edit-audio.html)
+- [edit image](https://mamun-ethan.github.io/LMS-template/edit-image.html)
+- [edit video](https://mamun-ethan.github.io/LMS-template/edit-video.html)
 
-- [single course in details](https://mamun-ethan.github.io/LMS-templateg/single-course-in-details.html)
+- [single course in details](https://mamun-ethan.github.io/LMS-template/single-course-in-details.html)
 
-- [single course in details](https://mamun-ethan.github.io/LMS-templateg/student-dashboard-course-details.html)
+- [single course in details](https://mamun-ethan.github.io/LMS-template/student-dashboard-course-details.html)
 
-- [Student Dashboard](https://mamun-ethan.github.io/LMS-templateg/student-dashboard.html)
+- [Student Dashboard](https://mamun-ethan.github.io/LMS-template/student-dashboard.html)
