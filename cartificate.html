@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate Download</title>
+    <style>
+      #certificate {
+        width: 800px;
+        height: 600px;
+        padding: 20px;
+        text-align: center;
+        border: 10px solid #000;
+        background: #fff;
+        font-family: "Arial", sans-serif;
+        margin: 20px auto;
+      }
+
+      #certificate h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      #certificate p {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+
+      #certificate .name {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+
+      #certificate .date {
+        margin-top: 40px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="certificate">
+      <h1>Certificate of Achievement</h1>
+      <p>This is to certify that</p>
+      <p class="name">[Recipient's Name]</p>
+      <p>has successfully completed the course</p>
+      <p class="course">[Course Name]</p>
+      <p class="date">Date: [Insert Date]</p>
+    </div>
+    <button id="downloadBtn">Download Certificate</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+      document.getElementById("downloadBtn").addEventListener("click", () => {
+        const { jsPDF } = window.jspdf;
+        const certificate = document.getElementById("certificate");
+
+        html2canvas(certificate).then((canvas) => {
+          const imgData = canvas.toDataURL("image/png");
+          const pdf = new jsPDF("l", "mm", "a4"); // Landscape orientation
+          const pdfWidth = pdf.internal.pageSize.getWidth();
+          const pdfHeight = pdf.internal.pageSize.getHeight();
+
+          pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+          pdf.save("certificate.pdf");
+        });
+      });
+    </script>
+  </body>
+</html>
