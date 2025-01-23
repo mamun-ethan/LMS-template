@@ -663,20 +663,28 @@
 
     <main>
       <div class="container mx-auto my-10 px-5">
-        <div class="grid grid-cols-1 my-5 md:grid-cols-3 gap-2 lg:grid-cols-5">
-          <div
-            class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
-          >
-            <div><img src="./src/assets/img/coding.jpg" alt="" /></div>
+        <!-- book details -->
+        <div
+          class="grid grid-cols-1 bg-white shadow-md rounded-md md:grid-cols-6"
+        >
+          <div class="col-span-2">
+            <img
+              id="book-modal-btn"
+              class="w-full p-5 cursor-pointer"
+              src="./src/assets/img/coding.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-span-4">
             <div
-              class="capitalize flex gap-2 flex-col justify-center items-center"
+              class="capitalize flex gap-2 flex-col justify-center items-start p-10"
             >
               <a
                 href="./book-details.html"
-                class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
+                class="text-4xl hover:text-blue-500 cursor-pointer font-medium"
                 >programming 1st part</a
               >
-              <span class="text-sm text-gray-600">tamim shahoriar subeen</span>
+              <span class="text-lg text-gray-600">tamim shahoriar subeen</span>
               <div class="flex flex-row gap-1">
                 <i class="fa-solid text-orange-400 fa-star"></i>
                 <i class="fa-solid text-orange-400 fa-star"></i>
@@ -684,265 +692,343 @@
                 <i class="fa-solid text-orange-400 fa-star"></i>
                 <i class="fa-regular text-orange-400 fa-star"></i>
               </div>
+              <h5 class="text-xl font-medium capitalize">content:</h5>
+              <ul class="list-disc text-gray-500 ml-5">
+                <li>JavaScript: The Good Parts</li>
+                <li>Clean Code</li>
+                <li>Python Crash Course</li>
+                <li>Head First Design Patterns</li>
+                <li>Effective Java</li>
+                <li>Learning React</li>
+                <li>Introduction to Algorithms</li>
+                <li>JavaScript and JQuery</li>
+                <li>Practical Node.js</li>
+                <li>Fluent Python</li>
+              </ul>
               <div class="flex gap-2">
-                <span class="text-base text-gray-500 font-medium line-through"
+                <span class="text-xl text-gray-500 font-medium line-through"
                   >TK. 450</span
                 >
                 <span class="text-base font-medium">TK. 450</span>
               </div>
-            </div>
-          </div>
-          <div
-            class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
-          >
-            <div><img src="./src/assets/img/jhankar.jpg" alt="" /></div>
-            <div
-              class="capitalize flex gap-2 flex-col justify-center items-center"
-            >
-              <a
-                href="./book-details.html"
-                class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
-                >coding guru</a
-              >
-              <span class="text-sm text-gray-600">jhankar</span>
-              <div class="flex flex-row gap-1">
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-regular text-orange-400 fa-star"></i>
-              </div>
-              <div class="flex gap-2">
-                <span class="text-base text-gray-500 font-medium line-through"
-                  >TK. 450</span
+              <div class="flex gap-2 items-center">
+                <a
+                  class="bg-orange-400 py-2 px-10 shadow-md rounded-md capitalize text-lg font-semibold text-white"
+                  href=""
+                  >read</a
                 >
-                <span class="text-base font-medium">TK. 450</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
-          >
-            <div><img src="./src/assets/img/coding.jpg" alt="" /></div>
-            <div
-              class="capitalize flex gap-2 flex-col justify-center items-center"
-            >
-              <a
-                href="./book-details.html"
-                class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
-                >programming 1st part</a
-              >
-              <span class="text-sm text-gray-600">tamim shahoriar subeen</span>
-              <div class="flex flex-row gap-1">
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-regular text-orange-400 fa-star"></i>
-              </div>
-              <div class="flex gap-2">
-                <span class="text-base text-gray-500 font-medium line-through"
-                  >TK. 450</span
+                <a
+                  class="bg-blue-600 py-2 px-10 shadow-md rounded-md capitalize text-lg font-semibold text-white"
+                  href=""
+                  >add to cart</a
                 >
-                <span class="text-base font-medium">TK. 450</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
-          >
-            <div><img src="./src/assets/img/jhankar.jpg" alt="" /></div>
-            <div
-              class="capitalize flex gap-2 flex-col justify-center items-center"
-            >
-              <a
-                href="./book-details.html"
-                class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
-                >coding guru</a
-              >
-              <span class="text-sm text-gray-600">jhankar</span>
-              <div class="flex flex-row gap-1">
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-regular text-orange-400 fa-star"></i>
-              </div>
-              <div class="flex gap-2">
-                <span class="text-base text-gray-500 font-medium line-through"
-                  >TK. 450</span
-                >
-                <span class="text-base font-medium">TK. 450</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
-          >
-            <div><img src="./src/assets/img/coding.jpg" alt="" /></div>
-            <div
-              class="capitalize flex gap-2 flex-col justify-center items-center"
-            >
-              <a
-                href="./book-details.html"
-                class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
-                >programming 1st part</a
-              >
-              <span class="text-sm text-gray-600">tamim shahoriar subeen</span>
-              <div class="flex flex-row gap-1">
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-regular text-orange-400 fa-star"></i>
-              </div>
-              <div class="flex gap-2">
-                <span class="text-base text-gray-500 font-medium line-through"
-                  >TK. 450</span
-                >
-                <span class="text-base font-medium">TK. 450</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-1 my-5 md:grid-cols-3 gap-2 lg:grid-cols-5">
+
+        <!-- releted books -->
+        <div>
+          <h1 class="my-6 text-center text-3xl font-semibold capitalize">
+            releted books
+          </h1>
           <div
-            class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
+            class="grid grid-cols-1 my-5 md:grid-cols-3 gap-2 lg:grid-cols-5"
           >
-            <div><img src="./src/assets/img/coding.jpg" alt="" /></div>
             <div
-              class="capitalize flex gap-2 flex-col justify-center items-center"
+              class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
             >
-              <a
-                href="./book-details.html"
-                class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
-                >programming 1st part</a
+              <div><img src="./src/assets/img/coding.jpg" alt="" /></div>
+              <div
+                class="capitalize flex gap-2 flex-col justify-center items-center"
               >
-              <span class="text-sm text-gray-600">tamim shahoriar subeen</span>
-              <div class="flex flex-row gap-1">
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-regular text-orange-400 fa-star"></i>
-              </div>
-              <div class="flex gap-2">
-                <span class="text-base text-gray-500 font-medium line-through"
-                  >TK. 450</span
+                <a
+                  href="./book-details.html"
+                  class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
+                  >programming 1st part</a
                 >
-                <span class="text-base font-medium">TK. 450</span>
+                <span class="text-sm text-gray-600"
+                  >tamim shahoriar subeen</span
+                >
+                <div class="flex flex-row gap-1">
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-regular text-orange-400 fa-star"></i>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-base text-gray-500 font-medium line-through"
+                    >TK. 450</span
+                  >
+                  <span class="text-base font-medium">TK. 450</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
+            >
+              <div><img src="./src/assets/img/jhankar.jpg" alt="" /></div>
+              <div
+                class="capitalize flex gap-2 flex-col justify-center items-center"
+              >
+                <a
+                  href="./book-details.html"
+                  class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
+                  >coding guru</a
+                >
+                <span class="text-sm text-gray-600">jhankar</span>
+                <div class="flex flex-row gap-1">
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-regular text-orange-400 fa-star"></i>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-base text-gray-500 font-medium line-through"
+                    >TK. 450</span
+                  >
+                  <span class="text-base font-medium">TK. 450</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
+            >
+              <div><img src="./src/assets/img/coding.jpg" alt="" /></div>
+              <div
+                class="capitalize flex gap-2 flex-col justify-center items-center"
+              >
+                <a
+                  href="./book-details.html"
+                  class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
+                  >programming 1st part</a
+                >
+                <span class="text-sm text-gray-600"
+                  >tamim shahoriar subeen</span
+                >
+                <div class="flex flex-row gap-1">
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-regular text-orange-400 fa-star"></i>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-base text-gray-500 font-medium line-through"
+                    >TK. 450</span
+                  >
+                  <span class="text-base font-medium">TK. 450</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
+            >
+              <div><img src="./src/assets/img/jhankar.jpg" alt="" /></div>
+              <div
+                class="capitalize flex gap-2 flex-col justify-center items-center"
+              >
+                <a
+                  href="./book-details.html"
+                  class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
+                  >coding guru</a
+                >
+                <span class="text-sm text-gray-600">jhankar</span>
+                <div class="flex flex-row gap-1">
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-regular text-orange-400 fa-star"></i>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-base text-gray-500 font-medium line-through"
+                    >TK. 450</span
+                  >
+                  <span class="text-base font-medium">TK. 450</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
+            >
+              <div><img src="./src/assets/img/coding.jpg" alt="" /></div>
+              <div
+                class="capitalize flex gap-2 flex-col justify-center items-center"
+              >
+                <a
+                  href="./book-details.html"
+                  class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
+                  >programming 1st part</a
+                >
+                <span class="text-sm text-gray-600"
+                  >tamim shahoriar subeen</span
+                >
+                <div class="flex flex-row gap-1">
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-regular text-orange-400 fa-star"></i>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-base text-gray-500 font-medium line-through"
+                    >TK. 450</span
+                  >
+                  <span class="text-base font-medium">TK. 450</span>
+                </div>
               </div>
             </div>
           </div>
           <div
-            class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
+            class="grid grid-cols-1 my-5 md:grid-cols-3 gap-2 lg:grid-cols-5"
           >
-            <div><img src="./src/assets/img/jhankar.jpg" alt="" /></div>
             <div
-              class="capitalize flex gap-2 flex-col justify-center items-center"
+              class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
             >
-              <a
-                href="./book-details.html"
-                class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
-                >coding guru</a
+              <div><img src="./src/assets/img/coding.jpg" alt="" /></div>
+              <div
+                class="capitalize flex gap-2 flex-col justify-center items-center"
               >
-              <span class="text-sm text-gray-600">jhankar</span>
-              <div class="flex flex-row gap-1">
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-regular text-orange-400 fa-star"></i>
-              </div>
-              <div class="flex gap-2">
-                <span class="text-base text-gray-500 font-medium line-through"
-                  >TK. 450</span
+                <a
+                  href="./book-details.html"
+                  class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
+                  >programming 1st part</a
                 >
-                <span class="text-base font-medium">TK. 450</span>
+                <span class="text-sm text-gray-600"
+                  >tamim shahoriar subeen</span
+                >
+                <div class="flex flex-row gap-1">
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-regular text-orange-400 fa-star"></i>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-base text-gray-500 font-medium line-through"
+                    >TK. 450</span
+                  >
+                  <span class="text-base font-medium">TK. 450</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
-          >
-            <div><img src="./src/assets/img/coding.jpg" alt="" /></div>
             <div
-              class="capitalize flex gap-2 flex-col justify-center items-center"
+              class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
             >
-              <a
-                href="./book-details.html"
-                class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
-                >programming 1st part</a
+              <div><img src="./src/assets/img/jhankar.jpg" alt="" /></div>
+              <div
+                class="capitalize flex gap-2 flex-col justify-center items-center"
               >
-              <span class="text-sm text-gray-600">tamim shahoriar subeen</span>
-              <div class="flex flex-row gap-1">
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-regular text-orange-400 fa-star"></i>
-              </div>
-              <div class="flex gap-2">
-                <span class="text-base text-gray-500 font-medium line-through"
-                  >TK. 450</span
+                <a
+                  href="./book-details.html"
+                  class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
+                  >coding guru</a
                 >
-                <span class="text-base font-medium">TK. 450</span>
+                <span class="text-sm text-gray-600">jhankar</span>
+                <div class="flex flex-row gap-1">
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-regular text-orange-400 fa-star"></i>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-base text-gray-500 font-medium line-through"
+                    >TK. 450</span
+                  >
+                  <span class="text-base font-medium">TK. 450</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
-          >
-            <div><img src="./src/assets/img/jhankar.jpg" alt="" /></div>
             <div
-              class="capitalize flex gap-2 flex-col justify-center items-center"
+              class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
             >
-              <a
-                href="./book-details.html"
-                class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
-                >coding guru</a
+              <div><img src="./src/assets/img/coding.jpg" alt="" /></div>
+              <div
+                class="capitalize flex gap-2 flex-col justify-center items-center"
               >
-              <span class="text-sm text-gray-600">jhankar</span>
-              <div class="flex flex-row gap-1">
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-regular text-orange-400 fa-star"></i>
-              </div>
-              <div class="flex gap-2">
-                <span class="text-base text-gray-500 font-medium line-through"
-                  >TK. 450</span
+                <a
+                  href="./book-details.html"
+                  class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
+                  >programming 1st part</a
                 >
-                <span class="text-base font-medium">TK. 450</span>
+                <span class="text-sm text-gray-600"
+                  >tamim shahoriar subeen</span
+                >
+                <div class="flex flex-row gap-1">
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-regular text-orange-400 fa-star"></i>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-base text-gray-500 font-medium line-through"
+                    >TK. 450</span
+                  >
+                  <span class="text-base font-medium">TK. 450</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
-          >
-            <div><img src="./src/assets/img/coding.jpg" alt="" /></div>
             <div
-              class="capitalize flex gap-2 flex-col justify-center items-center"
+              class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
             >
-              <a
-                href="./book-details.html"
-                class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
-                >programming 1st part</a
+              <div><img src="./src/assets/img/jhankar.jpg" alt="" /></div>
+              <div
+                class="capitalize flex gap-2 flex-col justify-center items-center"
               >
-              <span class="text-sm text-gray-600">tamim shahoriar subeen</span>
-              <div class="flex flex-row gap-1">
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-solid text-orange-400 fa-star"></i>
-                <i class="fa-regular text-orange-400 fa-star"></i>
-              </div>
-              <div class="flex gap-2">
-                <span class="text-base text-gray-500 font-medium line-through"
-                  >TK. 450</span
+                <a
+                  href="./book-details.html"
+                  class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
+                  >coding guru</a
                 >
-                <span class="text-base font-medium">TK. 450</span>
+                <span class="text-sm text-gray-600">jhankar</span>
+                <div class="flex flex-row gap-1">
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-regular text-orange-400 fa-star"></i>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-base text-gray-500 font-medium line-through"
+                    >TK. 450</span
+                  >
+                  <span class="text-base font-medium">TK. 450</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col bg-white p-2 rounded-md shadow-md justify-between items-center gap-2"
+            >
+              <div><img src="./src/assets/img/coding.jpg" alt="" /></div>
+              <div
+                class="capitalize flex gap-2 flex-col justify-center items-center"
+              >
+                <a
+                  href="./book-details.html"
+                  class="text-lg hover:text-blue-500 cursor-pointer font-semibold"
+                  >programming 1st part</a
+                >
+                <span class="text-sm text-gray-600"
+                  >tamim shahoriar subeen</span
+                >
+                <div class="flex flex-row gap-1">
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-solid text-orange-400 fa-star"></i>
+                  <i class="fa-regular text-orange-400 fa-star"></i>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-base text-gray-500 font-medium line-through"
+                    >TK. 450</span
+                  >
+                  <span class="text-base font-medium">TK. 450</span>
+                </div>
               </div>
             </div>
           </div>

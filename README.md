@@ -56,3 +56,6 @@
 - [single course in details](https://mamun-ethan.github.io/LMS-template/student-dashboard-course-details.html)
 
 - [Student Dashboard](https://mamun-ethan.github.io/LMS-template/student-dashboard.html)
+
+- [Books](https://mamun-ethan.github.io/LMS-template/books.html)
+- [Book-details](https://mamun-ethan.github.io/LMS-template/book-details.html)
