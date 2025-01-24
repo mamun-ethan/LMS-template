@@ -18,6 +18,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- pdf viewer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
     <!-- tailwindcss -->
     <link rel="stylesheet" href="./src/tailwind.css" />
@@ -713,8 +715,9 @@
               </div>
               <div class="flex gap-2 items-center">
                 <a
+                  id="read-btn"
                   class="bg-orange-400 py-2 px-10 shadow-md rounded-md capitalize text-lg font-semibold text-white"
-                  href=""
+                  href="#"
                   >read</a
                 >
                 <a
@@ -727,6 +730,26 @@
           </div>
         </div>
 
+        <!-- Modal -->
+        <div
+          id="modal"
+          class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+        >
+          <div
+            class="w-4/5 md:w-3/5 h-4/5 bg-white rounded shadow-lg relative overflow-y-auto"
+          >
+            <!-- PDF Container -->
+            <div id="pdf-container" class="p-4"></div>
+
+            <!-- Close Button -->
+            <button
+              id="close-btn"
+              class="absolute top-2 right-1 font-semibold text-gray-500 hover:text-gray-800 text-2xl"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
         <!-- releted books -->
         <div>
           <h1 class="my-6 text-center text-3xl font-semibold capitalize">
@@ -1141,51 +1164,55 @@
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const carousel = document.getElementById("carousel");
-        const prevButton = document.getElementById("prev");
-        const nextButton = document.getElementById("next");
-        const items = carousel.children;
-        const totalItems = items.length;
+      const pdfUrl = "./src/assets/sample.pdf"; // Path to your PDF file
+      const maxPages = 2; // Maximum pages to render
+      let pdfDoc = null;
 
-        let currentIndex = 0;
-        let visibleItems = 2; // Default to 2 for small screens
+      // Open Modal
+      document
+        .getElementById("read-btn")
+        .addEventListener("click", async () => {
+          document.getElementById("modal").classList.remove("hidden");
 
-        const updateVisibleItems = () => {
-          if (window.innerWidth >= 768) {
-            visibleItems = 4; // Medium and larger devices
-          } else {
-            visibleItems = 2; // Small devices
-          }
-          updateCarousel();
-        };
-
-        const updateCarousel = () => {
-          const itemWidth = items[0].offsetWidth;
-          const totalOffset = currentIndex * itemWidth;
-          carousel.style.transform = `translateX(-${totalOffset}px)`;
-        };
-
-        prevButton.addEventListener("click", () => {
-          if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
+          // Load and render the PDF
+          if (!pdfDoc) {
+            pdfDoc = await pdfjsLib.getDocument(pdfUrl).promise;
+            renderPages(pdfDoc, maxPages);
           }
         });
 
-        nextButton.addEventListener("click", () => {
-          if (currentIndex < totalItems - visibleItems) {
-            currentIndex++;
-            updateCarousel();
-          }
-        });
-
-        // Update visible items on screen resize
-        window.addEventListener("resize", updateVisibleItems);
-
-        // Initialize visible items on load
-        updateVisibleItems();
+      // Close Modal
+      document.getElementById("close-btn").addEventListener("click", () => {
+        document.getElementById("modal").classList.add("hidden");
       });
+
+      // Close modal when clicking outside the content
+      document.getElementById("modal").addEventListener("click", (e) => {
+        if (e.target === e.currentTarget) {
+          document.getElementById("modal").classList.add("hidden");
+        }
+      });
+
+      // Render specified number of pages
+      async function renderPages(pdfDoc, maxPages) {
+        const container = document.getElementById("pdf-container");
+        container.innerHTML = ""; // Clear previous content
+
+        for (let i = 1; i <= Math.min(maxPages, pdfDoc.numPages); i++) {
+          const page = await pdfDoc.getPage(i);
+          const canvas = document.createElement("canvas");
+          const context = canvas.getContext("2d");
+          canvas.classList.add("mb-4"); // Add margin between pages
+          container.appendChild(canvas);
+
+          const viewport = page.getViewport({ scale: 1.5 });
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+
+          await page.render({ canvasContext: context, viewport: viewport })
+            .promise;
+        }
+      }
     </script>
   </body>
 </html>
