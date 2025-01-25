@@ -61,3 +61,4 @@
 - [Book-details](https://mamun-ethan.github.io/LMS-template/book-details.html)
 - [Student-book](https://mamun-ethan.github.io/LMS-template/student-book.html)
 - [Read-book](https://mamun-ethan.github.io/LMS-template/read-book.html)
+- [book-admin-dashboard](https://mamun-ethan.github.io/LMS-template/add-book-admin.html)
