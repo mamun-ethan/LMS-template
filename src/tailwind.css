@@ -4238,6 +4238,10 @@ details.collapse summary::-webkit-details-marker {
   margin: auto;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -4578,6 +4582,10 @@ details.collapse summary::-webkit-details-marker {
   height: 100vh;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .max-h-\[90vh\] {
   max-height: 90vh;
 }
@@ -4734,6 +4742,10 @@ details.collapse summary::-webkit-details-marker {
   width: 100%;
 }
 
+.w-\[80\%\] {
+  width: 80%;
+}
+
 .min-w-\[150px\] {
   min-width: 150px;
 }
@@ -4784,6 +4796,10 @@ details.collapse summary::-webkit-details-marker {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .flex-1 {
@@ -5566,9 +5582,25 @@ details.collapse summary::-webkit-details-marker {
   --tw-gradient-to: #E74694 var(--tw-gradient-to-position);
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .object-cover {

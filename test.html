@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font aswome icon -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+      integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- tailwindcss -->
+    <link rel="stylesheet" href="./src/tailwind.css" />
+    <!-- flowbite cdn -->
+
+    <title>Document</title>
+  </head>
+  <body class="bg-bgColor font-hind">
+    <main>
+      <header class="p-4 bg-white">
+        <!-- mobile button -->
+        <div class="flex flex-row justify-between">
+          <!-- button -->
+          <div>
+            <button
+              type="button"
+              id="toggle_btn"
+              class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            >
+              <span class="sr-only">Open sidebar</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- item -->
+          <div class="md:hidden flex w-full flex-row justify-end">
+            <ul
+              class="flex flex-row justify-between cursor-pointer items-center"
+            >
+              <li class="mx-2 flex flex-col">
+                <a href="#">
+                  <span class="font-medium text-base"> Mamun Ethan </span>
+                </a>
+
+                <a href="#">
+                  <span class="font-light text-sm text-gray-500"
+                    >#User_id
+                  </span>
+                </a>
+              </li>
+              <li class="flex justify-around mx-2 items-center flex-row">
+                <img
+                  class="w-[50px] h-auto rounded-full"
+                  src="./src/assets/img/user.jpg"
+                  alt=""
+                />
+              </li>
+              <li class="dropdown_btn mx-4 relative">
+                <i
+                  class="fa-solid px-2 py-2 rounded-full bg-slate-100 text-gray-500 fa-arrow-down-long"
+                ></i>
+                <div class="dropdown_menu absolute hidden top-[60px] right-0">
+                  <ul class="p-5 rounded-sm flex flex-col bg-slate-300">
+                    <li class="w-full flex flex-row">
+                      <span class="mx-2">
+                        <i class="fa-solid fa-user"></i>
+                      </span>
+                      Profile
+                    </li>
+
+                    <li class="w-full flex flex-row mt-4">
+                      <span class="mx-2"
+                        ><i class="fa-solid fa-right-from-bracket"></i
+                      ></span>
+                      Logout
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="hidden md:flex w-full flex-row justify-end">
+          <ul class="flex flex-row justify-between cursor-pointer items-center">
+            <li class="mx-2 flex flex-col">
+              <a href="#">
+                <span class="font-medium text-base"> Mamun Ethan </span>
+              </a>
+
+              <a href="#">
+                <span class="font-light text-sm text-gray-500"
+                  >Frontend Dev
+                </span>
+              </a>
+            </li>
+            <li class="flex justify-around mx-2 items-center flex-row">
+              <img
+                class="w-[50px] h-auto rounded-full"
+                src="./src/assets/img/user.jpg"
+                alt=""
+              />
+            </li>
+            <li class="dropdown_btn mx-4 relative">
+              <i
+                class="fa-solid px-2 py-2 rounded-full bg-slate-100 text-gray-500 fa-arrow-down-long"
+              ></i>
+              <div class="dropdown_menu absolute hidden top-[64px] right-0">
+                <ul class="p-5 rounded-sm flex flex-col bg-slate-300">
+                  <li class="w-full flex flex-row">
+                    <span class="mx-2">
+                      <i class="fa-solid fa-user"></i>
+                    </span>
+                    Profile
+                  </li>
+
+                  <li class="w-full flex flex-row mt-4">
+                    <span class="mx-2"
+                      ><i class="fa-solid fa-right-from-bracket"></i
+                    ></span>
+                    Logout
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- sidebar -->
+      <div>
+        <aside
+          id="logo-sidebar"
+          class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+          aria-label="Sidebar"
+        >
+          <div
+            class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800"
+          >
+            <div class="flex flex-row justify-between">
+              <a href="./index.html" class="flex items-center ps-2.5 mb-5">
+                <img
+                  class="w-[50%]"
+                  src="./src/assets/img/hsk logo.png"
+                  alt=""
+                />
+              </a>
+              <span
+                id="collapse_btn"
+                class="text-2xl sm:hidden cursor-pointer font-bold text-gray-500"
+                >X</span
+              >
+            </div>
+            <ul class="space-y-2 font-medium">
+              <li>
+                <a
+                  href="./quizzes.html"
+                  class="flex items-center capitalize p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 capitalize whitespace-nowrap"
+                    >my course</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 capitalize whitespace-nowrap"
+                    >live class</span
+                  >
+                  <span
+                    class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300"
+                    >3</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 capitalize ms-3 whitespace-nowrap"
+                    >my course</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./cartificate.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 capitalize whitespace-nowrap"
+                    >cartificate</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./student-book.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 capitalize ms-3 whitespace-nowrap"
+                    >books</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+      <div class="p-4 sm:ml-64">
+        <div class="flex justify-center w-[80%] my-5 mx-auto items-center">
+          <div
+            id="cartificate"
+            class="w-full h-screen bg-no-repeat bg-contain bg-center"
+            style="background-image: url('./src/assets/img/cartificate.png')"
+          ></div>
+        </div>
+        <div class="flex justify-center">
+          <button
+            class="bg-orange-400 hover:bg-orange-500 font-semibold text-white text-base capitalize px-8 py-2 rounded-md shadow-lg mb-5"
+          >
+            Download
+          </button>
+        </div>
+
+        <footer class="bg-[#09072b]">
+          <div class="container py-16 px-4 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="flex flex-col p-5">
+                <img
+                  class="w-[50%]"
+                  src="./src/assets/img/hsk logo.png"
+                  alt=""
+                />
+                <div class="text-gray-200 flex flex-col">
+                  <span class="text-base my-2"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem, necessitatibus?</span
+                  >
+
+                  <span class="font-semibold capitalize text-lg"
+                    >mirpur 1212, dhaka,</span
+                  >
+                  <span class="font-semibold capitalize text-lg"
+                    >+8801xxxxxx</span
+                  >
+                </div>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+    <script src="./src/dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+      document.getElementById("downloadBtn").addEventListener("click", () => {
+        const { jsPDF } = window.jspdf;
+        const certificate = document.getElementById("certificate");
+
+        html2canvas(certificate).then((canvas) => {
+          const imgData = canvas.toDataURL("image/png");
+          const pdf = new jsPDF("l", "mm", "a4"); // Landscape orientation
+          const pdfWidth = pdf.internal.pageSize.getWidth();
+          const pdfHeight = pdf.internal.pageSize.getHeight();
+
+          pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+          pdf.save("certificate.pdf");
+        });
+      });
+    </script>
+  </body>
+</html>
