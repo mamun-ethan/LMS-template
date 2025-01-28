@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font aswome icon -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+      integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- tailwindcss -->
+    <link rel="stylesheet" href="./src/tailwind.css" />
+    <!-- flowbite cdn -->
+
+    <title>Admin Dashboard</title>
+  </head>
+  <body class="bg-bgColor font-hind">
+    <main>
+      <header class="p-4 bg-white">
+        <!-- mobile button -->
+        <div class="flex flex-row justify-between">
+          <!-- button -->
+          <div>
+            <button
+              type="button"
+              id="toggle_btn"
+              class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            >
+              <span class="sr-only">Open sidebar</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- item -->
+          <div class="md:hidden flex w-full flex-row justify-end">
+            <ul
+              class="flex flex-row justify-between cursor-pointer items-center"
+            >
+              <li class="mx-2 flex flex-col">
+                <a href="#">
+                  <span class="font-medium text-base"> Mamun Ethan </span>
+                </a>
+
+                <a href="#">
+                  <span class="font-light text-sm text-gray-500"
+                    >Frontend Dev
+                  </span>
+                </a>
+              </li>
+              <li class="flex justify-around mx-2 items-center flex-row">
+                <img
+                  class="w-[50px] h-auto rounded-full"
+                  src="./src/assets/img/user.jpg"
+                  alt=""
+                />
+              </li>
+              <li class="dropdown_btn mx-4 relative">
+                <i
+                  class="fa-solid px-2 py-2 rounded-full bg-slate-100 text-gray-500 fa-arrow-down-long"
+                ></i>
+                <div class="dropdown_menu absolute hidden top-[60px] right-0">
+                  <ul class="p-5 rounded-sm flex flex-col bg-slate-300">
+                    <li class="w-full flex flex-row">
+                      <span class="mx-2">
+                        <i class="fa-solid fa-user"></i>
+                      </span>
+                      <a href="./profile.html">Profile</a>
+                    </li>
+
+                    <li class="w-full flex flex-row mt-4">
+                      <span class="mx-2"
+                        ><i class="fa-solid fa-right-from-bracket"></i
+                      ></span>
+                      Logout
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="hidden md:flex w-full flex-row justify-end">
+          <ul class="flex flex-row justify-between cursor-pointer items-center">
+            <li class="mx-2 flex flex-col">
+              <a href="#">
+                <span class="font-medium text-base"> Mamun Ethan </span>
+              </a>
+
+              <a href="#">
+                <span class="font-light text-sm text-gray-500"
+                  >Frontend Dev
+                </span>
+              </a>
+            </li>
+            <li class="flex justify-around mx-2 items-center flex-row">
+              <a href="./profile.html">
+                <img
+                  class="w-[50px] h-auto rounded-full"
+                  src="./src/assets/img/user.jpg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="dropdown_btn mx-4 relative">
+              <i
+                class="fa-solid px-2 py-2 rounded-full bg-slate-100 text-gray-500 fa-arrow-down-long"
+              ></i>
+              <div class="dropdown_menu absolute hidden top-[64px] right-0">
+                <ul class="p-5 rounded-sm flex flex-col bg-slate-300">
+                  <li class="w-full flex flex-row">
+                    <span class="mx-2">
+                      <i class="fa-solid fa-user"></i>
+                    </span>
+                    <a href="./profile.html">Profile</a>
+                  </li>
+
+                  <li class="w-full flex flex-row mt-4">
+                    <span class="mx-2"
+                      ><i class="fa-solid fa-right-from-bracket"></i
+                    ></span>
+                    Logout
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div>
+        <aside
+          id="logo-sidebar"
+          class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+          aria-label="Sidebar"
+        >
+          <div
+            class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800"
+          >
+            <div class="flex flex-row justify-between">
+              <a href="./index.html" class="flex items-center ps-2.5 mb-5">
+                <img
+                  class="w-[50%]"
+                  src="./src/assets/img/hsk logo.png"
+                  alt=""
+                />
+              </a>
+              <span
+                id="collapse_btn"
+                class="text-2xl sm:hidden cursor-pointer font-bold text-gray-500"
+                >X</span
+              >
+            </div>
+            <ul class="space-y-2 font-medium">
+              <li>
+                <a
+                  href="./admin-dashboard.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="ms-3">Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./quizzes.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 capitalize whitespace-nowrap"
+                    >my course</span
+                  >
+                </a>
+              </li>
+              <!-- multi level menu -->
+              <li>
+                <button
+                  type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  aria-controls="dropdown-example"
+                  data-collapse-toggle="dropdown-example"
+                >
+                  <span
+                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                    >E-commerce</span
+                  >
+                  <svg
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <ul id="dropdown-example" class="hidden py-2 space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Products</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Billing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Invoice</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <button
+                  type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  aria-controls="dropdown-example-1"
+                  data-collapse-toggle="dropdown-example-1"
+                >
+                  <span
+                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                    >E-commerce</span
+                  >
+                  <svg
+                    class="w-3 h-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <ul id="dropdown-example-1" class="hidden py-2 space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Products</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Billing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Invoice</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <button
+                  type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  aria-controls="dropdown-example-2"
+                  data-collapse-toggle="dropdown-example-2"
+                >
+                  <span
+                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                    >Settings</span
+                  >
+                  <svg
+                    class="w-3 h-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <ul id="dropdown-example-2" class="hidden py-2 space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Security</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Notifications</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Inbox Link -->
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
+                  <span
+                    class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300"
+                    >3</span
+                  >
+                </a>
+              </li>
+              <!-- end multi level menu -->
+              <li>
+                <a
+                  href="./add-book-admin.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 whitespace-nowrap">Books</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./my-library.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 capitalize whitespace-nowrap"
+                    >my library</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+      <div class="p-4 sm:ml-64">
+        <div class="content">
+          <h1 class="text-3xl text-center font-semibold capitalize my-5">
+            course setup
+          </h1>
+          <div>
+            <!-- course description: -->
+            <div>
+              <h2
+                class="text-xl text-start capitalize font-semibold text-gray-600"
+              >
+                course description:
+              </h2>
+              <div class="flex justify-start my-5">
+                <form class="w-full" action="">
+                  <textarea
+                    id="message"
+                    rows="10"
+                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Write your thoughts here..."
+                  ></textarea>
+                  <button
+                    class="m-3 bg-orange-500 px-8 rounded-md shadow-md p-3 font-medium text-base text-white capitalize"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div>
+              <h2
+                class="text-xl text-start capitalize font-semibold text-gray-600"
+              >
+                add class:
+              </h2>
+              <button
+                id="add-video"
+                class="m-5 px-5 py-2 bg-purple-700 font-semibold rounded-md shadow-md capitalize text-white"
+              >
+                add +
+              </button>
+              <div>
+                <div id="video-container" class="flex flex-col gap-2">
+                  <div
+                    class="flex gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center"
+                  >
+                    <div>
+                      <video
+                        id="video"
+                        width="200"
+                        height="100"
+                        class="rounded"
+                        controls
+                      >
+                        <source src="path/to/your-video.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div>
+                      <h5
+                        id="class-title"
+                        class="capitalize text-base font-medium"
+                      >
+                        fire base for react.js
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video Input Modal -->
+          <div
+            id="video-modal"
+            class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center"
+          >
+            <div class="bg-white p-6 rounded-lg shadow-md w-96">
+              <h3 class="text-lg font-medium mb-4">Add Video</h3>
+              <form id="video-form">
+                <div class="mb-4">
+                  <label
+                    for="video-title"
+                    class="block text-sm font-medium mb-1"
+                    >Video Title:</label
+                  >
+                  <input
+                    type="text"
+                    id="video-title"
+                    placeholder="Enter class title"
+                    class="w-full border border-gray-300 rounded p-2"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label for="video-file" class="block text-sm font-medium mb-1"
+                    >Upload Video:</label
+                  >
+                  <input
+                    type="file"
+                    id="video-file"
+                    accept="video/mp4,video/webm"
+                    class="w-full"
+                    required
+                  />
+                </div>
+                <div class="flex justify-end gap-2">
+                  <button
+                    type="button"
+                    id="cancel-modal"
+                    class="bg-gray-300 px-4 py-2 rounded"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    class="bg-blue-500 text-white px-4 py-2 rounded"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <footer class="bg-[#09072b]">
+          <div class="container py-16 px-4 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="flex flex-col p-5">
+                <img
+                  class="w-[50%]"
+                  src="./src/assets/img/hsk logo.png"
+                  alt=""
+                />
+                <div class="text-gray-200 flex flex-col">
+                  <span class="text-base my-2"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem, necessitatibus?</span
+                  >
+
+                  <span class="font-semibold capitalize text-lg"
+                    >mirpur 1212, dhaka,</span
+                  >
+                  <span class="font-semibold capitalize text-lg"
+                    >+8801xxxxxx</span
+                  >
+                </div>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <script src="./src/dashboard.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdownButtons = document.querySelectorAll(
+          "[data-collapse-toggle]"
+        );
+
+        dropdownButtons.forEach((button) => {
+          const dropdownId = button.getAttribute("data-collapse-toggle");
+          const dropdownMenu = document.getElementById(dropdownId);
+
+          button.addEventListener("click", function () {
+            dropdownMenu.classList.toggle("hidden");
+          });
+        });
+      });
+    </script>
+
+    <script>
+      // Get references to elements
+      const addVideoButton = document.getElementById("add-video");
+      const videoModal = document.getElementById("video-modal");
+      const cancelModalButton = document.getElementById("cancel-modal");
+      const videoForm = document.getElementById("video-form");
+      const videoContainer = document.getElementById("video-container");
+
+      // Show the modal
+      addVideoButton.addEventListener("click", () => {
+        videoModal.classList.remove("hidden");
+      });
+
+      // Hide the modal
+      cancelModalButton.addEventListener("click", () => {
+        videoModal.classList.add("hidden");
+      });
+
+      // Handle form submission
+      videoForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent default form submission
+
+        // Get title and video file
+        const title = document.getElementById("video-title").value;
+        const videoFile = document.getElementById("video-file").files[0];
+
+        if (videoFile) {
+          // Create a new video container
+          const videoDiv = document.createElement("div");
+          videoDiv.className =
+            "flex gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center";
+
+          // Create video element
+          const videoElement = document.createElement("video");
+          videoElement.width = 200;
+          videoElement.height = 100;
+          videoElement.className = "rounded";
+          videoElement.controls = true;
+
+          const sourceElement = document.createElement("source");
+          sourceElement.src = URL.createObjectURL(videoFile);
+          sourceElement.type = videoFile.type;
+          videoElement.appendChild(sourceElement);
+
+          // Create title element
+          const titleElement = document.createElement("h5");
+          titleElement.className = "capitalize text-base font-medium";
+          titleElement.textContent = title;
+
+          // Append video and title to the container
+          videoDiv.appendChild(videoElement);
+          const titleDiv = document.createElement("div");
+          titleDiv.appendChild(titleElement);
+          videoDiv.appendChild(titleDiv);
+
+          // Append the video container to #video-container
+          videoContainer.appendChild(videoDiv);
+
+          // Reset the form and hide the modal
+          videoForm.reset();
+          videoModal.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
