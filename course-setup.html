@@ -542,7 +542,7 @@
                 <option value="image">Image</option>
               </select>
 
-              <!-- Modal -->
+              <!-- resource Modal -->
               <div
                 id="fileModal"
                 class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
@@ -552,6 +552,12 @@
                     Upload File
                   </h2>
                   <form id="fileForm">
+                    <input
+                      type="text"
+                      id="fileTitle"
+                      class="border rounded-md w-full p-2 mb-4"
+                      placeholder="Title"
+                    />
                     <input
                       type="file"
                       id="fileInput"
@@ -576,7 +582,7 @@
             </div>
             <div
               id="fileContainer"
-              class="flex flex-row gap-5 justify-start my-5 items-center"
+              class="grid grid-cols-1 md:grid-cols-3 gap-8 my-5 items-center"
             ></div>
           </div>
         </div>
@@ -828,7 +834,8 @@
         }
       });
 
-      // file upload implemetion
+      // // file upload implemetion
+      // File upload implementation
       // Elements
       const fileTypeSelect = document.getElementById("file-type");
       const fileModal = document.getElementById("fileModal");
@@ -837,6 +844,7 @@
       const closeModal = document.getElementById("closeModal");
       const fileForm = document.getElementById("fileForm");
       const fileContainer = document.getElementById("fileContainer");
+      const fileTitleInput = document.getElementById("fileTitle");
 
       // File type icons
       const fileIcons = {
@@ -899,6 +907,13 @@
           return;
         }
 
+        // Get the title from the input
+        const fileTitle = fileTitleInput.value.trim();
+        if (!fileTitle) {
+          alert("Please enter a title for the file.");
+          return;
+        }
+
         // Determine file type
         const fileType = fileInput.accept.includes("image")
           ? "image"
@@ -909,13 +924,18 @@
         // Create file card
         const fileCard = document.createElement("div");
         fileCard.className =
-          "flex items-center shadow-lg rounded-md gap-2 p-3 bg-gray-100";
+          "flex flex-col items-center  shadow-xl rounded-md gap-2 p-3 bg-gray-100";
 
         // Add file icon
         const fileIcon = document.createElement("img");
         fileIcon.src = fileIcons[fileType];
         fileIcon.width = 80;
         fileIcon.alt = `${fileType} icon`;
+
+        // Add file title
+        const fileTitleElement = document.createElement("p");
+        fileTitleElement.textContent = fileTitle;
+        fileTitleElement.className = "text-lg font-semibold text-gray-700";
 
         // Add delete button
         const deleteButton = document.createElement("button");
@@ -928,6 +948,7 @@
 
         // Append elements to file card
         fileCard.appendChild(fileIcon);
+        fileCard.appendChild(fileTitleElement);
         fileCard.appendChild(deleteButton);
 
         // Append file card to container
@@ -938,7 +959,5 @@
         fileModal.classList.add("hidden");
       });
     </script>
-
-    <script></script>
   </body>
 </html>
