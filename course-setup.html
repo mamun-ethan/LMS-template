@@ -404,13 +404,14 @@
                     placeholder="Write your thoughts here..."
                   ></textarea>
                   <button
-                    class="m-3 bg-orange-500 px-8 rounded-md shadow-md p-3 font-medium text-base text-white capitalize"
+                    class="m-3 bg-blue-700 px-8 rounded-md shadow-md p-3 font-medium text-base text-white capitalize"
                   >
                     Submit
                   </button>
                 </form>
               </div>
             </div>
+            <!-- video class -->
             <div>
               <h2
                 class="text-xl text-start capitalize font-semibold text-gray-600"
@@ -419,7 +420,7 @@
               </h2>
               <button
                 id="add-video"
-                class="m-5 px-5 py-2 bg-purple-700 font-semibold rounded-md shadow-md capitalize text-white"
+                class="m-5 px-4 py-2 bg-blue-700 font-semibold rounded-md shadow-md capitalize text-white"
               >
                 add +
               </button>
@@ -504,6 +505,67 @@
                 </div>
               </form>
             </div>
+          </div>
+          <!-- resources -->
+          <div>
+            <h2
+              class="text-xl text-start capitalize font-semibold text-gray-600"
+            >
+              resources:
+            </h2>
+            <div class="my-5">
+              <label
+                for="file type"
+                class="text-base font-semibold m-2 capitalize"
+                >file type:</label
+              >
+              <select
+                id="file-type"
+                name="fileType"
+                class="rounded-md py-1 capitalize"
+              >
+                <option disabled selected>Choice File</option>
+                <option value="pdf">PDF</option>
+                <option value="document">Document</option>
+                <option value="image">Image</option>
+              </select>
+
+              <!-- Modal -->
+              <div
+                id="fileModal"
+                class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+              >
+                <div class="bg-white p-5 rounded-lg w-1/3">
+                  <h2 class="text-xl font-semibold mb-4" id="modal-title">
+                    Upload File
+                  </h2>
+                  <form id="fileForm">
+                    <input
+                      type="file"
+                      id="fileInput"
+                      class="border rounded-md w-full p-2 mb-4"
+                      accept=""
+                    />
+                    <button
+                      type="submit"
+                      class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+                    >
+                      Submit
+                    </button>
+                  </form>
+                  <button
+                    id="closeModal"
+                    class="absolute top-2 right-2 text-gray-500 hover:text-black"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              id="fileContainer"
+              class="flex flex-row gap-5 justify-start my-5 items-center"
+            ></div>
           </div>
         </div>
         <footer class="bg-[#09072b]">
@@ -635,6 +697,7 @@
     </script>
 
     <script>
+      // adding video functionality
       // Get references to elements
       const addVideoButton = document.getElementById("add-video");
       const videoModal = document.getElementById("video-modal");
@@ -697,6 +760,118 @@
           videoModal.classList.add("hidden");
         }
       });
+
+      // file upload implemetion
+      // Elements
+      const fileTypeSelect = document.getElementById("file-type");
+      const fileModal = document.getElementById("fileModal");
+      const fileInput = document.getElementById("fileInput");
+      const modalTitle = document.getElementById("modal-title");
+      const closeModal = document.getElementById("closeModal");
+      const fileForm = document.getElementById("fileForm");
+      const fileContainer = document.getElementById("fileContainer");
+
+      // File type icons
+      const fileIcons = {
+        pdf: "./src/assets/img/pdf.png",
+        document: "./src/assets/img/text.png",
+        image: "./src/assets/img/img.png",
+      };
+
+      // Event Listener for File Type Selection
+      fileTypeSelect.addEventListener("change", (event) => {
+        const selectedType = event.target.value;
+
+        // Update modal input and title based on selection
+        switch (selectedType) {
+          case "pdf":
+            fileInput.type = "file";
+            fileInput.accept = ".pdf";
+            modalTitle.textContent = "Upload PDF File";
+            break;
+          case "document":
+            fileInput.type = "file";
+            fileInput.accept = ".doc,.docx,.txt";
+            modalTitle.textContent = "Upload Document File";
+            break;
+          case "image":
+            fileInput.type = "file";
+            fileInput.accept = "image/*";
+            modalTitle.textContent = "Upload Image File";
+            break;
+          default:
+            fileInput.type = "file";
+            fileInput.accept = "";
+            modalTitle.textContent = "Upload File";
+        }
+
+        // Show the modal
+        fileModal.classList.remove("hidden");
+      });
+
+      // Close Modal
+      closeModal.addEventListener("click", () => {
+        fileModal.classList.add("hidden");
+      });
+
+      // Optional: Close modal on outside click
+      fileModal.addEventListener("click", (event) => {
+        if (event.target === fileModal) {
+          fileModal.classList.add("hidden");
+        }
+      });
+
+      // Handle File Submission
+      fileForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // Get the selected file
+        const file = fileInput.files[0];
+        if (!file) {
+          alert("Please select a file to upload.");
+          return;
+        }
+
+        // Determine file type
+        const fileType = fileInput.accept.includes("image")
+          ? "image"
+          : fileInput.accept.includes(".pdf")
+          ? "pdf"
+          : "document";
+
+        // Create file card
+        const fileCard = document.createElement("div");
+        fileCard.className =
+          "flex items-center shadow-lg rounded-md gap-2 p-3 bg-gray-100";
+
+        // Add file icon
+        const fileIcon = document.createElement("img");
+        fileIcon.src = fileIcons[fileType];
+        fileIcon.width = 80;
+        fileIcon.alt = `${fileType} icon`;
+
+        // Add delete button
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.className =
+          "font-semibold text-white capitalize text-base px-5 py-1 rounded-md shadow-md bg-red-600 hover:bg-red-700";
+        deleteButton.addEventListener("click", () => {
+          fileCard.remove();
+        });
+
+        // Append elements to file card
+        fileCard.appendChild(fileIcon);
+        fileCard.appendChild(deleteButton);
+
+        // Append file card to container
+        fileContainer.appendChild(fileCard);
+
+        // Reset form and close modal
+        fileForm.reset();
+        fileModal.classList.add("hidden");
+      });
     </script>
+
+    <script></script>
   </body>
 </html>
