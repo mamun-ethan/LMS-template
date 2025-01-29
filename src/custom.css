@@ -94,3 +94,30 @@ faq */
 .accordion-content.active {
   max-height: 500px; /* Adjust this based on the content height or use a higher value if you want more flexibility */
 }
+
+/* custom fonts for catficate */
+
+@font-face {
+  font-family: "mansalva";
+  src: url("./assets/fonts/Mansalva/Mansalva-Regular.ttf");
+}
+
+@font-face {
+  font-family: "mashang";
+  src: url("./assets/fonts/Ma_Shan_Zheng/MaShanZheng-Regular.ttf");
+}
+@font-face {
+  font-family: "corsiva";
+  src: url("./assets/fonts/Monotype/Monotype-Corsiva-Regular.ttf");
+}
+
+.mansalva {
+  font-family: "mansalva";
+}
+.mashang {
+  font-family: "mashang";
+}
+
+.corsiva {
+  font-family: "corsiva";
+}
