@@ -5011,6 +5011,18 @@ details.collapse summary::-webkit-details-marker {
   gap: 2rem;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-16 {
+  gap: 4rem;
+}
+
+.gap-28 {
+  gap: 7rem;
+}
+
 .gap-x-16 {
   -moz-column-gap: 4rem;
        column-gap: 4rem;
@@ -5213,6 +5225,10 @@ details.collapse summary::-webkit-details-marker {
 
 .border-solid {
   border-style: solid;
+}
+
+.border-dashed {
+  border-style: dashed;
 }
 
 .border-dotted {
@@ -5788,6 +5804,11 @@ details.collapse summary::-webkit-details-marker {
 .px-28 {
   padding-left: 7rem;
   padding-right: 7rem;
+}
+
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .pb-2 {
