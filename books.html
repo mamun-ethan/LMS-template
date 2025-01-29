@@ -1053,53 +1053,5 @@
 
     <script src="./src/custom.js"></script>
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const carousel = document.getElementById("carousel");
-        const prevButton = document.getElementById("prev");
-        const nextButton = document.getElementById("next");
-        const items = carousel.children;
-        const totalItems = items.length;
-
-        let currentIndex = 0;
-        let visibleItems = 2; // Default to 2 for small screens
-
-        const updateVisibleItems = () => {
-          if (window.innerWidth >= 768) {
-            visibleItems = 4; // Medium and larger devices
-          } else {
-            visibleItems = 2; // Small devices
-          }
-          updateCarousel();
-        };
-
-        const updateCarousel = () => {
-          const itemWidth = items[0].offsetWidth;
-          const totalOffset = currentIndex * itemWidth;
-          carousel.style.transform = `translateX(-${totalOffset}px)`;
-        };
-
-        prevButton.addEventListener("click", () => {
-          if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-          }
-        });
-
-        nextButton.addEventListener("click", () => {
-          if (currentIndex < totalItems - visibleItems) {
-            currentIndex++;
-            updateCarousel();
-          }
-        });
-
-        // Update visible items on screen resize
-        window.addEventListener("resize", updateVisibleItems);
-
-        // Initialize visible items on load
-        updateVisibleItems();
-      });
-    </script>
   </body>
 </html>
