@@ -21,7 +21,9 @@
 
     <!-- tailwindcss -->
     <link rel="stylesheet" href="./src/tailwind.css" />
-    <!-- flowbite cdn -->
+    <!-- certificate download as pdf cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 
     <title>Document</title>
   </head>
@@ -240,10 +242,14 @@
       </div>
       <div class="p-4 sm:ml-64">
         <div class="flex justify-center w-[80%] my-5 mx-auto items-center">
-          <div class="relative">
+          <div
+            id="cartificate"
+            style="background-color: #ffffff !important"
+            class="relative"
+          >
             <img src="./src/assets/img/cartificate.png" alt="" srcset="" />
             <div class="absolute w-full top-5 md:top-[25rem]">
-              <div class="flex flex-col justify-around items-start gap-28">
+              <div class="flex flex-col justify-around items-start gap-[90px]">
                 <div>
                   <div
                     class="flex mashang flex-row items-center mb-3 gap-10 ml-10 justify-around"
@@ -286,14 +292,14 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col gap-4 corsiva font-semibold text-xl capitalize ml-10 justify-between"
+                  class="flex flex-col text-xl gap-4 corsiva font-semibold capitalize ml-10 justify-between"
                 >
                   <div class="flex justify-between items-center">
                     <div>
                       <span>this is cartify that,mr/mrs</span>
                     </div>
                     <div
-                      class="border-b-4 mx-2 border-dashed border-black px-24"
+                      class="border-b-4 mx-2 border-dotted border-black px-24"
                     >
                       <span class="mansalva uppercase font-medium"
                         >tonmoy khondokar</span
@@ -313,9 +319,60 @@
                       <p>learn the chines language from</p>
                     </div>
                   </div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
+                  <div class="flex corsiva flex-row justify-start items-center">
+                    <div class="flex gap-5">
+                      <span
+                        class="px-5 border-b-4 border-dotted border-black"
+                      ></span>
+                      <span>2024/09</span>
+                      <span
+                        class="px-5 border-b-4 border-dotted border-black"
+                      ></span>
+                      <span>to</span>
+                      <span
+                        class="px-5 border-b-4 border-dotted border-black"
+                      ></span>
+                      <span>2024/09</span>
+                      <span
+                        class="px-5 border-b-4 border-dotted border-black"
+                      ></span>
+                      <span>at hsl, solution ( a online base chines </span>
+                    </div>
+                  </div>
+                  <div class="flex flex-row justify-start gap-8 items-center">
+                    <span> language school ) in bangladesh, has complete </span>
+                    <div class="border-b-4 border-dotted border-black px-8">
+                      <span class="mansalva"> hsl standart course </span>,
+                    </div>
+                    <span>with a</span>
+                  </div>
+                  <div class="flex items-center gap-5">
+                    <span>score of </span>
+                    <div class="border-b-4 border-dotted border-black px-5">
+                      <span class="uppercase mansalva font-medium">a+</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="ml-10 flex flex-row justify-between items-center gap-10"
+                >
+                  <div
+                    class="flex flex-col mansalva justify-center items-center gap-8"
+                  >
+                    <span class="font-semibold mb-5"
+                      >器升 空完成星 航天器升空 天器升 空完成星
+                    </span>
+                    <span class="font-bold text-2xl">天器升</span>
+                  </div>
+                  <div
+                    class="flex flex-col mansalva justify-center items-center gap-7"
+                  >
+                    <span class="font-semibold"
+                      >器升 空完成星 航天器升空 天器升 空完成星
+                    </span>
+                    <span class="font-semibold">天器升</span>
+                    <span class="font-semibold corsiva">02/09/2024</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -323,6 +380,7 @@
         </div>
         <div class="flex justify-center">
           <button
+            id="downloadBtn"
             class="bg-orange-400 hover:bg-orange-500 font-semibold text-white text-base capitalize px-8 py-2 rounded-md shadow-lg mb-5"
           >
             Download
@@ -439,23 +497,39 @@
       </div>
     </main>
     <script src="./src/dashboard.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
     <script>
-      document.getElementById("downloadBtn").addEventListener("click", () => {
-        const { jsPDF } = window.jspdf;
-        const certificate = document.getElementById("certificate");
+      document
+        .getElementById("downloadBtn")
+        .addEventListener("click", function () {
+          const element = document.getElementById("cartificate");
 
-        html2canvas(certificate).then((canvas) => {
-          const imgData = canvas.toDataURL("image/png");
-          const pdf = new jsPDF("l", "mm", "a4"); // Landscape orientation
-          const pdfWidth = pdf.internal.pageSize.getWidth();
-          const pdfHeight = pdf.internal.pageSize.getHeight();
+          // Before generating the PDF, scale down the content if needed to fit it on one page
+          element.style.transform = "scale(0.)"; // Adjust scaling factor as needed
 
-          pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-          pdf.save("certificate.pdf");
+          // Set the options to control the PDF layout
+          const options = {
+            filename: "certificate.pdf", // Filename for the PDF
+            html2canvas: {
+              scale: 2, // Increase scale for better rendering
+              useCORS: true, // Use CORS for external resources like images
+              letterRendering: true, // Improve text rendering
+              backgroundColor: "#ffffff", // Ensure white background
+            },
+            jsPDF: {
+              unit: "mm", // Units in millimeters
+              format: "a4", // A4 format
+              orientation: "portrait", // Portrait orientation
+              margin: [0, 0, 0, 0], // Set margins to zero
+            },
+          };
+
+          // Use html2pdf to convert the HTML element to PDF and immediately download it
+          html2pdf().from(element).set(options).save();
+
+          // Optionally, reset the scaling after the download (if you made any changes)
+          element.style.transform = "scale(1)";
         });
-      });
     </script>
   </body>
 </html>
