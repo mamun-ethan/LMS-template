@@ -64,3 +64,4 @@
 - [book-admin-dashboard](https://mamun-ethan.github.io/LMS-template/add-book-admin.html)
 - [Course setup](https://mamun-ethan.github.io/LMS-template/course-setup.html)
 - [Certificate](https://mamun-ethan.github.io/LMS-template/certificate.html)
+- [Attendence](https://mamun-ethan.github.io/LMS-template/attendence.html)

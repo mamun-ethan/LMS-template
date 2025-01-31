@@ -5222,6 +5222,16 @@ details.collapse summary::-webkit-details-marker {
   border-top-right-radius: 0.5rem;
 }
 
+.rounded-e {
+  border-start-end-radius: 0.25rem;
+  border-end-end-radius: 0.25rem;
+}
+
+.rounded-s {
+  border-start-start-radius: 0.25rem;
+  border-end-start-radius: 0.25rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -5248,6 +5258,10 @@ details.collapse summary::-webkit-details-marker {
 
 .border-e-0 {
   border-inline-end-width: 0px;
+}
+
+.border-s {
+  border-inline-start-width: 1px;
 }
 
 .border-solid {
@@ -5324,6 +5338,11 @@ details.collapse summary::-webkit-details-marker {
 .border-zinc-700 {
   --tw-border-opacity: 1;
   border-color: rgb(63 63 70 / var(--tw-border-opacity));
+}
+
+.border-gray-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
 .bg-\[\#09072b\] {
@@ -6626,6 +6645,11 @@ faq */
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 .hover\:text-black:hover {
