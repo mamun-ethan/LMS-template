@@ -4195,6 +4195,10 @@ details.collapse summary::-webkit-details-marker {
   top: 68%;
 }
 
+.right-3 {
+  right: 0.75rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -4213,6 +4217,10 @@ details.collapse summary::-webkit-details-marker {
 
 .z-50 {
   z-index: 50;
+}
+
+.z-\[9999\] {
+  z-index: 9999;
 }
 
 .order-first {
@@ -5602,6 +5610,11 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(194 120 3 / var(--tw-bg-opacity));
 }
 
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -6156,6 +6169,11 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(88 80 236 / var(--tw-text-opacity));
 }
 
+.text-neutral-500 {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
+}
+
 .text-neutral-600 {
   --tw-text-opacity: 1;
   color: rgb(82 82 82 / var(--tw-text-opacity));
@@ -6238,11 +6256,6 @@ details.collapse summary::-webkit-details-marker {
 .text-zinc-700 {
   --tw-text-opacity: 1;
   color: rgb(63 63 70 / var(--tw-text-opacity));
-}
-
-.text-neutral-500 {
-  --tw-text-opacity: 1;
-  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
 .underline {

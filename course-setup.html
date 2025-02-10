@@ -395,16 +395,64 @@
               >
                 add content
               </h2>
-              <button
-                id="add-video"
-                class="m-5 px-4 py-2 bg-blue-700 font-semibold rounded-md shadow-md capitalize text-white"
+              <!-- select file -->
+              <div class="my-5">
+                <label
+                  for="contentType"
+                  class="text-base font-semibold m-2 capitalize"
+                  >content type:</label
+                >
+                <select
+                  id="contentType"
+                  name="contentType"
+                  class="rounded-md py-1 capitalize border"
+                >
+                  <option disabled selected>Choice content</option>
+                  <option value="pdf">video</option>
+                  <option value="audio">audio</option>
+                  <option value="image">image</option>
+                  <option value="document">Document</option>
+                </select>
+              </div>
+
+              <!-- Modal -->
+              <div
+                style="z-index: 9999"
+                id="modal"
+                class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center"
               >
-                add +
-              </button>
-              <div>
-                <div id="video-container" class="flex flex-col gap-2">
-                  <div
-                    class="flex gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center"
+                <div class="bg-white p-6 rounded-md shadow-md w-96 relative">
+                  <button
+                    id="closeModal"
+                    class="absolute top-2 right-3 text-gray-500"
+                  >
+                    X
+                  </button>
+                  <div id="modalContent"></div>
+                </div>
+              </div>
+              <div
+                style="z-index: 9999"
+                id="editModal"
+                class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+              >
+                <div class="bg-white p-5 rounded-md w-96">
+                  <h2 class="text-lg font-bold mb-4">Edit Content</h2>
+                  <div id="editModalContent"></div>
+                  <button
+                    id="closeEditModal"
+                    class="mt-4 bg-gray-500 text-white px-4 py-2 rounded-md"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+
+              <div id="content-container">
+                <div id="content-item" class="flex flex-col gap-2">
+                  <!-- video -->
+                  <!-- <div
+                    class="flex flex-col md:flex-row justify-between gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center"
                   >
                     <div>
                       <video
@@ -412,21 +460,137 @@
                         width="200"
                         height="100"
                         class="rounded"
-                        controls
+                        controls=""
                       >
                         <source src="path/to/your-video.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
                     </div>
-                    <div>
-                      <h5
-                        id="class-title"
-                        class="capitalize text-base font-medium"
-                      >
-                        fire base for react.js
-                      </h5>
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <h5
+                          id="class-title"
+                          class="capitalize text-base font-medium"
+                        >
+                          fire base for react.js
+                        </h5>
+                      </div>
                     </div>
-                  </div>
+                    <div
+                      class="flex justify-between gap-3 text-base font-medium items-center capitalize"
+                    >
+                      <span class="bg-blue-600 px-2 text-white rounded">
+                        edit
+                      </span>
+                      <span class="bg-red-600 rounded px-2 text-white"
+                        >delete</span
+                      >
+                    </div>
+                  </div> -->
+                  <!-- audio -->
+                  <!-- <div
+                    class="flex flex-col md:flex-row justify-between gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center"
+                  >
+                    <div>
+                      <audio controls="">
+                        <source src="horse.ogg" type="audio/ogg" />
+                        <source src="horse.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                      </audio>
+                    </div>
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <h5
+                          id="class-title"
+                          class="capitalize text-base font-medium"
+                        >
+                          fire base for react.js
+                        </h5>
+                      </div>
+                    </div>
+                    <div
+                      class="flex justify-between gap-3 text-base font-medium items-center capitalize"
+                    >
+                      <span class="bg-blue-600 px-2 text-white rounded">
+                        edit
+                      </span>
+                      <span class="bg-red-600 rounded px-2 text-white"
+                        >delete</span
+                      >
+                    </div>
+                  </div> -->
+                  <!-- image -->
+                  <!-- <div
+                    class="flex flex-col md:flex-row justify-between gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center"
+                  >
+                    <div>
+                      <img
+                        style="
+                          width: 200px !important;
+                          height: 100px !important;
+                        "
+                        class="rounded"
+                        src="./src/assets/img/image-2phwpm9u.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <h5
+                          id="class-title"
+                          class="capitalize text-base font-medium"
+                        >
+                          fire base for react.js
+                        </h5>
+                      </div>
+                    </div>
+                    <div
+                      class="flex justify-between gap-3 text-base font-medium items-center capitalize"
+                    >
+                      <span class="bg-blue-600 px-2 text-white rounded">
+                        edit
+                      </span>
+                      <span class="bg-red-600 rounded px-2 text-white"
+                        >delete</span
+                      >
+                    </div>
+                  </div> -->
+                  <!-- document -->
+                  <!-- <div
+                    class="flex flex-col md:flex-row justify-between gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center"
+                  >
+                    <div>
+                      <img
+                        src="./src/assets/img/pdf.png"
+                        style="
+                          width: 200px !important;
+                          height: 100px !important;
+                        "
+                        class="rounded"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <h5
+                          id="class-title"
+                          class="capitalize text-base font-medium"
+                        >
+                          fire base for react.js
+                        </h5>
+                      </div>
+                    </div>
+                    <div
+                      class="flex justify-between gap-3 text-base font-medium items-center capitalize"
+                    >
+                      <span class="bg-blue-600 px-2 text-white rounded">
+                        edit
+                      </span>
+                      <span class="bg-red-600 rounded px-2 text-white"
+                        >delete</span
+                      >
+                    </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -690,127 +854,155 @@
         });
       });
     </script>
-
     <script>
-      // adding video
-      // Get references to elements
-      const addVideoButton = document.getElementById("add-video");
-      const videoModal = document.getElementById("video-modal");
-      const cancelModalButton = document.getElementById("cancel-modal");
-      const videoForm = document.getElementById("video-form");
-      const videoContainer = document.getElementById("video-container");
+      document.addEventListener("DOMContentLoaded", function () {
+        const contentTypeSelect = document.getElementById("contentType");
+        const modal = document.getElementById("modal");
+        const modalContent = document.getElementById("modalContent");
+        const closeModal = document.getElementById("closeModal");
+        const contentContainer = document.getElementById("content-item");
+        const editModal = document.getElementById("editModal");
+        const editModalContent = document.getElementById("editModalContent");
+        const closeEditModal = document.getElementById("closeEditModal");
 
-      // Show the modal
-      addVideoButton.addEventListener("click", () => {
-        videoModal.classList.remove("hidden");
-      });
+        contentTypeSelect.addEventListener("change", function () {
+          openModal(this.value);
+        });
 
-      // Hide the modal
-      cancelModalButton.addEventListener("click", () => {
-        videoModal.classList.add("hidden");
-      });
+        closeModal.addEventListener("click", function () {
+          modal.classList.add("hidden");
+        });
 
-      // Handle form submission
-      videoForm.addEventListener("submit", (e) => {
-        e.preventDefault(); // Prevent default form submission
+        closeEditModal.addEventListener("click", function () {
+          editModal.classList.add("hidden");
+        });
 
-        // Get form inputs
-        const title = document.getElementById("video-title").value.trim();
-        const videoFileInput = document.getElementById("video-file");
-        const videoFile = videoFileInput?.files[0];
-        const youtubeLink = document
-          .getElementById("youtube-link")
-          .value.trim();
+        function openModal(type) {
+          let inputField = getFileInputField(type);
+          modalContent.innerHTML = `
+      <label class="block">Title:</label>
+      <input type="text" id="titleInput" class="border p-2 w-full rounded-md mb-3">
+      ${inputField}
+      <button id="submitBtn" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md">Submit</button>
+    `;
+          modal.classList.remove("hidden");
 
-        // Check if both inputs are empty or both are filled
-        if ((!youtubeLink && !videoFile) || (youtubeLink && videoFile)) {
-          alert(
-            "Please provide only one option: either upload a video or provide a YouTube link."
-          );
-          return;
+          document
+            .getElementById("submitBtn")
+            .addEventListener("click", function () {
+              const title = document.getElementById("titleInput").value;
+              const fileInput = document.getElementById("fileInput").files[0];
+              if (!title || !fileInput) {
+                alert("Please enter a title and select a file.");
+                return;
+              }
+              const fileURL = URL.createObjectURL(fileInput);
+              appendContent(type, title, fileURL);
+              modal.classList.add("hidden");
+            });
         }
 
-        // Handle YouTube video link
-        if (youtubeLink) {
-          const youtubeRegex =
-            /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-          const match = youtubeLink.match(youtubeRegex);
-
-          if (match) {
-            const videoId = match[1];
-            const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-
-            // Create a container for the video
-            const videoDiv = document.createElement("div");
-            videoDiv.className =
-              "flex gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center";
-
-            // Add YouTube iframe
-            const iframe = document.createElement("iframe");
-            iframe.width = 200;
-            iframe.height = 100;
-            iframe.className = "rounded";
-            iframe.src = embedUrl;
-            iframe.allow =
-              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-            iframe.allowFullscreen = true;
-
-            // Add title
-            const titleElement = document.createElement("h5");
-            titleElement.className = "capitalize text-base font-medium";
-            titleElement.textContent = title;
-
-            // Append iframe and title
-            videoDiv.appendChild(iframe);
-            videoDiv.appendChild(titleElement);
-
-            // Add to the video container
-            videoContainer.appendChild(videoDiv);
-
-            // Reset form and hide modal
-            videoForm.reset();
-            videoModal.classList.add("hidden");
-          } else {
-            alert("Please provide a valid YouTube link.");
-          }
+        function appendContent(type, title, fileURL) {
+          let contentHTML = `
+      <div class="content-item flex flex-col md:flex-row justify-between gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center">
+        <div class="content-preview" data-type="${type}" data-url="${fileURL}">
+          ${getContentPreview(type, fileURL)}
+        </div>
+        <div class="content-details">
+          <h5 class="capitalize text-base font-medium">${title}</h5>
+        </div>
+        <div class="content-actions flex justify-between gap-3 text-base font-medium items-center capitalize">
+          <span class="bg-blue-600 px-2 text-white rounded edit-item">edit</span>
+          <span class="bg-red-600 rounded px-2 text-white delete-item">delete</span>
+        </div>
+      </div>
+    `;
+          contentContainer.insertAdjacentHTML("beforeend", contentHTML);
+          addEventListeners();
         }
 
-        // Handle local video upload
-        if (videoFile) {
-          const videoDiv = document.createElement("div");
-          videoDiv.className =
-            "flex gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center";
+        function addEventListeners() {
+          document.querySelectorAll(".delete-item").forEach((btn) => {
+            btn.addEventListener("click", function () {
+              this.closest(".content-item").remove();
+            });
+          });
 
-          // Add video player
-          const videoElement = document.createElement("video");
-          videoElement.width = 200;
-          videoElement.height = 100;
-          videoElement.className = "rounded";
-          videoElement.controls = true;
-
-          const sourceElement = document.createElement("source");
-          sourceElement.src = URL.createObjectURL(videoFile);
-          sourceElement.type = videoFile.type;
-          videoElement.appendChild(sourceElement);
-
-          // Add title
-          const titleElement = document.createElement("h5");
-          titleElement.className = "capitalize text-base font-medium";
-          titleElement.textContent = title;
-
-          // Append video and title
-          videoDiv.appendChild(videoElement);
-          videoDiv.appendChild(titleElement);
-
-          // Add to the video container
-          videoContainer.appendChild(videoDiv);
-
-          // Reset form and hide modal
-          videoForm.reset();
-          videoModal.classList.add("hidden");
+          document.querySelectorAll(".edit-item").forEach((btn) => {
+            btn.addEventListener("click", function () {
+              const contentItem = this.closest(".content-item");
+              openEditModal(contentItem);
+            });
+          });
         }
+
+        function openEditModal(contentItem) {
+          const titleElement = contentItem.querySelector(".content-details h5");
+          const currentTitle = titleElement.innerText;
+          const mediaType =
+            contentItem.querySelector(".content-preview").dataset.type; // Get the media type (audio, image, etc.)
+          const mediaURL =
+            contentItem.querySelector(".content-preview").dataset.url; // Get the current file URL
+
+          const inputField = getFileInputField(mediaType); // Get the correct input field based on the media type
+          editModalContent.innerHTML = `
+      <label class="block">Edit Title:</label>
+      <input type="text" id="editTitleInput" class="border p-2 w-full rounded-md mb-3" value="${currentTitle}">
+      ${inputField}
+      <button id="updateBtn" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md">Update</button>
+    `;
+          editModal.classList.remove("hidden");
+
+          document
+            .getElementById("updateBtn")
+            .addEventListener("click", function () {
+              const newTitle = document.getElementById("editTitleInput").value;
+              const fileInput = document.getElementById("fileInput").files[0];
+              const updatedFileURL = fileInput
+                ? URL.createObjectURL(fileInput) // Get the updated file URL if a new file is selected
+                : mediaURL; // Use the old file URL if no new file is selected
+
+              titleElement.innerText = newTitle;
+              const contentPreview = getContentPreview(
+                mediaType,
+                updatedFileURL
+              );
+              contentItem.querySelector(".content-preview").innerHTML =
+                contentPreview;
+              contentItem.querySelector(".content-preview").dataset.url =
+                updatedFileURL; // Update the data-url attribute
+
+              editModal.classList.add("hidden");
+            });
+        }
+
+        function getFileInputField(type) {
+          const fileTypes = {
+            audio: "audio/*",
+            image: "image/*",
+            pdf: "video/*",
+            document: ".pdf,.doc,.docx",
+          };
+          return `
+      <label class="block">Upload File:</label>
+      <input type="file" accept="${fileTypes[type]}" id="fileInput" class="border p-2 w-full rounded-md">
+    `;
+        }
+
+        function getContentPreview(type, fileURL) {
+          const previews = {
+            audio: `<audio controls><source src="${fileURL}" type="audio/mpeg">Your browser does not support the audio element.</audio>`,
+            image: `<img src="${fileURL}" style="width: 200px; height: 100px;" class="rounded" alt="uploaded image">`,
+            pdf: `<video width="200" height="100" class="rounded" controls><source src="${fileURL}" type="video/mp4"></video>`,
+            document: `<img src="./src/assets/img/pdf.png" style="width: 200px; height: 100px;" class="rounded" alt="document icon">`,
+          };
+          return previews[type];
+        }
+
+        addEventListeners();
       });
-
+    </script>
+    <script>
       // // file upload implemetion
       // File upload implementation
       // Elements
