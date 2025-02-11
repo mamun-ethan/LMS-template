@@ -384,7 +384,9 @@
       </div>
       <div class="p-4 sm:ml-64">
         <div class="content">
-          <h1 class="text-3xl text-center font-semibold capitalize my-5">
+          <h1
+            class="text-3xl text-blue-600 text-center font-semibold capitalize my-5"
+          >
             course setup
           </h1>
           <div>
@@ -441,7 +443,7 @@
                   <div id="editModalContent"></div>
                   <button
                     id="closeEditModal"
-                    class="mt-4 bg-gray-500 text-white px-4 py-2 rounded-md"
+                    class="mt-4 bg-orange-400 text-white px-4 py-2 rounded-md"
                   >
                     Close
                   </button>
@@ -883,7 +885,7 @@
       <label class="block">Title:</label>
       <input type="text" id="titleInput" class="border p-2 w-full rounded-md mb-3">
       ${inputField}
-      <button id="submitBtn" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md">Submit</button>
+      <button id="submitBtn" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md">Submit</button>
     `;
           modal.classList.remove("hidden");
 
@@ -949,7 +951,7 @@
       <label class="block">Edit Title:</label>
       <input type="text" id="editTitleInput" class="border p-2 w-full rounded-md mb-3" value="${currentTitle}">
       ${inputField}
-      <button id="updateBtn" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md">Update</button>
+      <button id="updateBtn" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md">Update</button>
     `;
           editModal.classList.remove("hidden");
 
