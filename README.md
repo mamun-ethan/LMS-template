@@ -69,7 +69,6 @@
 - [course-setup-sigle-course](https://mamun-ethan.github.io/LMS-template/course-setup-sigle-course.html)
 
 - [enroll course](https://mamun-ethan.github.io/LMS-template/course-enroll.html)
-
+- [Bank](https://mamun-ethan.github.io/LMS-template/bank.html)
 - [Bkash](https://mamun-ethan.github.io/LMS-template/bkash.html)
 - [Nagod](https://mamun-ethan.github.io/LMS-template/nagod.html)
-- [Bank](https://mamun-ethan.github.io/LMS-template/bank.html)
