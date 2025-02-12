@@ -240,134 +240,45 @@
         </div>
       </div>
       <div class="p-4 sm:ml-64">
-        <!-- enroll  -->
-        <div class="my-16">
-          <div class="container mx-auto px-4">
-            <h3 class="text-2xl text-center font-bold py-5">
-              enroll ms word basic to advance
-            </h3>
-            <div class="grid grid-cols-1 p md:grid-cols-2 gap-4">
-              <div class="p-4 bg-header rounded-lg">
-                <div>
-                  <div>
-                    <img
-                      class="w-[65%] mx-auto"
-                      src="./src/assets/img/ms.svg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="flex flex-col py-4 flex-wrap">
-                    <h3 class="font-semibold text-2xl">Ms Word</h3>
-                    <span
-                      class="font-bold text-gray-500 border-b-2 capitalize text-base"
-                      >expert</span
-                    >
-                    <p class="text-gray-400 text-sm p-4">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Ratione fugit molestiae iusto rem, fugiat quasi?
-                    </p>
-                  </div>
+        <div class="flex justify-center items-center">
+          <div class="p-5 w-full md:w-1/2 m-5 shadow-md rounded-md">
+            <div class="flex-col justify-center items-center">
+              <img
+                class="mx-auto"
+                width="200"
+                height="150"
+                src="./src/assets/img/nogod.png"
+                alt=""
+              />
+              <form action="" class="gap-4 flex flex-col">
+                <div class="flex flex-col">
+                  <label for="Number">Number:</label>
+                  <input
+                    type="number"
+                    name=""
+                    class="rounded border-none outline-none"
+                    id=""
+                    placeholder="Nagod Number"
+                  />
                 </div>
-                <div></div>
-                <div></div>
-              </div>
-              <div
-                class="p-4 bg-orange-200 capitalize flex flex-col justify-between rounded-lg"
-              >
-                <span
-                  class="text-center font-semibold w-full inline-block text-xl"
-                  >payment details</span
-                >
-                <div class="flex flex-wrap flex-row justify-between py-2 my-5">
-                  <span class="font-bold">price</span>
-                  <span class="text-gray-700">
-                    <i class="fa-solid mx-3 fa-bangladeshi-taka-sign"></i>
-                    <i class="fa-solid ml-4 mr-2 text-xs fa-minus"></i>350</span
-                  >
+                <div class="flex flex-col">
+                  <label for="Number">TrxID:</label>
+                  <input
+                    type="text"
+                    name=""
+                    class="rounded border-none outline-none"
+                    placeholder="Transaction Td"
+                    id=""
+                  />
                 </div>
-                <div class="flex flex-wrap flex-row justify-between py-2 my-5">
-                  <span class="font-bold underline">cuppon</span>
-                  <span class="text-gray-700">
-                    <input
-                      type="text"
-                      class="rounded-md outline-none border-none"
-                      name=""
-                      placeholder="cuppon code"
-                      id=""
-                  /></span>
+                <div class="flex flex-row items-center justify-center">
+                  <input
+                    type="submit"
+                    class="w-2/3 py-2 rounded-md bg-orange-400 text-white font-semibold cursor-pointer"
+                    value="Confirm"
+                  />
                 </div>
-                <div
-                  class="flex flex-wrap flex-row justify-between pb-2 mt-2 mb-4"
-                >
-                  <span class="font-bold">total payment:</span>
-                  <span class="text-gray-700">
-                    <i class="fa-solid mx-3 fa-bangladeshi-taka-sign"></i>
-                    <i class="fa-solid ml-4 mr-2 text-xs fa-minus"></i
-                    ><span class="font-bold">350</span></span
-                  >
-                </div>
-                <div class="py-2 my-5">
-                  <span class="font-bold">payment methods:</span>
-                  <div>
-                    <form action="" class="flex flex-row items-center gap-2">
-                      <div class="flex flex-row gap-2 items-center my-5">
-                        <input
-                          type="radio"
-                          name="payment"
-                          id="bkash-radio"
-                          value="bkash.html"
-                        />
-                        <img
-                          width="60"
-                          height="40"
-                          src="./src/assets/img/bkash.png"
-                          alt="Bkash"
-                        />
-                      </div>
-                      <div class="flex flex-row gap-2 items-center my-5">
-                        <input
-                          type="radio"
-                          name="payment"
-                          id="nagod-radio"
-                          value="nagod.html"
-                        />
-                        <img
-                          width="60"
-                          height="30"
-                          src="./src/assets/img/nogod.png"
-                          alt="Nogod"
-                        />
-                      </div>
-                      <div class="flex flex-row gap-2 items-center my-5">
-                        <input
-                          type="radio"
-                          name="payment"
-                          id="bank-radio"
-                          value="bank.html"
-                        />
-                        <img
-                          width="60"
-                          height="30"
-                          src="./src/assets/img/bank.png"
-                          alt="Bank"
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="py-2 my-5">
-                  <a id="checkout-btn" href="#">
-                    <button
-                      class="bg-primary w-full text-slate-50 font-semibold px-4 py-3 rounded-lg"
-                    >
-                      Checkout
-                      <i
-                        class="ml-5 fa-solid fa-person-walking-arrow-right"
-                      ></i>
-                    </button>
-                  </a>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -482,23 +393,5 @@
     </main>
 
     <script src="./src/dashboard.js"></script>
-
-    <script>
-      // JavaScript to handle redirection
-      document
-        .getElementById("checkout-btn")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default anchor behavior
-
-          const selectedPayment = document.querySelector(
-            'input[name="payment"]:checked'
-          );
-          if (selectedPayment) {
-            window.location.href = selectedPayment.value;
-          } else {
-            alert("Please select a payment method before proceeding.");
-          }
-        });
-    </script>
   </body>
 </html>
