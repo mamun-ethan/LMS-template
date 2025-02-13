@@ -72,3 +72,9 @@
 - [Bank](https://mamun-ethan.github.io/LMS-template/bank.html)
 - [Bkash](https://mamun-ethan.github.io/LMS-template/bkash.html)
 - [Nagod](https://mamun-ethan.github.io/LMS-template/nagod.html)
+
+- [Students-attendence](https://mamun-ethan.github.io/LMS-template/students-attendence.html)
+
+- [view-students](https://mamun-ethan.github.io/LMS-template/view-students.html)
+
+- [edit-attendence](https://mamun-ethan.github.io/LMS-template/edit-attendence.html)
