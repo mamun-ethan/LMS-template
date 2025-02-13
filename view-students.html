@@ -431,9 +431,8 @@
                   >
                     <td class="px-6 py-4">
                       <input
-                        id="student-check"
                         type="checkbox"
-                        class="w-4 h-4 rounded-sm"
+                        class="w-4 h-4 student-check rounded-sm"
                       />
                     </td>
                     <td class="px-6 py-4">#09072b</td>
@@ -457,9 +456,8 @@
                   >
                     <td class="px-6 py-4">
                       <input
-                        id="student-check"
                         type="checkbox"
-                        class="w-4 h-4 rounded-sm"
+                        class="w-4 h-4 student-check rounded-sm"
                       />
                     </td>
                     <td class="px-6 py-4">#09072b</td>
@@ -483,9 +481,8 @@
                   >
                     <td class="px-6 py-4">
                       <input
-                        id="student-check"
                         type="checkbox"
-                        class="w-4 h-4 rounded-sm"
+                        class="w-4 h-4 student-check rounded-sm"
                       />
                     </td>
                     <td class="px-6 py-4">#09072b</td>
@@ -509,9 +506,8 @@
                   >
                     <td class="px-6 py-4">
                       <input
-                        id="student-check"
                         type="checkbox"
-                        class="w-4 h-4 rounded-sm"
+                        class="w-4 h-4 student-check rounded-sm"
                       />
                     </td>
                     <td class="px-6 py-4">#09072b</td>
@@ -535,9 +531,8 @@
                   >
                     <td class="px-6 py-4">
                       <input
-                        id="student-check"
                         type="checkbox"
-                        class="w-4 h-4 rounded-sm"
+                        class="w-4 h-4 student-check rounded-sm"
                       />
                     </td>
                     <td class="px-6 py-4">#09072b</td>
@@ -561,9 +556,8 @@
                   >
                     <td class="px-6 py-4">
                       <input
-                        id="student-check"
                         type="checkbox"
-                        class="w-4 h-4 rounded-sm"
+                        class="w-4 h-4 student-check rounded-sm"
                       />
                     </td>
                     <td class="px-6 py-4">#09072b</td>
@@ -587,9 +581,8 @@
                   >
                     <td class="px-6 py-4">
                       <input
-                        id="student-check"
                         type="checkbox"
-                        class="w-4 h-4 rounded-sm"
+                        class="w-4 h-4 student-check rounded-sm"
                       />
                     </td>
                     <td class="px-6 py-4">#09072b</td>
@@ -613,9 +606,8 @@
                   >
                     <td class="px-6 py-4">
                       <input
-                        id="student-check"
                         type="checkbox"
-                        class="w-4 h-4 rounded-sm"
+                        class="w-4 h-4 student-check rounded-sm"
                       />
                     </td>
                     <td class="px-6 py-4">#09072b</td>
@@ -639,9 +631,8 @@
                   >
                     <td class="px-6 py-4">
                       <input
-                        id="student-check"
                         type="checkbox"
-                        class="w-4 h-4 rounded-sm"
+                        class="w-4 h-4 student-check rounded-sm"
                       />
                     </td>
                     <td class="px-6 py-4">#09072b</td>
@@ -665,9 +656,58 @@
                   >
                     <td class="px-6 py-4">
                       <input
-                        id="student-check"
                         type="checkbox"
-                        class="w-4 h-4 rounded-sm"
+                        class="w-4 h-4 student-check rounded-sm"
+                      />
+                    </td>
+                    <td class="px-6 py-4">#09072b</td>
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      Rakibul hasan
+                    </th>
+
+                    <td class="px-6 py-4">
+                      <a
+                        href="#"
+                        class="px-5 py-2 bg-blue-600 font-semibold text-white capitalize rounded"
+                        >edit</a
+                      >
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b text-center dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  >
+                    <td class="px-6 py-4">
+                      <input
+                        type="checkbox"
+                        class="w-4 h-4 student-check rounded-sm"
+                      />
+                    </td>
+                    <td class="px-6 py-4">#09072b</td>
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      Rakibul hasan
+                    </th>
+
+                    <td class="px-6 py-4">
+                      <a
+                        href="#"
+                        class="px-5 py-2 bg-blue-600 font-semibold text-white capitalize rounded"
+                        >edit</a
+                      >
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b text-center dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  >
+                    <td class="px-6 py-4">
+                      <input
+                        type="checkbox"
+                        class="w-4 h-4 student-check rounded-sm"
                       />
                     </td>
                     <td class="px-6 py-4">#09072b</td>
@@ -850,6 +890,16 @@
             dropdownMenu.classList.toggle("hidden");
           });
         });
+
+        document
+          .getElementById("check-all")
+          .addEventListener("change", function () {
+            const studentCheckboxes =
+              document.querySelectorAll(".student-check");
+            studentCheckboxes.forEach((checkbox) => {
+              checkbox.checked = this.checked;
+            });
+          });
       });
     </script>
   </body>
