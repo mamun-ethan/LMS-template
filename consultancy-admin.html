@@ -382,7 +382,77 @@
       </div>
       <div class="p-4 sm:ml-64">
         <div class="content">
-          <h1 class="mx-auto text-4xl">admin dashboard</h1>
+          <h1
+            class="font-semibold text-center text-2xl capitalize text-blue-600 my-5"
+          >
+            create blog
+          </h1>
+          <!-- blog -->
+          <div>
+            <button
+              id="blog-add-btn"
+              class="capitalize font-semibold text-lg bg-blue-600 px-5 py-2 rounded-md text-white"
+            >
+              add
+            </button>
+          </div>
+          <div
+            id="blog-container"
+            class="grid grid-cols-1 my-5 md:grid-cols-3 gap-2"
+          ></div>
+        </div>
+
+        <!-- Modal -->
+        <div
+          id="blog-modal"
+          class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
+        >
+          <div class="bg-white p-6 rounded-lg w-96">
+            <h2 class="text-lg font-semibold mb-4">Add Blog</h2>
+
+            <!-- Form -->
+            <form id="blog-form">
+              <!-- Image Input -->
+              <label class="block mb-2">Image:</label>
+              <input
+                type="file"
+                id="blog-image"
+                class="border p-2 rounded-md w-full mb-3"
+              />
+
+              <!-- Title Input -->
+              <label class="block mb-2">Title:</label>
+              <input
+                type="text"
+                id="blog-title"
+                placeholder="Blog Title"
+                class="border p-2 rounded-md w-full mb-3"
+              />
+
+              <!-- Description Input -->
+              <label class="block mb-2">Description:</label>
+              <textarea
+                id="blog-description"
+                class="border p-2 rounded-md w-full mb-3"
+                placeholder="Blog Description"
+              ></textarea>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="px-4 py-2 bg-orange-500 text-white rounded"
+              >
+                Submit
+              </button>
+              <button
+                type="button"
+                id="close-modal"
+                class="px-4 py-2 bg-black text-white rounded ml-2"
+              >
+                Close
+              </button>
+            </form>
+          </div>
         </div>
         <footer class="bg-[#09072b]">
           <div class="container py-16 px-4 mx-auto">
@@ -508,6 +578,72 @@
           button.addEventListener("click", function () {
             dropdownMenu.classList.toggle("hidden");
           });
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("blog-modal");
+        const openBtn = document.getElementById("blog-add-btn");
+        const closeBtn = document.getElementById("close-modal");
+        const form = document.getElementById("blog-form");
+        const blogContainer = document.getElementById("blog-container");
+
+        openBtn.addEventListener("click", () => {
+          modal.classList.remove("hidden");
+        });
+
+        closeBtn.addEventListener("click", () => {
+          modal.classList.add("hidden");
+        });
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const imageInput = document.getElementById("blog-image");
+          const title = document.getElementById("blog-title").value.trim();
+          const description = document
+            .getElementById("blog-description")
+            .value.trim();
+
+          if (!imageInput.files[0] || !title || !description) {
+            alert("All fields are required!");
+            return;
+          }
+
+          const imageURL = URL.createObjectURL(imageInput.files[0]);
+
+          // Create blog div
+          const blogDiv = document.createElement("div");
+          blogDiv.className =
+            "p-2 blog rounded-md shadow-md flex flex-col justify-between items-center gap-2";
+
+          blogDiv.innerHTML = `
+            <div>
+                <img style="height: 200px !important; width: 300px" src="${imageURL}" alt="">
+            </div>
+            <div class="p-2 flex flex-col gap-2 justify-between items-center">
+                <h2 class="font-semibold text-lg text-center">${title}</h2>
+                <p class="text-base text-gray-500">${description}</p>
+                <a href="#" class="text-center px-4 py-2 rounded-md bg-red-600 text-white font-semibold delete-blog">Delete</a>
+            </div>
+        `;
+
+          // Append blog to container
+          blogContainer.appendChild(blogDiv);
+
+          // Reset form
+          form.reset();
+          modal.classList.add("hidden");
+
+          // Delete blog functionality
+          blogDiv
+            .querySelector(".delete-blog")
+            .addEventListener("click", (event) => {
+              event.preventDefault();
+              blogDiv.remove();
+            });
         });
       });
     </script>
