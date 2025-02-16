@@ -413,139 +413,15 @@
           <!-- add-content-section -->
           <div class="py-3 px-2">
             <button
-              class="font-semibold font-lg text-white bg-blue-600 py-4 px-4 rounded-md"
+              id="add-content"
+              class="font-semibold font-lg text-white bg-blue-600 py-2 px-2 rounded-md"
             >
-              <a href="./course-setup.html"> Add content +</a>
+              Add content +
             </button>
           </div>
-          <p class="text-lg font-medium">content:26</p>
-          <div id="content-container">
-            <div class="flex flex-col gap-2">
-              <div
-                class="flex flex-col md:flex-row justify-between gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center"
-              >
-                <div>
-                  <video
-                    id="video"
-                    width="200"
-                    height="100"
-                    class="rounded"
-                    controls=""
-                  >
-                    <source src="path/to/your-video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="flex justify-between items-center">
-                  <div>
-                    <h5
-                      id="class-title"
-                      class="capitalize text-base font-medium"
-                    >
-                      fire base for react.js
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="flex justify-between gap-3 text-base font-medium items-center capitalize"
-                >
-                  <span class="bg-blue-600 px-2 text-white rounded">
-                    edit
-                  </span>
-                  <span class="bg-red-600 rounded px-2 text-white">delete</span>
-                </div>
-              </div>
-              <div
-                class="flex flex-col md:flex-row justify-between gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center"
-              >
-                <div>
-                  <audio controls>
-                    <source src="horse.ogg" type="audio/ogg" />
-                    <source src="horse.mp3" type="audio/mpeg" />
-                    Your browser does not support the audio element.
-                  </audio>
-                </div>
-                <div class="flex justify-between items-center">
-                  <div>
-                    <h5
-                      id="class-title"
-                      class="capitalize text-base font-medium"
-                    >
-                      fire base for react.js
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="flex justify-between gap-3 text-base font-medium items-center capitalize"
-                >
-                  <span class="bg-blue-600 px-2 text-white rounded">
-                    edit
-                  </span>
-                  <span class="bg-red-600 rounded px-2 text-white">delete</span>
-                </div>
-              </div>
-              <div
-                class="flex flex-col md:flex-row justify-between gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center"
-              >
-                <div>
-                  <img
-                    style="width: 200px !important; height: 100px !important"
-                    class="rounded"
-                    src="./src/assets/img/image-2phwpm9u.png"
-                    alt=""
-                  />
-                </div>
-                <div class="flex justify-between items-center">
-                  <div>
-                    <h5
-                      id="class-title"
-                      class="capitalize text-base font-medium"
-                    >
-                      fire base for react.js
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="flex justify-between gap-3 text-base font-medium items-center capitalize"
-                >
-                  <span class="bg-blue-600 px-2 text-white rounded">
-                    edit
-                  </span>
-                  <span class="bg-red-600 rounded px-2 text-white">delete</span>
-                </div>
-              </div>
-              <div
-                class="flex flex-col md:flex-row justify-between gap-5 m-2 p-2 rounded border-2 border-blue-300 items-center"
-              >
-                <div>
-                  <img
-                    src="./src/assets/img/pdf.png"
-                    style="width: 200px !important; height: 100px !important"
-                    class="rounded"
-                    alt=""
-                  />
-                </div>
-                <div class="flex justify-between items-center">
-                  <div>
-                    <h5
-                      id="class-title"
-                      class="capitalize text-base font-medium"
-                    >
-                      fire base for react.js
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="flex justify-between gap-3 text-base font-medium items-center capitalize"
-                >
-                  <span class="bg-blue-600 px-2 text-white rounded">
-                    edit
-                  </span>
-                  <span class="bg-red-600 rounded px-2 text-white">delete</span>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <p class="text-lg font-medium">Content:26</p>
+          <div id="content-container"></div>
 
           <div class="flex justify-center items-center my-10">
             <ul class="inline-flex -space-x-px text-base">
@@ -602,6 +478,7 @@
             </ul>
           </div>
         </div>
+
         <footer class="bg-[#09072b]">
           <div class="container py-16 px-4 mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -710,6 +587,30 @@
           </div>
         </footer>
       </div>
+      <!-- Modal -->
+      <div
+        id="modal"
+        class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 w-full h-full"
+      >
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+          <h2 class="text-xl font-semibold mb-4">Add Content</h2>
+          <input
+            type="text"
+            id="content-input"
+            placeholder="Enter content title"
+            class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <div class="flex justify-end gap-3 mt-4">
+            <button id="close-modal" class="text-gray-500">Cancel</button>
+            <button
+              id="create-content"
+              class="bg-blue-500 text-white px-4 py-2 rounded-md"
+            >
+              Create
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="./src/dashboard.js"></script>
@@ -726,6 +627,53 @@
           button.addEventListener("click", function () {
             dropdownMenu.classList.toggle("hidden");
           });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const addContentBtn = document.getElementById("add-content");
+        const modal = document.getElementById("modal");
+        const closeModalBtn = document.getElementById("close-modal");
+        const createContentBtn = document.getElementById("create-content");
+        const contentInput = document.getElementById("content-input");
+        const contentContainer = document.getElementById("content-container");
+
+        let contentCount = 0; // Track the number of content items
+
+        // Show Modal
+        addContentBtn.addEventListener("click", () => {
+          modal.classList.remove("hidden");
+        });
+
+        // Close Modal
+        closeModalBtn.addEventListener("click", () => {
+          modal.classList.add("hidden");
+          contentInput.value = ""; // Clear input field
+        });
+
+        // Create Content Item
+        createContentBtn.addEventListener("click", () => {
+          const title = contentInput.value.trim();
+          if (title === "") return; // Prevent empty content
+
+          contentCount++; // Increment counter
+
+          const contentItem = document.createElement("div");
+          contentItem.className =
+            "flex content-item m-4 shadow-md p-5 font-semibold text-xl flex-col gap-2";
+          contentItem.innerHTML = `
+      <div class="flex flex-row gap-8 justify-start items-center">
+        <p class="counter">${contentCount}.</p>
+        <p class="content-title">${title}</p>
+      </div>
+    `;
+
+          contentContainer.appendChild(contentItem);
+
+          // Reset and close modal
+          contentInput.value = "";
+          modal.classList.add("hidden");
         });
       });
     </script>

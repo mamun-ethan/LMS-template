@@ -4263,6 +4263,10 @@ details.collapse summary::-webkit-details-marker {
   margin: 0.75rem;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
 .m-5 {
   margin: 1.25rem;
 }
@@ -4409,6 +4413,10 @@ details.collapse summary::-webkit-details-marker {
 
 .ml-10 {
   margin-left: 2.5rem;
+}
+
+.ml-12 {
+  margin-left: 3rem;
 }
 
 .ml-2 {
