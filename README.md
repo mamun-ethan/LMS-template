@@ -78,3 +78,8 @@
 - [view-students](https://mamun-ethan.github.io/LMS-template/view-students.html)
 
 - [edit-attendence](https://mamun-ethan.github.io/LMS-template/edit-attendence.html)
+
+- [consultancy](https://mamun-ethan.github.io/LMS-template/consultancy.html)
+
+- [consultancy-details](https://mamun-ethan.github.io/LMS-template/consultancy-details.html)
+- [consultancy-admin](https://mamun-ethan.github.io/LMS-template/consultancy-admin.html)
