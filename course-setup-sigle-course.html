@@ -420,7 +420,6 @@
             </button>
           </div>
 
-          <p class="text-lg font-medium">Content:26</p>
           <div id="content-container"></div>
 
           <div class="flex justify-center items-center my-10">
@@ -476,6 +475,65 @@
                 >
               </li>
             </ul>
+          </div>
+
+          <!-- Modal -->
+          <div
+            id="mediaModal"
+            class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden"
+          >
+            <div
+              class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 flex flex-col items-center space-y-4"
+            >
+              <h2 class="text-xl font-semibold text-gray-900">
+                Select File Type
+              </h2>
+
+              <!-- File Type Selection -->
+              <select
+                id="mediaFileType"
+                class="border border-gray-300 p-2 w-full rounded focus:ring focus:ring-green-300"
+              >
+                <option value="">Select file type</option>
+                <option value="upload_video">Upload Video</option>
+                <option value="video_link">Video Link</option>
+                <option value="pdf">PDF</option>
+              </select>
+
+              <!-- Dynamic Input Fields -->
+              <div id="dynamicFields" class="w-full space-y-4 hidden">
+                <!-- Title Input -->
+                <input
+                  type="text"
+                  id="mediaTitle"
+                  class="border border-gray-300 p-2 w-full rounded"
+                  placeholder="Enter Title"
+                />
+
+                <!-- File Input (For Upload Video & PDF) -->
+                <input
+                  type="file"
+                  id="mediaFile"
+                  class="border border-gray-300 p-2 w-full rounded hidden"
+                />
+
+                <!-- URL Input (For Video Link) -->
+                <input
+                  type="url"
+                  id="mediaUrl"
+                  class="border border-gray-300 p-2 w-full rounded hidden"
+                  placeholder="Enter URL"
+                />
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                id="mediaSubmitBtn"
+                class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded transition"
+              >
+                Submit
+              </button>
+            </div>
           </div>
         </div>
 
@@ -667,7 +725,7 @@
        <div class="flex gap-5"> <p class="counter">${contentCount}.</p>
         <p class="content-title">${title}</p>
         </div>
-        <div> <span class="bg-orange-600 add-content-media  capitalize text-white font-medium cursor-pointer rounded px-1 text-base">add</span>
+        <div> <span class="bg-orange-600 open-media-modal  capitalize text-white font-medium cursor-pointer rounded px-1 text-base">add</span>
           </div>
       </div>
     `;
@@ -677,6 +735,89 @@
           // Reset and close modal
           contentInput.value = "";
           modal.classList.add("hidden");
+          // Select elements
+          const mediaModal = document.getElementById("mediaModal");
+          const openMediaModalBtns =
+            document.querySelectorAll(".open-media-modal");
+          const mediaSubmitBtn = document.getElementById("mediaSubmitBtn");
+          const mediaFileType = document.getElementById("mediaFileType");
+          const dynamicFields = document.getElementById("dynamicFields");
+          const mediaTitle = document.getElementById("mediaTitle");
+          const mediaFile = document.getElementById("mediaFile");
+          const mediaUrl = document.getElementById("mediaUrl");
+
+          // Open modal for all buttons
+          openMediaModalBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              mediaModal.classList.remove("hidden");
+            });
+          });
+
+          // Close modal when clicking outside
+          mediaModal.addEventListener("click", (event) => {
+            if (event.target === mediaModal) {
+              mediaModal.classList.add("hidden");
+            }
+          });
+
+          // Handle file type selection
+          mediaFileType.addEventListener("change", () => {
+            const selectedType = mediaFileType.value;
+            dynamicFields.classList.remove("hidden"); // Show the input fields
+
+            // Reset inputs
+            mediaFile.classList.add("hidden");
+            mediaUrl.classList.add("hidden");
+
+            // Show specific inputs based on selection
+            if (selectedType === "upload_video") {
+              mediaFile.classList.remove("hidden");
+              mediaFile.setAttribute("accept", "video/*");
+            } else if (selectedType === "video_link") {
+              mediaUrl.classList.remove("hidden");
+            } else if (selectedType === "pdf") {
+              mediaFile.classList.remove("hidden");
+              mediaFile.setAttribute("accept", "application/pdf");
+            }
+          });
+
+          // Submit button action
+          mediaSubmitBtn.addEventListener("click", () => {
+            const selectedValue = mediaFileType.value;
+            const titleValue = mediaTitle.value;
+            const fileValue = mediaFile.files[0];
+            const urlValue = mediaUrl.value;
+
+            if (!selectedValue) {
+              alert("Please select a file type.");
+              return;
+            }
+
+            if (!titleValue) {
+              alert("Please enter a title.");
+              return;
+            }
+
+            if (
+              (selectedValue === "upload_video" || selectedValue === "pdf") &&
+              !fileValue
+            ) {
+              alert("Please upload a file.");
+              return;
+            }
+
+            if (selectedValue === "video_link" && !urlValue) {
+              alert("Please enter a URL.");
+              return;
+            }
+
+            console.log("Selected Type:", selectedValue);
+            console.log("Title:", titleValue);
+            if (fileValue) console.log("File:", fileValue.name);
+            if (urlValue) console.log("URL:", urlValue);
+
+            mediaModal.classList.add("hidden"); // Close modal after submitting
+          });
         });
       });
     </script>
