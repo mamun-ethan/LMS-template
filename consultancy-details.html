@@ -22,7 +22,39 @@
     <!-- tailwindcss -->
     <link rel="stylesheet" href="./src/tailwind.css" />
     <!-- flowbite cdn -->
-
+    <style>
+      .blog-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+      .blog-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 50px;
+      }
+      .blog-title {
+        font-size: 21px;
+        font-weight: 700;
+      }
+      .blog-content p {
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(107 114 128);
+        margin: 20px 0;
+      }
+      .blog-content #apply-btn {
+        font-weight: 600;
+        background: #5252ff;
+        color: white;
+        padding: 5px 17px;
+        border-radius: 5px;
+      }
+    </style>
     <title>Document</title>
   </head>
   <body class="bg-bgColor font-hind">
@@ -239,138 +271,40 @@
         </aside>
       </div>
       <div class="p-4 sm:ml-64">
-        <div class="grid mb-5 grid-cols-1 md:grid-cols-12 gap-3">
-          <!-- 3-column div (should be FIRST on small screens) -->
-          <div class="col-span-3 w-full order-first md:order-last">
-            <div class="ml-10 md:ml-0">
-              <div
-                class="flex flex-col p-4 shadow-lg rounded-sm pb-5 bg-white mb-5 gap-2"
-              >
-                <h6
-                  class="capitalize text-center p-2 text-lg font-semibold bg-blue-200"
-                >
-                  sunday
-                </h6>
-                <h6 class="capitalize px-2 text-base font-semibold">
-                  introduction to psychology
-                </h6>
-                <p class="text-sm text-gray-500 px-2 font-normal">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quibusdam, laborum!
-                </p>
-                <h6
-                  class="capitalize text-gray-600 px-2 my-3 text-base font-semibold"
-                >
-                  <i class="fa-solid text-orange-400 mr-5 fa-clock"></i> time
-                  <br />
-                  <span class="text-gray-500">20:00:00 PM</span>
-                </h6>
-                <h6
-                  class="capitalize px-2 flex my-3 flex-col text-base font-semibold"
-                >
-                  <span class="text-gray-600">
-                    <i class="fa-solid text-red-600 mr-5 fa-rocket"></i> live
-                    class link</span
-                  >
-                  <a
-                    href="https://www.example.com/ljadfha/adskldfasdf./jkadsf"
-                    class="text-orange-500 italic font-light overflow-hidden cursor-pointer underline"
-                  >
-                    https://www.example.com/ljadfha...
-                  </a>
-                </h6>
-              </div>
-            </div>
+        <!-- blog -->
+        <div class="blog-details">
+          <div>
+            <img src="./src/assets/img/hero-2.webp" alt="" />
           </div>
-
-          <!-- 9-column div (should be LAST on small screens) -->
-          <div class="col-span-9 order-last md:order-first">
-            <h1 class="text-center font-semibold p-2 capitalize text-2xl">
-              my courses
-            </h1>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-              <div class="p-2 bg-white rounded shadow">
-                <div>
-                  <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                </div>
-                <div
-                  class="text-xs flex flex-row justify-between font-medium p-4"
-                >
-                  <span>৪র্থ ব্যাচ</span>
-                  <span>১০ সিট বাকী</span>
-                  <span>৭ দিন </span>
-                </div>
-                <hr />
-                <div>
-                  <h2 class="font-semibold text-lg">
-                    Full stack web development with javascript
-                  </h2>
-                </div>
-                <div class="mt-5 w-full">
-                  <a
-                    class="bg-orange-400 hover:bg-orange-500 text-center font-medium block text-white d-block rounded-md py-2 px-10"
-                    href="#"
-                  >
-                    <button>Learn</button>
-                  </a>
-                </div>
-              </div>
-              <div class="p-2 bg-white rounded shadow">
-                <div>
-                  <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                </div>
-                <div
-                  class="text-xs flex flex-row justify-between font-medium p-4"
-                >
-                  <span>৪র্থ ব্যাচ</span>
-                  <span>১০ সিট বাকী</span>
-                  <span>৭ দিন </span>
-                </div>
-                <hr />
-                <div>
-                  <h2 class="font-semibold text-lg">
-                    Full stack web development with javascript
-                  </h2>
-                </div>
-                <div class="mt-5 w-full">
-                  <a
-                    class="bg-orange-400 hover:bg-orange-500 text-center font-medium block text-white d-block rounded-md py-2 px-10"
-                    href="#"
-                  >
-                    <button>Learn</button>
-                  </a>
-                </div>
-              </div>
-              <div class="p-2 bg-white rounded shadow">
-                <div>
-                  <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                </div>
-                <div
-                  class="text-xs flex flex-row justify-between font-medium p-4"
-                >
-                  <span>৪র্থ ব্যাচ</span>
-                  <span>১০ সিট বাকী</span>
-                  <span>৭ দিন </span>
-                </div>
-                <hr />
-                <div>
-                  <h2 class="font-semibold text-lg">
-                    Full stack web development with javascript
-                  </h2>
-                </div>
-                <div class="mt-5 w-full">
-                  <a
-                    class="bg-orange-400 hover:bg-orange-500 text-center font-medium block text-white d-block rounded-md py-2 px-10"
-                    href="#"
-                  >
-                    <button>Learn</button>
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div class="blog-content">
+            <h1 class="blog-title">Lorem ipsum dolor sit amet.</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              eveniet autem accusamus nesciunt modi dolore ex ratione deserunt
+              ut, vero possimus quia iusto maiores sapiente similique et,
+              incidunt libero accusantium deleniti hic, itaque quibusdam quasi
+              porro. Dolor pariatur aliquam mollitia voluptatem beatae quam,
+              dolore dicta hic! Dolore id explicabo vel?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              eveniet autem accusamus nesciunt modi dolore ex ratione deserunt
+              ut, vero possimus quia iusto maiores sapiente similique et,
+              incidunt libero accusantium deleniti hic, itaque quibusdam quasi
+              porro. Dolor pariatur aliquam mollitia voluptatem beatae quam,
+              dolore dicta hic! Dolore id explicabo vel?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              eveniet autem accusamus nesciunt modi dolore ex ratione deserunt
+              ut, vero possimus quia iusto maiores sapiente similique et,
+              incidunt libero accusantium deleniti hic, itaque quibusdam quasi
+              porro. Dolor pariatur aliquam mollitia voluptatem beatae quam,
+              dolore dicta hic! Dolore id explicabo vel?
+            </p>
+            <a id="apply-btn" href="#">Apply</a>
           </div>
         </div>
-
         <footer class="bg-[#09072b]">
           <div class="container py-16 px-4 mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
