@@ -414,9 +414,9 @@
           <div class="py-3 px-2">
             <button
               id="add-content"
-              class="font-semibold font-lg text-white bg-blue-600 py-2 px-2 rounded-md"
+              class="font-semibold capitalize font-lg text-white bg-blue-600 py-2 px-2 rounded-md"
             >
-              Add content +
+              create content
             </button>
           </div>
 
@@ -663,9 +663,12 @@
           contentItem.className =
             "flex content-item m-4 shadow-md p-5 font-semibold text-xl flex-col gap-2";
           contentItem.innerHTML = `
-      <div class="flex flex-row gap-8 justify-start items-center">
-        <p class="counter">${contentCount}.</p>
+      <div class="flex flex-row gap-8 justify-between items-center">
+       <div class="flex gap-5"> <p class="counter">${contentCount}.</p>
         <p class="content-title">${title}</p>
+        </div>
+        <div> <span class="bg-orange-600 add-content-media  capitalize text-white font-medium cursor-pointer rounded px-1 text-base">add</span>
+          </div>
       </div>
     `;
 
