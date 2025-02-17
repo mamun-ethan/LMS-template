@@ -387,11 +387,15 @@
               <label class="font-semibold" for="sentto">Sent to:</label>
               <select class="rounded-md" id="sentto">
                 <option value="">Select</option>
-                <option value="student">Student</option>
+                <option value="single_email">Single Email</option>
                 <option value="all_students">All Students</option>
+                <option value="course_wise_students">
+                  Course Wise All Students
+                </option>
+                <option value="all_teachers">All Teachers</option>
               </select>
 
-              <!-- Input for student email -->
+              <!-- Input for single student email -->
               <input
                 class="rounded-md"
                 type="email"
@@ -400,7 +404,7 @@
                 style="display: none"
               />
 
-              <!-- Course selection for all students -->
+              <!-- Course selection for course-wise students -->
               <select class="rounded-md" id="courseField" style="display: none">
                 <option value="">Select Course</option>
                 <option value="course1">Course 1</option>
@@ -570,15 +574,13 @@
         let emailField = document.getElementById("emailField");
         let courseField = document.getElementById("courseField");
 
-        if (this.value === "student") {
+        emailField.style.display = "none";
+        courseField.style.display = "none";
+
+        if (this.value === "single_email") {
           emailField.style.display = "block";
-          courseField.style.display = "none";
-        } else if (this.value === "all_students") {
-          emailField.style.display = "none";
+        } else if (this.value === "course_wise_students") {
           courseField.style.display = "block";
-        } else {
-          emailField.style.display = "none";
-          courseField.style.display = "none";
         }
       });
     </script>
