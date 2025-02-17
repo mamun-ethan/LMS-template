@@ -83,3 +83,5 @@
 
 - [consultancy-details](https://mamun-ethan.github.io/LMS-template/consultancy-details.html)
 - [consultancy-admin](https://mamun-ethan.github.io/LMS-template/consultancy-admin.html)
+
+- [Email](https://mamun-ethan.github.io/LMS-template/email.html)
