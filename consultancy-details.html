@@ -302,7 +302,64 @@
               porro. Dolor pariatur aliquam mollitia voluptatem beatae quam,
               dolore dicta hic! Dolore id explicabo vel?
             </p>
-            <a id="apply-btn" href="#">Apply</a>
+            <div class="flex flex-row w-full justify-between items-center">
+              <span class="text-xl font-semibold text-blue-600">5400 Taka</span>
+              <a id="apply-btn" href="#">Apply</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Overlay -->
+        <div
+          id="apply-modal"
+          class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+        >
+          <div class="bg-white p-6 rounded-lg w-96 relative">
+            <h2 class="text-xl font-semibold mb-4">Upload Documents</h2>
+
+            <!-- Close Button -->
+            <button
+              id="close-modal"
+              class="absolute top-2 right-2 text-gray-500 text-lg"
+            >
+              ✖
+            </button>
+
+            <!-- Form -->
+            <form id="apply-form">
+              <!-- User Photo -->
+              <label class="block mb-2">User Photo:</label>
+              <input
+                type="file"
+                id="user-photo"
+                class="w-full mb-3 border p-2"
+              />
+
+              <!-- Passport Photo -->
+              <label class="block mb-2">Passport Photo:</label>
+              <input
+                type="file"
+                id="passport-photo"
+                class="w-full mb-3 border p-2"
+              />
+
+              <!-- Documents Upload -->
+              <label class="block mb-2">Documents:</label>
+              <input
+                type="file"
+                id="documents"
+                class="w-full mb-3 border p-2"
+                multiple
+              />
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="bg-orange-500 text-white px-4 py-2 rounded w-full"
+              >
+                Submit
+              </button>
+            </form>
           </div>
         </div>
         <footer class="bg-[#09072b]">
@@ -415,5 +472,39 @@
       </div>
     </main>
     <script src="./src/dashboard.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const applyBtn = document.getElementById("apply-btn");
+        const modal = document.getElementById("apply-modal");
+        const closeModal = document.getElementById("close-modal");
+
+        // Open Modal
+        applyBtn.addEventListener("click", function () {
+          modal.classList.remove("hidden");
+        });
+
+        // Close Modal
+        closeModal.addEventListener("click", function () {
+          modal.classList.add("hidden");
+        });
+
+        // Close Modal on Click Outside
+        modal.addEventListener("click", function (event) {
+          if (event.target === modal) {
+            modal.classList.add("hidden");
+          }
+        });
+
+        // Handle Form Submission
+        document
+          .getElementById("apply-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Form submitted!");
+            modal.classList.add("hidden"); // Hide modal after submission
+          });
+      });
+    </script>
   </body>
 </html>
