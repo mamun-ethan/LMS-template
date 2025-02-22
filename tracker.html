@@ -73,6 +73,9 @@
       ol.stepper li.active::before {
         background: var(--active-b);
       }
+      .hide {
+        display: none !important;
+      }
 
       ol.stepper li::after {
         content: "";
@@ -517,15 +520,38 @@
             <h1 class="text-center text-xl capitalize m-5">Track order</h1>
             <div class="flex justify-center">
               <ol class="stepper capitalize mt-5">
-                <li class="active">Applicatin pendding</li>
-                <li class="active">Recived document</li>
+                <li class="active">
+                  <div class="flex flex-col">
+                    <span>Applicatin pendding</span>
+                    <div class="font-normal flex flex-col date">
+                      <span style="color: Red !important">12:07 PM</span>
+                      <span style="color: Red !important">22/02/2025</span>
+                    </div>
+                    <span class="font-normal text-base text-gray-400"
+                      >Lorem, ipsum dolor.</span
+                    >
+                  </div>
+                </li>
+
+                <li class="active">
+                  <div class="flex flex-col">
+                    <span>recived document</span>
+                    <div class="font-normal flex flex-col date">
+                      <span style="color: Red !important">12:07 PM</span>
+                      <span style="color: Red !important">22/02/2025</span>
+                    </div>
+                    <span class="font-normal text-base text-gray-400"
+                      >Lorem, ipsum dolor.</span
+                    >
+                  </div>
+                </li>
                 <li>Missing documents</li>
                 <li>Paper sent to university</li>
                 <li>university paper rejected</li>
                 <li>university paper acept</li>
                 <li>pre addmisstion later and JW</li>
                 <li>visa processing</li>
-                <li>canclled</li>
+                <li class="hide">canclled</li>
                 <li>completed</li>
               </ol>
             </div>
