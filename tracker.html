@@ -22,7 +22,76 @@
     <!-- tailwindcss -->
     <link rel="stylesheet" href="./src/tailwind.css" />
     <!-- flowbite cdn -->
+    <style>
+      ol.stepper {
+        --default-b: lightgrey;
+        --default-c: black;
+        --active-b: #3182ce;
+        --active-c: white;
+        --circle: 3.5em; /* size of circle */
+        --b: 5px; /* line thickness */
 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        background: none;
+        counter-reset: step;
+        margin: 20px;
+        padding: 0;
+        font-size: 22px;
+        font-weight: bold;
+        font-family: sans-serif;
+      }
+
+      ol.stepper li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        margin-bottom: 45px;
+        font-size: 14px;
+        width: 100%;
+      }
+
+      ol.stepper li::before {
+        content: counter(step) " ";
+        counter-increment: step;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--circle);
+        height: var(--circle);
+        border: 5px solid #fff;
+        box-sizing: border-box;
+        background: var(--default-b);
+        color: var(--active-c);
+        border-radius: 50%;
+        font-family: monospace;
+        z-index: 1;
+      }
+      ol.stepper li.active::before {
+        background: var(--active-b);
+      }
+
+      ol.stepper li::after {
+        content: "";
+        position: absolute;
+        width: var(--b);
+        height: 100%;
+        left: calc(var(--circle) / 2);
+        top: calc(var(--circle) + 5px);
+        background: var(--default-b);
+      }
+
+      ol.stepper li:last-child::after {
+        display: none;
+      }
+
+      ol.stepper li.active::after {
+        background: var(--active-b);
+      }
+    </style>
     <title>Admin Dashboard</title>
   </head>
   <body class="bg-bgColor font-hind">
@@ -442,6 +511,23 @@
             >
               <div><h1>transition Id :</h1></div>
               <div><h1 class="font-normal">A12345678</h1></div>
+            </div>
+          </div>
+          <div>
+            <h1 class="text-center text-xl capitalize m-5">Track order</h1>
+            <div class="flex justify-center">
+              <ol class="stepper capitalize mt-5">
+                <li class="active">Applicatin pendding</li>
+                <li class="active">Recived document</li>
+                <li>Missing documents</li>
+                <li>Paper sent to university</li>
+                <li>university paper rejected</li>
+                <li>university paper acept</li>
+                <li>pre addmisstion later and JW</li>
+                <li>visa processing</li>
+                <li>canclled</li>
+                <li>completed</li>
+              </ol>
             </div>
           </div>
         </div>
