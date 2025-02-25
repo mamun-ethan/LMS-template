@@ -241,7 +241,7 @@
       </div>
       <div class="p-4 sm:ml-64">
         <div>
-          <div class="container mx-auto p-16">
+          <div class="container mx-auto p-4 md:p-16">
             <div class="">
               <div class="flex flex-col items-center justify-center">
                 <img
@@ -257,46 +257,47 @@
               </div>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="space-y-4">
-                  <label class="input input-bordered flex items-center gap-2">
-                    Name:
-                    <input type="text" class="grow" value="Mamun Ethan" />
-                  </label>
-                  <label class="input input-bordered flex items-center gap-2">
-                    Email:
+                  <div class="flex flex-col">
+                    <label class=""> Name: </label>
                     <input
                       type="text"
-                      class="grow"
-                      value="ethan.mamun@gmai.com"
+                      class="grow rounded-md"
+                      value="Mamun Ethan"
                     />
-                  </label>
-                  <label class="input input-bordered flex items-center gap-2">
-                    Alternative Email
+                  </div>
+                  <div class="flex flex-col">
+                    <label class=""> Email: </label>
                     <input
                       type="text"
-                      class="grow"
-                      placeholder="ethan.mamun@gmail.com"
+                      class="grow rounded-md"
+                      value="Mamun@gamil.com"
                     />
-                  </label>
-                  <label class="input input-bordered flex items-center gap-2">
-                    Mobile:
+                  </div>
+
+                  <div class="flex flex-col">
+                    <label class=""> Mobile: </label>
                     <input
-                      type="number"
-                      class="grow"
-                      placeholder="0195xxxxxxx"
+                      type="text"
+                      class="grow rounded-md"
+                      value="98742318216"
                     />
-                  </label>
+                  </div>
                   <button class="btn w-full btn-warning">Update</button>
                 </div>
                 <div class="space-y-4">
-                  <label class="input input-bordered flex items-center gap-2">
-                    New Password:
-                    <input type="text" class="grow" placeholder="*********" />
-                  </label>
+                  <div class="flex flex-col">
+                    <label class=""> Password: </label>
+                    <input type="text" class="grow rounded-md" value="****" />
+                  </div>
 
-                  <label class="input input-bordered flex items-center gap-2">
-                    Confirm Password:
-                    <input type="text" class="grow" placeholder="*********" />
-                  </label>
+                  <div class="flex flex-col">
+                    <label class=""> New Password: </label>
+                    <input
+                      type="text"
+                      class="grow rounded-md"
+                      value="*******"
+                    />
+                  </div>
                   <button class="btn w-full btn-warning">Change</button>
                 </div>
               </div>
