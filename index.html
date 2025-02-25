@@ -737,280 +737,272 @@
             <h1 class="font-bold text-4xl capitalize text-center mb-8">
               our courses
             </h1>
-            <!-- course catagory -->
+            <!-- course catagores -->
             <div
               class="grid grid-cols-1 cursor-pointer gap-4 md:grid-cols-2 lg:grid-cols-4 md:border-b-4 border-gray-300 pb-2"
             >
-              <!-- web development -->
+              <!-- catefor 1 -->
               <div
-                id="web-development-btn"
-                class="menu-btn flex flex-row justify-center items-center text-black px-3 py-2 rounded relative"
-                onclick="filterCourses('web-development')"
+                data-category="category-one-items"
+                class="category-tab active flex flex-row justify-center items-center text-black px-3 py-2 rounded relative"
               >
                 <span
                   class="font-semibold text-base text-center capitalize text-gray-400"
-                  >web development</span
+                  >category 1</span
                 >
               </div>
-              <!-- app developemmt -->
+              <!-- catefor 2 -->
               <div
-                id="app-development-btn"
-                class="menu-btn flex flex-row justify-center items-center text-black px-3 relative"
-                onclick="filterCourses('app-development')"
+                data-category="category-two-items"
+                class="category-tab flex flex-row justify-center items-center text-black px-3 relative"
               >
                 <span
                   class="font-semibold text-base text-center capitalize text-gray-400"
-                  >app development</span
+                  >category 2</span
                 >
               </div>
 
-              <!-- ui ux design -->
+              <!--catefor 3 -->
 
               <div
-                id="ui-ux-design-btn"
-                class="menu-btn flex flex-row justify-center relative items-center"
-                onclick="filterCourses('ui-ux-design')"
+                data-category="category-three-items"
+                class="category-tab flex flex-row justify-center relative items-center"
               >
                 <span
                   class="font-semibold text-base text-center capitalize text-gray-400"
-                  >ui & ux</span
+                  >cagegory 3</span
                 >
               </div>
-              <!-- digital-marketing -->
+              <!-- catefor 4 -->
               <div
-                id="digital-marketing-btn"
-                class="menu-btn flex flex-row justify-center litems-center relative"
-                onclick="filterCourses('digital-marketing')"
+                data-category="category-four-items"
+                class="category-tab flex flex-row justify-center litems-center relative"
               >
                 <span
                   class="font-semibold text-base text-center capitalize text-gray-400"
-                  >marketing</span
+                  >cagegory 4</span
                 >
               </div>
             </div>
 
             <!-- course items -->
             <div class="mt-10">
-              <!-- web-development -->
-              <div class="web_dev grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div
-                  class="course-box web-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold text-lg">
-                      Full stack web development with javascript
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="course-box web-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold text-lg">
-                      Full stack web development with javascript
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <!-- app development -->
-              <div class="app_dev grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div
-                  class="course-box app-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      app development
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="course-box app-development bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      app development
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <!-- ui ux design -->
-              <div class="ui_ux_design grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div
-                  class="course-box ui-ux-design bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      ui ux design
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="course-box ui-ux-design bg-white p-4 rounded shadow"
-                >
-                  <div>
-                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
-                  </div>
-                  <div
-                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
-                  >
-                    <span>3d batch</span>
-                    <span>05 sit</span>
-                    <span>9 days </span>
-                  </div>
-                  <hr />
-                  <div>
-                    <h2 class="font-semibold capitalize text-lg">
-                      ui ux design
-                    </h2>
-                  </div>
-                  <div class="mt-5 flex justify-between items-center">
-                    <a
-                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
-                      href="#"
-                    >
-                      add to cart
-                    </a>
-                    <span class="font-semibold text-blue-600">
-                      <i
-                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
-                      ></i>
-                      4990 <span class="text-gray-600">/=</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <!-- digital marketing -->
+              <!-- category-one items -->
               <div
-                class="digital_marketing grid grid-cols-1 md:grid-cols-4 gap-4"
+                id="category-one-items"
+                class="grid grid-cols-1 md:grid-cols-4 gap-4"
               >
-                <div
-                  class="course-box digital-marketing bg-white p-4 rounded shadow"
-                >
+                <div class="bg-white p-4 rounded shadow">
+                  <div>
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
+                  </div>
+                  <div
+                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
+                  >
+                    <span>3d batch</span>
+                    <span>05 sit</span>
+                    <span>9 days </span>
+                  </div>
+                  <hr />
+                  <div>
+                    <h2 class="font-semibold text-lg">
+                      Full stack web development with javascript
+                    </h2>
+                  </div>
+                  <div class="mt-5 flex justify-between items-center">
+                    <a
+                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
+                      href="#"
+                    >
+                      add to cart
+                    </a>
+                    <span class="font-semibold text-blue-600">
+                      <i
+                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
+                      ></i>
+                      4990 <span class="text-gray-600">/=</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                  <div>
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
+                  </div>
+                  <div
+                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
+                  >
+                    <span>3d batch</span>
+                    <span>05 sit</span>
+                    <span>9 days </span>
+                  </div>
+                  <hr />
+                  <div>
+                    <h2 class="font-semibold text-lg">
+                      Full stack web development with javascript
+                    </h2>
+                  </div>
+                  <div class="mt-5 flex justify-between items-center">
+                    <a
+                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
+                      href="#"
+                    >
+                      add to cart
+                    </a>
+                    <span class="font-semibold text-blue-600">
+                      <i
+                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
+                      ></i>
+                      4990 <span class="text-gray-600">/=</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!--category-two items  -->
+              <div
+                id="category-two-items"
+                class="grid grid-cols-1 hidden md:grid-cols-4 gap-4"
+              >
+                <div class="bg-white p-4 rounded shadow">
+                  <div>
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
+                  </div>
+                  <div
+                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
+                  >
+                    <span>3d batch</span>
+                    <span>05 sit</span>
+                    <span>9 days </span>
+                  </div>
+                  <hr />
+                  <div>
+                    <h2 class="font-semibold capitalize text-lg">
+                      app development
+                    </h2>
+                  </div>
+                  <div class="mt-5 flex justify-between items-center">
+                    <a
+                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
+                      href="#"
+                    >
+                      add to cart
+                    </a>
+                    <span class="font-semibold text-blue-600">
+                      <i
+                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
+                      ></i>
+                      4990 <span class="text-gray-600">/=</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                  <div>
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
+                  </div>
+                  <div
+                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
+                  >
+                    <span>3d batch</span>
+                    <span>05 sit</span>
+                    <span>9 days </span>
+                  </div>
+                  <hr />
+                  <div>
+                    <h2 class="font-semibold capitalize text-lg">
+                      app development
+                    </h2>
+                  </div>
+                  <div class="mt-5 flex justify-between items-center">
+                    <a
+                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
+                      href="#"
+                    >
+                      add to cart
+                    </a>
+                    <span class="font-semibold text-blue-600">
+                      <i
+                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
+                      ></i>
+                      4990 <span class="text-gray-600">/=</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- category-three items  -->
+              <div
+                id="category-three-items"
+                class="grid grid-cols-1 hidden md:grid-cols-4 gap-4"
+              >
+                <div class="bg-white p-4 rounded shadow">
+                  <div>
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
+                  </div>
+                  <div
+                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
+                  >
+                    <span>3d batch</span>
+                    <span>05 sit</span>
+                    <span>9 days </span>
+                  </div>
+                  <hr />
+                  <div>
+                    <h2 class="font-semibold capitalize text-lg">
+                      ui ux design
+                    </h2>
+                  </div>
+                  <div class="mt-5 flex justify-between items-center">
+                    <a
+                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
+                      href="#"
+                    >
+                      add to cart
+                    </a>
+                    <span class="font-semibold text-blue-600">
+                      <i
+                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
+                      ></i>
+                      4990 <span class="text-gray-600">/=</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                  <div>
+                    <img src="./src/assets/img/course_item_1.jpg" alt="" />
+                  </div>
+                  <div
+                    class="text-xs flex capitalize flex-row justify-between font-medium p-4"
+                  >
+                    <span>3d batch</span>
+                    <span>05 sit</span>
+                    <span>9 days </span>
+                  </div>
+                  <hr />
+                  <div>
+                    <h2 class="font-semibold capitalize text-lg">
+                      ui ux design
+                    </h2>
+                  </div>
+                  <div class="mt-5 flex justify-between items-center">
+                    <a
+                      class="bg-[#ffc224] text-center capitalize font-medium block text-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] d-block rounded-full py-1.5 px-5"
+                      href="#"
+                    >
+                      add to cart
+                    </a>
+                    <span class="font-semibold text-blue-600">
+                      <i
+                        class="fa-solid text-gray-400 fa-bangladeshi-taka-sign"
+                      ></i>
+                      4990 <span class="text-gray-600">/=</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- dcategory-four items  -->
+              <div
+                id="category-four-items"
+                class="grid grid-cols-1 hidden md:grid-cols-4 gap-4"
+              >
+                <div class="bg-white p-4 rounded shadow">
                   <div>
                     <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
@@ -1042,9 +1034,7 @@
                     </span>
                   </div>
                 </div>
-                <div
-                  class="course-box digital-marketing bg-white p-4 rounded shadow"
-                >
+                <div class="bg-white p-4 rounded shadow">
                   <div>
                     <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
@@ -1076,9 +1066,7 @@
                     </span>
                   </div>
                 </div>
-                <div
-                  class="course-box digital-marketing bg-white p-4 rounded shadow"
-                >
+                <div class="bg-white p-4 rounded shadow">
                   <div>
                     <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
@@ -1110,9 +1098,7 @@
                     </span>
                   </div>
                 </div>
-                <div
-                  class="course-box digital-marketing bg-white p-4 rounded shadow"
-                >
+                <div class="bg-white p-4 rounded shadow">
                   <div>
                     <img src="./src/assets/img/course_item_1.jpg" alt="" />
                   </div>
@@ -2716,6 +2702,28 @@
 
         // Initialize visible items on load
         updateVisibleItems();
+      });
+    </script>
+    <script>
+      document.querySelectorAll(".category-tab").forEach((tab) => {
+        tab.addEventListener("click", function () {
+          // Remove "active" class from currently active tab
+          document
+            .querySelector(".category-tab.active")
+            ?.classList.remove("active");
+          this.classList.add("active");
+
+          // Get the target category ID
+          const categoryId = this.getAttribute("data-category");
+
+          // Hide all category items
+          document.querySelectorAll('[id^="category-"]').forEach((category) => {
+            category.classList.add("hidden");
+          });
+
+          // Show the selected category
+          document.getElementById(categoryId)?.classList.remove("hidden");
+        });
       });
     </script>
   </body>
