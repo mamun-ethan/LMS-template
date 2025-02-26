@@ -86,3 +86,6 @@
 
 - [Email](https://mamun-ethan.github.io/LMS-template/email.html)
 - [Tracker](https://mamun-ethan.github.io/LMS-template/tracker.html)
+
+- [Blog](https://mamun-ethan.github.io/LMS-template/blog.html)
+- [Blog Details](https://mamun-ethan.github.io/LMS-template/blog-details.html)

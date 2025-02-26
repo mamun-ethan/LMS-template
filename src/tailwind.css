@@ -7228,9 +7228,18 @@ faq */
     grid-column: span 2 / span 2;
   }
 
+  .md\:m-12 {
+    margin: 3rem;
+  }
+
   .md\:mx-10 {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
+  }
+
+  .md\:mx-12 {
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   .md\:mx-20 {
@@ -7490,6 +7499,11 @@ faq */
   .md\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .md\:text-3xl {
