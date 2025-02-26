@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font aswome icon -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+      integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- tailwindcss -->
+    <link rel="stylesheet" href="./src/tailwind.css" />
+    <!-- flowbite cdn -->
+
+    <title>Admin Dashboard</title>
+  </head>
+  <body class="bg-bgColor font-hind">
+    <main>
+      <header class="p-4 bg-white">
+        <!-- mobile button -->
+        <div class="flex flex-row justify-between">
+          <!-- button -->
+          <div>
+            <button
+              type="button"
+              id="toggle_btn"
+              class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            >
+              <span class="sr-only">Open sidebar</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- item -->
+          <div class="md:hidden flex w-full flex-row justify-end">
+            <ul
+              class="flex flex-row justify-between cursor-pointer items-center"
+            >
+              <li class="mx-2 flex flex-col">
+                <a href="#">
+                  <span class="font-medium text-base"> Mamun Ethan </span>
+                </a>
+
+                <a href="#">
+                  <span class="font-light text-sm text-gray-500"
+                    >Frontend Dev
+                  </span>
+                </a>
+              </li>
+              <li class="flex justify-around mx-2 items-center flex-row">
+                <img
+                  class="w-[50px] h-auto rounded-full"
+                  src="./src/assets/img/user.jpg"
+                  alt=""
+                />
+              </li>
+              <li class="dropdown_btn mx-4 relative">
+                <i
+                  class="fa-solid px-2 py-2 rounded-full bg-slate-100 text-gray-500 fa-arrow-down-long"
+                ></i>
+                <div class="dropdown_menu absolute hidden top-[60px] right-0">
+                  <ul class="p-5 rounded-sm flex flex-col bg-slate-300">
+                    <li class="w-full flex flex-row">
+                      <span class="mx-2">
+                        <i class="fa-solid fa-user"></i>
+                      </span>
+                      <a href="./profile.html">Profile</a>
+                    </li>
+
+                    <li class="w-full flex flex-row mt-4">
+                      <span class="mx-2"
+                        ><i class="fa-solid fa-right-from-bracket"></i
+                      ></span>
+                      Logout
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="hidden md:flex w-full flex-row justify-end">
+          <ul class="flex flex-row justify-between cursor-pointer items-center">
+            <li class="mx-2 flex flex-col">
+              <a href="#">
+                <span class="font-medium text-base"> Mamun Ethan </span>
+              </a>
+
+              <a href="#">
+                <span class="font-light text-sm text-gray-500"
+                  >Frontend Dev
+                </span>
+              </a>
+            </li>
+            <li class="flex justify-around mx-2 items-center flex-row">
+              <a href="./profile.html">
+                <img
+                  class="w-[50px] h-auto rounded-full"
+                  src="./src/assets/img/user.jpg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="dropdown_btn mx-4 relative">
+              <i
+                class="fa-solid px-2 py-2 rounded-full bg-slate-100 text-gray-500 fa-arrow-down-long"
+              ></i>
+              <div class="dropdown_menu absolute hidden top-[64px] right-0">
+                <ul class="p-5 rounded-sm flex flex-col bg-slate-300">
+                  <li class="w-full flex flex-row">
+                    <span class="mx-2">
+                      <i class="fa-solid fa-user"></i>
+                    </span>
+                    <a href="./profile.html">Profile</a>
+                  </li>
+
+                  <li class="w-full flex flex-row mt-4">
+                    <span class="mx-2"
+                      ><i class="fa-solid fa-right-from-bracket"></i
+                    ></span>
+                    Logout
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div>
+        <aside
+          id="logo-sidebar"
+          class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+          aria-label="Sidebar"
+        >
+          <div
+            class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800"
+          >
+            <div class="flex flex-row justify-between">
+              <a href="./index.html" class="flex items-center ps-2.5 mb-5">
+                <img
+                  class="w-[50%]"
+                  src="./src/assets/img/hsk logo.png"
+                  alt=""
+                />
+              </a>
+              <span
+                id="collapse_btn"
+                class="text-2xl sm:hidden cursor-pointer font-bold text-gray-500"
+                >X</span
+              >
+            </div>
+            <ul class="space-y-2 font-medium">
+              <li>
+                <a
+                  href="./admin-dashboard.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="ms-3">Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./quizzes.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 capitalize whitespace-nowrap"
+                    >my course</span
+                  >
+                </a>
+              </li>
+              <!-- multi level menu -->
+              <li>
+                <button
+                  type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  aria-controls="dropdown-example"
+                  data-collapse-toggle="dropdown-example"
+                >
+                  <span
+                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                    >E-commerce</span
+                  >
+                  <svg
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <ul id="dropdown-example" class="hidden py-2 space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Products</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Billing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Invoice</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <button
+                  type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  aria-controls="dropdown-example-1"
+                  data-collapse-toggle="dropdown-example-1"
+                >
+                  <span
+                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                    >E-commerce</span
+                  >
+                  <svg
+                    class="w-3 h-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <ul id="dropdown-example-1" class="hidden py-2 space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Products</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Billing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Invoice</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <button
+                  type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  aria-controls="dropdown-example-2"
+                  data-collapse-toggle="dropdown-example-2"
+                >
+                  <span
+                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                    >Settings</span
+                  >
+                  <svg
+                    class="w-3 h-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <ul id="dropdown-example-2" class="hidden py-2 space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Security</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Notifications</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Inbox Link -->
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
+                  <span
+                    class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300"
+                    >3</span
+                  >
+                </a>
+              </li>
+              <!-- end multi level menu -->
+              <li>
+                <a
+                  href="./add-book-admin.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 whitespace-nowrap">Books</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./my-library.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 capitalize whitespace-nowrap"
+                    >my library</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+      <div class="p-4 sm:ml-64">
+        <div class="content">
+          <!-- add btn -->
+          <div class="m-5">
+            <button
+              id="add-book-btn"
+              class="bg-blue-600 px-6 p-2 rounded-md font-semibold text-white shadow"
+            >
+              add new +
+            </button>
+          </div>
+          <!-- add new book -->
+          <div
+            id="book-add-form"
+            class="m-3 flex hidden flex-col justify-start"
+          >
+            <div class="w-1/3 bg-white shadow-lg rounded-lg">
+              <div class="flex justify-end m-4">
+                <span id="close-btn" class="font-semibold cursor-pointer"
+                  >&#x2715;</span
+                >
+              </div>
+              <form action="" class="p-4 flex flex-col gap-2">
+                <div class="flex flex-col font-medium">
+                  <label for="Image">Image:</label>
+                  <input
+                    type="file"
+                    accept="image"
+                    class="border-2"
+                    src=""
+                    alt=""
+                  />
+                </div>
+                <div class="flex flex-col font-medium">
+                  <label for="title">Title:</label>
+                  <input type="text" placeholder="Blog Title" src="" alt="" />
+                </div>
+                <div class="flex flex-col font-medium">
+                  <label for="title">Description:</label>
+                  <textarea
+                    name=""
+                    placeholder="Blog Description"
+                    id=""
+                  ></textarea>
+                </div>
+                <div class="flex justify-center items-center">
+                  <button
+                    class="font-semibold text-white bg-orange-500 rounded-md py-2 px-10"
+                  >
+                    Create
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- books -->
+          <div class="m-5">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+              <table
+                class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+              >
+                <thead
+                  class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+                >
+                  <tr class="capitalize">
+                    <th scope="col" class="px-6 py-3">Image</th>
+                    <th scope="col" class="px-6 py-3">Title</th>
+                    <th scope="col" class="px-6 py-3">Description</th>
+
+                    <th scope="col" class="px-6 py-3">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="blog-container"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <footer class="bg-[#09072b]">
+          <div class="container py-16 px-4 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="flex flex-col p-5">
+                <img
+                  class="w-[50%]"
+                  src="./src/assets/img/hsk logo.png"
+                  alt=""
+                />
+                <div class="text-gray-200 flex flex-col">
+                  <span class="text-base my-2"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem, necessitatibus?</span
+                  >
+
+                  <span class="font-semibold capitalize text-lg"
+                    >mirpur 1212, dhaka,</span
+                  >
+                  <span class="font-semibold capitalize text-lg"
+                    >+8801xxxxxx</span
+                  >
+                </div>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <script src="./src/dashboard.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const addBookBtn = document.getElementById("add-book-btn");
+        const bookAddForm = document.getElementById("book-add-form");
+        const closeBtn = document.getElementById("close-btn");
+        const createBtn = document.querySelector("#book-add-form button");
+        const blogContainer = document.getElementById("blog-container");
+
+        // Show the form when clicking "Add Book" button
+        addBookBtn.addEventListener("click", function () {
+          bookAddForm.classList.remove("hidden");
+        });
+
+        // Hide the form when clicking close button
+        closeBtn.addEventListener("click", function () {
+          bookAddForm.classList.add("hidden");
+        });
+
+        // Handle form submission
+        createBtn.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          // Get form data
+          const imageInput = bookAddForm.querySelector('input[type="file"]');
+          const titleInput = bookAddForm.querySelector('input[type="text"]');
+          const descriptionInput = bookAddForm.querySelector("textarea");
+
+          if (
+            !imageInput.files.length ||
+            !titleInput.value.trim() ||
+            !descriptionInput.value.trim()
+          ) {
+            alert("Please fill in all fields.");
+            return;
+          }
+
+          const imageFile = imageInput.files[0];
+          const imageURL = URL.createObjectURL(imageFile);
+          const title = titleInput.value;
+          const description = descriptionInput.value;
+
+          // Create new table row
+          const newRow = document.createElement("tr");
+          newRow.className =
+            "odd:bg-white book-item odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200";
+          newRow.innerHTML = `
+      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+        <img width="40px" height="40px" src="${imageURL}" alt="Book Image" />
+      </th>
+      <td class="px-6 py-4">${title}</td>
+      <td class="px-6 py-4">${description}</td>
+      <td class="px-6 py-4">
+        <div class="flex gap-2 capitalize items-center">
+          <button class="edit-btn font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
+          <button class="delete-btn font-medium capitalize text-red-700 hover:underline">Delete</button>
+        </div>
+      </td>
+    `;
+
+          // Append the new row to the table
+          blogContainer.appendChild(newRow);
+
+          // Clear form fields
+          imageInput.value = "";
+          titleInput.value = "";
+          descriptionInput.value = "";
+
+          // Hide the form
+          bookAddForm.classList.add("hidden");
+
+          // Add event listener for delete button
+          newRow
+            .querySelector(".delete-btn")
+            .addEventListener("click", function () {
+              newRow.remove();
+            });
+
+          // Add event listener for edit button
+          newRow
+            .querySelector(".edit-btn")
+            .addEventListener("click", function () {
+              titleInput.value = title;
+              descriptionInput.value = description;
+              bookAddForm.classList.remove("hidden");
+
+              // Remove old entry when editing
+              newRow.remove();
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

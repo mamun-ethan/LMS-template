@@ -89,3 +89,4 @@
 
 - [Blog](https://mamun-ethan.github.io/LMS-template/blog.html)
 - [Blog Details](https://mamun-ethan.github.io/LMS-template/blog-details.html)
+- [Blog Admin](https://mamun-ethan.github.io/LMS-template/blog-admin.html)
