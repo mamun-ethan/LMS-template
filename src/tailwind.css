@@ -7245,6 +7245,10 @@ faq */
     margin: 3rem;
   }
 
+  .md\:m-5 {
+    margin: 1.25rem;
+  }
+
   .md\:mx-10 {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
@@ -7273,6 +7277,11 @@ faq */
   .md\:my-24 {
     margin-top: 6rem;
     margin-bottom: 6rem;
+  }
+
+  .md\:mx-5 {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
   }
 
   .md\:ml-0 {
