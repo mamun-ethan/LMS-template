@@ -101,3 +101,5 @@
 - [faq-view](https://mamun-ethan.github.io/LMS-template/view-faq.html)
 - [faq-create](https://mamun-ethan.github.io/LMS-template/create-faq.html)
 - [faq-edit](https://mamun-ethan.github.io/LMS-template/faq-edit.html)
+
+- [Brand-create](https://mamun-ethan.github.io/LMS-template/brand-create.html)

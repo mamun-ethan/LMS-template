@@ -25,7 +25,7 @@
 
     <title>Admin Dashboard</title>
   </head>
-  <body class="bg-bgColor">
+  <body class="bg-bgColor font-hind">
     <main>
       <header class="p-4 bg-white">
         <!-- mobile button -->
@@ -382,162 +382,40 @@
       </div>
       <div class="p-4 sm:ml-64">
         <div class="content">
-          <div class="mx-5 my-4 bg-white p-5 rounded shadow-md">
-            <h1
-              class="text-2xl capitalize font-semibold my-5 text-gray-600 text-center"
-            >
-              add Header & Footer
-            </h1>
-            <div>
-              <form
-                class="grid grid-cols-1 md:grid-cols-3 gap-5 capitalize"
-                action=""
-              >
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="Header-logo">header logo:</label>
-                  <input
-                    type="file"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    accept="image"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Footer logo:</label>
-                  <input
-                    type="file"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    accept="image"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Company Name:</label>
-                  <input
-                    type="text"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Company Name"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Address:</label>
-                  <input
-                    type="text"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Address"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Phone:</label>
-                  <input
-                    type="number"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Phone"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Email:</label>
-                  <input
-                    type="email"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="E-mail"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Facebook:</label>
-                  <input
-                    type="url"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Facebook URL"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Linkedin:</label>
-                  <input
-                    type="url"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Linkedin URL"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Twitter:</label>
-                  <input
-                    type="url"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Twitter URL"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Insgram:</label>
-                  <input
-                    type="url"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Twitter URL"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Youtube:</label>
-                  <input
-                    type="url"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Twitter URL"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Facebook Pixel:</label>
-                  <input
-                    type="url"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Pixel "
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Meta keyword:</label>
-                  <textarea
-                    name=""
-                    placeholder="Meta keyword"
-                    class="rounded"
-                    id=""
-                  ></textarea>
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Meta Description:</label>
-                  <textarea
-                    name=""
-                    placeholder="Meta Description"
-                    class="rounded"
-                    id=""
-                  ></textarea>
-                </div>
-              </form>
-              <div>
-                <button
-                  class="bg-orange-500 px-10 font-semibold text-white py-2 rounded-md shadow-md"
+          <div>
+            <h1 class="text-center m-5 font-semibold text-2xl">create brand</h1>
+            <div class="md:mx-4 p-2 md:p-5">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div
+                  class="bg-white p-2 flex flex-row justify-between items-center mx-3 rounded shadow-md"
                 >
-                  Submit
-                </button>
+                  <input type="file" class="w-2/3" accept="image" />
+                  <span
+                    ><i
+                      class="fa-solid text-red-600 cursor-pointer fa-trash"
+                    ></i
+                  ></span>
+                </div>
+                <div
+                  class="bg-white p-2 flex flex-row justify-between items-center mx-3 rounded shadow-md"
+                >
+                  <input type="file" class="w-2/3" accept="image" />
+                  <span
+                    ><i
+                      class="fa-solid text-red-600 cursor-pointer fa-trash"
+                    ></i
+                  ></span>
+                </div>
+                <div
+                  class="bg-white p-2 flex flex-row justify-between items-center mx-3 rounded shadow-md"
+                >
+                  <input type="file" class="w-2/3" accept="image" />
+                  <span
+                    ><i
+                      class="fa-solid text-red-600 cursor-pointer fa-trash"
+                    ></i
+                  ></span>
+                </div>
               </div>
             </div>
           </div>
