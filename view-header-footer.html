@@ -25,7 +25,7 @@
 
     <title>Admin Dashboard</title>
   </head>
-  <body class="bg-bgColor">
+  <body class="bg-bgColor font-hind">
     <main>
       <header class="p-4 bg-white">
         <!-- mobile button -->
@@ -382,115 +382,217 @@
       </div>
       <div class="p-4 sm:ml-64">
         <div class="content">
-          <div class="mx-5 my-4 bg-white p-5 rounded shadow-md">
-            <h1
-              class="text-2xl capitalize font-semibold my-5 text-gray-600 text-center"
-            >
-              add Header & Footer
+          <div>
+            <h1 class="text-2xl text-center font-semibold capitalize my-5">
+              header & footer
             </h1>
-            <div>
-              <form
-                class="grid grid-cols-1 md:grid-cols-3 gap-5 capitalize"
-                action=""
+            <div class="grid m-5 grid-cols-1 gap-4 md:grid-cols-3">
+              <div
+                class="flex bg-white shadow-md rounded p-4 capitalize flex-col gap-2"
               >
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="Header-logo">header logo:</label>
-                  <input
-                    type="file"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    accept="image"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Footer logo:</label>
-                  <input
-                    type="file"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    accept="image"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Company Name:</label>
-                  <input
-                    type="text"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Company Name"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Address:</label>
-                  <input
-                    type="text"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Address"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Phone:</label>
-                  <input
-                    type="number"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Phone"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Email:</label>
-                  <input
-                    type="email"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="E-mail"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Facebook:</label>
-                  <input
-                    type="url"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Facebook URL"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Linkedin:</label>
-                  <input
-                    type="url"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Linkedin URL"
-                    id=""
-                  />
-                </div>
-                <div class="flex flex-col my-2 font-base gap-2 font-medium">
-                  <label for="footer-logo">Twitter:</label>
-                  <input
-                    type="url"
-                    name=""
-                    class="border-2 border-gray-400 cursor-pointer rounded"
-                    placeholder="Twitter URL"
-                    id=""
-                  />
-                </div>
-                <div>
-                  <button
-                    class="bg-orange-500 px-10 font-semibold text-white py-2 rounded-md shadow-md"
+                <div class="flex justify-between gap-4">
+                  <label for="header-logo" class="font-semibold"
+                    >Header logo:</label
                   >
-                    Submit
-                  </button>
+                  <div class="flex gap-2">
+                    <a
+                      href="edit-header-footer.html"
+                      class="bg-blue-600 text-sm px-2 text-white flex justify-center items-center font-semibold rounded"
+                      >edit</a
+                    >
+                    <button
+                      class="bg-red-600 text-sm px-4 text-white flex justify-center items-center capitalize font-semibold rounded"
+                    >
+                      delete
+                    </button>
+                  </div>
                 </div>
-              </form>
+                <img src="./src/assets/img/hsk logo.png" width="70" alt="" />
+              </div>
+              <div
+                class="flex bg-white shadow-md rounded p-4 capitalize flex-col gap-2"
+              >
+                <div class="flex justify-between gap-4">
+                  <label for="header-logo" class="font-semibold"
+                    >Footer logo:</label
+                  >
+                  <div class="flex gap-2">
+                    <a
+                      href="edit-header-footer.html"
+                      class="bg-blue-600 text-sm px-2 text-white flex justify-center items-center font-semibold rounded"
+                      >edit</a
+                    >
+                    <button
+                      class="bg-red-600 text-sm px-4 text-white flex justify-center items-center capitalize font-semibold rounded"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+                <img src="./src/assets/img/hsk logo.png" width="70" alt="" />
+              </div>
+              <div
+                class="flex bg-white shadow-md rounded p-4 capitalize flex-col gap-2"
+              >
+                <div class="flex justify-between gap-4">
+                  <label for="header-logo" class="font-semibold"
+                    >Company:</label
+                  >
+                  <div class="flex gap-2">
+                    <a
+                      href="edit-header-footer.html"
+                      class="bg-blue-600 text-sm px-2 text-white flex justify-center items-center font-semibold rounded"
+                      >edit</a
+                    >
+                    <button
+                      class="bg-red-600 text-sm px-4 text-white flex justify-center items-center capitalize font-semibold rounded"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+                <span class="text-base font-semibold text-gray-400"
+                  >Hsl Solution BD</span
+                >
+              </div>
+              <div
+                class="flex bg-white shadow-md rounded p-4 capitalize flex-col gap-2"
+              >
+                <div class="flex justify-between gap-4">
+                  <label for="header-logo" class="font-semibold">Adress:</label>
+                  <div class="flex gap-2">
+                    <a
+                      href="edit-header-footer.html"
+                      class="bg-blue-600 text-sm px-2 text-white flex justify-center items-center font-semibold rounded"
+                      >edit</a
+                    >
+                    <button
+                      class="bg-red-600 text-sm px-4 text-white flex justify-center items-center capitalize font-semibold rounded"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+                <span class="text-base font-semibold text-gray-400"
+                  >Mirpur,Dhaka</span
+                >
+              </div>
+              <div
+                class="flex bg-white shadow-md rounded p-4 capitalize flex-col gap-2"
+              >
+                <div class="flex justify-between gap-4">
+                  <label for="header-logo" class="font-semibold">Phone:</label>
+                  <div class="flex gap-2">
+                    <a
+                      href="edit-header-footer.html"
+                      class="bg-blue-600 text-sm px-2 text-white flex justify-center items-center font-semibold rounded"
+                      >edit</a
+                    >
+                    <button
+                      class="bg-red-600 text-sm px-4 text-white flex justify-center items-center capitalize font-semibold rounded"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+                <span class="text-base font-semibold text-gray-400"
+                  >+880179-7653434</span
+                >
+              </div>
+              <div
+                class="flex bg-white shadow-md rounded p-4 capitalize flex-col gap-2"
+              >
+                <div class="flex justify-between gap-4">
+                  <label for="header-logo" class="font-semibold">E-mail:</label>
+                  <div class="flex gap-2">
+                    <a
+                      href="edit-header-footer.html"
+                      class="bg-blue-600 text-sm px-2 text-white flex justify-center items-center font-semibold rounded"
+                      >edit</a
+                    >
+                    <button
+                      class="bg-red-600 text-sm px-4 text-white flex justify-center items-center capitalize font-semibold rounded"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+                <span class="text-base font-semibold text-gray-400"
+                  >ethan.mamun@gmail.com</span
+                >
+              </div>
+              <div
+                class="flex bg-white shadow-md rounded p-4 capitalize flex-col gap-2"
+              >
+                <div class="flex justify-between gap-4">
+                  <label for="header-logo" class="font-semibold"
+                    >Facebook:</label
+                  >
+                  <div class="flex gap-2">
+                    <a
+                      href="edit-header-footer.html"
+                      class="bg-blue-600 text-sm px-2 text-white flex justify-center items-center font-semibold rounded"
+                      >edit</a
+                    >
+                    <button
+                      class="bg-red-600 text-sm px-4 text-white flex justify-center items-center capitalize font-semibold rounded"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+                <span class="text-base wo font-semibold text-gray-400"
+                  >https://www.facebook.com/.....</span
+                >
+              </div>
+              <div
+                class="flex bg-white shadow-md rounded p-4 capitalize flex-col gap-2"
+              >
+                <div class="flex justify-between gap-4">
+                  <label for="header-logo" class="font-semibold"
+                    >Linkedin:</label
+                  >
+                  <div class="flex gap-2">
+                    <a
+                      href="edit-header-footer.html"
+                      class="bg-blue-600 text-sm px-2 text-white flex justify-center items-center font-semibold rounded"
+                      >edit</a
+                    >
+                    <button
+                      class="bg-red-600 text-sm px-4 text-white flex justify-center items-center capitalize font-semibold rounded"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+                <span class="text-base wo font-semibold text-gray-400"
+                  >https://www.facebook.com/.....</span
+                >
+              </div>
+              <div
+                class="flex bg-white shadow-md rounded p-4 capitalize flex-col gap-2"
+              >
+                <div class="flex justify-between gap-4">
+                  <label for="header-logo" class="font-semibold"
+                    >Twitter:</label
+                  >
+                  <div class="flex gap-2">
+                    <a
+                      href="edit-header-footer.html"
+                      class="bg-blue-600 text-sm px-2 text-white flex justify-center items-center font-semibold rounded"
+                      >edit</a
+                    >
+                    <button
+                      class="bg-red-600 text-sm px-4 text-white flex justify-center items-center capitalize font-semibold rounded"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+                <span class="text-base wo font-semibold text-gray-400"
+                  >https://www.facebook.com/.....</span
+                >
+              </div>
             </div>
           </div>
         </div>

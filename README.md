@@ -94,5 +94,6 @@
 
 - [edit blog](https://mamun-ethan.github.io/LMS-template/edit-blog.html)
 
-- [setting-admin](https://mamun-ethan.github.io/LMS-template/setting-admint.html)
 - [create-header-footer](https://mamun-ethan.github.io/LMS-template/create-header-footer.html)
+- [view-header-footer](https://mamun-ethan.github.io/LMS-template/view-header-footer.html)
+- [edit-header-footer](https://mamun-ethan.github.io/LMS-template/edit-header-footer.html)
