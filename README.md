@@ -97,3 +97,7 @@
 - [create-header-footer](https://mamun-ethan.github.io/LMS-template/create-header-footer.html)
 - [view-header-footer](https://mamun-ethan.github.io/LMS-template/view-header-footer.html)
 - [edit-header-footer](https://mamun-ethan.github.io/LMS-template/edit-header-footer.html)
+
+- [faq-view](https://mamun-ethan.github.io/LMS-template/view-faq.html)
+- [faq-create](https://mamun-ethan.github.io/LMS-template/create-faq.html)
+- [faq-edit](https://mamun-ethan.github.io/LMS-template/faq-edit.html)

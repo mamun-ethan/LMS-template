@@ -4924,6 +4924,10 @@ details.collapse summary::-webkit-details-marker {
   resize: both;
 }
 
+.list-decimal {
+  list-style-type: decimal;
+}
+
 .list-disc {
   list-style-type: disc;
 }
