@@ -103,3 +103,6 @@
 - [faq-edit](https://mamun-ethan.github.io/LMS-template/faq-edit.html)
 
 - [Brand-create](https://mamun-ethan.github.io/LMS-template/brand-create.html)
+- [create category](https://mamun-ethan.github.io/LMS-template/create-category.html)
+
+- [single category course](https://mamun-ethan.github.io/LMS-template/single-category.html)
