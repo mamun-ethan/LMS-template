@@ -4611,6 +4611,10 @@ details.collapse summary::-webkit-details-marker {
   height: 100vh;
 }
 
+.h-\[350px\] {
+  height: 350px;
+}
+
 .max-h-\[90vh\] {
   max-height: 90vh;
 }
@@ -7264,6 +7268,11 @@ faq */
     margin-right: 1rem;
   }
 
+  .md\:mx-5 {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
   .md\:my-10 {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
@@ -7277,11 +7286,6 @@ faq */
   .md\:my-24 {
     margin-top: 6rem;
     margin-bottom: 6rem;
-  }
-
-  .md\:mx-5 {
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
   }
 
   .md\:ml-0 {
