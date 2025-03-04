@@ -109,3 +109,5 @@
 
 - [faq-admin](https://mamun-ethan.github.io/LMS-template/faq-admin.html)
 - [slider-admin](https://mamun-ethan.github.io/LMS-template/slider-admin.html)
+
+- [teachers-admin](https://mamun-ethan.github.io/LMS-template/teachers-admin.html)

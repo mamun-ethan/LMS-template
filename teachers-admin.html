@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font aswome icon -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+      integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- tailwindcss -->
+    <link rel="stylesheet" href="./src/tailwind.css" />
+    <!-- flowbite cdn -->
+
+    <title>Admin Dashboard</title>
+  </head>
+  <body class="bg-bgColor font-hind">
+    <main>
+      <header class="p-4 bg-white">
+        <!-- mobile button -->
+        <div class="flex flex-row justify-between">
+          <!-- button -->
+          <div>
+            <button
+              type="button"
+              id="toggle_btn"
+              class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            >
+              <span class="sr-only">Open sidebar</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- item -->
+          <div class="md:hidden flex w-full flex-row justify-end">
+            <ul
+              class="flex flex-row justify-between cursor-pointer items-center"
+            >
+              <li class="mx-2 flex flex-col">
+                <a href="#">
+                  <span class="font-medium text-base"> Mamun Ethan </span>
+                </a>
+
+                <a href="#">
+                  <span class="font-light text-sm text-gray-500"
+                    >Frontend Dev
+                  </span>
+                </a>
+              </li>
+              <li class="flex justify-around mx-2 items-center flex-row">
+                <img
+                  class="w-[50px] h-auto rounded-full"
+                  src="./src/assets/img/user.jpg"
+                  alt=""
+                />
+              </li>
+              <li class="dropdown_btn mx-4 relative">
+                <i
+                  class="fa-solid px-2 py-2 rounded-full bg-slate-100 text-gray-500 fa-arrow-down-long"
+                ></i>
+                <div class="dropdown_menu absolute hidden top-[60px] right-0">
+                  <ul class="p-5 rounded-sm flex flex-col bg-slate-300">
+                    <li class="w-full flex flex-row">
+                      <span class="mx-2">
+                        <i class="fa-solid fa-user"></i>
+                      </span>
+                      <a href="./profile.html">Profile</a>
+                    </li>
+
+                    <li class="w-full flex flex-row mt-4">
+                      <span class="mx-2"
+                        ><i class="fa-solid fa-right-from-bracket"></i
+                      ></span>
+                      Logout
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="hidden md:flex w-full flex-row justify-end">
+          <ul class="flex flex-row justify-between cursor-pointer items-center">
+            <li class="mx-2 flex flex-col">
+              <a href="#">
+                <span class="font-medium text-base"> Mamun Ethan </span>
+              </a>
+
+              <a href="#">
+                <span class="font-light text-sm text-gray-500"
+                  >Frontend Dev
+                </span>
+              </a>
+            </li>
+            <li class="flex justify-around mx-2 items-center flex-row">
+              <a href="./profile.html">
+                <img
+                  class="w-[50px] h-auto rounded-full"
+                  src="./src/assets/img/user.jpg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="dropdown_btn mx-4 relative">
+              <i
+                class="fa-solid px-2 py-2 rounded-full bg-slate-100 text-gray-500 fa-arrow-down-long"
+              ></i>
+              <div class="dropdown_menu absolute hidden top-[64px] right-0">
+                <ul class="p-5 rounded-sm flex flex-col bg-slate-300">
+                  <li class="w-full flex flex-row">
+                    <span class="mx-2">
+                      <i class="fa-solid fa-user"></i>
+                    </span>
+                    <a href="./profile.html">Profile</a>
+                  </li>
+
+                  <li class="w-full flex flex-row mt-4">
+                    <span class="mx-2"
+                      ><i class="fa-solid fa-right-from-bracket"></i
+                    ></span>
+                    Logout
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div>
+        <aside
+          id="logo-sidebar"
+          class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+          aria-label="Sidebar"
+        >
+          <div
+            class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800"
+          >
+            <div class="flex flex-row justify-between">
+              <a href="./index.html" class="flex items-center ps-2.5 mb-5">
+                <img
+                  class="w-[50%]"
+                  src="./src/assets/img/hsk logo.png"
+                  alt=""
+                />
+              </a>
+              <span
+                id="collapse_btn"
+                class="text-2xl sm:hidden cursor-pointer font-bold text-gray-500"
+                >X</span
+              >
+            </div>
+            <ul class="space-y-2 font-medium">
+              <li>
+                <a
+                  href="./admin-dashboard.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="ms-3">Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./quizzes.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 capitalize whitespace-nowrap"
+                    >my course</span
+                  >
+                </a>
+              </li>
+              <!-- multi level menu -->
+              <li>
+                <button
+                  type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  aria-controls="dropdown-example"
+                  data-collapse-toggle="dropdown-example"
+                >
+                  <span
+                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                    >E-commerce</span
+                  >
+                  <svg
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <ul id="dropdown-example" class="hidden py-2 space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Products</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Billing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Invoice</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <button
+                  type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  aria-controls="dropdown-example-1"
+                  data-collapse-toggle="dropdown-example-1"
+                >
+                  <span
+                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                    >E-commerce</span
+                  >
+                  <svg
+                    class="w-3 h-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <ul id="dropdown-example-1" class="hidden py-2 space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Products</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Billing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Invoice</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <button
+                  type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  aria-controls="dropdown-example-2"
+                  data-collapse-toggle="dropdown-example-2"
+                >
+                  <span
+                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                    >Settings</span
+                  >
+                  <svg
+                    class="w-3 h-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <ul id="dropdown-example-2" class="hidden py-2 space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Security</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      >Notifications</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Inbox Link -->
+              <li>
+                <a
+                  href="./consultancy-admin.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 capitalize whitespace-nowrap"
+                    >consultancy</span
+                  >
+                </a>
+              </li>
+              <!-- end multi level menu -->
+              <li>
+                <a
+                  href="./add-book-admin.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 whitespace-nowrap">Books</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./my-library.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <span class="flex-1 ms-3 capitalize whitespace-nowrap"
+                    >my library</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+      <div class="p-4 sm:ml-64">
+        <div class="content">
+          <h1 class="text-2xl font-semibold capitalize m-4 text-center">
+            Teachers board
+          </h1>
+          <div class="m-4">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+              <div
+                class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4"
+              >
+                <div>
+                  <button
+                    id="dropdownRadioButton"
+                    data-dropdown-toggle="dropdownRadio"
+                    class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                    type="button"
+                  >
+                    <svg
+                      class="w-3 h-3 text-gray-500 dark:text-gray-400 me-3"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z"
+                      ></path>
+                    </svg>
+                    Last 30 days
+                    <svg
+                      class="w-2.5 h-2.5 ms-2.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      ></path>
+                    </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownRadio"
+                    class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+                    data-popper-placement="bottom"
+                    style="
+                      position: absolute;
+                      inset: 0px auto auto 0px;
+                      margin: 0px;
+                      transform: translate3d(363.355px, 163.097px, 0px);
+                    "
+                  >
+                    <ul
+                      class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownRadioButton"
+                    >
+                      <li>
+                        <div
+                          class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          <input
+                            id="filter-radio-example-1"
+                            type="radio"
+                            value=""
+                            name="filter-radio"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          />
+                          <label
+                            for="filter-radio-example-1"
+                            class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300"
+                            >Last day</label
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          <input
+                            checked=""
+                            id="filter-radio-example-2"
+                            type="radio"
+                            value=""
+                            name="filter-radio"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          />
+                          <label
+                            for="filter-radio-example-2"
+                            class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300"
+                            >Last 7 days</label
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          <input
+                            id="filter-radio-example-3"
+                            type="radio"
+                            value=""
+                            name="filter-radio"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          />
+                          <label
+                            for="filter-radio-example-3"
+                            class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300"
+                            >Last 30 days</label
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          <input
+                            id="filter-radio-example-4"
+                            type="radio"
+                            value=""
+                            name="filter-radio"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          />
+                          <label
+                            for="filter-radio-example-4"
+                            class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300"
+                            >Last month</label
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          <input
+                            id="filter-radio-example-5"
+                            type="radio"
+                            value=""
+                            name="filter-radio"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          />
+                          <label
+                            for="filter-radio-example-5"
+                            class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300"
+                            >Last year</label
+                          >
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <label for="table-search" class="sr-only">Search</label>
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    id="table-search"
+                    class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search for items"
+                  />
+                </div>
+              </div>
+              <table
+                class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+              >
+                <thead
+                  class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+                >
+                  <tr class="text-center capitalize">
+                    <th scope="col" class="px-6 py-3">Photo</th>
+                    <th scope="col" class="px-6 py-3">Name & Id</th>
+                    <th scope="col" class="px-6 py-3">Email</th>
+
+                    <th scope="col" class="px-6 py-3">Category</th>
+                    <th scope="col" class="px-6 py-3">Home</th>
+                    <th scope="col" class="px-6 py-3">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 capitalize text-center dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  >
+                    <td class="px-4 py-4">
+                      <img width="50" src="./src/assets/img/bkash.jpg" alt="" />
+                    </td>
+                    <td class="px-6 py-4">
+                      <div
+                        class="flex flex-col justify-between items-center gap-2"
+                      >
+                        <span>Rakibul Hasan</span>
+                        <span>#09072b</span>
+                      </div>
+                    </td>
+                    <th
+                      class="py-4 font-medium whitespace-nowrap dark:text-white"
+                    >
+                      ethan.mamun@gmail.com
+                    </th>
+
+                    <td class="px-4 py-4">web development</td>
+                    <td class="px-4 py-4">
+                      <form action="">
+                        <input type="checkbox" name="" id="" />
+                      </form>
+                    </td>
+                    <td class="px-6">
+                      <div
+                        class="flex text-white font-semibold items-center justify-start gap-3"
+                      >
+                        <button
+                          class="bg-yellow-400 text-black py-1 px-2 rounded-md"
+                        >
+                          Block
+                        </button>
+                        <button class="bg-blue-600 py-1 px-2 rounded-md">
+                          Unblock
+                        </button>
+                        <button
+                          class="bg-red-600 capitalize py-1 px-2 rounded-md"
+                        >
+                          delete
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 capitalize text-center dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  >
+                    <td class="px-4 py-4">
+                      <img width="50" src="./src/assets/img/bkash.jpg" alt="" />
+                    </td>
+                    <td class="px-6 py-4">
+                      <div
+                        class="flex flex-col justify-between items-center gap-2"
+                      >
+                        <span>Rakibul Hasan</span>
+                        <span>#09072b</span>
+                      </div>
+                    </td>
+                    <th
+                      class="py-4 font-medium whitespace-nowrap dark:text-white"
+                    >
+                      ethan.mamun@gmail.com
+                    </th>
+
+                    <td class="px-4 py-4">web development</td>
+                    <td class="px-4 py-4">
+                      <form action="">
+                        <input type="checkbox" name="" id="" />
+                      </form>
+                    </td>
+                    <td class="px-6">
+                      <div
+                        class="flex text-white font-semibold items-center justify-start gap-3"
+                      >
+                        <button
+                          class="bg-yellow-400 text-black py-1 px-2 rounded-md"
+                        >
+                          Block
+                        </button>
+                        <button class="bg-blue-600 py-1 px-2 rounded-md">
+                          Unblock
+                        </button>
+                        <button
+                          class="bg-red-600 capitalize py-1 px-2 rounded-md"
+                        >
+                          delete
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 capitalize text-center dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  >
+                    <td class="px-4 py-4">
+                      <img width="50" src="./src/assets/img/bkash.jpg" alt="" />
+                    </td>
+                    <td class="px-6 py-4">
+                      <div
+                        class="flex flex-col justify-between items-center gap-2"
+                      >
+                        <span>Rakibul Hasan</span>
+                        <span>#09072b</span>
+                      </div>
+                    </td>
+                    <th
+                      class="py-4 font-medium whitespace-nowrap dark:text-white"
+                    >
+                      ethan.mamun@gmail.com
+                    </th>
+
+                    <td class="px-4 py-4">web development</td>
+                    <td class="px-4 py-4">
+                      <form action="">
+                        <input type="checkbox" name="" id="" />
+                      </form>
+                    </td>
+                    <td class="px-6">
+                      <div
+                        class="flex text-white font-semibold items-center justify-start gap-3"
+                      >
+                        <button
+                          class="bg-yellow-400 text-black py-1 px-2 rounded-md"
+                        >
+                          Block
+                        </button>
+                        <button class="bg-blue-600 py-1 px-2 rounded-md">
+                          Unblock
+                        </button>
+                        <button
+                          class="bg-red-600 capitalize py-1 px-2 rounded-md"
+                        >
+                          delete
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 capitalize text-center dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  >
+                    <td class="px-4 py-4">
+                      <img width="50" src="./src/assets/img/bkash.jpg" alt="" />
+                    </td>
+                    <td class="px-6 py-4">
+                      <div
+                        class="flex flex-col justify-between items-center gap-2"
+                      >
+                        <span>Rakibul Hasan</span>
+                        <span>#09072b</span>
+                      </div>
+                    </td>
+                    <th
+                      class="py-4 font-medium whitespace-nowrap dark:text-white"
+                    >
+                      ethan.mamun@gmail.com
+                    </th>
+
+                    <td class="px-4 py-4">web development</td>
+                    <td class="px-4 py-4">
+                      <form action="">
+                        <input type="checkbox" name="" id="" />
+                      </form>
+                    </td>
+                    <td class="px-6">
+                      <div
+                        class="flex text-white font-semibold items-center justify-start gap-3"
+                      >
+                        <button
+                          class="bg-yellow-400 text-black py-1 px-2 rounded-md"
+                        >
+                          Block
+                        </button>
+                        <button class="bg-blue-600 py-1 px-2 rounded-md">
+                          Unblock
+                        </button>
+                        <button
+                          class="bg-red-600 capitalize py-1 px-2 rounded-md"
+                        >
+                          delete
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <footer class="bg-[#09072b]">
+          <div class="container py-16 px-4 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="flex flex-col p-5">
+                <img
+                  class="w-[50%]"
+                  src="./src/assets/img/hsk logo.png"
+                  alt=""
+                />
+                <div class="text-gray-200 flex flex-col">
+                  <span class="text-base my-2"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem, necessitatibus?</span
+                  >
+
+                  <span class="font-semibold capitalize text-lg"
+                    >mirpur 1212, dhaka,</span
+                  >
+                  <span class="font-semibold capitalize text-lg"
+                    >+8801xxxxxx</span
+                  >
+                </div>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5">
+                <ul class="text-gray-200">
+                  <li class="font-semibold text-lg my-3">
+                    <span class="border-b-2 border-blue-600"> কুইক লিংক</span>
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    আপকামিং লাইভ ব্যাচ
+                  </li>
+                  <li
+                    class="font-light text-base my-3 hover:text-white hover:underline"
+                  >
+                    ফ্রি কোর্সসমূহ
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <script src="./src/dashboard.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdownButtons = document.querySelectorAll(
+          "[data-collapse-toggle]"
+        );
+
+        dropdownButtons.forEach((button) => {
+          const dropdownId = button.getAttribute("data-collapse-toggle");
+          const dropdownMenu = document.getElementById(dropdownId);
+
+          button.addEventListener("click", function () {
+            dropdownMenu.classList.toggle("hidden");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

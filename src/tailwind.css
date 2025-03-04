@@ -5628,6 +5628,11 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(194 120 3 / var(--tw-bg-opacity));
 }
 
+.bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(227 160 8 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
