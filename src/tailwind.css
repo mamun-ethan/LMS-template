@@ -7288,6 +7288,11 @@ faq */
     margin-bottom: 6rem;
   }
 
+  .md\:mx-12 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
   .md\:ml-0 {
     margin-left: 0px;
   }
