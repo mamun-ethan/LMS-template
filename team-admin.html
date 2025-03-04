@@ -382,11 +382,66 @@
       </div>
       <div class="p-4 sm:ml-64">
         <div class="content">
-          <h1 class="text-2xl font-semibold capitalize m-4 text-center">
-            all Teacher
+          <h1 class="text-2xl text-center m-3 font-semibold capitalize">
+            team info
           </h1>
-          <div class="m-4">
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+
+          <div class="md:mx-5 my-8 flex flex-col justify-center items-center">
+            <div class="bg-white p-5 shadow-md rounded-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <input
+                    type="text"
+                    class="w-full rounded"
+                    name=""
+                    placeholder="Sub Title"
+                    id=""
+                    value="Sub Title"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    class="w-full rounded"
+                    name=""
+                    placeholder="Main Title"
+                    id=""
+                    value="our dream and action"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    name=""
+                    class="w-full rounded"
+                    name=""
+                    placeholder="short Description"
+                    id=""
+                  ></textarea>
+                </div>
+                <div>
+                  <input
+                    type="file"
+                    class="border-2 border-gray-400 rounded"
+                    name=""
+                    accept="image"
+                    id=""
+                  />
+                </div>
+                <div>
+                  <img src="./src/assets/img/bkash.png" alt="" />
+                </div>
+              </div>
+              <div class="flex flex-row justify-center items-center">
+                <button
+                  class="px-6 py-2 rounded-md text-white bg-blue-600 font-medium"
+                >
+                  update
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative w-full my-5 overflow-x-auto shadow-md sm:rounded-lg"
+            >
               <div
                 class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4"
               >
@@ -425,11 +480,8 @@
                 >
                   <tr class="text-center capitalize">
                     <th scope="col" class="px-6 py-3">Photo</th>
-                    <th scope="col" class="px-6 py-3">Name & Id</th>
-                    <th scope="col" class="px-6 py-3">Email</th>
-
-                    <th scope="col" class="px-6 py-3">Category</th>
-                    <th scope="col" class="px-6 py-3">Home</th>
+                    <th scope="col" class="px-6 py-3">Name</th>
+                    <th scope="col" class="px-6 py-3">Role</th>
                     <th scope="col" class="px-6 py-3">Action</th>
                   </tr>
                 </thead>
@@ -438,40 +490,41 @@
                     class="bg-white border-b dark:bg-gray-800 capitalize text-center dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
                   >
                     <td class="px-4 py-4">
-                      <img width="50" src="./src/assets/img/bkash.jpg" alt="" />
+                      <input type="file" name="" accept="image" id="" />
                     </td>
                     <td class="px-6 py-4">
-                      <div
-                        class="flex flex-col justify-between items-center gap-2"
-                      >
-                        <span>Rakibul Hasan</span>
-                        <span>#09072b</span>
-                      </div>
+                      <input
+                        type="text"
+                        name=""
+                        class="rounded-md"
+                        value="Mamun Ethan"
+                        id=""
+                      />
                     </td>
                     <th
                       class="py-4 font-medium whitespace-nowrap dark:text-white"
                     >
-                      ethan.mamun@gmail.com
+                      <input
+                        type="text"
+                        name=""
+                        placeholder="Role"
+                        class="rounded-md"
+                        value="Frontend dev"
+                        id=""
+                      />
                     </th>
 
-                    <td class="px-4 py-4">web development</td>
-                    <td class="px-4 py-4">
-                      <form action="">
-                        <input type="checkbox" name="" id="" />
-                      </form>
-                    </td>
                     <td class="px-6">
                       <div
                         class="flex text-white font-semibold items-center justify-start gap-3"
                       >
+                        <
                         <button
-                          class="bg-yellow-400 text-black py-1 px-2 rounded-md"
+                          class="bg-blue-600 capitalize py-1 px-2 rounded-md"
                         >
-                          Block
+                          update
                         </button>
-                        <button class="bg-blue-600 py-1 px-2 rounded-md">
-                          Unblock
-                        </button>
+                        <
                         <button
                           class="bg-red-600 capitalize py-1 px-2 rounded-md"
                         >
@@ -484,132 +537,41 @@
                     class="bg-white border-b dark:bg-gray-800 capitalize text-center dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
                   >
                     <td class="px-4 py-4">
-                      <img width="50" src="./src/assets/img/bkash.jpg" alt="" />
+                      <input type="file" name="" accept="image" id="" />
                     </td>
                     <td class="px-6 py-4">
-                      <div
-                        class="flex flex-col justify-between items-center gap-2"
-                      >
-                        <span>Rakibul Hasan</span>
-                        <span>#09072b</span>
-                      </div>
+                      <input
+                        type="text"
+                        name=""
+                        class="rounded-md"
+                        value="Mamun Ethan"
+                        id=""
+                      />
                     </td>
                     <th
                       class="py-4 font-medium whitespace-nowrap dark:text-white"
                     >
-                      ethan.mamun@gmail.com
+                      <input
+                        type="text"
+                        name=""
+                        placeholder="Role"
+                        class="rounded-md"
+                        value="Frontend dev"
+                        id=""
+                      />
                     </th>
 
-                    <td class="px-4 py-4">web development</td>
-                    <td class="px-4 py-4">
-                      <form action="">
-                        <input type="checkbox" name="" id="" />
-                      </form>
-                    </td>
                     <td class="px-6">
                       <div
                         class="flex text-white font-semibold items-center justify-start gap-3"
                       >
+                        <
                         <button
-                          class="bg-yellow-400 text-black py-1 px-2 rounded-md"
+                          class="bg-blue-600 capitalize py-1 px-2 rounded-md"
                         >
-                          Block
+                          update
                         </button>
-                        <button class="bg-blue-600 py-1 px-2 rounded-md">
-                          Unblock
-                        </button>
-                        <button
-                          class="bg-red-600 capitalize py-1 px-2 rounded-md"
-                        >
-                          delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 capitalize text-center dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
-                  >
-                    <td class="px-4 py-4">
-                      <img width="50" src="./src/assets/img/bkash.jpg" alt="" />
-                    </td>
-                    <td class="px-6 py-4">
-                      <div
-                        class="flex flex-col justify-between items-center gap-2"
-                      >
-                        <span>Rakibul Hasan</span>
-                        <span>#09072b</span>
-                      </div>
-                    </td>
-                    <th
-                      class="py-4 font-medium whitespace-nowrap dark:text-white"
-                    >
-                      ethan.mamun@gmail.com
-                    </th>
-
-                    <td class="px-4 py-4">web development</td>
-                    <td class="px-4 py-4">
-                      <form action="">
-                        <input type="checkbox" name="" id="" />
-                      </form>
-                    </td>
-                    <td class="px-6">
-                      <div
-                        class="flex text-white font-semibold items-center justify-start gap-3"
-                      >
-                        <button
-                          class="bg-yellow-400 text-black py-1 px-2 rounded-md"
-                        >
-                          Block
-                        </button>
-                        <button class="bg-blue-600 py-1 px-2 rounded-md">
-                          Unblock
-                        </button>
-                        <button
-                          class="bg-red-600 capitalize py-1 px-2 rounded-md"
-                        >
-                          delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 capitalize text-center dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
-                  >
-                    <td class="px-4 py-4">
-                      <img width="50" src="./src/assets/img/bkash.jpg" alt="" />
-                    </td>
-                    <td class="px-6 py-4">
-                      <div
-                        class="flex flex-col justify-between items-center gap-2"
-                      >
-                        <span>Rakibul Hasan</span>
-                        <span>#09072b</span>
-                      </div>
-                    </td>
-                    <th
-                      class="py-4 font-medium whitespace-nowrap dark:text-white"
-                    >
-                      ethan.mamun@gmail.com
-                    </th>
-
-                    <td class="px-4 py-4">web development</td>
-                    <td class="px-4 py-4">
-                      <form action="">
-                        <input type="checkbox" name="" id="" />
-                      </form>
-                    </td>
-                    <td class="px-6">
-                      <div
-                        class="flex text-white font-semibold items-center justify-start gap-3"
-                      >
-                        <button
-                          class="bg-yellow-400 text-black py-1 px-2 rounded-md"
-                        >
-                          Block
-                        </button>
-                        <button class="bg-blue-600 py-1 px-2 rounded-md">
-                          Unblock
-                        </button>
+                        <
                         <button
                           class="bg-red-600 capitalize py-1 px-2 rounded-md"
                         >
