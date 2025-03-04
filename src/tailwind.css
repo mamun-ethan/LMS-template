@@ -4579,6 +4579,10 @@ details.collapse summary::-webkit-details-marker {
   height: 200px;
 }
 
+.h-\[350px\] {
+  height: 350px;
+}
+
 .h-\[40\%\] {
   height: 40%;
 }
@@ -4609,10 +4613,6 @@ details.collapse summary::-webkit-details-marker {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[350px\] {
-  height: 350px;
 }
 
 .max-h-\[90vh\] {
@@ -7258,6 +7258,11 @@ faq */
     margin-right: 2.5rem;
   }
 
+  .md\:mx-12 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
   .md\:mx-20 {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -7286,11 +7291,6 @@ faq */
   .md\:my-24 {
     margin-top: 6rem;
     margin-bottom: 6rem;
-  }
-
-  .md\:mx-12 {
-    margin-left: 3rem;
-    margin-right: 3rem;
   }
 
   .md\:ml-0 {

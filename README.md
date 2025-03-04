@@ -106,3 +106,6 @@
 - [create category](https://mamun-ethan.github.io/LMS-template/create-category.html)
 
 - [single category course](https://mamun-ethan.github.io/LMS-template/single-category.html)
+
+- [faq-admin](https://mamun-ethan.github.io/LMS-template/faq-admin.html)
+- [slider-admin](https://mamun-ethan.github.io/LMS-template/slider-admin.html)
