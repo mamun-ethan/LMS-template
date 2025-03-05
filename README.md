@@ -113,3 +113,5 @@
 - [teachers-board](https://mamun-ethan.github.io/LMS-template/teachers-admin.html)
 - [team-admin](https://mamun-ethan.github.io/LMS-template/team-admin.html)
 - [create-page](https://mamun-ethan.github.io/LMS-template/create-page-admin.html)
+
+- [create-menu](https://mamun-ethan.github.io/LMS-template/create-menu-admin.html)
